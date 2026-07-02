@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header and Footer */
+.content{
+    background-color: #1c467c;
+    text-align: center;
+    color: #fff;
+}
+.header{
+    padding: 20px;
+}
+.footer{
+    padding: 50px;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* banner puppies */
+.banner img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+
+.container{
+    width: 100%;
+}
+
+/* three puppies */
+.three-puppies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* padding: 30px 0; */
+    flex-wrap: wrap;
+}
+
+/* .three-puppies .puppy-1,
+.three-puppies .puppy-3,
+.three-puppies .puppy-missing{
+    width: 310px;
+    min-height: 310px;
+} */
+
+.three-puppies .puppy{
+    width: 310px;
+    min-height: 310px;
+}
+
+
+/* 
+.three-puppies .puppy,
+.three-puppies .puppy{
+    overflow: hidden;
+} */
+
+.three-puppies img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Puppy missing  */
+
+.missing{
+    background-color: #c21010;
+    font-size: 60px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.puppy-missing-content{
+    text-align: center;
+}
+/* Puppy missing  End*/
+
+
+/* more puppies  */
+.more-puppies{
+    text-align: center;
+    color: #000000;
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+.two-puppies{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; 
+}
+.two-puppies div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+
+.two-puppies img{
+    width: 365px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+

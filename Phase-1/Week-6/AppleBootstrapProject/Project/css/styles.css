@@ -1,3 +1,95 @@
+.green {
+  background-color: #06c;
+}
+.pink {
+  background-color: #fc7feb;
+}
+.blue {
+  background-color: #007aff;
+}
+.red {
+  background-color: #ff3b30;
+}
+
+.model{
+    font-size: .89em;
+}
+.product-title{
+    font-size: 56px;
+}
+.brief-description{
+    font-size: 28px;
+}
+.links-wrapper ul li a:hover{
+    color: #000;
+}
+.links-wrapper ul li a::after{
+    font-family: "FontAwesome";
+    font-weight: 900;
+    content: "\f105";
+    padding-left: 10px;
+}
+/* Section 2 */
+.second-hightlight-wrapper, .third-highlight-wrapper{
+    background-image: url(../images/home/iphone11-pro-bg.jpg);
+    height: 580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title-wrapper{
+    font-size: 56px;
+}
+.description-wrapper{
+    font-size: 20px;
+    /* padding: 1px 0; */
+}
+.price-wrapper{
+    color: #86868b;
+    font-size: 1em;
+}
+
+.third-highlight-wrapper{
+    background-image: url("../images/home/iphone11-bg.jpg");
+}
+
+/* Section 4 */
+.left-side-wrapper, .right-side-wrpper{
+    height: 580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* width: 48.5%; */
+    margin: 1% 0.5% 0% 1%; 
+    padding-top: 1px;
+    padding-bottom: 60px;
+}
+/* .left-side-wrapper .logo-wrapper{
+    padding-top: -80px;
+} */
+.fourth-hightlight-wrapper .left-side-wrapper{
+    background-image: url("../images/home/watch-series-5.jpg");
+    
+}
+
+.fourth-hightlight-wrapper .right-side-wrpper{
+    background-image: url("../images/home/apple-card.jpg");
+}
+
+/* .left-side-wrapper{
+  mt-4 mr-3 pt-3 pb-4
+} */
+
+/* .right-side-wrapper{
+  mt-4 ml-3 pt-3 pb-4
+} */
+
+
+
+
+
 /* General Styling*/
 body {
   font-family: "Montserrat", sans-serif;

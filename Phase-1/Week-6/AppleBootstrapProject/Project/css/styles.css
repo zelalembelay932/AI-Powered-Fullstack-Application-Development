@@ -78,6 +78,32 @@
     margin: 0 auto !important;
 }
 
+/* Section 5 */
+
+.fifth-left-side-wrapper{
+    background-image: url("../images/home/apple-tv-background.jpg");
+    height: 580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fifth-right-side-wrpper{
+    background-image: url("../images/home/air-pods.jpg");
+    height: 580px;
+    background-size: initial;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.tvshow-logo-wrapper{
+    padding: 180px 0 200px;
+}
+.text-violet {
+    color: #7f00ff !important; 
+}
+
+/* Section 5 */
 
 
 

@@ -60,15 +60,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    /* width: 48.5%; */
-    margin: 1% 0.5% 0% 1%; 
-    padding-top: 1px;
-    padding-bottom: 60px;
 }
-/* .left-side-wrapper .logo-wrapper{
-    padding-top: -80px;
-} */
 .fourth-hightlight-wrapper .left-side-wrapper{
     background-image: url("../images/home/watch-series-5.jpg");
     
@@ -78,13 +70,13 @@
     background-image: url("../images/home/apple-card.jpg");
 }
 
-/* .left-side-wrapper{
-  mt-4 mr-3 pt-3 pb-4
-} */
-
-/* .right-side-wrapper{
-  mt-4 ml-3 pt-3 pb-4
-} */
+.description-wrapper{
+    max-width: 430px;
+}
+.col-6 {
+    width: 49% !important;
+    margin: 0 auto !important;
+}
 
 
 
@@ -93,6 +85,7 @@
 /* General Styling*/
 body {
   font-family: "Montserrat", sans-serif;
+  
 }
 a {
   color: #06c;

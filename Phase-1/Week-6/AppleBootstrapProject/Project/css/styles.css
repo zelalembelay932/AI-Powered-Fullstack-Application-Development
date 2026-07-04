@@ -40,8 +40,8 @@
 
 .title-wrapper{
     font-size: 56px;
-}
-.description-wrapper{
+}.description-wrapper{
+    max-width: 430px;
     font-size: 20px;
     /* padding: 1px 0; */
 }
@@ -70,9 +70,7 @@
     background-image: url("../images/home/apple-card.jpg");
 }
 
-.description-wrapper{
-    max-width: 430px;
-}
+
 .col-6 {
     width: 49% !important;
     margin: 0 auto !important;
@@ -104,6 +102,32 @@
 }
 
 /* Section 5 */
+
+
+/* Section 6 start*/
+.sixth-left-side-wrapper{
+    background-image: url(../images/home/macbook-pro.jpg);
+    background-size: initial;
+    background-color: #fafafa;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 580px;
+}
+
+.sixth-right-side-wrpper{
+    
+    background-image: url(../images/home/new-ipad.jpg);
+    background-size: initial;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 580px;
+}
+
+
+
+
+/* Section 6 end*/
 
 
 

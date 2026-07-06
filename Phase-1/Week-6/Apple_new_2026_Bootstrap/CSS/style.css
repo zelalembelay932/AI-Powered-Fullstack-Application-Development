@@ -17,6 +17,19 @@
 .logo img{
     height: 4rem;
 }
+.section-4-right, .section-4-left{
+    background-image: url(../images/home/promo_macbook_pro.jpg);
+    height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+.section-4-left{
+    background-image: url(../images/home/hero_airpods_pro_3.jpg);
+}
+.logo{
+    padding-top: 16rem;
+}
 
 @media (min-width: 735px){
         .second-section, .three-section{

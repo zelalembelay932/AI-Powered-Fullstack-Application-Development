@@ -1,0 +1,34 @@
+.first-section, .second-section, .three-section{
+    background-image: url(../images/home/promo_macbook_air_2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35rem;
+    
+}
+.second-section{
+    background-image: url(../images/home/hero_iphone_family_mobile.jpg);
+}
+.three-section {
+    background-image: url(../images/home/hero_ipad_air_m4_2.jpg);
+    height: 40rem;
+
+}
+.logo img{
+    height: 4rem;
+}
+
+@media (min-width: 735px){
+        .second-section, .three-section{
+            background-image: url(../images/home/hero_iphone_family.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30rem;
+        }
+        .three-section{
+            background-image: url(../images/home/promo_ipad_air_m4.jpg);
+            height: 40rem;
+            
+        }
+}

@@ -27,10 +27,23 @@
 .section-4-left{
     background-image: url(../images/home/hero_airpods_pro_3.jpg);
 }
-.logo{
+/* .logo{
     padding-top: 16rem;
+} */
+
+
+.section-5-right,
+.section-5-left {
+    background-image: url(../images/home/promo_apple_watch_series.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.section-5-left {
+    background-image: url(../images/home/promo_ipad_pro.jpg);
+}
 @media (min-width: 735px){
         .second-section, .three-section{
             background-image: url(../images/home/hero_iphone_family.jpg);

@@ -27,9 +27,9 @@
 .section-4-left{
     background-image: url(../images/home/hero_airpods_pro_3.jpg);
 }
-/* .logo{
-    padding-top: 16rem;
-} */
+.logo img {
+    width: 15%;
+}
 
 
 .section-5-right,
@@ -43,6 +43,20 @@
 
 .section-5-left {
     background-image: url(../images/home/promo_ipad_pro.jpg);
+}
+
+
+.section-6-right,
+.section-6-left {
+    background-image: url(../images/home/promo_iphone_tradein.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-6-left {
+    background-image: url(../images/home/promo_apple_card.jpg);
 }
 @media (min-width: 735px){
         .second-section, .three-section{

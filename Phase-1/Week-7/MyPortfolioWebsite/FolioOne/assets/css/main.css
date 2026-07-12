@@ -44,6 +44,51 @@
   color: var(--accent-color-2);
 }
 
+/* Container for the glowing border */
+.avatar-wrapper {
+  display: inline-block;
+  /* Keeps the wrapper tight to the image size */
+  width: 380px;
+  /* Adjust overall size here */
+  height: 380px;
+  /* Must match width for a perfect circle */
+  border-radius: 50%;
+    margin-left: 7rem !important;
+  /* 1. The Gradient Border */
+  /* Top-left is bright cyan, bottom-right is deep blue */
+  background: linear-gradient(135deg, #00e5ff 10%, #1e50ff 90%);
+
+  /* The padding acts as the thickness of your colored border */
+  padding: 6px;
+  
+  /* 2. The Outer Glow (Border Shadow) */
+  /* We use two shadows to match the cyan and blue colors on their respective sides */
+  box-shadow:
+    -5px -5px 25px rgba(0, 229, 255, 0.4),
+    /* Cyan glow top/left */
+    5px 5px 25px rgba(30, 80, 255, 0.4);
+  /* Blue glow bottom/right */
+}
+
+/* The actual image styling */
+.avatar-wrapper .avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Ensures the image fills the circle without stretching */
+
+  /* 3. The Inner Dark Ring */
+  /* This creates the thin dark gap between the picture and the glowing neon ring */
+  /* border: 4px solid #040812; */
+
+  /* Ensures the border doesn't break the layout size */
+  box-sizing: border-box;
+}
+
+
+
+
 .light-background {
   --background-color: #142027;
   --surface-color: #325264;

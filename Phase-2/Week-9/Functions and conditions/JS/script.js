@@ -287,6 +287,10 @@ console.log("\n ======== Question 8 =========");
 // Step 5 Test
     // 3 * 2 / 2 = 3
 
+
+
+
+
 // function triArea(base, height) {
 //     base = Number(base) 
 //     height = Number(height);
@@ -309,35 +313,35 @@ console.log("\n ======== Question 8 =========");
     // 1, User Andun asegebto andun bitew eg:- base asegebto height beresa
 
 
-function triArea (base, height) {
+// function triArea (base, height) {
 
-    if (base == null || base === "") return "Please enter the base.";
-    if (height == null || height === "") return "Please enter the height.";
+//     if (base == null || base === "") return "Please enter the base.";
+//     if (height == null || height === "") return "Please enter the height.";
 
-    base = Number(base);
-    height = Number(height);
+//     base = Number(base);
+//     height = Number(height);
 
-    // if(Number.isNaN(base) || Number.isNaN(height)) {
-    //     return "Base and height must be valid numbers.";
-    // }
+//     // if(Number.isNaN(base) || Number.isNaN(height)) {
+//     //     return "Base and height must be valid numbers.";
+//     // }
 
-    if (isNaN(base) || isNaN(height)) {
-        return "Please enter a valid number.";
-    }
+//     if (isNaN(base) || isNaN(height)) {
+//         return "Please enter a valid number.";
+//     }
 
 
-    // if (typeof base !== "number" || typeof height !== "number") {
-    //     return " base and height must be numbers.";
-    // }
+//     // if (typeof base !== "number" || typeof height !== "number") {
+//     //     return " base and height must be numbers.";
+//     // }
 
-  return (base * height) / 2;
-}
+//   return (base * height) / 2;
+// }
 
-console.log(triArea(0, 2));   // 3
-console.log(triArea(7, 4));   // 14
-console.log(triArea(-4, 6));
-console.log(triArea("5" ));
-console.log(triArea("zele", "hh" ));
+// console.log(triArea(0, 2));   // 3
+// console.log(triArea(7, 4));   // 14
+// console.log(triArea(-4, 6));
+// console.log(triArea("5" ));
+// console.log(triArea("zele", "hh" ));
 
 // Problem :- 
 // 1, base or height check emnadergebet bota lay kelay ena ketach sihon lyunet alew ( Kelay sihon ayseram)
@@ -348,6 +352,76 @@ console.log(triArea("zele", "hh" ));
 
 
 
+
+
+
+console.log("\n ======== Question 9 =========");
+
+//1, Understand the Problem
+    // Create a function that returns the total number of legs of all the animals. The farmer has:
+    //Chickens = 2 legs
+    // Cows = 4 legs
+    // Pigs = 4 legs
+
+    // Takes three parameters:
+        // chickens
+        // cows
+        // pigs
+    // Calculates the total number of legs.
+    // Returns the total
+
+
+// 2, soli ti on paper
+    //  Total Legs = (chickens × 2) + (cows × 4) + (pigs × 4)
+
+// 3, Write Pseudo code
+
+//  Step 1 Create a function named animals and Accept three parameters
+        // function animals(chickens, cows, pigs){};
+
+
+// Step 3 
+        // Convert each value to a number.
+
+// Step 4 Check if any value is missing.
+
+// Step 5 Check if all values are valid numbers.
+
+// Step 6 Multiply:
+    // chickens * 2
+    // cows * 4
+    // pigs * 4
+
+// Step 7 Add the three results together.
+// Step 8 Return the total.
+
+
+
+
+function animals(chickens, cows, pigs) {
+    if (chickens == null || chickens === "") return "Please enter the number of chickens.";
+    if (cows == null || cows === "") return "Please enter the number of cows.";
+    if (pigs == null || pigs === "") return "Please enter the number of pigs.";
+
+
+    chickens = Number(chickens);
+    cows = Number(cows);
+    pigs = Number(pigs);
+
+    if (Number.isNaN(chickens) || Number.isNaN(cows) || Number.isNaN(pigs)) {
+        return "Please enter valid numbers.";
+    }
+
+    return chickens * 2 + cows * 4 + pigs * 4;
+}
+
+console.log(animals(2, 3, 5)); // 36
+console.log(animals(0, 0, 0)); // 0
+console.log(animals("2", "3", "5")); // 36
+console.log(animals("", 3, 5)); // Please enter the number of chickens.
+console.log(animals(2, "", 8)); // Please enter the number of cows.
+console.log(animals(4, 5, "")); // Please enter the number of pigs.
+console.log(animals(2, "zzz", 5));
 
 
 

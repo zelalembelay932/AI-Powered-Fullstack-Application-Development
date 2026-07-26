@@ -100,6 +100,39 @@ console.log("\n ======== Question 4 =========");
 // myFourth([5, 10, 15]);
 // myFourth(["Red", "Blue", "Green"]);
 
+console.log("\n ======== Question 5 =========");
+ //1,  Function Declaration
+// function myFifth (array) {
+//   console.log(array[0] + array[1]);
+// }
+// myFifth([10, 20]);
+
+// 2, Function Exprerssion
+// const myFifth = function (array) {
+//   const [num1, num2] = array;
+//   console.log(num1 + num2);
+// }
+// myFifth([100, 200]);
+
+// 3, Arrow Function
+// function myFifth (array) {}
+// const myFifth = function (array) {}
+
+// const myFifth = (array) => {
+//   let sum = 0;
+
+//   for (const number of array){
+//     // sum += number;
+//     // sum = sum + number;
+//   }
+//   console.log(sum);
+// }
+
+// myFifth([12, 18])
+
+
+
+
 
 
 

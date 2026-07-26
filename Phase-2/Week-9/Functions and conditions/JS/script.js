@@ -226,7 +226,7 @@ console.log("\n ======== Question 7 =========");
 //  Step 1 Create a function named increments
         // function increments(number){};
 // Step 2 
-        // Check minutes value is NOT a valid number
+        // Check number value is NOT a valid number
 // Step 3 Add 1 and Return the answer.
         // number + 1
 // Step 4 Call the function.
@@ -254,7 +254,96 @@ console.log("\n ======== Question 7 =========");
 // console.log(increments(6));
 // console.log(increments(-4));
 // console.log(increments("5"));
-console.log(increments("zele"));
+// console.log(increments("zele"));
+
+
+
+
+
+
+
+console.log("\n ======== Question 8 =========");
+
+
+//1, Understand the Problem
+    // Accepts two parameters: base & height
+    // Calculates the area of a triangle.
+    // Returns the result.
+
+
+// 2, soli ti on paper
+//  Area = base * height / 2
+    // 3 * 2 / 2 = 3
+// 3, Write Pseudo code
+
+//  Step 1 Create a function named triArea
+        // function triArea(base, height){};
+// Step 2 
+        // Check area value is NOT a valid number
+        // 
+// Step 3 Multiply base by height and Divide the result by 2
+// Step 4 Call the function.
+        // console.log(triArea(base, height)));
+// Step 5 Test
+    // 3 * 2 / 2 = 3
+
+// function triArea(base, height) {
+//     base = Number(base) 
+//     height = Number(height);
+
+//     // if (isNaN(base) || isNaN(height)) {
+//     //     return "Please enter a valid number.";
+//     // }
+
+//     if (typeof base !== "number" || typeof height !== "number") {
+//         return " base and height must be numbers.";
+//     }
+//     return (base * height) / 2;
+// }
+// console.log(triArea(0, 2));   // 3
+// console.log(triArea(7, 4));   // 14
+// console.log(triArea(-4, -8));
+// console.log(triArea("5", "10"));
+// console.log(triArea("zele"));
+//  problem:-
+    // 1, User Andun asegebto andun bitew eg:- base asegebto height beresa
+
+
+function triArea (base, height) {
+
+    if (base == null || base === "") return "Please enter the base.";
+    if (height == null || height === "") return "Please enter the height.";
+
+    base = Number(base);
+    height = Number(height);
+
+    // if(Number.isNaN(base) || Number.isNaN(height)) {
+    //     return "Base and height must be valid numbers.";
+    // }
+
+    if (isNaN(base) || isNaN(height)) {
+        return "Please enter a valid number.";
+    }
+
+
+    // if (typeof base !== "number" || typeof height !== "number") {
+    //     return " base and height must be numbers.";
+    // }
+
+  return (base * height) / 2;
+}
+
+console.log(triArea(0, 2));   // 3
+console.log(triArea(7, 4));   // 14
+console.log(triArea(-4, 6));
+console.log(triArea("5" ));
+console.log(triArea("zele", "hh" ));
+
+// Problem :- 
+// 1, base or height check emnadergebet bota lay kelay ena ketach sihon lyunet alew ( Kelay sihon ayseram)
+        //  base = Number(base);
+        //  height = Number(height);
+
 
 
 
@@ -263,14 +352,6 @@ console.log(increments("zele"));
 
 
 console.log("\n ======== Question  =========");
-
-
-
-
-
-
-
-
 
 
 

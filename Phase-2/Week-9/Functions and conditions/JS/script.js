@@ -77,6 +77,31 @@ console.log("\n ======== Question 3 =========");
 
 
 console.log("\n ======== Question 4 =========");
+//1,  Function Declaration
+// function myFourth (array) {
+//   console.log(array[0]);
+// }
+// myFourth([10, 20, 30, 40]);
+// myFourth(["Apple", "Banana", "Orange"]);
+
+// 2, Function Exprerssion
+// const myFourth = function (array){
+//   console.log(array[0]);
+//   console.log(array.at(0)); // second option
+// }
+// myFourth([100, 200, 300]);
+// myFourth(["Dog", "Cat", "Bird"]);
+
+// 3, Arrow Function
+// const myFourth = (array) => {
+//   const [first] = array;
+//   console.log(first);
+// }
+// myFourth([5, 10, 15]);
+// myFourth(["Red", "Blue", "Green"]);
+
+
+
 
 
 

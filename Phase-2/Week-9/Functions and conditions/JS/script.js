@@ -32,9 +32,9 @@ console.log("\n ======== Question 2 =========");
 // A parameter is a variable inside the function definition that receives a value.
 // An argument is the actual value passed to the function when it is called.
 
-function mySecond(parameter) {
-    console.log(parameter);
-}
+// function mySecond(parameter) {
+//     console.log(parameter);
+// }
 
 // mySecond("JavaScript Function Declaration");
 // mySecond(100);
@@ -57,19 +57,26 @@ function mySecond(parameter) {
 console.log("\n ======== Question 3 =========");
 
 //1,  Function Declaration
-
-function myThird(parameter) {
-  mySecond(parameter); // Calls mySecond to print the value
-}
-myThird("JavaScript");
+// function myThird(parameter) {
+//   mySecond(parameter); // Calls mySecond to print the value
+// }
+// myThird(" myThird JavaScript Function Declaration");
 
 // 2, Function Exprerssion
+// const myThird = function (parameter) {
+//    mySecond(parameter);
+// };
+// myThird("myThird JavaScript Function Exprerssion");
+
+// 3, Arrow Function
+// const myThird = (parameter) => {
+//   mySecond(parameter);
+// };
+// myThird("myThird JavaScript Arrow Function");
 
 
 
-
-
-
+console.log("\n ======== Question 4 =========");
 
 
 

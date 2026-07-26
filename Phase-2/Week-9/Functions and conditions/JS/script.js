@@ -146,7 +146,8 @@ console.log("\n ======== Question 6 =========");
 //  5 * 60 = 300
 //  2 * 60 = 120
 
-// 3, Write Pseudo code 
+// 3, Write Pseudo code
+
 //  Step 1 Create a function named minutesToSeconds
         // function minutesToSeconds(minutes){};
 // Step 2 
@@ -160,7 +161,7 @@ console.log("\n ======== Question 6 =========");
     // 2 * 60 = 120
 
 
-
+// 4,  Pseudo code to JavaScript
 // function minutesToSeconds(minutes){
 //   //  Step 1 Create a function named minutesToSeconds
 //     if (typeof minutes !== "number") {
@@ -207,8 +208,75 @@ console.log("\n ======== Question 6 =========");
 
 console.log("\n ======== Question 7 =========");
 
+//1, Understand the Problem
+    // We need to create a function:
+    // Takes one number as input.
+    // Increases the number by 1.
+    // Returns the new value.
 
-// console.log("\n ======== Question  =========");
+// 5 number after after adding 1 to 6
+
+// 2, soli ti on paper
+//  0 + 1 = 1
+//  5 + 1 = 6
+//  -5 + 1 = -4
+
+// 3, Write Pseudo code
+
+//  Step 1 Create a function named increments
+        // function increments(number){};
+// Step 2 
+        // Check minutes value is NOT a valid number
+// Step 3 Add 1 and Return the answer.
+        // number + 1
+// Step 4 Call the function.
+        // console.log(increments(5));
+// Step 5 Test
+    //  0 + 1 = 1
+    //  5 + 1 = 6
+    //  -5 + 1 = -4
+
+
+// 4,  Pseudo code to JavaScript
+
+// function increments(number){
+//   number = Number(number);
+//   if (isNaN(number)) {
+//     return "Please enter a valid number.";
+//   }
+// //   if (typeof number !== "number") {
+// //     return "Please enter a valid number.";
+// //   }
+
+//   return number + 1;
+// };
+// console.log(increments(0));
+// console.log(increments(6));
+// console.log(increments(-4));
+// console.log(increments("5"));
+console.log(increments("zele"));
+
+
+
+
+
+
+
+console.log("\n ======== Question  =========");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let firstName = "Zelalem ";
 // let lastName = "Belay";

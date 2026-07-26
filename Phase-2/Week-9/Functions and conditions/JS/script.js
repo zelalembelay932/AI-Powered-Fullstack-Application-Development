@@ -131,11 +131,81 @@ console.log("\n ======== Question 5 =========");
 // myFifth([12, 18])
 
 
+console.log("\n ======== Question 6 =========");
+// Write a function that takes an integer minutes and converts it to seconds.
+
+//1, Understand the Problem
+    // We need to create a function that:
+    // Takes one parameter called minutes
+    // Converts the minutes into seconds
+    // Returns the result
+
+// 1 minute = 60 seconds So seconds = minutes × 60
+
+// 2, soli ti on paper
+//  5 * 60 = 300
+//  2 * 60 = 120
+
+// 3, Write Pseudo code 
+//  Step 1 Create a function named minutesToSeconds
+        // function minutesToSeconds(minutes){};
+// Step 2 
+        // Check minutes value is NOT a valid number
+// Step 3 Multiply the minutes by 60 and Return the answer.
+        // minutes × 60
+// Step 4 Call the function.
+        // console.log(minutesToSeconds(5));
+// Step 5 Test
+    // 5 * 60 = 300
+    // 2 * 60 = 120
 
 
 
+// function minutesToSeconds(minutes){
+//   //  Step 1 Create a function named minutesToSeconds
+//     if (typeof minutes !== "number") {
+//     return "Please enter a valid number.";
+//     }
+//     if (minutes < 0) {
+//     return "Minutes cannot be negative.";
+//     } // Step 2
+//   // Check minutes value is NOT a valid number
+
+//     return minutes * 60; //  Step 3
+// };
+
+// console.log(minutesToSeconds(5)); // Step 4
+// console.log(minutesToSeconds("2")); // Step 4
+// console.log(minutesToSeconds(-5));
+// console.log(minutesToSeconds("hello"));
+
+// // Step 5 Test Passd
 
 
+// const minutesToSeconds = (minutes) => {
+// //   //  Step 1 Create a function named minutesToSeconds
+//     minutes = Number(minutes);
+//     // Convert the input into a number
+//     if (isNaN(minutes)) {
+//         return "Please enter a valid number.";
+//     }
+//     if (minutes < 0) {
+//         return "Minutes cannot be negative.";
+//     }
+// //   // Check minutes value is NOT a valid number
+
+//   return minutes * 60;
+// }
+
+
+// console.log(minutesToSeconds("2"));
+// console.log(minutesToSeconds("10"));
+// console.log(minutesToSeconds("abc"));
+// console.log(minutesToSeconds("-5"));
+
+
+
+console.log("\n ======== Question 7 =========");
 
 
 // console.log("\n ======== Question  =========");
@@ -191,12 +261,6 @@ console.log("\n ======== Question 5 =========");
 
 // console.log("\n ======== =========");
 
-
-// function convertMinutesToSeconds(minutes) {
-//     return minutes * 60;
-// }
-
-// console.log(convertMinutesToSeconds(2));
 
 
 

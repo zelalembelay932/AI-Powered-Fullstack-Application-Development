@@ -175,30 +175,30 @@ console.log("\n ======== Question 6 =========");
 // 4,  Pseudo code to JavaScript
 
 
-const minutesToSeconds = (minutes) => {
-  //  Step 1 Create a function named minutesToSeconds
-    minutes = Number(minutes);
-    // Convert the input into a number
-    if (isNaN(minutes)) {
-        return "Please enter a valid number.";
-    }else if (minutes < 0) {
-        return "Minutes cannot be negative.";
-    }else if (!Number.isInteger(minutes)){
-        return "Minutes cannot be decimal.";
-    }
-//   // Check minutes value is NOT a valid number  
-    return minutes * 60;
-}
+// const minutesToSeconds = (minutes) => {
+//   //  Step 1 Create a function named minutesToSeconds
+//     minutes = Number(minutes);
+//     // Convert the input into a number
+//     if (isNaN(minutes)) {
+//         return "Please enter a valid number.";
+//     }else if (minutes < 0) {
+//         return "Minutes cannot be negative.";
+//     }else if (!Number.isInteger(minutes)){
+//         return "Minutes cannot be decimal.";
+//     }
+// //   // Check minutes value is NOT a valid number  
+//     return minutes * 60;
+// }
 
-// 5 Test Passd
+// // 5 Test Passd
 
-console.log(minutesToSeconds(1));
-console.log(minutesToSeconds("2"));
-console.log(minutesToSeconds("10"));
-console.log(minutesToSeconds("abc"));
-console.log(minutesToSeconds("-5"));
-console.log(minutesToSeconds(3.5));
-console.log(minutesToSeconds("-2.4"));
+// console.log(minutesToSeconds(1));
+// console.log(minutesToSeconds("2"));
+// console.log(minutesToSeconds("10"));
+// console.log(minutesToSeconds("abc"));
+// console.log(minutesToSeconds("-5"));
+// console.log(minutesToSeconds(3.5));
+// console.log(minutesToSeconds("-2.4"));
 
 // ploblem 
     //1,  if we are add 3.5 number what happen check it
@@ -292,6 +292,7 @@ console.log("\n ======== Question 8 =========");
 
 
 
+// 4,  Pseudo code to JavaScript
 // function triArea(base, height) {
 //     base = Number(base);
 //     height = Number(height);
@@ -401,6 +402,7 @@ console.log("\n ======== Question 9 =========");
 
 
 
+// 4,  Pseudo code to JavaScript
 // function animals(chickens, cows, pigs) {
 
 //     if (chickens == null || chickens === "") return "Please enter the number of chickens.";
@@ -459,5 +461,67 @@ console.log("\n ======== Question 9 =========");
 
 // Problem :-
     // 1, animals(2, "zzz", 5) ezi gar missed yaderegenew ye ye cow nw, only "Please enter valid numbers of cow" emil comment endiyametaln madreg alebegn
+
+console.log("\n ======== Question 10 =========");
+//1, Understand the Problem
+        // Accepts an array containing exactly two numbers.
+        // Returns 3 times the first element of the array.
+        // If the input is invalid, return an appropriate error message.
+        // Return 3 times the first element
+
+// 2, solve it on paper
+        //  threeTimesFirst([2, 5]); 2  * 3 =  6
+        // threeTimesFirst([10, 8]); 10 * 3 = 30
+        // threeTimesFirst([7, 20]); 7 * 3 = 21
+
+// 3, Write Pseudo code
+        // step 1
+            // Create a function named threeTimesFirst
+                // function threeTimesFirst(arr)
+        // Step 2
+            // Check if input is an array
+        // Step 3
+            // Check array contains exactly two elements
+        // Step 4
+            // Convert both elements to numbers.
+        // Step 5
+            // Check if the first and second element is a valid number.
+        // Step 6 
+            // Multiply the first element by 3 then 
+            // Return 3 times the first element
+
+
+// 4,  Pseudo code to JavaScript
+
+
+const threeTimesFirst = (arr) => {
+
+  // Check if input is an array
+    if (!Array.isArray(arr)) {
+        return "Please  enter an array.";
+    // Check array contains exactly two elements
+    }else if (arr.length !== 2){
+        return "Check array contains exactly two elements"
+    }
+    
+    let first = Number(arr[0]);
+    let second = Number(arr[1]);
+
+    if (isNaN(first)) {
+        return "The First element must be a valid number.";
+    }else if (isNaN(second)) {
+        return "The Second element must be a valid number.";
+    }
+    return first * 3;
+} 
+
+// 5, Test
+console.log(threeTimesFirst([2, 5])); //6
+console.log(threeTimesFirst(["7", "20"])); //21
+console.log(threeTimesFirst());  // Please enter an array.
+console.log(threeTimesFirst([]));  // Array must contain exactly two elements.
+console.log(threeTimesFirst([5])); // Array must contain exactly two elements.
+console.log(threeTimesFirst(["abc", 8])); // The first element must be a valid number.
+console.log(threeTimesFirst([5, "xyz"])); // The second element must be a valid number.
 
 console.log("\n ======== Question 10 =========");

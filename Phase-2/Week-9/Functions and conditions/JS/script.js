@@ -144,40 +144,40 @@ console.log("\n ======== Question 6 =========");
 //Question 6:- Write a function that takes an integer minutes and converts it to seconds.
 
 //1, Understand the Problem
-    // We need to create a function that:
-    // Takes one parameter called minutes
-    // Converts the minutes into seconds
-    // Returns the result
+        // We need to create a function that:
+        // Takes one parameter called minutes
+        // Converts the minutes into seconds
+        // Returns the result
 
-// 1 minute = 60 seconds So seconds = minutes × 60
+        // 1 minute = 60 seconds So seconds = minutes × 60
 
 // 2, solve on paper
-//  5 * 60 = 300
-//  2 * 60 = 120
+        //  5 * 60 = 300
+        //  2 * 60 = 120
 
 // 3, Write Pseudo code
 
-//  Step 1 Create a function named minutesToSeconds
-        // function minutesToSeconds(minutes){};
-// Step 2 
-        // we have string value conver to number
-        // Check minutes value is NOT a valid number  
-        // check Minutes cannot be negative.
-// Step 3 Multiply the minutes by 60 and Return the answer.
-        // minutes × 60
-// Step 4 Call the function.
-        // console.log(minutesToSeconds(5));
-// Step 5 Test
-    // 5 * 60 = 300
-    // 2 * 60 = 120
+        // Step 1 Create a function named minutesToSeconds
+                // function minutesToSeconds(minutes){};
+        // Ste p 2
+                // we have string value conver to number
+                // Check minutes value is NOT a valid number  
+                // check Minutes cannot be negative.
+       // Step 3 Multiply the minutes by 60 and Return the answer.
+                // minutes * 60
+        // Step 4 Call the function.
+                // console.log(minutesToSeconds(5));
+        // Step 5 Test
+                // 5 * 60 = 300
+                // 2 * 60 = 120
 
 
 // 4,  Pseudo code to JavaScript
-
-
+// function minutesToSeconds(minutes){};
+// const minutesToSeconds = function (minutes) {};
 // const minutesToSeconds = (minutes) => {
 //   //  Step 1 Create a function named minutesToSeconds
-//     minutes = Number(minutes);
+//     minutes = Number(minutes); 
 //     // Convert the input into a number
 //     if (isNaN(minutes)) {
 //         return "Please enter a valid number.";
@@ -186,7 +186,7 @@ console.log("\n ======== Question 6 =========");
 //     }else if (!Number.isInteger(minutes)){
 //         return "Minutes cannot be decimal.";
 //     }
-// //   // Check minutes value is NOT a valid number  
+// //   // Check minutes value is NOT a valid number
 //     return minutes * 60;
 // }
 
@@ -392,12 +392,12 @@ console.log("\n ======== Question 9 =========");
 // Step 4 Check if all values are valid numbers.
 
 // Step 5 Multiply:
-    // chickens * 2
+    // chickens *. 2
     // cows * 4
     // pigs * 4
 
 // Step 6 Add the three results together.
-// Step 7 Return the total.
+// Step 7 Return the total
 
 
 
@@ -434,24 +434,19 @@ console.log("\n ======== Question 9 =========");
 
 //     if (isNaN(chickens)) {
 //         return "Please enter a valid number of chickens.";
-//     }
-
-//     if (isNaN(cows)) {
+//     }else if (isNaN(cows)) {
 //         return "Please enter a valid number of cows.";
-//     }
-
-//     if (isNaN(pigs)) {
+//     }else if (isNaN(pigs)) {
 //         return "Please enter a valid number of pigs.";
 //     }
     
-  
 
 //     return chickens * 2 + cows * 4 + pigs * 4;
 // }
 
-// console.log(animals(2, 3, 5)); // 36
+// console.log(animals(22, 33, 55)); // 36
 // console.log(animals(0, 0, 0)); // 0
-// console.log(animals("2", "3", "-5")); // 36
+// console.log(animals("22", "33", "55")); // 36
 // console.log(animals("2", "-3", "5")); // 36
 // console.log(animals("", 3, 5)); // Please enter the number of chickens.
 // console.log(animals(2, "", 8)); // Please enter the number of cows.
@@ -494,34 +489,105 @@ console.log("\n ======== Question 10 =========");
 // 4,  Pseudo code to JavaScript
 
 
-const threeTimesFirst = (arr) => {
+// const threeTimesFirst = (arr) => {
 
-  // Check if input is an array
-    if (!Array.isArray(arr)) {
-        return "Please  enter an array.";
-    // Check array contains exactly two elements
-    }else if (arr.length !== 2){
-        return "Check array contains exactly two elements"
-    }
+//   // Check if input is an array
+//     if (!Array.isArray(arr)) {
+//         return "Please  enter an array.";
+//     // Check array contains exactly two elements
+//     }else if (arr.length !== 2){
+//         return "Check array contains exactly two elements"
+//     }
     
-    let first = Number(arr[0]);
-    let second = Number(arr[1]);
+//     let first = Number(arr[0]);
+//     let second = Number(arr[1]);
 
-    if (isNaN(first)) {
-        return "The First element must be a valid number.";
-    }else if (isNaN(second)) {
-        return "The Second element must be a valid number.";
-    }
-    return first * 3;
-} 
+//     if (isNaN(first)) {
+//         return "The First element must be a valid number.";
+//     }else if (isNaN(second)) {
+//         return "The Second element must be a valid number.";
+//     }
+//     return first * 3;
+// } 
 
-// 5, Test
-console.log(threeTimesFirst([2, 5])); //6
-console.log(threeTimesFirst(["7", "20"])); //21
-console.log(threeTimesFirst());  // Please enter an array.
-console.log(threeTimesFirst([]));  // Array must contain exactly two elements.
-console.log(threeTimesFirst([5])); // Array must contain exactly two elements.
-console.log(threeTimesFirst(["abc", 8])); // The first element must be a valid number.
-console.log(threeTimesFirst([5, "xyz"])); // The second element must be a valid number.
+// // 5, Test
+// console.log(threeTimesFirst([2, 5])); //6
+// console.log(threeTimesFirst(["7", "20"])); //21
+// console.log(threeTimesFirst());  // Please enter an array.
+// console.log(threeTimesFirst([]));  // Array must contain exactly two elements.
+// console.log(threeTimesFirst([5])); // Array must contain exactly two elements.
+// console.log(threeTimesFirst(["abc", 8])); // The first element must be a valid number.
+// console.log(threeTimesFirst([5, "xyz"])); // The second element must be a valid number.
 
-console.log("\n ======== Question 10 =========");
+console.log("\n ======== Question 11 =========");
+
+//1, Understand the Problem
+        // Write a JavaScript function that isSameNum
+        // Accepts two parameters:- num1 and num2
+        // Compares the two values
+        // Returns: 
+                // if they are equal:- true
+                //  otherwise. :- False
+   
+// 2, solve it on paper
+        //  isSameNum(4, 8);      // false
+        // isSameNum(2, 2);      // true
+        // isSameNum(-5, -5);    // true
+
+// 3, Write Pseudo code
+        // step 1
+            // Create a function named isSameNum
+                // function isSameNum(num1, num2)
+        // Step 2
+            // Convert both values to numbers.
+        // Step 3
+            // Check whether each value is a valid number.
+        // Step 4
+        // Compare the values
+            // Use an if...else  statement
+            // use Ternary Operator ? ... :
+        // Step 5 
+            // Return the result
+
+
+// 4,  Pseudo code to JavaScript
+
+// const SameNum = function (num1, num2) {
+//     if (num1 == undefined || num1 === "") return "Please enter the first number.";
+//     if (num2 == undefined || num2 === "") return "Please enter the second number.";
+
+
+//     num1 = Number(num1);
+//     num2 = Number(num2);
+    
+//     if (Number.isNaN(num1)) {
+//         return "The first value must be a valid number.";
+//     }else if(Number.isNaN(num2)){
+//         return "The Second value must be a valid number.";
+//     }
+
+//     // if(num1 === num2){
+//     //     return true;
+//     // }else {
+//     //     return false;
+//     // }
+
+//     // Ternary Operator
+//     return num1 === num2 ? true : false;
+
+
+// };
+
+
+// // 5, Test Cases
+// console.log(SameNum(4, 8));        // false
+// console.log(SameNum(2, 2));        // true
+// console.log(SameNum(2, -2));        // false
+// console.log(SameNum(-5, -5));      // true
+// console.log(SameNum("5", 5));      // true
+// console.log(SameNum());            // Please enter the first value.
+// console.log(SameNum(5));           // Please enter the second value.
+// console.log(SameNum("abc", 5));    // The first value must be a valid number.
+// console.log(SameNum(5, "xyz"));    // The second value must be a valid number.
+
+console.log("\n ======== Question 12 =========");

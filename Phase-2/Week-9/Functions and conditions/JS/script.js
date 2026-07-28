@@ -732,4 +732,86 @@ console.log("\n ======== Question 13 =========");
 // console.log(EvenOrOdd(""));       // Please enter a number.
 // console.log(EvenOrOdd("abc"));    // Please enter a valid number.
 
-console.log("\n ======== Question 13 =========");
+console.log("\n ======== Question 14 =========");
+//1, Understand the Problem
+        // Write a JavaScript function that getGrade
+        // Accepts two parameters:- score
+        // Check if the input is missing.
+        // Convert the input to a number.
+        // Invalid score" if the score is above 100 or below 0
+        // "Grade A" if the score is between 90 and 100 (inclusive).
+        // "Grade B" if the score is between 80 and 89 (inclusive).
+        // "Grade C" if the score is below 80
+
+        // Returns: 
+                // Returns the correct grade based on the score.
+                //  otherwise. :- odd
+                // Use a Ternary Operator (? :) for the conditional statement.
+
+// 2, solve it on paper
+        // getGrade(95);      // "Grade A"
+        // getGrade(85);      // "Grade B"
+        // getGrade(79);      // "Grade C"
+        // getGrade(101);     // "Invalid score"
+        // getGrade(-5);      // "Invalid score"
+
+// 3, Write Pseudo code
+        // step 1
+            // Create a function named getGrade
+                // function getGrade(score)
+        // Step 2
+            // Check if the input is missing
+        // Step 3
+            // Convert the input to a number.
+            // Check if the input is a valid number.
+        // Step 4
+            // Use nested ternary operators or if...else statement to determine the result
+                // If the score is less than 0 or greater than 100, return "Invalid score"
+                // Else if the score is 90 or above, return "Grade A".
+                // Else if the score is 80 or above, return "Grade B".
+                // Otherwise, return "Grade C"
+        // Step 5 
+            // Return the result
+
+
+// 4,  Pseudo code to JavaScript
+function getGrade(score) {
+    // Check if input is missing
+    if (score === undefined || score === "") {
+        return "Please enter a score.";
+    }
+    // Convert to number
+    if (score = Number(score)){
+
+    }else if (Number.isNaN(score)) {
+        return "Please enter a valid number.";
+    }   // Validate input
+
+    // if...else statement
+
+    // if (score < 0 || score > 100){
+    //     return "Invalid Score";
+    // }else if(score >= 90){
+    //     return "Grade A";
+    // }else if(score >= 80){
+    //     return "Grade B";
+    // }else{
+    //     return "Grade C";
+    // }
+
+    // Ternary Operator
+    return score < 0 || score > 100 ? "Invalid Score" : score >= 90 ? "Grade A" : score >= 80 ? "Grade B" : "Grade C";
+}
+
+
+// 5, Test Cases
+
+console.log(getGrade(92));      // Grade A
+console.log(getGrade(80));      // Grade B
+console.log(getGrade(79));      // Grade C
+console.log(getGrade(101));     // Invalid score
+console.log(getGrade(-5));      // Invalid score
+console.log(getGrade("92"));    // Grade A
+console.log(getGrade());        // Please enter a score.
+console.log(getGrade(""));      // Please enter a score.
+console.log(getGrade("abc"));   // Please enter a valid number.

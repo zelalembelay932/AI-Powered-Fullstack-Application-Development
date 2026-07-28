@@ -541,7 +541,7 @@ console.log("\n ======== Question 11 =========");
         // Step 2
             // Convert both values to numbers.
         // Step 3
-            // Check whether each value is a valid number.
+            // Check each value is a valid number.
         // Step 4
         // Compare the values
             // Use an if...else  statement
@@ -591,3 +591,74 @@ console.log("\n ======== Question 11 =========");
 // console.log(SameNum(5, "xyz"));    // The second value must be a valid number.
 
 console.log("\n ======== Question 12 =========");
+//1, Understand the Problem
+        // Write a JavaScript function that divisible
+        // Accepts two parameters:- num
+        // Checks whether the number is divisible by 100
+        // Returns: 
+                // if it is divisible by 100 :- true
+                //  otherwise. :- False
+                // Use a Ternary Operator (? :) for the conditional statement.
+   
+// 2, solve it on paper
+        //  divisible(25);      // false
+        // divisible(100);      // true
+        // divisible(-200);    // true
+
+// 3, Write Pseudo code
+        // step 1
+            // Create a function named divisible
+                // function divisible(num)
+        // Step 2
+            // Check if the input is missing
+        // Step 3
+            // Convert the input to a number.
+            // Check if the input is a valid number.
+        // Step 4
+            // Use the modulus operator (%) the number is divisible by 100
+        // Compare the values
+            // Use an if...else  statement
+            // use Ternary Operator num % 100 === 0 ? ... : 
+        // Step 5 
+            // Return the result
+
+
+// 4,  Pseudo code to JavaScript
+
+// function divisible(num){
+
+//      // Check if input is missing
+//     if (num == null || num === "")
+//         return "Please enter the first number.";
+
+//     //convert to number
+//     num = Number(num);
+
+//     //check valid number
+//     if(Number.isNaN(num)){
+//         return "Please enter a valid number.";
+//     }
+//     // if...else  statement
+//     // if (num % 100 === 0){
+//     //     return true;
+//     // }else{
+//     //     return false;
+//     // }
+//     // Ternary Operator 
+//     return num % 100 === 0 ? true : false;
+
+// }
+// // 5, Test
+
+
+// // Test Cases
+// console.log(divisible(100));      // true
+// console.log(divisible(1000));     // true
+// console.log(divisible(25));       // false
+// console.log(divisible(-200));     // true
+// console.log(divisible("300"));    // true
+// console.log(divisible());         // Please enter a number.
+// console.log(divisible(""));       // Please enter a number.
+// console.log(divisible("abc"));    // Please enter a valid number.
+
+console.log("\n ======== Question 13 =========");

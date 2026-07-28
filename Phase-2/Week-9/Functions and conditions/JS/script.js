@@ -594,7 +594,7 @@ console.log("\n ======== Question 12 =========");
 //1, Understand the Problem
         // Write a JavaScript function that divisible
         // Accepts two parameters:- num
-        // Checks whether the number is divisible by 100
+        // Checks  the number is divisible by 100
         // Returns: 
                 // if it is divisible by 100 :- true
                 //  otherwise. :- False
@@ -660,5 +660,76 @@ console.log("\n ======== Question 12 =========");
 // console.log(divisible());         // Please enter a number.
 // console.log(divisible(""));       // Please enter a number.
 // console.log(divisible("abc"));    // Please enter a valid number.
+
+console.log("\n ======== Question 13 =========");
+//1, Understand the Problem
+        // Write a JavaScript function that EvenOrOdd
+        // Accepts two parameters:- num
+        // Check if the input is missing.
+        // Convert the input to a number.
+        // check the number is even or odd.
+        // Returns: 
+                // if the number is divisible by 2 :- even
+                //  otherwise. :- odd
+                // Use a Ternary Operator (? :) for the conditional statement.
+
+// 2, solve it on paper
+        // EvenOrOdd(2);      // "even"
+        // EvenOrOdd(7);      // "odd"
+        // EvenOrOdd(0);      // "even"
+        // EvenOrOdd(-5);     // "odd"
+        // EvenOrOdd(-8);     // "even"
+
+// 3, Write Pseudo code
+        // step 1
+            // Create a function named EvenOrOdd
+                // function EvenOrOdd(num)
+        // Step 2
+            // Check if the input is missing
+        // Step 3
+            // Convert the input to a number.
+            // Check if the input is a valid number.
+        // Step 4
+            // Use the modulus operator (%) the number is divisible by 2
+        // Compare the values
+            // Use an if...else  statement
+            // use Ternary Operator num % 2 === 0 ? ... : 
+        // Step 5 
+            // Return the result
+
+
+// 4,  Pseudo code to JavaScript
+
+// const EvenOrOdd = (num) => {
+//     // Check if input is missing
+//     if (num === undefined || num === "") {
+//         return "Please enter a number.";
+//     }
+//     // Convert to number
+//     num = Number(num);
+//      //Check Valid input
+//     if (Number.isNaN(num)) {
+//         return "Please enter a valid number.";
+//     }
+
+//     // if (num % 2 === 0){
+//     //     return "even";
+//     // }else{
+//     //     return "odd";
+//     // }
+//     return num % 2 === 0 ? "even" : "odd";
+// }
+
+// //5, Test Cases
+// console.log(EvenOrOdd(2));        // even
+// console.log(EvenOrOdd(7));        // odd
+// console.log(EvenOrOdd(0));        // even
+// console.log(EvenOrOdd(-5));       // odd
+// console.log(EvenOrOdd(-8));       // even
+// console.log(EvenOrOdd("10"));     // even
+// console.log(EvenOrOdd("15"));     // odd
+// console.log(EvenOrOdd());         // Please enter a number.
+// console.log(EvenOrOdd(""));       // Please enter a number.
+// console.log(EvenOrOdd("abc"));    // Please enter a valid number.
 
 console.log("\n ======== Question 13 =========");

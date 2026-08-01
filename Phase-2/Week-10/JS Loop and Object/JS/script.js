@@ -1,16 +1,37 @@
-let dicRoll = 0;
-let attempts = 0;
+// Dic Roll Check in While
 
-console.log("Rolling the sice unit we go a 6...");
+// let dicRoll = 0;
+// let attempts = 0;
+
+// console.log("Rolling the sice unit we go a 6...");
 
 
-while (dicRoll !== 6) {
+// while (dicRoll !== 6) {
 
-    dicRoll = Math.floor(Math.random() *6) + 1;
-    attempts++;
+//     dicRoll = Math.floor(Math.random() *6) + 1;
+//     attempts++;
     
 
-    console.log(`Attemp ${attempts}: Rolled a ${dicRoll}`);
+//     console.log(`Attemp ${attempts}: Rolled a ${dicRoll}`);
     
+// }
+// console.log(`Success! It look ${attempts} rolls to get a 6.`);
+
+console.log("\n ===========      =========== ");
+
+const addUp = (a) =>{
+    if(typeof a !== "number") {
+        return "Please enter a number value";
+    }else if( a < 0){
+        return "Please enter only posetive number ";
+    }else{
+        let result = 0;
+        for (i = 1; i <= a; i++){
+            result = result + i;
+        }
+        return result;
+    }
 }
-console.log(`Success! It look ${attempts} rolls to get a 6.`);
+addUp(4);
+console.log(addUp(40));
+

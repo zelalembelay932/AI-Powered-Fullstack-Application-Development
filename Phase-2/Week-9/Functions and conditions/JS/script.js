@@ -34,10 +34,8 @@ console.log("\n ======== Question 1 =========");
 // function mySecond(x) {
 //     console.log(x);
 // }
-
 // mySecond("JavaScript Function Declaration");
 // mySecond(100);
-
 
 // 2, Function Exprerssion
 
@@ -55,12 +53,11 @@ console.log("\n ======== Question 1 =========");
 // mySecond(600);
 
 console.log("\n ======== Question 3 =========");
-
 //1,  Function Declaration
 // function myThird(parameter) {
 //   mySecond(parameter); // Calls mySecond to print the value
 // }
-// myThird(" myThird JavaScript Function Declaration");
+// myThird("myThird JavaScript Function Declaration");
 
 // 2, Function Exprerssion
 // const myThird = function (parameter) {
@@ -75,13 +72,11 @@ console.log("\n ======== Question 3 =========");
 // myThird("myThird JavaScript Arrow Function");
 // myThird(6)
 
-
-
 console.log("\n ======== Question 4 =========");
 // //1,  Function Declaration
-// function myFourth (array) {
+// function myFourth (x) {
 
-//     console.log(array[1]);
+//     console.log(x[2]);
 // }
 // myFourth([10, 20, 30, 40]);
 // myFourth(["Apple", "Banana", "Orange"]);
@@ -106,25 +101,33 @@ console.log("\n ======== Question 4 =========");
 
 console.log("\n ======== Question 5 =========");
 //  //1,  Function Declaration
-// function myFifth (array) {
-//   const [a, b] = array;
-//   console.log(a + b);
-//   //  console.log(array[0] + array[1]);
+// function myFifth (sew) {
+//     // const [a, b] = sew;
+//     // console.log(a + b);
+
+//     console.log(array[0] * array[1]);
+// }
+// myFifth([100, 20]);
+
+// function myFifth(array) {
+//     // const [a, b] = array;
+//     // console.log(a + b);
+//     console.log(array[0] + array[1]);
 // }
 // myFifth([10, 20]);
-// myFifth([0, 2]);
+// myFifth([3, 5]);
 
 // 2, Function Exprerssion
-// const myFifth = function (array) {
-//     const [num1, num2] = array;
-//     console.log(num1 + num2);
+// const myFifth = function (array)  {
+
+//     const [num1, num2] = x;
+//     // console.log(num1 + num2);
+//     // console.log(array[0] + array[1]);
 
 // }
 // myFifth([10, 20]);
 
 // 3, Arrow Function
-// function myFifth (array) {}
-// const myFifth = function (array) {}
 
 // const myFifth = (array) => {
 //     let sum = 0;
@@ -159,12 +162,13 @@ console.log("\n ======== Question 6 =========");
 
         // Step 1 Create a function named minutesToSeconds
                 // function minutesToSeconds(minutes){};
-        // Ste p 2
+        // Step 2
                 // we have string value conver to number
                 // Check minutes value is NOT a valid number  
                 // check Minutes cannot be negative.
+                //check Minutes cannot be decimal.
        // Step 3 Multiply the minutes by 60 and Return the answer.
-                // minutes * 60
+                //return minutes * 60
         // Step 4 Call the function.
                 // console.log(minutesToSeconds(5));
         // Step 5 Test
@@ -173,82 +177,80 @@ console.log("\n ======== Question 6 =========");
 
 
 // 4,  Pseudo code to JavaScript
-// function minutesToSeconds(minutes){};
-// const minutesToSeconds = function (minutes) {};
-// const minutesToSeconds = (minutes) => {
-//   //  Step 1 Create a function named minutesToSeconds
-//     minutes = Number(minutes); 
-//     // Convert the input into a number
-//     if (isNaN(minutes)) {
-//         return "Please enter a valid number.";
-//     }else if (minutes < 0) {
-//         return "Minutes cannot be negative.";
-//     }else if (!Number.isInteger(minutes)){
-//         return "Minutes cannot be decimal.";
-//     }
-// //   // Check minutes value is NOT a valid number
-//     return minutes * 60;
-// }
 
-// // 5 Test Passd
+const minutesToSeconds = (minutes) => {
+  //  Step 1 Create a function named minutesToSeconds
+    
+    minutes = Number(minutes); 
+    // Convert the input into a number
+    if (isNaN(minutes)) { 
+        return "Please enter a valid number.";
+    }else if (minutes < 0) { 
+        return "Minutes cannot be negative.";
+    }else if(!Number.isInteger(minutes)){
+        return "Minutes cannot be decimal.";
+    }
+//   // Check minutes value is NOT a valid number
+    return minutes * 60;
+}
 
-// console.log(minutesToSeconds(1));
+// // // 5 Test Passd
+
+// console.log(minutesToSeconds(5));
 // console.log(minutesToSeconds("2"));
 // console.log(minutesToSeconds("10"));
 // console.log(minutesToSeconds("abc"));
 // console.log(minutesToSeconds("-5"));
-// console.log(minutesToSeconds(3.5));
+// console.log(minutesToSeconds(2.50));
 // console.log(minutesToSeconds("-2.4"));
-
 // ploblem 
     //1,  if we are add 3.5 number what happen check it
     // 2, minutes be decimal biseten mn chger alew( 3 minutes to 50 second mekeyer bifelges)??
 
 
-
 console.log("\n ======== Question 7 =========");
-
+// Question 7 ● Create a function that takes a number as a parameter, increments the number by +1 and returns the result.
 //1, Understand the Problem
     // We need to create a function:
     // Takes one number as input.
     // Increases the number by 1.
     // Returns the new value.
 
-// 5 number after after adding 1 to 6
+    // 5 number  after adding 1 to 6
 
 // 2, solve it on paper
-//  0 + 1 = 1
-//  5 + 1 = 6
-//  -5 + 1 = -4
-
-// 3, Write Pseudo code
-
-//  Step 1 Create a function named increments
-        // function increments(number){};
-// Step 2 
-        // Check number value is NOT a valid number
-// Step 3 Add 1 and Return the answer.
-        // number + 1
-// Step 4 Call the function.
-        // console.log(increments(5));
-// Step 5 Test
     //  0 + 1 = 1
     //  5 + 1 = 6
     //  -5 + 1 = -4
+
+// 3, Write Pseudo code
+
+        //  Step 1 Create a function named increments
+                // function increments(number){};
+        // Step 2 
+                // Check number value is NOT a valid number
+        // Step 3 Add 1 and Return the answer.
+                // number + 1
+        // Step 4 Call the function.
+                // console.log(increments(5));
+        // Step 5 Test
+            //  0 + 1 = 1
+            //  5 + 1 = 6
+            //  -5 + 1 = -4
 
 
 // 4,  Pseudo code to JavaScript
 
 // function increments(number){
 //     number = Number(number);
-//     if (isNaN(number)) {
-//     return "Please enter a valid number.";
+
+//     if(isNaN(number)){
+//         return "ቁጥር ያሰገቡ.";
 //     }
-// //   if (typeof number !== "number") {
-// //     return "Please enter a valid number.";
-// //   }
-//     // number = ++number;
-//     // return number;
+//     // if (isNaN(number)) {
+//     // return "Please enter a valid number.";
+//     // }
+
 //     return number + 1;
 // };
 // console.log(increments(0));
@@ -258,13 +260,8 @@ console.log("\n ======== Question 7 =========");
 // console.log(increments("zele"));
 
 
-
-
-
-
-
 console.log("\n ======== Question 8 =========");
-
+//  8, Write a function that takes the base and height of a triangle and returns its area
 
 // 1, Understand the Problem
     // Accepts two parameters: base & height
@@ -273,26 +270,24 @@ console.log("\n ======== Question 8 =========");
 
 
 // 2, soli ti on paper
-//  Area = base * height / 2
-    // 3 * 2 / 2 = 3
+    // Area = base * height / 2
+        // 3 * 2 / 2 = 3
 // 3, Write Pseudo code
 
-//  Step 1 Create a function named triArea
-        // function triArea(base, height){};
-// Step 2 
-        // Check area value is NOT a valid number
-        // 
-// Step 3 Multiply base by height and Divide the result by 2
-// Step 4 Call the function.
-        // console.log(triArea(base, height)));
-// Step 5 Test
-    // 3 * 2 / 2 = 3
-
-
+    // Step 1 Create a function named triArea
+            // function triArea(base, height){};
+    // Step 2 
+            // Check area value is NOT a valid number 
+    // Step 3 Multiply base by height and Divide the result by 2
+    // Step 4 Call the function.
+            // console.log(triArea(base, height)));
+    // Step 5 Test
+        // 3 * 2 / 2 = 3
 
 
 
 // 4,  Pseudo code to JavaScript
+
 // function triArea(base, height) {
 //     base = Number(base);
 //     height = Number(height);
@@ -300,20 +295,24 @@ console.log("\n ======== Question 8 =========");
 //     if (isNaN(base) || isNaN(height)) {
 //         return "Please enter a valid number.";
 //     }
-
+//     if ((base < 0) || (height < 0)) {
+//         return " number cannot be negative. Please enter a valid number  of posetive ";
 
 //     // if (typeof base !== "number" || typeof height !== "number") {
 //     //     return " base and height must be numbers.";
 //     // }
 //     return (base * height) / 2;
 // }
-// console.log(triArea(0, 2));   // 3
+
+// 5, Test Cases
+// console.log(triArea(0, 2));   // 0
 // console.log(triArea(7, 4));   // 14
-// console.log(triArea(-4, -8));
+// console.log(triArea(-4, -8)); 
 // console.log(triArea("5", "10"));
 // console.log(triArea("zele"));
 //  problem:-
     // 1, User Andun asegebto andun bitew eg:- base asegebto height beresa
+    // 
 
 
 // function triArea (base, height) {
@@ -339,7 +338,7 @@ console.log("\n ======== Question 8 =========");
 
 //   return (base * height) / 2;
 // }
-
+// // 5, Test Cases
 // console.log(triArea(0, 2));   // 3
 // console.log(triArea(7, 4));   // 14
 // console.log(triArea( 6));
@@ -350,12 +349,6 @@ console.log("\n ======== Question 8 =========");
 // 1, base or height check emnadergebet bota lay kelay ena ketach sihon lyunet alew ( Kelay sihon ayseram)
         //  base = Number(base);
         //  height = Number(height);
-
-
-
-
-
-
 
 
 console.log("\n ======== Question 9 =========");
@@ -375,52 +368,49 @@ console.log("\n ======== Question 9 =========");
 
 
 // 2, solve it on paper
-    //  Total Legs = (chickens × 2) + (cows × 4) + (pigs × 4)
+        //  Total Legs = (chickens × 2) + (cows × 4) + (pigs × 4)
 
 // 3, Write Pseudo code
 
-//  Step 1 Create a function named animals and Accept three parameters
+        // Step 1 Create a function named animals and Accept three parameters
         // function animals(chickens, cows, pigs){};
 
-// Step 2 Check if any value is missing.
+        // Step 2 Check if any value is missing.
 
-// Step 3 
+        // Step 3 
         // Convert each value to a number.
 
+        // Step 4 Check if all values are valid numbers.
 
+        // Step 5 Multiply:
+            // chickens * 2
+            // cows * 4
+            // pigs * 4
 
-// Step 4 Check if all values are valid numbers.
-
-// Step 5 Multiply:
-    // chickens *. 2
-    // cows * 4
-    // pigs * 4
-
-// Step 6 Add the three results together.
-// Step 7 Return the total
+        // Step 6 Add the three results together.
+        // Step 7 Return the total
 
 
 
 
 // 4,  Pseudo code to JavaScript
+
 // function animals(chickens, cows, pigs) {
 
-//     if (chickens == null || chickens === "") return "Please enter the number of chickens.";
+//     if (chickens == null || chickens === "" ) return "Please enter the number of value chickens.";
 //     if (cows == null || cows === "") return "Please enter the number of cows.";
 //     if (pigs == null || pigs === "") return "Please enter the number of pigs.";
 
 
 //     if ((chickens < 0)) {
 //         return "chickens leg number cannot be negative. Please enter a valid number  of posetive ";
-//     }
-//     if (( cows < 0)) {
+//     }else if (( cows < 0)) {
 //         return "cows leg number cannot be negative. Please enter a valid number of posetive ";
-//     }
-//     if (pigs < 0) {
+//     }else if (pigs < 0) {
 //         return "pigs leg number cannot be negative. Please enter a valid number of posetive ";
 //     }
 //     // if ((chickens < 0 || pigs < 0 || cows <0 )) {
-//     //   return "animal leg number cannot be negative.";
+//     //     return "animal leg number cannot be negative.";
 //     // }
 
 
@@ -439,23 +429,27 @@ console.log("\n ======== Question 9 =========");
 //     }else if (isNaN(pigs)) {
 //         return "Please enter a valid number of pigs.";
 //     }
+
+//     // if (isNaN(chickens) || isNaN(cows) || isNaN(pigs)) {
+//     //     return "Please enter valid numbers.";
+//     // }
     
 
 //     return chickens * 2 + cows * 4 + pigs * 4;
 // }
 
-// console.log(animals(22, 33, 55)); // 36
+// console.log(animals(2, 3, 5)); // 36
 // console.log(animals(0, 0, 0)); // 0
-// console.log(animals("22", "33", "55")); // 36
+// console.log(animals("22", "33", "55")); // 369
 // console.log(animals("2", "-3", "5")); // 36
 // console.log(animals("", 3, 5)); // Please enter the number of chickens.
 // console.log(animals(2, "", 8)); // Please enter the number of cows.
 // console.log(animals(4, 5, "")); // Please enter the number of pigs.
 // console.log(animals(2, "zzz", 5));
 
+// problem 1, 
+    // chickens must be > 2 cow > 4 and pigs > 4 
 
-// Problem :-
-    // 1, animals(2, "zzz", 5) ezi gar missed yaderegenew ye ye cow nw, only "Please enter valid numbers of cow" emil comment endiyametaln madreg alebegn
 
 console.log("\n ======== Question 10 =========");
 //1, Understand the Problem
@@ -491,14 +485,20 @@ console.log("\n ======== Question 10 =========");
 
 // const threeTimesFirst = (arr) => {
 
+
 //   // Check if input is an array
 //     if (!Array.isArray(arr)) {
 //         return "Please  enter an array.";
+//         ///code
 //     // Check array contains exactly two elements
-//     }else if (arr.length !== 2){
+//     }
+//      if (arr.length !== 2){
 //         return "Check array contains exactly two elements"
 //     }
-    
+
+
+//     //if   check true  - > if {} execute, else if !execute, return -> after !{} execute, if {} execute, if{} execute, return -> terminate   
+
 //     let first = Number(arr[0]);
 //     let second = Number(arr[1]);
 
@@ -510,7 +510,7 @@ console.log("\n ======== Question 10 =========");
 //     return first * 3;
 // } 
 
-// // 5, Test
+// 5, Test
 // console.log(threeTimesFirst([2, 5])); //6
 // console.log(threeTimesFirst(["7", "20"])); //21
 // console.log(threeTimesFirst());  // Please enter an array.
@@ -528,7 +528,7 @@ console.log("\n ======== Question 11 =========");
         // Returns: 
                 // if they are equal:- true
                 //  otherwise. :- False
-   
+
 // 2, solve it on paper
         //  isSameNum(4, 8);      // false
         // isSameNum(2, 2);      // true
@@ -552,31 +552,31 @@ console.log("\n ======== Question 11 =========");
 
 // 4,  Pseudo code to JavaScript
 
-// const SameNum = function (num1, num2) {
-//     if (num1 == undefined || num1 === "") return "Please enter the first number.";
-//     if (num2 == undefined || num2 === "") return "Please enter the second number.";
+const SameNum = function (num1, num2) {
+    if (num1 == undefined || num1 === "") return "Please enter the first number.";
+    if (num2 == undefined || num2 === "") return "Please enter the second number.";
 
 
-//     num1 = Number(num1);
-//     num2 = Number(num2);
+    num1 = Number(num1); 
+    num2 = Number(num2);
     
-//     if (Number.isNaN(num1)) {
-//         return "The first value must be a valid number.";
-//     }else if(Number.isNaN(num2)){
-//         return "The Second value must be a valid number.";
-//     }
+    if (Number.isNaN(num1)) {
+        return "The first value must be a valid number.";
+    }else if(Number.isNaN(num2)){
+        return "The Second value must be a valid number.";
+    }
 
-//     // if(num1 === num2){
-//     //     return true;
-//     // }else {
-//     //     return false;
-//     // }
+    if(num1 === num2){
+        return true;
+    }else {
+        return false;
+    }
 
-//     // Ternary Operator
-//     return num1 === num2 ? true : false;
+    // Ternary Operator
+    // return num1 === num2 ? true : false;
 
 
-// };
+};
 
 
 // // 5, Test Cases
@@ -639,19 +639,19 @@ console.log("\n ======== Question 12 =========");
 //         return "Please enter a valid number.";
 //     }
 //     // if...else  statement
-//     // if (num % 100 === 0){
-//     //     return true;
-//     // }else{
-//     //     return false;
-//     // }
+//     if (num % 100 === 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
 //     // Ternary Operator 
-//     return num % 100 === 0 ? true : false;
+//     // return num % 100 === 0 ? true : false;
 
 // }
-// // 5, Test
+// // // 5, Test
 
 
-// // Test Cases
+// // // Test Cases
 // console.log(divisible(100));      // true
 // console.log(divisible(1000));     // true
 // console.log(divisible(25));       // false
@@ -712,12 +712,12 @@ console.log("\n ======== Question 13 =========");
 //         return "Please enter a valid number.";
 //     }
 
-//     // if (num % 2 === 0){
-//     //     return "even";
-//     // }else{
-//     //     return "odd";
-//     // }
-//     return num % 2 === 0 ? "even" : "odd";
+//     if (num % 2 === 0){
+//         return "even";
+//     }else{
+//         return "odd";
+//     }
+//     // return num % 2 === 0 ? "even" : "odd";
 // }
 
 // //5, Test Cases
@@ -775,43 +775,48 @@ console.log("\n ======== Question 14 =========");
 
 
 // 4,  Pseudo code to JavaScript
-function getGrade(score) {
-    // Check if input is missing
-    if (score === undefined || score === "") {
-        return "Please enter a score.";
-    }
-    // Convert to number
-    if (score = Number(score)){
 
-    }else if (Number.isNaN(score)) {
-        return "Please enter a valid number.";
-    }   // Validate input
+//     function getGrade(score) {
+//     // Check if input is missing
+//     if (score === undefined || score === "") {
+//         return "Please enter a score.";
+//     }
+//     // Convert to number
+//     score = Number(score)
+    
+    
+//     if (Number.isNaN(score)) {
+//         return "Please enter a valid number.";
+//     }   // Validate input
 
-    // if...else statement
+//     // if...else statement
 
-    // if (score < 0 || score > 100){
-    //     return "Invalid Score";
-    // }else if(score >= 90){
-    //     return "Grade A";
-    // }else if(score >= 80){
-    //     return "Grade B";
-    // }else{
-    //     return "Grade C";
-    // }
+//     if (score < 0 || score > 100){
+//         return "Invalid Score";
+//     }else if(score >= 90){
+//         return "Grade A";
+//     }else if(score >= 80){
+//         return "Grade B";
+//     }else{
+//         return "Grade C";
+//     }
 
-    // Ternary Operator
-    return score < 0 || score > 100 ? "Invalid Score" : score >= 90 ? "Grade A" : score >= 80 ? "Grade B" : "Grade C";
-}
+//    // Ternary Operator
+
+// //    cc
 
 
-// 5, Test Cases
+// }
 
-console.log(getGrade(92));      // Grade A
-console.log(getGrade(80));      // Grade B
-console.log(getGrade(79));      // Grade C
-console.log(getGrade(101));     // Invalid score
-console.log(getGrade(-5));      // Invalid score
-console.log(getGrade("92"));    // Grade A
-console.log(getGrade());        // Please enter a score.
-console.log(getGrade(""));      // Please enter a score.
-console.log(getGrade("abc"));   // Please enter a valid number.
+
+// 5, Test 
+
+// console.log(getGrade(92));      // Grade A
+// console.log(getGrade(80));      // Grade B
+// console.log(getGrade(79));      // Grade C
+// console.log(getGrade(101));     // Invalid score
+// console.log(getGrade(-5));      // Invalid score
+// console.log(getGrade("92"));    // Grade A
+// console.log(getGrade());        // Please enter a score.
+// console.log(getGrade(""));      // Please enter a score.
+// console.log(getGrade("abc"));   // Please enter a valid number.

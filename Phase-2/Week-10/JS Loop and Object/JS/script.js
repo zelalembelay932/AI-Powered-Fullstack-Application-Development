@@ -355,27 +355,52 @@ console.log("\n ===========  Question 5 =========== ");
 
 
 
-console.log("\n ===========  Question  =========== ");
+console.log("\n ===========  Question 6 =========== ");
+
+// Write a function that takes an array of numbers as a parameter and logs in the console the sum of all the numbers in the array. 
 
 
-//1, Understand the Problem
+//  for loop
 
-// 2, solve it on paper
+// function sumArray(array){
+//     let sum = 0;
 
-
-// 3, Write Pseudo code
-
-// 4, Pseudo code to JavaScript
-
-
-// 5, Test
-
-
+//     for (let i = 0; i < array.length; i++) {
+//         sum = sum + array[i];
+//     }
+//     console.log(sum);
+// }
+// sumArray([5, 6, 99, 8, 76, 4, 68, 44]); // 310
 
 
 
 
+// While
 
+// function sumArray (array)  {
+//     let sum = 0;
+//     let i = 0;
+
+//     while (i < array.length) {
+//         sum +=array[i];
+//         i++;
+//     }
+//     console.log(sum);
+// }
+// sumArray([5, 6, 99, 8, 76, 4, 68, 44]); // 310
+
+
+// for...of
+
+// function sumArray(array){
+//     let sum = 0;
+
+//     for (const value of array) {
+//         sum += value;
+//     }
+//     console.log(sum);
+// }
+// sumArray([5, 6, 99, 8, 76, 4, 68, 44]); // 310
 
 
 

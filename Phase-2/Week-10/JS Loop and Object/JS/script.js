@@ -406,17 +406,74 @@ console.log("\n ===========  Question 6 =========== ");
 
 
 
-console.log("\n ===========  Question  =========== ");
+console.log("\n ===========  Question 7 =========== ");
+//  Write a function that takes an array of all numbers as a parameter, subtracts the total sum of all odd numbers of the array from the total sum of all even numbers and logs the result in the console.
 
 
-//1, Understand the Problem
+// const evenOdd = function (array){
+//     let evenSum = 0;
+//     let oddSum = 0;
 
-// 2, solve it on paper
+//     for (let i = 0; i < array.length; i++) {
+
+//         if (array[i] % 2 === 0 ) {
+//             evenSum += array[i];
+//         }else{
+//             oddSum += array[i];
+//         }
+//     }
+//     console.log(evenSum - oddSum);
+// } 
+
+// evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
 
 
-// 3, Write Pseudo code
-
-// 4, Pseudo code to JavaScript
 
 
-// 5, Test
+// function evenOdd(array) {
+//     let evenSum = 0;
+//     let oddSum = 0;
+
+//     for (const value of array){
+
+//         if (value % 2 === 0) {
+//             evenSum += value;
+//         } else {
+//             oddSum += value;
+            
+//         }
+//     }
+//     console.log(evenSum - oddSum);
+// }
+// evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
+
+// iteration 1
+    // value = 5
+    // 5 % 2 === 0  F
+    // oddSum = oddSum + value;
+    // oddSum = 0 + 5
+    // oddSum = 5
+// iteration 2
+    // value = 6
+    // 6 % 2 === 0  T
+    // evenSum = evenSum + value;
+    // evenSum = 0 + 6
+    // evenSum = 6
+// iteration 3
+    // value = 99
+    // 99 % 2 === 0  F
+    // oddSum = oddSum + value;
+    // oddSum = 5 + 99
+    // oddSum = 104
+// iteration 4
+    // value = 8
+    // 8 % 2 === 0  T
+    // evenSum = evenSum + value;
+    // evenSum = 6 + 8
+    // evenSum = 14
+
+
+
+
+
+console.log("\n ===========  Question 7 =========== ");

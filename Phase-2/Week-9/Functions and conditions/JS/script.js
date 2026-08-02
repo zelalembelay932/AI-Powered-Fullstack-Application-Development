@@ -599,7 +599,7 @@ console.log("\n ======== Question 12 =========");
                 // if it is divisible by 100 :- true
                 //  otherwise. :- False
                 // Use a Ternary Operator (? :) for the conditional statement.
-   
+
 // 2, solve it on paper
         //  divisible(25);      // false
         // divisible(100);      // true
@@ -623,7 +623,7 @@ console.log("\n ======== Question 12 =========");
             // Return the result
 
 
-// 4,  Pseudo code to JavaScript
+
 
 // function divisible(num){
 

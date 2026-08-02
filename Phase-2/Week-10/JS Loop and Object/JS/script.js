@@ -299,30 +299,59 @@ console.log("\n ===========  Question 4  =========== ");
 // }
 
 
-    
-
-console.log("\n ===========  Question  =========== ");
-
+console.log("\n ===========  Question 5 =========== ");
 
 //1, Understand the Problem
 
 // 2, solve it on paper
 
-
 // 3, Write Pseudo code
 
 // 4, Pseudo code to JavaScript
-
 
 // 5, Test
 
 
 
 
+// Write a function that takes an array as an argument and prints the total number of elements found in the array
+
+// const totalNumber = function (array){
+//     console.log(array.length);
+// }
+// totalNumber([1, "Hello", 8, 44])
+// totalNumber(["world", 13]);
+
+
+// for
+
+// function totalNumber(array){
+//     let total = 0;
+
+//     for (let i = 0; i < array.length; i++) {
+//         total++;
+//     }
+//     console.log(total);
+// }
+// totalNumber([1, "Hello", 8, 44])
+// totalNumber(["world", 13]);
 
 
 
+// While
 
+// function totalNumber (array){
+//     let count = 0;
+//     let i = 0;
+
+//     while (i < array.length) {
+//         count++;
+//         i++;
+//     }
+//     console.log(count);
+// }
+// totalNumber([1, "Hello", 8, 44])
+// totalNumber(["world", 13]);
 
 
 

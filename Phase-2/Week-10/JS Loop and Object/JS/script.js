@@ -217,28 +217,89 @@ console.log("\n ===========  Question 3  =========== ");
 
 
 
-console.log("\n ===========  Question  =========== ");
+console.log("\n ===========  Question 4  =========== ");
+//  Write a function that takes an array as an argument and prints every element of the array on the console.
+    //  Test case: given the array a = [1, "Hello", 8, 44], output should look like this:
 
 
 //1, Understand the Problem
-
+    // create a function that takes an array as a parameter
+    // Prints every element in the array
+    // each element  on a new line.
 
 // 2, solve it on paper
-
+    //  let numbers = [1, "Hello", 8, 44];
 
 // 3, Write Pseudo code
+    // crate function receive an array.
+    // Start from the first element.
+    // print the element
+    // move to next
+    // continue more element
 
 // 4, Pseudo code to JavaScript
-
+    // For loop
+// function printArray(array) {
+//     for (let i = 0; i < array.length; i++){
+//         console.log(array[i]);
+//     }
+// }
 
 // 5, Test
+// printArray([1, "Hello", 8 ,44]);
+// 0 < 4 ✔
+// 1 < 4 ✔
+// 2 < 4 ✔
+// 3 < 4 ✔
+// 4 < 4 ✘
+
+
+
+// while
+    // Keep repeating this block of code as long as the condition is true.
+// function printArray(array) {
+//     let i = 0;
+
+//     while (i < array.length) {
+//     console.log(array[i]);
+//     i++;
+// }
+// }
+
+// printArray([1, "Hello", 8, 44]);
+//  To Array length check
+// const print = [1, "Hello", 8, 44];
+// console.log(print.length);
+
+// Index: 0   1       2   3
+// Value: 1  Hello    8   44
+// while (i < 4) 
+    // 0 < 4; T
+    // 1 < 4; T
+    // 2 < 4; T
+    // 3 < 4; T
+    // 4 < 4; F loop stop
 
 
 
 
 
+// forEach()
+// const array = [1, "Hello", 8, 44];
+//     array.forEach((element) => {
+//     console.log(element);
+// });
 
 
+// for...of
+// const array = [1, "Hello", 8, 44];
+
+// for (const element of array) {
+//     console.log(element);
+// }
+
+
+    
 
 console.log("\n ===========  Question  =========== ");
 

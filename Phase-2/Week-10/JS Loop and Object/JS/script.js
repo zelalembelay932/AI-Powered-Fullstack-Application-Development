@@ -46,6 +46,8 @@ console.log("\n ===========  Question 1  =========== ");
 //     if (num < 0){
 //         return "Please enter only posetive number ";
 //     }
+
+//     // i = 1; i <= 10; i++
 //         for (num = 1; num <= 10; num++){
 //             console.log(num);
 //         }
@@ -104,17 +106,19 @@ console.log("\n ===========  Question 2  =========== ");
 
 // 1. for Loop
 // const fiveNumber = (num) => {
+
 //     for (let i = 1; i <= 5;  i++){
 //         console.log(num + i);
 //     }
+
 // }
 // 5, Test
 
 // fiveNumber(7);
 //         // 8 9 10 11 12
-// // fiveNumber(20);
+// fiveNumber(20);
 //         //  21 22 23 24 25
-// // fiveNumber(-3);
+// fiveNumber(-3);
 //         // -2 -1 0 1 2
 
 console.log("\n ===========  Question 3  =========== ");
@@ -149,6 +153,7 @@ console.log("\n ===========  Question 3  =========== ");
 //     let sum = 0
 
 //     for (let i = 1; i <= 10; i++){
+//       // i =1; 1 <= 10; i++
 //         // sum += startNumber + i;
 //         sum = sum + (number + i);
 
@@ -156,40 +161,51 @@ console.log("\n ===========  Question 3  =========== ");
 //     return sum;
 // }
 
-// 5, Test
+// // 5, Test
 // console.log(sumNextTen(7));
 
 // First iteration
-// number = 7, // i = 1, sum = 0
-//sum = sum + number + i
-// sum = sum + 7 + 1
-// sum = 0 + 8;
-// sum = 8
+    // number = 7, // i = 1, sum = 0
+    //sum = sum + number + i
+    // sum = sum + 7 + 1
+    // sum = 0 + 8;
+    // sum = 8
 
 //  Second iteration
-// number = 7, i = 2, sum = 8
-//sum = sum + number + i
-// sum = sum + 7 + 2
-// sum = 8 + 9;
-// sum = 17
+    // number = 7, i = 2, sum = 8
+    //sum = sum + number + i
+    // sum = sum + 7 + 2
+    // sum = 8 + 9;
+    // sum = 17
 
-// Rhird iteration
+// third iteration
 // number 7, i = 3, sum = 17
 // sum = sum + number + i
 // sum = 17 + 7 + 3
+// sum = 17 + 10
 // sum = 27
+
+// forth iteration
+// number 7, i = 4, sum = 27
+// sum = sum + number + i
+// sum = 27 + 7 + 4
+// sum 27 + 11
+// 
+
+
 
 // Arithmetic Formula
 
 // const sum10Number = (num) => {
 //     return 10 * num + 55;
 // }
-// console.log(sum10Number(5));
+// console.log(sum10Number(7));
 
 // 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15
 
-// 7 = (8 + 9 + 10+ 11+ 12+ 13+ 14+ 15+ 16+ 17)
-// print 125
+// 7 = (8 + 9 + 10+ 11+ 12+ 13+ 14+ 15+ 16+ 17).
+
+// print = 125
 
 // 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17
 
@@ -235,7 +251,7 @@ console.log("\n ===========  Question 4  =========== ");
 //     }
 // }
 
-// 5, Test
+// // 5, Test
 // printArray([1, "Hello", 8 ,44]);
 // 0 < 4 ✔
 // 1 < 4 ✔
@@ -255,26 +271,29 @@ console.log("\n ===========  Question 4  =========== ");
 // }
 
 // printArray([1, "Hello", 8, 44]);
-//  To Array length check
+// //  To Array length check
+
 // const print = [1, "Hello", 8, 44];
 // console.log(print.length);
 
 // Index: 0   1       2   3
 // Value: 1  Hello    8   44
+
 // while (i < 4)
+
 // 0 < 4; T
 // 1 < 4; T
 // 2 < 4; T
 // 3 < 4; T
 // 4 < 4; F loop stop
 
-// forEach()
+// // forEach()
 // const array = [1, "Hello", 8, 44];
 //     array.forEach((element) => {
 //     console.log(element);
 // });
 
-// for...of
+// // for...of
 // const array = [1, "Hello", 8, 44];
 
 // for (const element of array) {
@@ -313,8 +332,13 @@ console.log("\n ===========  Question 5 =========== ");
 // }
 // totalNumber([1, "Hello", 8, 44])
 // totalNumber(["world", 13]);
-
+// 0 < 4 ✔
+// 1 < 4 ✔
+// 2 < 4 ✔
+// 3 < 4 ✔
+// 4 < 4 ✘
 // While
+
 
 // function totalNumber (array){
 //     let count = 0;
@@ -345,6 +369,28 @@ console.log("\n ===========  Question 6 =========== ");
 // }
 // sumArray([5, 6, 99, 8, 76, 4, 68, 44]); // 310
 
+
+// First iteration
+    // i = 0, sum = 0
+    //sum = sum + i
+    // sum = 5 + 0
+    // sum = 5
+    // sum = 
+// second iteration
+    // i = 1, sum = 5
+    //sum = sum + i
+    // sum = 5 + 1
+    // sum = 6
+    // sum = 
+// second iteration
+    // i = 2, sum = 6
+    //sum = sum + i
+    // sum = 6 + 2
+    // sum = 8
+    // sum = 
+
+
+
 // While
 
 // function sumArray (array)  {
@@ -366,6 +412,7 @@ console.log("\n ===========  Question 6 =========== ");
 
 //     for (const value of array) {
 //         sum += value;
+//         // sum = sum + value
 //     }
 //     console.log(sum);
 // }
@@ -375,9 +422,9 @@ console.log("\n ===========  Question 7 =========== ");
 //  Write a function that takes an array of all numbers as a parameter, subtracts the total sum of all odd numbers of the array from the total sum of all even numbers and logs the result in the console.
 
 // const evenOdd = function (array){
-//     let evenSum = 0;
-//     let oddSum = 0;
-
+//     let evenSum = 0; //90
+//     let oddSum = 0; //104
+//                               //8
 //     for (let i = 0; i < array.length; i++) {
 
 //         if (array[i] % 2 === 0 ) {
@@ -388,8 +435,44 @@ console.log("\n ===========  Question 7 =========== ");
 //     }
 //     console.log(evenSum - oddSum);
 // }
-
 // evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
+// iteration 1
+// value = 5
+// 5 % 2 === 0  F
+// oddSum = oddSum + value;
+// oddSum = 0 + 5
+// oddSum = 5
+
+// iteration 2
+// value = 6
+// 6 % 2 === 0  T
+// evenSum = evenSum + value;
+// evenSum = 0 + 6
+// evenSum = 6
+
+// iteration 3
+// value = 99
+// 99 % 2 === 0  F
+// oddSum = oddSum + value;
+// oddSum = 5 + 99
+// oddSum = 104
+
+
+// iteration 4
+// value = 8
+// 8 % 2 === 0  T
+// evenSum = evenSum + value;
+// evenSum = 6 + 8
+// evenSum = 14
+
+
+// iteration 5
+// value = 76
+// 76 % 2 === 0  T
+// evenSum = evenSum + value;
+// evenSum = 14 + 76
+// evenSum = 90
+
 
 // function evenOdd(array) {
 //     let evenSum = 0;
@@ -408,30 +491,6 @@ console.log("\n ===========  Question 7 =========== ");
 // }
 // evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
 
-// iteration 1
-// value = 5
-// 5 % 2 === 0  F
-// oddSum = oddSum + value;
-// oddSum = 0 + 5
-// oddSum = 5
-// iteration 2
-// value = 6
-// 6 % 2 === 0  T
-// evenSum = evenSum + value;
-// evenSum = 0 + 6
-// evenSum = 6
-// iteration 3
-// value = 99
-// 99 % 2 === 0  F
-// oddSum = oddSum + value;
-// oddSum = 5 + 99
-// oddSum = 104
-// iteration 4
-// value = 8
-// 8 % 2 === 0  T
-// evenSum = evenSum + value;
-// evenSum = 6 + 8
-// evenSum = 14
 
 console.log("\n ===========  Question 8 =========== ");
 // Write a function that takes an array as a parameter and logs in the console the elements that have even indexes only. Notice: this question is not asking you to log elements with even value, but elements that are located on even indexes)
@@ -465,17 +524,16 @@ console.log("\n ===========  Question 8 =========== ");
 
 // 4, Pseudo code to JavaScript
 
-function evenIndex (array) {
-    for (let i = 0; i < array.length; i++){
-        if (i % 2 === 0){
-            console.log(array[i]);
-        }
-    }
-}
-evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
+// function evenIndex (array) {
+//     for (let i = 0; i < array.length; i++){
+//         if (i % 2 === 0){
+//             console.log(array[i]);
+//         }
+//     }
+// }
+// evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 
-
-
+// evenIndex( [11, "Sam", 3, 7, "car"]);
 
 
 
@@ -515,10 +573,43 @@ evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 // indec  0  1
 // Value  5  6
 
-const items = ["apple", "banana", "cherry", "date", "elderberry"];
-for (let i = 0; i < items.length; i++) {
-  if (i % 2 === 0) {
-    // console.log(items[i]);
-    console.log(i);
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+// const items = ["apple", "banana", "cherry", "date", "elderberry"];
+// for (let i = 0; i < items.length; i++) {
+//   if (i % 2 === 0) {
+//     console.log(items[i]);
+//     console.log(i);
+//   }
+// }
+
+console.log("\n ===========  Question 9 =========== ");
+// Write a function that takes the sampleArray as a parameter, removes the last element from the array,vadds a new value of "32" to the array and prints the new array on the console. Hint: use an array method
+
+
+
+function sampleArray (number) {
+    // .pop();Remove the last number
+    number.pop();
+    // .push(); add new value number
+    number.push(32);
+    console.log(number);
 }
+
+sampleArray([5, 6, 99, 8, 76, 4, 68, 44]);
+
+
+//  Add to the end                    => push()
+//  Remove from the end               => pop()
+//  Add to the beginning (first)      => unshift()
+//  Remove from the beginning (first) => shift()

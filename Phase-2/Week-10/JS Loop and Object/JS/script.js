@@ -40,19 +40,12 @@ console.log("\n ===========  Question 1  =========== ");
 // for loop
 
 // function first10 (num){
-//     if(isNaN(num)){
-//         return "Please enter a number value";
-//     }
-//     if (num < 0){
-//         return "Please enter only posetive number ";
-//     }
-
 //     // i = 1; i <= 10; i++
 //         for (num = 1; num <= 10; num++){
 //             console.log(num);
 //         }
 // }
-// first10(1)
+// first10()
 
 // While loop
 
@@ -106,7 +99,9 @@ console.log("\n ===========  Question 2  =========== ");
 
 // 1. for Loop
 // const fiveNumber = (num) => {
-
+//     if (typeof(num) !== "number" || isNaN(num)) {
+//         return "Please enter a number value";
+//     }
 //     for (let i = 1; i <= 5;  i++){
 //         console.log(num + i);
 //     }
@@ -150,6 +145,12 @@ console.log("\n ===========  Question 3  =========== ");
 // 4, Pseudo code to JavaScript
 
 // function sumNextTen(number) {
+//     if (isNaN(number)) {
+//         return "Please enter a number value";
+//     }
+//     if (number < 0) {
+//         return "Please enter only posetive number ";
+//     }
 //     let sum = 0
 
 //     for (let i = 1; i <= 10; i++){
@@ -161,8 +162,27 @@ console.log("\n ===========  Question 3  =========== ");
 //     return sum;
 // }
 
-// // 5, Test
+// // // // 5, Test
 // console.log(sumNextTen(7));
+
+
+// function sumNextTenNumbers(givenNumber) {
+//     let sum = 0;
+    
+//     // Loop 10 times, starting from the next number
+//     for (let i = 1; i <= 10; i++) {
+//         // sum += givenNumber + i;
+//         sum = sum + (givenNumber + i );
+//     }
+    
+//     return sum;
+// }
+
+// // Example usage: If given number is 5, it sums 6 through 15
+// sumNextTenNumbers(10); // Prints 105
+
+// console.log(sumNextTenNumbers(7));
+
 
 // First iteration
     // number = 7, // i = 1, sum = 0
@@ -246,12 +266,17 @@ console.log("\n ===========  Question 4  =========== ");
 // 4, Pseudo code to JavaScript
 // For loop
 // function printArray(array) {
+//     if(!Array.isArray(array)){
+//         return "Please enter a valid array";
+//     }
+    
 //     for (let i = 0; i < array.length; i++){
 //         console.log(array[i]);
 //     }
 // }
 
-// // 5, Test
+// // // 5, Test
+
 // printArray([1, "Hello", 8 ,44]);
 // 0 < 4 ✔
 // 1 < 4 ✔
@@ -332,11 +357,7 @@ console.log("\n ===========  Question 5 =========== ");
 // }
 // totalNumber([1, "Hello", 8, 44])
 // totalNumber(["world", 13]);
-// 0 < 4 ✔
-// 1 < 4 ✔
-// 2 < 4 ✔
-// 3 < 4 ✔
-// 4 < 4 ✘
+
 // While
 
 
@@ -360,9 +381,16 @@ console.log("\n ===========  Question 6 =========== ");
 //  for loop
 
 // function sumArray(array){
+//     if(!Array.isArray(array)){
+//         return "Please enter a valid array";
+//     }
+     
 //     let sum = 0;
 
 //     for (let i = 0; i < array.length; i++) {
+//     if (typeof array !== "number" || isNaN(array)) {
+//       return "Please enter a number value";
+//     }
 //         sum = sum + array[i];
 //     }
 //     console.log(sum);
@@ -421,21 +449,31 @@ console.log("\n ===========  Question 6 =========== ");
 console.log("\n ===========  Question 7 =========== ");
 //  Write a function that takes an array of all numbers as a parameter, subtracts the total sum of all odd numbers of the array from the total sum of all even numbers and logs the result in the console.
 
-// const evenOdd = function (array){
-//     let evenSum = 0; //90
-//     let oddSum = 0; //104
-//                               //8
-//     for (let i = 0; i < array.length; i++) {
+const evenOdd = function (array){
+    if (!Array.isArray(array)) {
+        return "Please enter a valid array";
+    }
+    let evenSum = 0; 
+    let oddSum = 0; 
 
-//         if (array[i] % 2 === 0 ) {
-//             evenSum += array[i];
-//         }else{
-//             oddSum += array[i];
-//         }
-//     }
-//     console.log(evenSum - oddSum);
-// }
-// evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
+    for (let i = 0; i < array.length; i++) {
+
+    if (typeof array[i] !== "number" || isNaN(array[i])) {
+        return "Please enter a number value";
+    }
+
+        if (array[i] % 2 === 0 ) {
+            evenSum += array[i];
+        }else{
+            oddSum += array[i];
+        }
+
+    }
+    console.log(evenSum - oddSum);
+}
+evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
+// problem:- folt 12.5 bigeba mn enadergalen 12.5 odd or even? how to do
+
 // iteration 1
 // value = 5
 // 5 % 2 === 0  F
@@ -524,27 +562,30 @@ console.log("\n ===========  Question 8 =========== ");
 
 // 4, Pseudo code to JavaScript
 
-// function evenIndex (array) {
-//     for (let i = 0; i < array.length; i++){
-//         if (i % 2 === 0){
-//             console.log(array[i]);
-//         }
-//     }
-// }
-// evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
+function evenIndex (array) {
+    if (!Array.isArray(array)) {
+        return "Please enter a valid array";
+    }
+
+    for (let i = 0; i < array.length; i++){
+
+        if (i % 2 === 0){
+            console.log(array[i]);
+        }
+    }
+}
+evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
+
 
 // evenIndex( [11, "Sam", 3, 7, "car"]);
 
 
+//Index =>  0   1   2   3   4   5   6   7
 
-// for ... in
-// function evenIndex (array) {
-//     for (const index in array){
-//         if(index % 2 === 0){
-//             console.log(array[index]);
-//         }
-//     }
-// }
+//Value =>  5   6   99  8   76  4   68  44
+
+
+
 
 // evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 
@@ -576,40 +617,95 @@ console.log("\n ===========  Question 8 =========== ");
 
 
 
-
-
-
-
-
-
-
-
-
-// const items = ["apple", "banana", "cherry", "date", "elderberry"];
-// for (let i = 0; i < items.length; i++) {
-//   if (i % 2 === 0) {
-//     console.log(items[i]);
-//     console.log(i);
-//   }
+// for ... in
+// function evenIndex (array) {
+//     for (const index in array){
+//         if(index % 2 === 0){
+//             console.log(array[index]);
+//         }
+//     }
 // }
+
+
+
+
 
 console.log("\n ===========  Question 9 =========== ");
 // Write a function that takes the sampleArray as a parameter, removes the last element from the array,vadds a new value of "32" to the array and prints the new array on the console. Hint: use an array method
 
 
 
-function sampleArray (number) {
-    // .pop();Remove the last number
-    number.pop();
-    // .push(); add new value number
-    number.push(32);
-    console.log(number);
-}
+// function sampleArray (number) {
+//     // .pop();Remove the last number
+//     number.pop();
+//     // .push(); add new value number
+//     number.push(32);
+//     console.log(number);
+// }
 
-sampleArray([5, 6, 99, 8, 76, 4, 68, 44]);
+// sampleArray([5, 6, 99, 8, 76, 4, 68, 44]);
 
 
 //  Add to the end                    => push()
 //  Remove from the end               => pop()
 //  Add to the beginning (first)      => unshift()
 //  Remove from the beginning (first) => shift()
+
+
+console.log("\n ===========  Question 10 =========== ");
+// Write a function that takes the sampleArray as an argument, sorts the array in ascending order and prints the sorted array on the console
+
+// const sort = (sampleArray) => {
+//     sampleArray.sort(function (a, b){
+//         return a - b;
+//     } );
+//     console.log(sampleArray);
+
+// }
+
+// sort([5, 6, 99, 8, 76, 4, 68, 44]);
+// sort(["3", "44", "5", "22"]);
+// sort(["Banana", "Orange", "Apple", "Mango"]);
+
+// const sort = (sampleArray) =>{
+//     sampleArray.sort();
+
+//     console.log(sampleArray);
+// }
+
+
+// sort(["Banana", "Orange", "Apple", "Mango"]);
+
+// const sort  = (sampleArray) =>{
+//     if (typeof sampleArray[0] === "number"){
+//         sampleArray.sort((a, b) => a - b)
+//     }
+// }
+
+
+
+
+
+// sort()         => Sorts the array. 
+// function(a, b) => Receives two elements to compare.
+// return a - b   => Sort numbers in  Ascending  order.
+// return b - a   => Sort numbers in Descending order.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

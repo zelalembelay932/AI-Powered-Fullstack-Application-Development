@@ -562,19 +562,19 @@ console.log("\n ===========  Question 8 =========== ");
 
 // 4, Pseudo code to JavaScript
 
-function evenIndex (array) {
-    if (!Array.isArray(array)) {
-        return "Please enter a valid array";
-    }
+// function evenIndex (array) {
+//     if (!Array.isArray(array)) {
+//         return "Please enter a valid array";
+//     }
 
-    for (let i = 0; i < array.length; i++){
+//     for (let i = 0; i < array.length; i++){
 
-        if (i % 2 === 0){
-            console.log(array[i]);
-        }
-    }
-}
-evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
+//         if (i % 2 === 0){
+//             console.log(array[i]);
+//         }
+//     }
+// }
+// evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 
 
 // evenIndex( [11, "Sam", 3, 7, "car"]);
@@ -655,7 +655,9 @@ console.log("\n ===========  Question 9 =========== ");
 console.log("\n ===========  Question 10 =========== ");
 // Write a function that takes the sampleArray as an argument, sorts the array in ascending order and prints the sorted array on the console
 
+// only number
 // const sort = (sampleArray) => {
+
 //     sampleArray.sort(function (a, b){
 //         return a - b;
 //     } );
@@ -664,26 +666,80 @@ console.log("\n ===========  Question 10 =========== ");
 // }
 
 // sort([5, 6, 99, 8, 76, 4, 68, 44]);
-// sort(["3", "44", "5", "22"]);
-// sort(["Banana", "Orange", "Apple", "Mango"]);
+// sort([8, 5, 99, 4]);
 
-// const sort = (sampleArray) =>{
-//     sampleArray.sort();
+// Compares tow numbers at a time
+// formula => 
 
-//     console.log(sampleArray);
-// }
+    // ______ .sort((a, b) => a - b); 
+
+    // step 1
+        // a = 8; 
+        // b = 5; 
+                // 8 - 5 = 3
+            // result is positive "8 come after 5"
+    // final === 5, 8
+
+    // step 2
+        // a = 4; 
+        // b = 5; 
+                // 4 - 5 = -1
+            // result is negative "4 before 5"
+    // final === 4, 5, 8
+
+    // step 3
+        // a = 99; 
+        // b = 8; 
+                // 99 - 8 = 91
+            // result is positive "4 before 5"
+    // final === 4, 5, 8, 
 
 
-// sort(["Banana", "Orange", "Apple", "Mango"]);
 
-// const sort  = (sampleArray) =>{
-//     if (typeof sampleArray[0] === "number"){
-//         sampleArray.sort((a, b) => a - b)
+
+// only string numbers 
+
+// let numbers = ["5", "100", "20", "44"];
+// numbers.sort((a, b) => Number(a) - Number(b));
+
+// console.log(numbers);
+
+
+// Normal String
+// let car = ["Toyota", "Honda", "Ford", "Tesla","BMW"];
+
+// car.sort();
+
+// console.log(car);
+
+
+
+//  All Three Cases ==================================
+
+// const sortArray = (array) => {
+
+//     // Numbers
+//     if(typeof array[0] === "number"){
+//         array.sort((a, b) => a - b );
+
+//     }else if (!isNaN(array[0])) {
+
+//         // Numeric strings
+//         array.sort((a, b) => Number(a) - Number(b));
+
+//     }else{
+
+//         // Normal String
+//         array.sort();
 //     }
-// }
+//     console.log(array);
+// };
 
 
-
+// sortArray([5, 6, 99, 8, 76, 4, 68, 44]);
+// sortArray([5.6, 9.9, 8, 5.65, 4, 68, 44]);
+// sortArray(["5", "100", "20", "44"]);
+// sortArray(["Toyota", "Honda", "Ford", "Tesla", "BMW"]);
 
 
 // sort()         => Sorts the array. 

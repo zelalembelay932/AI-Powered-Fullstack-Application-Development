@@ -786,3 +786,66 @@ let evangadiClass = {
 }
 // // 5, test
 updateCourseLength(evangadiClass)
+
+console.log("\n ===========  Question 12 =========== ");
+
+// Add "Bootstrap" at the end of the topicsCovered property and print the new object on the console
+
+// 1. Understand the Problem
+// We have the following object:
+// let evangadiClass = {
+//     lengthOfCourse: "1 Month",
+//     website: "https://www.evangadi.com/",
+//     isChallenging: false,
+//     topicsCovered: ["HTML", "CSS", "Media Query", "JavaScript"],
+//     students: [
+//         { name: "Abebe", age: 34, sex: "M" },
+//         { name: "Kebede", age: 44, sex: "M" },
+//         { name: "Almaz", age: 27, sex: "F" },
+//         { name: "Challa", age: 22, sex: "M" },
+//         { name: "Chaltu", age: 19, sex: "F" }
+//     ]
+// };
+
+// Access the topicsCovered property.
+// Add "Bootstrap" to the end of the array.
+// Print the updated object.
+
+// 2. Solve It on Paper
+// Current array
+// ["HTML", "CSS", "Media Query", "JavaScript"]
+// Add "Bootstrap" to the end.
+// ["HTML", "CSS", "Media Query", "JavaScript", "Bootstrap"]
+
+// 3. Write Pseudo Code
+
+// 4. Convert Pseudo Code to JavaScript
+
+
+function addTopic(data) {
+    data.topicsCovered.push("Bootstrap");
+    // data.topicsCovered[4] = "Bootstrap";
+
+    // data.topicsCovered is :- 
+        // Access the array inside the object.
+    // .push("Bootstrap")is :-
+            // Add "Bootstrap" to the end of that array.
+    console.log(evangadiClass);
+    // Print the updated object.
+}
+
+addTopic(evangadiClass);
+
+// push();
+
+// pop();
+
+// shift();
+
+// unshift();
+
+// sort();
+
+// reverse();
+
+// includes();

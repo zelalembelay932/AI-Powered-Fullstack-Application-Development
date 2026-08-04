@@ -165,16 +165,15 @@ console.log("\n ===========  Question 3  =========== ");
 // // // // 5, Test
 // console.log(sumNextTen(7));
 
-
 // function sumNextTenNumbers(givenNumber) {
 //     let sum = 0;
-    
+
 //     // Loop 10 times, starting from the next number
 //     for (let i = 1; i <= 10; i++) {
 //         // sum += givenNumber + i;
 //         sum = sum + (givenNumber + i );
 //     }
-    
+
 //     return sum;
 // }
 
@@ -183,20 +182,19 @@ console.log("\n ===========  Question 3  =========== ");
 
 // console.log(sumNextTenNumbers(7));
 
-
 // First iteration
-    // number = 7, // i = 1, sum = 0
-    //sum = sum + number + i
-    // sum = sum + 7 + 1
-    // sum = 0 + 8;
-    // sum = 8
+// number = 7, // i = 1, sum = 0
+//sum = sum + number + i
+// sum = sum + 7 + 1
+// sum = 0 + 8;
+// sum = 8
 
 //  Second iteration
-    // number = 7, i = 2, sum = 8
-    //sum = sum + number + i
-    // sum = sum + 7 + 2
-    // sum = 8 + 9;
-    // sum = 17
+// number = 7, i = 2, sum = 8
+//sum = sum + number + i
+// sum = sum + 7 + 2
+// sum = 8 + 9;
+// sum = 17
 
 // third iteration
 // number 7, i = 3, sum = 17
@@ -210,9 +208,7 @@ console.log("\n ===========  Question 3  =========== ");
 // sum = sum + number + i
 // sum = 27 + 7 + 4
 // sum 27 + 11
-// 
-
-
+//
 
 // Arithmetic Formula
 
@@ -269,7 +265,7 @@ console.log("\n ===========  Question 4  =========== ");
 //     if(!Array.isArray(array)){
 //         return "Please enter a valid array";
 //     }
-    
+
 //     for (let i = 0; i < array.length; i++){
 //         console.log(array[i]);
 //     }
@@ -360,7 +356,6 @@ console.log("\n ===========  Question 5 =========== ");
 
 // While
 
-
 // function totalNumber (array){
 //     let count = 0;
 //     let i = 0;
@@ -384,7 +379,7 @@ console.log("\n ===========  Question 6 =========== ");
 //     if(!Array.isArray(array)){
 //         return "Please enter a valid array";
 //     }
-     
+
 //     let sum = 0;
 
 //     for (let i = 0; i < array.length; i++) {
@@ -397,27 +392,24 @@ console.log("\n ===========  Question 6 =========== ");
 // }
 // sumArray([5, 6, 99, 8, 76, 4, 68, 44]); // 310
 
-
 // First iteration
-    // i = 0, sum = 0
-    //sum = sum + i
-    // sum = 5 + 0
-    // sum = 5
-    // sum = 
+// i = 0, sum = 0
+//sum = sum + i
+// sum = 5 + 0
+// sum = 5
+// sum =
 // second iteration
-    // i = 1, sum = 5
-    //sum = sum + i
-    // sum = 5 + 1
-    // sum = 6
-    // sum = 
+// i = 1, sum = 5
+//sum = sum + i
+// sum = 5 + 1
+// sum = 6
+// sum =
 // second iteration
-    // i = 2, sum = 6
-    //sum = sum + i
-    // sum = 6 + 2
-    // sum = 8
-    // sum = 
-
-
+// i = 2, sum = 6
+//sum = sum + i
+// sum = 6 + 2
+// sum = 8
+// sum =
 
 // While
 
@@ -449,28 +441,26 @@ console.log("\n ===========  Question 6 =========== ");
 console.log("\n ===========  Question 7 =========== ");
 //  Write a function that takes an array of all numbers as a parameter, subtracts the total sum of all odd numbers of the array from the total sum of all even numbers and logs the result in the console.
 
-const evenOdd = function (array){
-    if (!Array.isArray(array)) {
-        return "Please enter a valid array";
-    }
-    let evenSum = 0; 
-    let oddSum = 0; 
+const evenOdd = function (array) {
+  if (!Array.isArray(array)) {
+    return "Please enter a valid array";
+  }
+  let evenSum = 0;
+  let oddSum = 0;
 
-    for (let i = 0; i < array.length; i++) {
-
+  for (let i = 0; i < array.length; i++) {
     if (typeof array[i] !== "number" || isNaN(array[i])) {
-        return "Please enter a number value";
+      return "Please enter a number value";
     }
 
-        if (array[i] % 2 === 0 ) {
-            evenSum += array[i];
-        }else{
-            oddSum += array[i];
-        }
-
+    if (array[i] % 2 === 0) {
+      evenSum += array[i];
+    } else {
+      oddSum += array[i];
     }
-    console.log(evenSum - oddSum);
-}
+  }
+  console.log(evenSum - oddSum);
+};
 evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
 // problem:- folt 12.5 bigeba mn enadergalen 12.5 odd or even? how to do
 
@@ -495,7 +485,6 @@ evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
 // oddSum = 5 + 99
 // oddSum = 104
 
-
 // iteration 4
 // value = 8
 // 8 % 2 === 0  T
@@ -503,14 +492,12 @@ evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
 // evenSum = 6 + 8
 // evenSum = 14
 
-
 // iteration 5
 // value = 76
 // 76 % 2 === 0  T
 // evenSum = evenSum + value;
 // evenSum = 14 + 76
 // evenSum = 90
-
 
 // function evenOdd(array) {
 //     let evenSum = 0;
@@ -528,7 +515,6 @@ evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
 //     console.log(evenSum - oddSum);
 // }
 // evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
-
 
 console.log("\n ===========  Question 8 =========== ");
 // Write a function that takes an array as a parameter and logs in the console the elements that have even indexes only. Notice: this question is not asking you to log elements with even value, but elements that are located on even indexes)
@@ -576,16 +562,11 @@ console.log("\n ===========  Question 8 =========== ");
 // }
 // evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 
-
 // evenIndex( [11, "Sam", 3, 7, "car"]);
-
 
 //Index =>  0   1   2   3   4   5   6   7
 
 //Value =>  5   6   99  8   76  4   68  44
-
-
-
 
 // evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 
@@ -614,9 +595,6 @@ console.log("\n ===========  Question 8 =========== ");
 // indec  0  1
 // Value  5  6
 
-
-
-
 // for ... in
 // function evenIndex (array) {
 //     for (const index in array){
@@ -626,14 +604,8 @@ console.log("\n ===========  Question 8 =========== ");
 //     }
 // }
 
-
-
-
-
 console.log("\n ===========  Question 9 =========== ");
 // Write a function that takes the sampleArray as a parameter, removes the last element from the array,vadds a new value of "32" to the array and prints the new array on the console. Hint: use an array method
-
-
 
 // function sampleArray (number) {
 //     // .pop();Remove the last number
@@ -645,12 +617,10 @@ console.log("\n ===========  Question 9 =========== ");
 
 // sampleArray([5, 6, 99, 8, 76, 4, 68, 44]);
 
-
 //  Add to the end                    => push()
 //  Remove from the end               => pop()
 //  Add to the beginning (first)      => unshift()
 //  Remove from the beginning (first) => shift()
-
 
 console.log("\n ===========  Question 10 =========== ");
 // Write a function that takes the sampleArray as an argument, sorts the array in ascending order and prints the sorted array on the console
@@ -669,41 +639,37 @@ console.log("\n ===========  Question 10 =========== ");
 // sort([8, 5, 99, 4]);
 
 // Compares tow numbers at a time
-// formula => 
+// formula =>
 
-    // ______ .sort((a, b) => a - b); 
+// ______ .sort((a, b) => a - b);
 
-    // step 1
-        // a = 8; 
-        // b = 5; 
-                // 8 - 5 = 3
-            // result is positive "8 come after 5"
-    // final === 5, 8
+// step 1
+// a = 8;
+// b = 5;
+// 8 - 5 = 3
+// result is positive "8 come after 5"
+// final === 5, 8
 
-    // step 2
-        // a = 4; 
-        // b = 5; 
-                // 4 - 5 = -1
-            // result is negative "4 before 5"
-    // final === 4, 5, 8
+// step 2
+// a = 4;
+// b = 5;
+// 4 - 5 = -1
+// result is negative "4 before 5"
+// final === 4, 5, 8
 
-    // step 3
-        // a = 99; 
-        // b = 8; 
-                // 99 - 8 = 91
-            // result is positive "4 before 5"
-    // final === 4, 5, 8, 
+// step 3
+// a = 99;
+// b = 8;
+// 99 - 8 = 91
+// result is positive "4 before 5"
+// final === 4, 5, 8,
 
-
-
-
-// only string numbers 
+// only string numbers
 
 // let numbers = ["5", "100", "20", "44"];
 // numbers.sort((a, b) => Number(a) - Number(b));
 
 // console.log(numbers);
-
 
 // Normal String
 // let car = ["Toyota", "Honda", "Ford", "Tesla","BMW"];
@@ -711,8 +677,6 @@ console.log("\n ===========  Question 10 =========== ");
 // car.sort();
 
 // console.log(car);
-
-
 
 //  All Three Cases ==================================
 
@@ -735,33 +699,90 @@ console.log("\n ===========  Question 10 =========== ");
 //     console.log(array);
 // };
 
-
 // sortArray([5, 6, 99, 8, 76, 4, 68, 44]);
 // sortArray([5.6, 9.9, 8, 5.65, 4, 68, 44]);
 // sortArray(["5", "100", "20", "44"]);
 // sortArray(["Toyota", "Honda", "Ford", "Tesla", "BMW"]);
 
-
-// sort()         => Sorts the array. 
+// sort()         => Sorts the array.
 // function(a, b) => Receives two elements to compare.
 // return a - b   => Sort numbers in  Ascending  order.
 // return b - a   => Sort numbers in Descending order.
 
+console.log("\n =========== Object-Oriented Data Model (OODM) =========== ");
 
+console.log("\n ===========  Question 11 =========== ");
 
+//1, Understand the Problem
+// We are given an object:
 
+// let evangadiClass = {
+//     lengthOfCourse: "1 Month",
+//     website: "https://www.evangadi.com/",
+//     isChallenging: false,
+//     topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
+//     students:[
+//         {
+//             name: "Abebe",
+//             age: 34,
+//             sex: "M"
+//         },
+//         {
+//             name: "Kebede",
+//             age: 44,
+//             sex: "M"
+//         },
+//         {
+//             name: "Almaz",
+//             age: 27,
+//             sex: "F"
+//         },
+//         {
+//             name: "Challa",
+//             age: 22,
+//             sex: "M"
+//         },
+//         {
+//             name: "Chaltu",
+//             age: 19,
+//             sex: "F"
+//         }
+//     ]
+// }
 
+// Find the lengthOfCourse property.
+// Change its value from "1 Month" to "5 Month"
+// Print the updated object.
 
+// 2, solve it on paper
+//  lengthOfCourse => "1 Month" to "5 Month"
 
+// 3, Write Pseudo code
+// crate function  updateCourseLength.
+// Access the lengthOfCourse property.
+// Assign a new value of "5 Month".
+// Print the updated object.
 
+// 4, Pseudo code to JavaScript
 
+function updateCourseLength(evangadiClass){
+    evangadiClass.lengthOfCourse = "5 Month";
 
+    console.log(evangadiClass);
+}
+let evangadiClass = {
+    lengthOfCourse: "1 Month",
+    website: "https://www.evangadi.com/",
+    isChallenging: false,
+    topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
+    students:[
+        { name: "Abebe", age: 34, sex: "M" },
+        { name: "Kebede", age: 44, sex: "M"},
+        { name: "Almaz",  age: 27, sex: "F"},
+        { name: "Challa", age: 22, sex: "M"},
+        { name: "Chaltu",age: 19, sex: "F" }
+        ]
 
-
-
-
-
-
-
-
-
+}
+// // 5, test
+updateCourseLength(evangadiClass)

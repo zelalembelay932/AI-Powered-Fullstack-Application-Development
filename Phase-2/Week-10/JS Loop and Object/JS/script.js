@@ -836,16 +836,63 @@ function addTopic(data) {
 
 addTopic(evangadiClass);
 
-// push();
+console.log("\n ===========  Question 13 =========== ");
 
-// pop();
 
-// shift();
+function averageAge (evangadiClass){
+    let totalAge = 0;
 
-// unshift();
+    for (const students of evangadiClass.students) {
+        totalAge += students.age
+        // totalAge = totalAge + students.age
+    }
+    const average = totalAge / evangadiClass.students.length;
 
-// sort();
+    console.log(average);
 
-// reverse();
+}
+averageAge(evangadiClass);
 
-// includes();
+
+// more eplanation for....of 
+// why for...of :-
+        // we want to loop values of an array
+
+// const student 
+        // Current student object
+
+// of
+        //  Take one element from the array
+
+// evangadiClass.students
+        // The students array
+
+
+
+// First Iteration
+    // student
+        //     {
+        // name: "Abebe",
+        // age: 34,
+        // sex: "M"
+        //     }
+    // student.age
+        // 34
+    // totalAge = totalAge + students.age
+        // totalAge = 0 + 34;
+// totalAge = 34;
+
+
+
+// second Iteration
+    // student
+        // {
+        //     name: "Kebede",
+        //     age: 44,
+        //     sex: "M"
+        // }
+    // student.age
+        // 44
+    // totalAge = totalAge + students.age
+        // totalAge = 34 + 44;
+// totalAge = 78;

@@ -839,19 +839,20 @@ addTopic(evangadiClass);
 console.log("\n ===========  Question 13 =========== ");
 
 
-function averageAge (evangadiClass){
-    let totalAge = 0;
+// function averageAge (evangadiClass){
 
-    for (const students of evangadiClass.students) {
-        totalAge += students.age
-        // totalAge = totalAge + students.age
-    }
-    const average = totalAge / evangadiClass.students.length;
+//     let totalAge = 0;
 
-    console.log(average);
+//     for (const students of evangadiClass.students) {
+//         totalAge += students.age
+//         // totalAge = totalAge + students.age
+//     }
+//     const average = totalAge / evangadiClass.students.length;
 
-}
-averageAge(evangadiClass);
+//     console.log(average);
+
+// }
+// averageAge(evangadiClass);
 
 
 // more eplanation for....of 
@@ -896,3 +897,82 @@ averageAge(evangadiClass);
     // totalAge = totalAge + students.age
         // totalAge = 34 + 44;
 // totalAge = 78;
+
+
+
+
+console.log("\n ===========  Question 14 =========== ");
+
+
+// const malePercentage = (evangadiClass) => {
+
+//     let maleCount = 0;
+
+//     for (const students of evangadiClass.students) {
+//         if (students.sex === "M"){
+//             maleCount++;
+//         }
+//     }
+
+//     const totalStudents = evangadiClass.students.length;
+
+//     const percentage = (maleCount / totalStudents) *  100;
+
+//     console.log(percentage + "%");
+// }
+
+// malePercentage(evangadiClass);
+
+// First Iteration
+    // {
+    // name: "Abebe",
+    // age: 34,
+    // sex: "M"
+    // }
+    // Check
+        // students.sex === "M"
+        // "M" === "M"  True
+    // maleCount= maleCount + 1 =  1 
+
+// second Iteration
+    // {
+    // name: "Kebede",
+    // age: 44,
+    // sex: "M"
+    // }
+    // Check
+        // students.sex === "M"
+        // "M" === "M"  True
+    // maleCount = 1 + 1 =  2
+
+// 3 iteeration
+    //  { name: "Almaz",  age: 27, sex: "F"},
+    // Check
+        // students.sex === "M"
+        // "F" === "M"  False
+    // maleCount = 1 + 1 =  2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

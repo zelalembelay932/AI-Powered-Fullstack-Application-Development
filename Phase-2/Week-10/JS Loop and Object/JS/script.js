@@ -441,27 +441,38 @@ console.log("\n ===========  Question 6 =========== ");
 console.log("\n ===========  Question 7 =========== ");
 //  Write a function that takes an array of all numbers as a parameter, subtracts the total sum of all odd numbers of the array from the total sum of all even numbers and logs the result in the console.
 
-const evenOdd = function (array) {
-  if (!Array.isArray(array)) {
-    return "Please enter a valid array";
-  }
-  let evenSum = 0;
-  let oddSum = 0;
+// const evenOdd = function (array) {
 
-  for (let i = 0; i < array.length; i++) {
-    if (typeof array[i] !== "number" || isNaN(array[i])) {
-      return "Please enter a number value";
-    }
+//        if (!Array.isArray(array)) {
+//         return "Please enter a valid array";
+//     }
 
-    if (array[i] % 2 === 0) {
-      evenSum += array[i];
-    } else {
-      oddSum += array[i];
-    }
-  }
-  console.log(evenSum - oddSum);
-};
-evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
+//     let evenSum = 0; // 6
+//     let oddSum = 0; //104
+
+//     for (let i = 0; i < array.length; i++) {
+//          // array = Number(array[i]);
+//         if (typeof array[i] !== "number") {
+//         return "Please enter a number value";
+//         }
+//         if (isNaN(array[i])){
+//             return "Please enter a number value";
+//         }
+//             if (array[i] % 2 === 0) {
+//                 evenSum += array[i];
+//             } else {
+//                 oddSum += array[i];
+//             }
+//     }
+
+//     return(evenSum - oddSum);
+// };
+
+// evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
+
+// console.log(evenOdd([5, 6, 99, 8, 76, 4, 68, 44]));
+
+
 // problem:- folt 12.5 bigeba mn enadergalen 12.5 odd or even? how to do
 
 // iteration 1
@@ -615,6 +626,7 @@ console.log("\n ===========  Question 9 =========== ");
 //     console.log(number);
 // }
 
+
 // sampleArray([5, 6, 99, 8, 76, 4, 68, 44]);
 
 //  Add to the end                    => push()
@@ -638,6 +650,7 @@ console.log("\n ===========  Question 10 =========== ");
 // sort([5, 6, 99, 8, 76, 4, 68, 44]);
 // sort([8, 5, 99, 4]);
 
+
 // Compares tow numbers at a time
 // formula =>
 
@@ -647,7 +660,7 @@ console.log("\n ===========  Question 10 =========== ");
 // a = 8;
 // b = 5;
 // 8 - 5 = 3
-// result is positive "8 come after 5"
+// value of a result is positive "8 come after 5"
 // final === 5, 8
 
 // step 2
@@ -661,8 +674,8 @@ console.log("\n ===========  Question 10 =========== ");
 // a = 99;
 // b = 8;
 // 99 - 8 = 91
-// result is positive "4 before 5"
-// final === 4, 5, 8,
+// result is positive "99 come after 8"
+// final === 4, 5, 8, 99
 
 // only string numbers
 
@@ -710,6 +723,24 @@ console.log("\n ===========  Question 10 =========== ");
 // return b - a   => Sort numbers in Descending order.
 
 console.log("\n =========== Object-Oriented Data Model (OODM) =========== ");
+
+let evangadiClass = {
+    lengthOfCourse: "1 Month",
+    website: "https://www.evangadi.com/",
+    isChallenging: false,
+    topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
+    students:[
+        { name: "Abebe", age: 34, sex: "M" },
+        { name: "Kebede", age: 44, sex: "M"},
+        { name: "Almaz",  age: 27, sex: "F"},
+        { name: "Challa", age: 22, sex: "M"},
+        { name: "Chaltu",age: 19, sex: "F" }
+        ]
+
+}
+
+
+
 
 console.log("\n ===========  Question 11 =========== ");
 
@@ -765,24 +796,13 @@ console.log("\n ===========  Question 11 =========== ");
 
 // 4, Pseudo code to JavaScript
 
+
+
+
 function updateCourseLength(evangadiClass){
     evangadiClass.lengthOfCourse = "5 Month";
 
     console.log(evangadiClass);
-}
-let evangadiClass = {
-    lengthOfCourse: "1 Month",
-    website: "https://www.evangadi.com/",
-    isChallenging: false,
-    topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
-    students:[
-        { name: "Abebe", age: 34, sex: "M" },
-        { name: "Kebede", age: 44, sex: "M"},
-        { name: "Almaz",  age: 27, sex: "F"},
-        { name: "Challa", age: 22, sex: "M"},
-        { name: "Chaltu",age: 19, sex: "F" }
-        ]
-
 }
 // // 5, test
 updateCourseLength(evangadiClass)
@@ -822,26 +842,27 @@ console.log("\n ===========  Question 12 =========== ");
 // 4. Convert Pseudo Code to JavaScript
 
 
-function addTopic(data) {
-    data.topicsCovered.push("Bootstrap");
+// function addTopic(data) {
+    evangadiClass.topicsCovered.push("Bootstrap");
+    console.log(evangadiClass);
     // data.topicsCovered[4] = "Bootstrap";
 
     // data.topicsCovered is :- 
         // Access the array inside the object.
     // .push("Bootstrap")is :-
             // Add "Bootstrap" to the end of that array.
-    console.log(evangadiClass);
+    
     // Print the updated object.
-}
+// }
 
-addTopic(evangadiClass);
+// addTopic(evangadiClass);
 
 console.log("\n ===========  Question 13 =========== ");
 
 
 // function averageAge (evangadiClass){
 
-//     let totalAge = 0;
+//     let totalAge = 0;//78
 
 //     for (const students of evangadiClass.students) {
 //         totalAge += students.age
@@ -858,17 +879,12 @@ console.log("\n ===========  Question 13 =========== ");
 // more eplanation for....of 
 // why for...of :-
         // we want to loop values of an array
-
 // const student 
         // Current student object
-
 // of
         //  Take one element from the array
-
 // evangadiClass.students
         // The students array
-
-
 
 // First Iteration
     // student
@@ -903,20 +919,21 @@ console.log("\n ===========  Question 13 =========== ");
 
 console.log("\n ===========  Question 14 =========== ");
 
-
 // const malePercentage = (evangadiClass) => {
 
-//     let maleCount = 0;
+//     let maleCount = 0; //2
 
 //     for (const students of evangadiClass.students) {
+
 //         if (students.sex === "M"){
 //             maleCount++;
 //         }
+        
 //     }
 
-//     const totalStudents = evangadiClass.students.length;
+//     // const totalStudents = evangadiClass.students.length;
 
-//     const percentage = (maleCount / totalStudents) *  100;
+//     const percentage = (maleCount / evangadiClass.students.length) * 100;
 
 //     console.log(percentage + "%");
 // }
@@ -945,7 +962,7 @@ console.log("\n ===========  Question 14 =========== ");
         // "M" === "M"  True
     // maleCount = 1 + 1 =  2
 
-// 3 iteeration
+// 3 iteration
     //  { name: "Almaz",  age: 27, sex: "F"},
     // Check
         // students.sex === "M"
@@ -954,18 +971,53 @@ console.log("\n ===========  Question 14 =========== ");
 
 
 
+console.log("\n =========== Puzzles =========== ");
+console.log("\n ===========  Question 15 =========== ");
+
+// 1. Understand the Problem
+    // Receive two numbers:
+        // low and high
+    // Loop from low to high
+    // Check every number.
+    // If the number is divisible by 3, print: div3
+
+// 2. Solve It on Paper
+    // testDiv3(5, 12); low = 5 and high = 10
+        // 5 / 3 = remainder 1
+        // 6  / 3 = remainder 0 => div3
+        // 7 / 3 = remainder 1 
+        // 8 / 3 = remainder 1  
+        // 9 = remainder 0 => div3
+        // 10 / 3 = remainder 1 
+        // 11 / 3 = remainder 1 
+        // 12 = remainder 0 => div3
 
 
 
+function div3 (low, high) {
+
+    for (let i = low; i <= high; i++){
+
+        if (i % 3 === 0) {
+            console.log(i + "div3");
+        }else{
+            console.log(i);
+        }
+    }
+}
+
+div3(5, 12);
 
 
-
-
-
-
-
-
-
+    // testDiv3(5, 12); low = 5 and high = 10
+        // 5 / 3    = remainder 1
+        // 6  / 3   = remainder 0 => div3
+        // 7 / 3    = remainder 1 
+        // 8 / 3    = remainder 1  
+        // 9 / 3    = remainder 0 => div3
+        // 10 / 3   = remainder 1 
+        // 11 / 3   = remainder 1 
+        // 12 = remainder 0 => div3
 
 
 

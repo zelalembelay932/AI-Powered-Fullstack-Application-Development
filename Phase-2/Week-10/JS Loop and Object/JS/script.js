@@ -1023,8 +1023,117 @@ div3(5, 12);
 
 
 
+console.log("\n ===========  Question 16 =========== ");
+
+
+// 1. Understand the Problem
+
+
+    // We need to print numbers from 1 to 100.
+    
+//   Condition                  Print        
+
+//  Divisible by 3               Fizz     
+//  Divisible by 5               Buzz    
+//  Divisible by both 3 and 5    FizzBuzz 
+//  Otherwise                    The number   
+
+
+// 1;
+// 2;
+// 3 = Fizz;
+// 4;
+// 5 = Buzz;
+// 6 = Fizz;
+// 7;
+// 8;
+// 9 =  Fizz;
+// 10 = Buzz;
+// 11;
+// 12 = Fizz;
+// 13;
+// 14;
+// 15 = FizzBuzz;
+
+// 3  => divisible by 3       => Fizz
+// 5  => divisible by 5       => Buzz
+// 6  => divisible by 3       => Fizz
+// 9  => divisible by 3       => Fizz
+// 10 => divisible by 5       => Buzz
+// 15 => divisible by 3 and 5 => FizzBuzz
 
 
 
+function fizzBuzz () {
 
+    for (let i = 1; i <= 100; i++){
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+            // console.log(i + " " + "FizzBuzz");
+        }else if (i % 3 === 0){
+            console.log("Fizz");
+            // console.log(i + " " + "Fizz");
+        }else if (i % 5 === 0) {
+            console.log("Buzz");
+            // console.log(i + " " + "Buzz");
+        }else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz()
+
+// first iteration 
+    // i = 1
+    // check = i % 3 === 0
+        // False
+    // check = i % 5 === 0;
+        // false
+// print = 1
+
+// 2nd iteration 
+    // i = 2
+    // check = i % 3 === 0
+        // False
+    // check = i % 5 === 0;
+        // false
+// print = 2
+
+// 3 iteration 
+    // i = 3
+    // check = i % 3 === 0
+        // true
+    // check = i % 5 === 0;
+        // false
+    // check step to if()
+        // i % 3 === 0
+            // true
+// print = Fizz
+
+// 4 iteration 
+    // same as iteration 1 and 2
+
+// 5 iteration 
+    // i = 5
+    // check = i % 3 === 0
+        // false
+    // check = i % 5 === 0;
+        // true
+    // check step 3 if()
+        // i % 5 === 0
+            // true
+// print = Buzz
+
+
+
+// 15 iteration 
+    // i = 15
+    // check = i % 3 === 0
+        // true
+    // check = i % 5 === 0;
+        // true
+// print = FizzBuzz
+
+
+console.log("\n ===========  Question 16 =========== ");
 

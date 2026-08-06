@@ -468,9 +468,8 @@ console.log("\n ===========  Question 7 =========== ");
 //     return(evenSum - oddSum);
 // };
 
-// evenOdd([5, 6, 99, 8, 76, 4, 68, 44]);
-
 // console.log(evenOdd([5, 6, 99, 8, 76, 4, 68, 44]));
+
 
 
 // problem:- folt 12.5 bigeba mn enadergalen 12.5 odd or even? how to do
@@ -571,6 +570,7 @@ console.log("\n ===========  Question 8 =========== ");
 //         }
 //     }
 // }
+
 // evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 
 // evenIndex( [11, "Sam", 3, 7, "car"]);
@@ -579,7 +579,11 @@ console.log("\n ===========  Question 8 =========== ");
 
 //Value =>  5   6   99  8   76  4   68  44
 
-// evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
+
+
+
+
+
 
 // iteration 1
 // i = 0
@@ -614,6 +618,9 @@ console.log("\n ===========  Question 8 =========== ");
 //         }
 //     }
 // }
+
+
+// evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 
 console.log("\n ===========  Question 9 =========== ");
 // Write a function that takes the sampleArray as a parameter, removes the last element from the array,vadds a new value of "32" to the array and prints the new array on the console. Hint: use an array method
@@ -663,6 +670,8 @@ console.log("\n ===========  Question 10 =========== ");
 // value of a result is positive "8 come after 5"
 // final === 5, 8
 
+
+
 // step 2
 // a = 4;
 // b = 5;
@@ -692,6 +701,11 @@ console.log("\n ===========  Question 10 =========== ");
 // console.log(car);
 
 //  All Three Cases ==================================
+// if result posetive b after come a
+// if result negative a befor come b
+
+
+
 
 // const sortArray = (array) => {
 
@@ -716,6 +730,9 @@ console.log("\n ===========  Question 10 =========== ");
 // sortArray([5.6, 9.9, 8, 5.65, 4, 68, 44]);
 // sortArray(["5", "100", "20", "44"]);
 // sortArray(["Toyota", "Honda", "Ford", "Tesla", "BMW"]);
+
+
+
 
 // sort()         => Sorts the array.
 // function(a, b) => Receives two elements to compare.
@@ -747,39 +764,6 @@ console.log("\n ===========  Question 11 =========== ");
 //1, Understand the Problem
 // We are given an object:
 
-// let evangadiClass = {
-//     lengthOfCourse: "1 Month",
-//     website: "https://www.evangadi.com/",
-//     isChallenging: false,
-//     topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
-//     students:[
-//         {
-//             name: "Abebe",
-//             age: 34,
-//             sex: "M"
-//         },
-//         {
-//             name: "Kebede",
-//             age: 44,
-//             sex: "M"
-//         },
-//         {
-//             name: "Almaz",
-//             age: 27,
-//             sex: "F"
-//         },
-//         {
-//             name: "Challa",
-//             age: 22,
-//             sex: "M"
-//         },
-//         {
-//             name: "Chaltu",
-//             age: 19,
-//             sex: "F"
-//         }
-//     ]
-// }
 
 // Find the lengthOfCourse property.
 // Change its value from "1 Month" to "5 Month"
@@ -799,13 +783,13 @@ console.log("\n ===========  Question 11 =========== ");
 
 
 
-function updateCourseLength(evangadiClass){
-    evangadiClass.lengthOfCourse = "5 Month";
+// function updateCourseLength(evangadiClass){
+//     evangadiClass.lengthOfCourse = "5 Month";
 
-    console.log(evangadiClass);
-}
-// // 5, test
-updateCourseLength(evangadiClass)
+//     console.log(evangadiClass);
+// }
+// // // 5, test
+// updateCourseLength(evangadiClass)
 
 console.log("\n ===========  Question 12 =========== ");
 
@@ -843,8 +827,8 @@ console.log("\n ===========  Question 12 =========== ");
 
 
 // function addTopic(data) {
-    evangadiClass.topicsCovered.push("Bootstrap");
-    console.log(evangadiClass);
+    // evangadiClass.topicsCovered.push("Bootstrap");
+    // console.log(evangadiClass);
     // data.topicsCovered[4] = "Bootstrap";
 
     // data.topicsCovered is :- 
@@ -857,12 +841,17 @@ console.log("\n ===========  Question 12 =========== ");
 
 // addTopic(evangadiClass);
 
+
+// evangadiClass.topicsCovered.push("Bootstrap");
+// console.log(evangadiClass);
+
+
 console.log("\n ===========  Question 13 =========== ");
 
 
 // function averageAge (evangadiClass){
 
-//     let totalAge = 0;//78
+//     let totalAge = 0;
 
 //     for (const students of evangadiClass.students) {
 //         totalAge += students.age
@@ -921,7 +910,7 @@ console.log("\n ===========  Question 14 =========== ");
 
 // const malePercentage = (evangadiClass) => {
 
-//     let maleCount = 0; //2
+//     let maleCount = 0; //
 
 //     for (const students of evangadiClass.students) {
 
@@ -982,7 +971,7 @@ console.log("\n ===========  Question 15 =========== ");
     // If the number is divisible by 3, print: div3
 
 // 2. Solve It on Paper
-    // testDiv3(5, 12); low = 5 and high = 10
+    // testDiv3(5, 12); low = 5 and high = 12
         // 5 / 3 = remainder 1
         // 6  / 3 = remainder 0 => div3
         // 7 / 3 = remainder 1 
@@ -994,22 +983,20 @@ console.log("\n ===========  Question 15 =========== ");
 
 
 
-function div3 (low, high) {
+// function div3 (low, high) {
 
-    for (let i = low; i <= high; i++){
+//     for (let i = low; i <= high; i++){
 
-        if (i % 3 === 0) {
-            console.log(i + "div3");
-        }else{
-            console.log(i);
-        }
-    }
-}
+//         if (i % 3 === 0) {
+//             console.log(i + " " + "div3");
+//         }else{
+//             console.log(i);
+//         }
+//     }
+// }
 
-div3(5, 12);
-
-
-    // testDiv3(5, 12); low = 5 and high = 10
+// div3(5, 12);
+   // testDiv3(5, 12); low = 5 and high = 10
         // 5 / 3    = remainder 1
         // 6  / 3   = remainder 0 => div3
         // 7 / 3    = remainder 1 
@@ -1064,24 +1051,25 @@ console.log("\n ===========  Question 16 =========== ");
 
 
 
-function fizzBuzz () {
+// function fizzBuzz () {
 
-    for (let i = 1; i <= 100; i++){
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzz");
-            // console.log(i + " " + "FizzBuzz");
-        }else if (i % 3 === 0){
-            console.log("Fizz");
-            // console.log(i + " " + "Fizz");
-        }else if (i % 5 === 0) {
-            console.log("Buzz");
-            // console.log(i + " " + "Buzz");
-        }else {
-            console.log(i);
-        }
-    }
-}
-fizzBuzz()
+//     for (let i = 1; i <= 100; i++){
+
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             // console.log("FizzBuzz");
+//             console.log(i + "_" + "FizzBuzz");
+//         }else if (i % 3 === 0){
+//             console.log( i + "_" + "Fizz");
+//             // console.log(i + " " + "Fizz");
+//         }else if (i % 5 === 0) {
+//             console.log(i + "_" + "Buzz");
+//             // console.log(i + " " + "Buzz");
+//         }else {
+//             console.log(i);
+//         }
+//     }
+// }
+// fizzBuzz()
 
 // first iteration 
     // i = 1
@@ -1135,5 +1123,51 @@ fizzBuzz()
 // print = FizzBuzz
 
 
-console.log("\n ===========  Question 16 =========== ");
+console.log("\n ===========  Question 17 =========== ");
 
+// 1. Understand the Problem
+    // we are receive one integer
+    // check every digit
+    // if all digits are even print: 1
+    // otherwise print 0
+// eg :- 2426 all are even print 1
+        // 3224 :-3 is odd print 0
+
+
+function isEvens (number){
+
+    let digits = number.toString();
+    // "2", "4", "2", "6"
+
+    for (const num of digits) {
+
+        if (Number(num) % 2 !== 0) {
+            console.log(0);
+            return;
+        }
+    }
+    console.log(1);
+}
+isEvens(2426);
+isEvens(3224);
+isEvens(8788);
+isEvens(1358);
+
+
+
+
+
+
+
+
+
+
+// let digits = number.toString();
+    //Why Convert to a String?
+        // Because strings are easy to loop through
+        // Each character can be checked one by one.
+
+
+
+// for (const num of digits)
+    // Take one character at a time.

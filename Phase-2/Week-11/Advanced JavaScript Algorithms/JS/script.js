@@ -537,22 +537,22 @@ console.log("\n ===========  Question 2 =========== ");
                 // factorial = factorial * i;
 // Step 5
     // Translate to JavaScript Code
-function returnFactorial(number) {
-    let factorial = 1;
+// function returnFactorial(number) {
+//     let factorial = 1;
 
-    for (let i = number; i >= 1; i--) {
-        // factorial = factorial * i;
-        factorial *= i;
-    }
-    return factorial;
-}
+//     for (let i = number; i >= 1; i--) {
+//         // factorial = factorial * i;
+//         factorial *= i;
+//     }
+//     return factorial;
+// }
 
-// Step 6
-// Test
+// // Step 6
+// // Test
 
-console.log(returnFactorial(5));
-console.log(returnFactorial(6));
-console.log(returnFactorial(0));
+// console.log(returnFactorial(5));
+// console.log(returnFactorial(6));
+// console.log(returnFactorial(0));
 
 
 // 1 itration
@@ -586,6 +586,66 @@ console.log(returnFactorial(0));
     // factorial = factorial * i;
         // 1 * 120 = 120
     // factorial = 120;
+
+
+
+console.log("\n ===========  Question 3 =========== ");
+// The assignment defines a Meera array as an array where, for every value n, the array does not contain both n and n * 2. For example, [8, 3, 4] is not a Meera array because both 4 and 8 exist.
+
+
+// Step 1
+    // Understand the problem
+        // for evry number n check  n * 2 also existsin the array
+// Step 2
+    // Solve it on paper
+        // [10, 4, 0, 5]  = n * 2
+            // 10 * 2 = 20, 20 is not inside array
+            // 4 * 2 = 8, 8 is not inside array
+            // 0 * 2 = 0, [0] would not be a Meera array
+            // 5 * 2 = 10, 10 is in side arry
+        // print "I am NOT a Meera array"
+// Step 3
+    // Create a general Solution to applay step by step
+// Step 4
+    // Write Pseudo code
+    // stp 1
+        // create function checkMeera and parameter(array)
+            // function checkMeera(array) {}
+    // setp 2
+        // for each number n in array
+            // for (const n of array) {}
+    // step 3
+        // check doubled = n * 2
+            // const doubled = n * 2;
+    // step 4
+        // if array contains doubled
+            // if (array.includes(doubled)){}
+        // print "I am NOT a Meera array"
+    // step 6 
+        // if array not contains
+            // print "I am a Meera array"
+        // console.log("I am a Meera array");
+
+// Step 5
+// Translate to JavaScript Code
+function checkMeera(array) {
+    for (const n of array) {
+        const doubled = n * 2;
+        
+        if (array.includes(doubled)) {
+            console.log("I am NOT a Meera array");
+            return;
+        }
+    }
+    console.log("I am a Meera array");
+}
+
+// Step 6
+    // Test
+checkMeera([10, 4, 0, 5]);
+checkMeera([7, 4, 9]);
+checkMeera([1, -6, 4, -3]);
+
 
 
 

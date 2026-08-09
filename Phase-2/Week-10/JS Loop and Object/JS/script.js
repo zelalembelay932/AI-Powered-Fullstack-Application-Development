@@ -742,20 +742,25 @@ console.log("\n ===========  Question 10 =========== ");
 console.log("\n =========== Object-Oriented Data Model (OODM) =========== ");
 
 let evangadiClass = {
-    lengthOfCourse: "1 Month",
-    website: "https://www.evangadi.com/",
-    isChallenging: false,
-    topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
-    students:[
-        { name: "Abebe", age: 34, sex: "M" },
-        { name: "Kebede", age: 44, sex: "M"},
-        { name: "Almaz",  age: 27, sex: "F"},
-        { name: "Challa", age: 22, sex: "M"},
-        { name: "Chaltu",age: 19, sex: "F" }
+        lengthOfCourse: "1 Month",
+        website: "https://www.evangadi.com/",
+        isChallenging: false,
+        topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
+        students:[
+            { name: "Abebe", age: 34, sex: "M" },
+            { name: "Kebede", age: 44, sex: "M"},
+            { name: "Almaz",  age: 27, sex: "F"},
+            { name: "Challa", age: 22, sex: "M"},
+            { name: "Chaltu",age: 19, sex: "F" }
         ]
-
 }
 
+// CRUD
+
+// creat
+// read
+// update
+// delete
 
 
 
@@ -784,9 +789,11 @@ console.log("\n ===========  Question 11 =========== ");
 
 
 // function updateCourseLength(evangadiClass){
-//     evangadiClass.lengthOfCourse = "5 Month";
 
-//     console.log(evangadiClass);
+
+
+    // evangadiClass.lengthOfCourse = "5 Month";
+    // console.log(evangadiClass);
 // }
 // // // 5, test
 // updateCourseLength(evangadiClass)
@@ -827,16 +834,16 @@ console.log("\n ===========  Question 12 =========== ");
 
 
 // function addTopic(data) {
-    // evangadiClass.topicsCovered.push("Bootstrap");
-    // console.log(evangadiClass);
-    // data.topicsCovered[4] = "Bootstrap";
+//     evangadiClass.topicsCovered.push("Bootstrap");
+//     console.log(evangadiClass);
+//     data.topicsCovered[4] = "Bootstrap";
 
-    // data.topicsCovered is :- 
-        // Access the array inside the object.
-    // .push("Bootstrap")is :-
-            // Add "Bootstrap" to the end of that array.
+//     // data.topicsCovered is :- 
+//         // Access the array inside the object.
+//     // .push("Bootstrap")is :-
+//             // Add "Bootstrap" to the end of that array.
     
-    // Print the updated object.
+//     // Print the updated object.
 // }
 
 // addTopic(evangadiClass);
@@ -853,15 +860,19 @@ console.log("\n ===========  Question 13 =========== ");
 
 //     let totalAge = 0;
 
-//     for (const students of evangadiClass.students) {
-//         totalAge += students.age
-//         // totalAge = totalAge + students.age
-//     }
-//     const average = totalAge / evangadiClass.students.length;
+    // for (const students of evangadiClass.students) {
+    //     // totalAge += students.age
+    //     totalAge = totalAge + students.age
+    // }
+//     const average = totalAge / evangadiClass.students.length; //5
 
 //     console.log(average);
+//     // return average;
 
 // }
+
+// console.log(averageAge(evangadiClass));
+
 // averageAge(evangadiClass);
 
 
@@ -924,10 +935,36 @@ console.log("\n ===========  Question 14 =========== ");
 
 //     const percentage = (maleCount / evangadiClass.students.length) * 100;
 
-//     console.log(percentage + "%");
+//     console.log(percentage + "%" );
 // }
 
+
 // malePercentage(evangadiClass);
+
+
+
+
+
+
+// function malePercentage (evangadiClass){
+
+//     let maleCount = 0;
+
+//     for (i = 0; i < evangadiClass.students.length; i++){
+
+//         if(evangadiClass.students[i].sex === "M"){
+//             maleCount++;
+//         }
+//     }
+
+//     const percentage = (maleCount / evangadiClass.students.length) * 100 ;
+        
+//     // return percentage;
+//     console.log(percentage + "%");
+// }
+// malePercentage(evangadiClass);
+// console.log(malePercentage(evangadiClass));
+
 
 // First Iteration
     // {
@@ -971,7 +1008,9 @@ console.log("\n ===========  Question 15 =========== ");
     // If the number is divisible by 3, print: div3
 
 // 2. Solve It on Paper
+
     // testDiv3(5, 12); low = 5 and high = 12
+
         // 5 / 3 = remainder 1
         // 6  / 3 = remainder 0 => div3
         // 7 / 3 = remainder 1 
@@ -992,10 +1031,14 @@ console.log("\n ===========  Question 15 =========== ");
 //         }else{
 //             console.log(i);
 //         }
+        
 //     }
 // }
 
-// div3(5, 12);
+// div3(100, 120);
+
+
+
    // testDiv3(5, 12); low = 5 and high = 10
         // 5 / 3    = remainder 1
         // 6  / 3   = remainder 0 => div3
@@ -1056,13 +1099,16 @@ console.log("\n ===========  Question 16 =========== ");
 //     for (let i = 1; i <= 100; i++){
 
 //         if (i % 3 === 0 && i % 5 === 0) {
-//             // console.log("FizzBuzz");
-//             console.log(i + "_" + "FizzBuzz");
+
+//             console.log( i + " " + "FizzBuzz");
+//             // console.log(i + "_" + "FizzBuzz");
 //         }else if (i % 3 === 0){
-//             console.log( i + "_" + "Fizz");
+
+//             console.log(i + " " + "Fizz");
 //             // console.log(i + " " + "Fizz");
 //         }else if (i % 5 === 0) {
-//             console.log(i + "_" + "Buzz");
+
+//             console.log(i + " " + "Buzz");
 //             // console.log(i + " " + "Buzz");
 //         }else {
 //             console.log(i);
@@ -1137,7 +1183,9 @@ console.log("\n ===========  Question 17 =========== ");
 function isEvens (number){
 
     let digits = number.toString();
+
     // "2", "4", "2", "6"
+    
 
     for (const num of digits) {
 
@@ -1148,6 +1196,7 @@ function isEvens (number){
     }
     console.log(1);
 }
+
 isEvens(2426);
 isEvens(3224);
 isEvens(8788);

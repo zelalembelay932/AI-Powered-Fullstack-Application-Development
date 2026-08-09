@@ -354,8 +354,6 @@ console.log("\n ===========  Question 2 =========== ");
 
 
 
-
-
 // Step 1
     // Understand the problem
         // we receive a tow digit number 72
@@ -415,30 +413,30 @@ console.log("\n ===========  Question 2 =========== ");
 // Step 5
 // Translate to JavaScript Code
 
-function reverseCompare(number) {
+// function reverseCompare(number) {
     
-    // number.toString().split().reverse().join();
+//     // number.toString().split().reverse().join();
 
-    // Number(number);
+//     // Number(number);
 
-    // Number( number.toString().split().reverse().join())
+//     // Number( number.toString().split().reverse().join())
 
-    // return reverseCompare;
+//     // return reverseCompare;
 
-    const reversedNumber = Number(number.toString().split("").reverse().join(""));
+//     const reversedNumber = Number(number.toString().split("").reverse().join(""));
 
-    if (number > reversedNumber) {
-        console.log("Ok");
-    }else{
-        console.log("Not Ok");
-    }
-}
+//     if (number > reversedNumber) {
+//         console.log("Ok");
+//     }else{
+//         console.log("Not Ok");
+//     }
+// }
 
 
-// Step 6
-// Test
-reverseCompare(72);
-reverseCompare(23)
+// // Step 6
+// // Test
+// reverseCompare(72);
+// reverseCompare(23)
 
 
 
@@ -464,5 +462,130 @@ reverseCompare(23)
 
 // reverseString("hello");
 // console.log(reverseString("27"));
+
+
+
+
+
+
+
+
+
+
+// Source - https://stackoverflow.com/q/29338175
+// Posted by fev3r, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-08-09, License - CC BY-SA 3.0
+
+
+
+
+
+
+
+
+
+
+console.log("\n ===========  Question 2 =========== ");
+// Source - https://stackoverflow.com/a/29338200
+// Posted by Tommy
+// Retrieved 2026-08-09, License - CC BY-SA 3.0
+
+// function fact(x) {
+//     if (x <= 1) {
+//         return 1
+//     }
+//     else {
+//         return (x * fact(x-1))
+//     }
+// }
+// console.log(fact(5));
+// console.log(fact(6));
+
+
+
+// Step 1
+    // Understand the problem
+    // What is factorial
+    // A factorial number is the product of an integer and all the positive whole numbers below it.
+        // How Factorials Work
+            // Symbol: Written as an exclamation point (!) after a number.
+            // Formula:  n! = n * (n - 1) * (n - 2)...
+            // Special Rule: Zero factorial (0!) always equals 1 by definition.
+            // Example :- 5! = 120, 4! = 24
+// Step 2
+    // Solve it on paper
+    // returnFactorial(5)
+        // 5 × 4 × 3 × 2 × 1 = 120
+    // always start in 1 b/c multiplying 1 is not change the result
+        
+// Step 3
+    // Create a general Solution
+        // Formula:  n! = n * (n - 1) * (n - 2)
+// Step 4
+    // Write Pseudo code
+        // step 1
+            // Create a function returnFactorial
+                // function returnFactorial(number) {}
+        // step 2
+            // set factorial start to = 1
+                // let factorial = 1;
+        // step 3
+            // for i from number down to 1
+                // for (let i = number; i >= 1; i--) {}
+        // step 4
+            // Multiply factorial
+                // factorial = factorial * i;
+// Step 5
+    // Translate to JavaScript Code
+function returnFactorial(number) {
+    let factorial = 1;
+
+    for (let i = number; i >= 1; i--) {
+        // factorial = factorial * i;
+        factorial *= i;
+    }
+    return factorial;
+}
+
+// Step 6
+// Test
+
+console.log(returnFactorial(5));
+console.log(returnFactorial(6));
+console.log(returnFactorial(0));
+
+
+// 1 itration
+    // returnFactorial(5)
+        // i = 5 
+    // factorial = factorial * i;
+        // 1 * 5 = 5
+    // factorial = 5;
+
+// 2 itration
+        // i = 4 
+    // factorial = factorial * i;
+        // 4 * 5 = 20
+    // factorial = 20;
+
+// 3 itration
+        // i = 3 
+    // factorial = factorial * i;
+        // 3 * 20 = 60
+    // factorial = 60;
+
+// 4 itration
+        // i = 2 
+    // factorial = factorial * i;
+        // 2 * 60 = 120
+    // factorial = 120;
+
+
+// 5 itration
+        // i = 1 
+    // factorial = factorial * i;
+        // 1 * 120 = 120
+    // factorial = 120;
+
 
 

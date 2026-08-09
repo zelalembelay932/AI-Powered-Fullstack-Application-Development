@@ -347,46 +347,122 @@ console.log("\n ===========  Question 1 =========== ");
 
 
 console.log("\n ===========  Question 2 =========== ");
+//  Create a function that takes a two-digit number as an parameter and prints "Ok" in the console if the given string is greater than its reversed digit version. If not, the function will print "Not ok"
+// ○ Test 1: reverseCompare(72) prints "ok" because 72 > 27
+// ○ reverseCompare(23) prints "Not ok", because 23 is not greater than 32
+
+
+
+
+
 
 // Step 1
     // Understand the problem
+        // we receive a tow digit number 72
+            // 72 > 27
+            // if the given string is greater than its reversed digit print "OK"
+        
+        // we receive a tow digit number 23
+            // 23 > 32
+            // if the given number is lessthan to reversed digit print "Not Ok" 
 // Step 2
-// Solve it on paper
+    // Solve it on paper
+        // let use 72
+            // 7 is first digit 
+            // 2 is second digit
+        // Reverse in to 27
+        // compare 72 > 27 result True
+        // print "OK"
+    // other method 
+        // let use 23
+            // 2 is first digit 
+            // 3 is second digit
+        // Reverse in to 32
+        // compare 23 > 32 result False
+        // Print "Not Ok"
+
 // Step 3
-// Create a general Solution to applay step by step
+    // Create a general Solution to applay step by step
+        // conver number to string and split
+        // reverse the characters
+        // convert the reverse string back to number
+        // compare original number with reversed number
+        // if original is gerterthan
+            // print Ok
+        // Otherwise 
+            // print Not Ok
 // Step 4
-// Write Pseudo code
+    // Write Pseudo code
+        // step 1
+            // creat function ReveerseCompare and parametre (number)
+        // step 2
+            // Convert number to string and split
+                // How?
+                //	number.toString()
+        // step 3
+            // reverse the characters
+                // How ?
+                // number.reverse()
+        // step 4 
+            // convert the reverse string back to number
+                // how ?
+                // Number()
+        // step 5
+            // if original number is greterthan revers number
+                // Print "Ok"
+            // else 
+                // print "Not ok"
 // Step 5
 // Translate to JavaScript Code
+
+function reverseCompare(number) {
+    
+    // number.toString().split().reverse().join();
+
+    // Number(number);
+
+    // Number( number.toString().split().reverse().join())
+
+    // return reverseCompare;
+
+    const reversedNumber = Number(number.toString().split("").reverse().join(""));
+
+    if (number > reversedNumber) {
+        console.log("Ok");
+    }else{
+        console.log("Not Ok");
+    }
+}
+
+
 // Step 6
 // Test
-
-
-
+reverseCompare(72);
+reverseCompare(23)
 
 
 
 // Source - https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
 
 
-function reverseString(str) {
-  // Step 1. Use the split() method to return a new array
-  var splitString = str.split(""); // var splitString = "hello".split("");
-  // ["h", "e", "l", "l", "o"]
+// function reverseString(str) {
+//   // Step 1. Use the split() method to return a new array
+//   var splitString = str.split(""); // var splitString = "hello".split("");
+//   // ["h", "e", "l", "l", "o"]
 
-  // Step 2. Use the reverse() method to reverse the new created array
-  var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
-  // ["o", "l", "l", "e", "h"]
+//   // Step 2. Use the reverse() method to reverse the new created array
+//   var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+//   // ["o", "l", "l", "e", "h"]
 
-  // Step 3. Use the join() method to join all elements of the array into a string
-  var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
-  // "olleh"
+//   // Step 3. Use the join() method to join all elements of the array into a string
+//   var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+//   // "olleh"
 
-  //Step 4. Return the reversed string
-  return joinArray; // "olleh"
-}
+//   //Step 4. Return the reversed string
+//   return joinArray; // "olleh"
+// }
 
-reverseString("hello");
-console.log(reverseString("27"));
+// reverseString("hello");
+// console.log(reverseString("27"));
 
 

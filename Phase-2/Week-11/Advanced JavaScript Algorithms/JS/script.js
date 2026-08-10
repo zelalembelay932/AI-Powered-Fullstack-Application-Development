@@ -240,60 +240,65 @@ console.log("\n ===========  Question 1 =========== ");
 // ○ Test 2: getOnlyEvens([0, 1, 2, 3, 4]) prints [0, 2, 4]
 
 // Step 1
-// Understand the problem
-// we are given an array  of numbers
-// function should create and print another array.
-// there are two condition
-// first:- number must be even
-// How to check number even?
-// number % 2 === 0
-// second:- index must be even only
-// How to check index even?
-// index % 2 === 0
+    // Understand the problem
+        // we are given an array  of numbers
+        // function should create and print another array.
+        // there are two condition
+            // first:- number must be even
+            // How to check number even?
+                // number % 2 === 0
+            // second:- index must be even only
+            // How to check index even?
+                // index % 2 === 0
 
 // Step 2
 // Solve it on paper
-// index : 0  1  2   3   4   5
-// Value : 1  2  3   6   4   8
+    // index : 0  1  2   3   4   5
+    // Value : 1  2  3   6   4   8
 
-// Only (4) index and number EVEN both condition true
+    // Only (4) index and number EVEN both condition true
+
 // Step 3
-// Create a general Solution to applay step by step
-// the tow condition are
-// number % 2 === 0 &&  array[index] % 2 === 0
-// both must be true
+    // Create a general Solution to applay step by step
+        // the tow condition are
+    // number % 2 === 0 &&  array[index] % 2 === 0
+        // both must be true
 // Step 4
 // Write Pseudo code
-// create function getOnlyEvens argument (array)
-// function getOnlyEvens(array)
-// create empty result array
-// const result = [];
-// for each index from 0 to array length
-// for(i = 0; i < array.length; i++)
-//get the number at index
-
-// if index is even
-// AND number is even
-// add number to result array
-// number % 2 === 0 &&  array[index] % 2 === 0
-// prit result
+    // create function getOnlyEvens argument (array)
+        // function getOnlyEvens(array)
+    // create empty result array
+        // const result = [];
+    // for each index from 0 to array length
+        // for(i = 0; i < array.length; i++)
+    //get the number at index
+        // if index is even
+        // AND number is even
+    // add number to result array
+    // number % 2 === 0 &&  array[index] % 2 === 0
+        // prit result
 
 // Step 5
 // Translate to JavaScript Code
 
 // function getOnlyEvens(array) {
-//     const result = [];
+//     const result = []; // 0, 2, 4
 
 // for (let i = 0; i < array.length; i++) {
 //     if (i % 2 === 0 && array[i] % 2 === 0) {
-//         // result.push(array[i]);
-//         result[result.length] = array[i];
+//         result.push(array[i]);
+//         // result[result.length] = array[i];
 
-//       // console.log(array[i]);
+//     //   console.log(array[i]);
 //     }
 // }
 //     return result;
 // }
+// console.log(getOnlyEvens([1, 2, 3, 6, 4, 8]));
+// // [4]
+// console.log(getOnlyEvens([0, 1, 2, 3, 4]));
+// // // [0, 2, 4]
+
 
 // array[i] → GET the value
 // push()   → ADD the value
@@ -305,14 +310,14 @@ console.log("\n ===========  Question 1 =========== ");
 //     });
 // }
 
-// Step 6
-// Test
+// // Step 6
+// // Test
 
 // console.log(getOnlyEvens([1, 2, 3, 6, 4, 8]));
-// [4]
+// // [4]
 
 // console.log(getOnlyEvens([10, 1, 2, 3, 4]));
-// // [0, 2, 4]
+// // // [0, 2, 4]
 
 // array = [1, 2, 3, 6, 4, 8];
 // result = [];
@@ -331,7 +336,7 @@ console.log("\n ===========  Question 1 =========== ");
 // which is 4
 // i % 2 === 0 => 4 % 2 true
 // array[i] % 2 === 0 => 4 % 2 true
-// we do push to result = [44]
+// we do push to result = [4]
 
 // const numbers = [];
 
@@ -423,20 +428,23 @@ console.log("\n ===========  Question 2 =========== ");
 
 //     // return reverseCompare;
 
-//     const reversedNumber = Number(number.toString().split("").reverse().join(""));
+//     const reversedNumber = (number.toString().split("").reverse().join(""));
 
 //     if (number > reversedNumber) {
 //         console.log("Ok");
 //     }else{
 //         console.log("Not Ok");
 //     }
+
 // }
 
 
 // // Step 6
 // // Test
 // reverseCompare(72);
-// reverseCompare(23)
+// reverseCompare(23);
+// reverseCompare(77);
+// reverseCompare(66);
 
 
 
@@ -459,8 +467,8 @@ console.log("\n ===========  Question 2 =========== ");
 //   //Step 4. Return the reversed string
 //   return joinArray; // "olleh"
 // }
+// console.log(reverseString("hello"));
 
-// reverseString("hello");
 // console.log(reverseString("27"));
 
 
@@ -485,7 +493,7 @@ console.log("\n ===========  Question 2 =========== ");
 
 
 
-console.log("\n ===========  Question 2 =========== ");
+console.log("\n ===========  Question 3 =========== ");
 // Source - https://stackoverflow.com/a/29338200
 // Posted by Tommy
 // Retrieved 2026-08-09, License - CC BY-SA 3.0
@@ -521,6 +529,7 @@ console.log("\n ===========  Question 2 =========== ");
 // Step 3
     // Create a general Solution
         // Formula:  n! = n * (n - 1) * (n - 2)
+                    // 55! = 55 * (55-1) * (55-2)
 // Step 4
     // Write Pseudo code
         // step 1
@@ -538,19 +547,20 @@ console.log("\n ===========  Question 2 =========== ");
 // Step 5
     // Translate to JavaScript Code
 // function returnFactorial(number) {
-//     let factorial = 1;
+//     let factorial = 1; // 5 // 20 // 60 // 120
 
 //     for (let i = number; i >= 1; i--) {
-//         // factorial = factorial * i;
-//         factorial *= i;
+//         factorial = factorial * i;
+//         // factorial *= i;
+//         // factorial = 0 * 5; = 0
 //     }
 //     return factorial;
 // }
 
-// // Step 6
-// // Test
+// Step 6
+// Test
 
-// console.log(returnFactorial(5));
+// console.log(returnFactorial(555));
 // console.log(returnFactorial(6));
 // console.log(returnFactorial(0));
 
@@ -589,7 +599,7 @@ console.log("\n ===========  Question 2 =========== ");
 
 
 
-console.log("\n ===========  Question 3 =========== ");
+console.log("\n ===========  Question 4 =========== ");
 // The assignment defines a Meera array as an array where, for every value n, the array does not contain both n and n * 2. For example, [8, 3, 4] is not a Meera array because both 4 and 8 exist.
 
 
@@ -628,23 +638,26 @@ console.log("\n ===========  Question 3 =========== ");
 
 // Step 5
 // Translate to JavaScript Code
-function checkMeera(array) {
-    for (const n of array) {
-        const doubled = n * 2;
-        
-        if (array.includes(doubled)) {
-            console.log("I am NOT a Meera array");
-            return;
-        }
-    }
-    console.log("I am a Meera array");
-}
 
-// Step 6
-    // Test
-checkMeera([10, 4, 0, 5]);
-checkMeera([7, 4, 9]);
-checkMeera([1, -6, 4, -3]);
+// function checkMeera(array) {
+//     for (const n of array) {
+
+//         const doubled = n * 2;
+        
+//         if (array.includes(doubled)) {
+//             console.log("I am NOT a Meera array");
+//             return;
+//         }
+//     }
+    
+//     console.log("I am a Meera array");
+// }
+
+// // Step 6
+//     // Test
+// checkMeera([10, 4, 0, 5]);
+// checkMeera([7, 4, 9]);
+// checkMeera([1, -6, 4, -3]);
 
 
 

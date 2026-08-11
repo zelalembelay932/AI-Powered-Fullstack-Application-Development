@@ -297,7 +297,7 @@ console.log("\n ===========  Question 1 =========== ");
 // console.log(getOnlyEvens([1, 2, 3, 6, 4, 8]));
 // // [4]
 // console.log(getOnlyEvens([0, 1, 2, 3, 4]));
-// // // [0, 2, 4]
+// // [0, 2, 4]
 
 
 // array[i] → GET the value
@@ -342,9 +342,22 @@ console.log("\n ===========  Question 1 =========== ");
 
 // console.log(numbers.push(10));
 
+// function getOnlyEvens(array) {
+//     return array.filter((number, index) => {
+//         return index % 2 === 0 && number % 2 === 0;
+//     });
+// }
 
 
+// array map, filter is recived call back function 
+// what is call back function
+// how to use call back function
 
+
+// function santsef return array.filter becha tetekmen mesrt enchlalen.
+//  return array.filter((number, index) => {
+//         return index % 2 === 0 && number % 2 === 0;
+//     });
 
 
 
@@ -439,8 +452,8 @@ console.log("\n ===========  Question 2 =========== ");
 // }
 
 
-// // Step 6
-// // Test
+// // // Step 6
+// // // Test
 // reverseCompare(72);
 // reverseCompare(23);
 // reverseCompare(77);
@@ -557,13 +570,13 @@ console.log("\n ===========  Question 3 =========== ");
 //     return factorial;
 // }
 
-// Step 6
-// Test
+// // Step 6
+// // Test
 
 // console.log(returnFactorial(555));
 // console.log(returnFactorial(6));
 // console.log(returnFactorial(0));
-
+// problem :- use recurtion method
 
 // 1 itration
     // returnFactorial(5)
@@ -600,6 +613,7 @@ console.log("\n ===========  Question 3 =========== ");
 
 
 console.log("\n ===========  Question 4 =========== ");
+
 // The assignment defines a Meera array as an array where, for every value n, the array does not contain both n and n * 2. For example, [8, 3, 4] is not a Meera array because both 4 and 8 exist.
 
 
@@ -660,5 +674,214 @@ console.log("\n ===========  Question 4 =========== ");
 // checkMeera([1, -6, 4, -3]);
 
 
+console.log("\n ===========  Question 5 =========== ");
 
+// Question 5 (Dual array)
+// ● Define a Dual array to be an array where every value occurs exactly twice. For example, {1, 2, 1, 3, 3, 2} is a dual array.The following arrays are not Dual arrays {2, 5, 2, 5, 5} (5) occurs three times instead of two times) {3, 1, 1, 2, 2} (3 occurs once instead of two times) Write a function named isDual that returns 1 if its array argument is a Dual array.
+// Otherwise it returns 0.
+
+
+
+
+
+// Step 1
+    // Understand the problem
+        // 1 => if EVERY value appears exactly twice
+        // 0 => if ANY value does not appear exactly twice
+
+// Step 2
+    // Solve it on paper
+        // [1, 2, 1, 3, 3, 2]
+            // 1 => 2 
+            // 2 => 2
+            // 3 => 2
+    // print 1
+
+    // [2, 5, 2, 5, 5]
+        // 2 => 2
+        // 5 => 3   5  three times:
+    // print 0
+// Step 3
+    // Create a general Solution 
+        // Count how many times each value twice
+        // we are create an object to store 
+            // value => how many times it appears
+        // then we are check
+            // all counts exactly 2?
+            // if yes print 1
+            // otherwise print 0
+// Step 4
+    // Write Pseudo code
+        // stp 1
+        // create function isDual and parameter(array)
+                // function isDual(array) {}
+            // we have diclaring count variable to store
+                // const counts = {};
+        // setp 2
+            // for each value in array
+                // for (const num of array) {}
+
+                // if we are seen it before
+                    // increase its count by 1
+                // if we have not seet it before
+                    // start its count at 1
+        // step 3
+            // after counting all number
+                // look at every count.
+                // if any count is not equal 2 
+                    // return 0
+        // step 4
+            // every count is 2 
+                // return 1
+
+// Step 5
+// Translate to JavaScript Code
+function isDual(arr) {
+  const counts = {}; //  to store how many times it appears
+
+//   counts = {
+//     1: 2,
+//     2: 2,
+//     3: 2,
+//   };
+
+  for (const num of arr) { // look at each number in arr 
+    if (num in counts) {  
+      // "have I seen this number before?" loop  west check siyaderg yhn number aytotal emilewn check yadergal
+        counts[num] += 1; 
+    } else {
+        counts[num] = 1; 
+    }
+}
+
+for (const num of Object.values(counts)) {
+    // look at each tally
+    if (num !== 2) {
+
+    return 0; 
+    }
+}
+
+  return 1; // survived the whole loop -> every tally was 2
+}
+
+// Tests
+console.log(isDual([1, 2, 1, 3, 3, 2])); // 1
+console.log(isDual([2, 5, 2, 5, 5]));  // 0
+// counts = {
+//   2: 2,
+//   5: 3, => 3 !== 2 print 0
+// };
+console.log(isDual([3, 1, 1, 2, 2])); // 0  
+// {
+//     3: 1,  => 1 !== 2 print 0
+//     1: 2,
+//     2: 2
+// }
+// Step 6
+// Test
+
+
+// iteration for step 1 num 1
+
+// if (num in counts) {  
+// eg: 
+// 1, 2, 1, 3, 3, 2
+
+// num = 1
+// counts = {} 
+// 1 in counts  false
+
+// else {
+//     counts[num] = 1;
+// }
+
+// add 1 in to counts = {1} 
+// {
+//     1: 1
+// }
+
+
+// counts[num] = 1;
+
+// num = 1 we now in first itration 
+// counts = {1} = 1
+// {
+//     1: 1
+// }
+
+
+// iteration for step 2 num 2
+
+// num 2
+// this is current in 1
+//{
+//     1: 1
+// }
+
+// check 
+// 2 in count false
+// counts[2] = 1;  count west 2 and gize new yalecw
+
+//{
+//     1: 1
+//     2: 1
+// }
+
+
+// iteration for step 3 num 1
+// curent object is
+//{
+//     1: 1
+//     2: 1
+// }
+// now 1 is  counts true :- because we have already counted
+        // if (num in counts) {
+        // counts[num] += 1;
+            // num = 1
+        // counts[1] += 1;
+            // 1 + 1 = 2
+
+//{
+//     1: 2 times
+//     2: 1
+// }
+
+// isDual([1, 2, 1, 3, 3, 2])
+
+
+// | Step | num |   Object after processing |
+
+//      1     1   { 
+//                      1: 1 
+//                  }  
+
+//      2    2    { 
+//                       1: 1,
+//                       2: 1
+//                   }      
+
+//      3    1       { 
+//                      1: 2, 
+//                      2: 1 }    
+//      4    3       { 
+//                      1: 2, 
+//                      2: 1, 
+//                      3: 1 
+//                    }
+
+//      5    3        { 
+//                      1: 2, 
+//                      2: 1, 
+//                      3: 2 
+//                     }
+//      6    2        {
+//                       1: 2, 
+//                       2: 2, 
+//                       3: 2 
+//                      }
+
+
+
+console.log("\n ===========  Question 6 =========== ");
 

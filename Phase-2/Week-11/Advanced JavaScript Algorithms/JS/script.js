@@ -653,25 +653,25 @@ console.log("\n ===========  Question 4 =========== ");
 // Step 5
 // Translate to JavaScript Code
 
-// function checkMeera(array) {
-//     for (const n of array) {
+function checkMeera(array) {
+    for (const n of array) {
 
-//         const doubled = n * 2;
+        const doubled = n * 2;
         
-//         if (array.includes(doubled)) {
-//             console.log("I am NOT a Meera array");
-//             return;
-//         }
-//     }
+        if (array.includes(doubled)) {
+            console.log("I am NOT a Meera array");
+            return;
+        }
+    }
     
-//     console.log("I am a Meera array");
-// }
+    console.log("I am a Meera array");
+}
 
-// // Step 6
-//     // Test
-// checkMeera([10, 4, 0, 5]);
-// checkMeera([7, 4, 9]);
-// checkMeera([1, -6, 4, -3]);
+// Step 6
+    // Test
+checkMeera([10, 4, 0, 5]);
+checkMeera([7, 4, 9]);
+checkMeera([1, -6, 4, -3]);
 
 
 console.log("\n ===========  Question 5 =========== ");
@@ -735,8 +735,19 @@ console.log("\n ===========  Question 5 =========== ");
                 // return 1
 
 // Step 5
-// Translate to JavaScript Code
+// // Translate to JavaScript Code
+
+
+// if (!Array.isArray(arr)) throw new TypeError('arr must be an array');
+//   if (arr.length % 2 !== 0) return 0; // odd length cannot be dual
+  
+
+
+
+
+
 function isDual(arr) {
+
   const counts = {}; //  to store how many times it appears
 
 //   counts = {
@@ -744,34 +755,30 @@ function isDual(arr) {
 //     2: 2,
 //     3: 2,
 //   };
-
   for (const num of arr) { // look at each number in arr 
     if (num in counts) {  
-      // "have I seen this number before?" loop  west check siyaderg yhn number aytotal emilewn check yadergal
+      // loop  west check siyaderg yhn number aytotal emilewn check yadergal
         counts[num] += 1; 
+        // counts[num] =  counts[num] + 1; 
     } else {
         counts[num] = 1; 
     }
 }
-
 for (const num of Object.values(counts)) {
     // look at each tally
     if (num !== 2) {
-
     return 0; 
     }
 }
-
-  return 1; // survived the whole loop -> every tally was 2
+    return 1;
 }
-
 // Tests
 console.log(isDual([1, 2, 1, 3, 3, 2])); // 1
 console.log(isDual([2, 5, 2, 5, 5]));  // 0
-// counts = {
-//   2: 2,
-//   5: 3, => 3 !== 2 print 0
-// };
+// // counts = {
+// //   2: 2,
+// //   5: 3, => 3 !== 2 print 0
+// // };
 console.log(isDual([3, 1, 1, 2, 2])); // 0  
 // {
 //     3: 1,  => 1 !== 2 print 0
@@ -780,6 +787,23 @@ console.log(isDual([3, 1, 1, 2, 2])); // 0
 // }
 // Step 6
 // Test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // iteration for step 1 num 1
@@ -810,7 +834,7 @@ console.log(isDual([3, 1, 1, 2, 2])); // 0
 //     1: 1
 // }
 
-
+// 1, 2, 1, 3, 3, 2
 // iteration for step 2 num 2
 
 // num 2
@@ -828,16 +852,19 @@ console.log(isDual([3, 1, 1, 2, 2])); // 0
 //     2: 1
 // }
 
-
+// 1, 2, 1, 3, 3, 2
 // iteration for step 3 num 1
 // curent object is
 //{
 //     1: 1
 //     2: 1
 // }
+
 // now 1 is  counts true :- because we have already counted
         // if (num in counts) {
         // counts[num] += 1;
+        // counts[num] =  counts[num] + 1; 
+                // counts[num] = 1 +1 = 2
             // num = 1
         // counts[1] += 1;
             // 1 + 1 = 2
@@ -847,8 +874,11 @@ console.log(isDual([3, 1, 1, 2, 2])); // 0
 //     2: 1
 // }
 
-// isDual([1, 2, 1, 3, 3, 2])
 
+
+
+
+// isDual([1, 2, 1, 3, 3, 2])
 
 // | Step | num |   Object after processing |
 
@@ -856,7 +886,7 @@ console.log(isDual([3, 1, 1, 2, 2])); // 0
 //                      1: 1 
 //                  }  
 
-//      2    2    { 
+//      2     2    { 
 //                       1: 1,
 //                       2: 1
 //                   }      
@@ -881,7 +911,245 @@ console.log(isDual([3, 1, 1, 2, 2])); // 0
 //                       3: 2 
 //                      }
 
+// tare
+// function dualArrayUsingFilter(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let filtered = arr.filter((element) => element === arr[i]);
+//     if (filtered.length != 2) {
+//       return 0;
+//     }
+//   }
+//   return 1;
+// }
+// console.log(dualArrayUsingFilter([1, 2, 1, 3, 3, 2]));
+// console.log(dualArrayUsingFilter([2, 5, 2, 5, 5]));
+// console.log(dualArrayUsingFilter([3, 1, 1, 2, 2]));
+
+
+
+
+
+// Salii
+// function isDual(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let count = 0;
+
+//     for (let j = 0; j < arr.length; j++) {
+//         if (arr[i] === arr[j]) {
+//             count++;
+//         }
+//         console.log(arr[j]);
+//     }
+//         if (count !== 2) {
+//         return 0;
+//     }
+// }
+//     return 1;
+// }
+// console.log(isDual([1, 2, 1, 3, 3, 2])); // 1
+// console.log(isDual([2, 5, 2, 5, 5]));  // 0
+
+
+
+
+// function isDual(arr) {
+//   if (!arr || arr.length === 0 || arr.length % 2 !== 0) {
+//     return 0;
+//   }
+
+//   const counts = [];
+
+//   for (let num of arr) {
+//     counts[num] = (counts[num] || 0) + 1;
+//   }
+//   // Check if every element occurs exactly twice
+//   for (let key in counts) {
+//     if (counts[key] !== 2) {
+//       return 0;
+//     }
+//   }
+//   return 1;
+// }
+// console.log(isDual([0, 0, 2, 2, 3, 3, 4, 4])); //1
+// console.log(isDual([1, 2, 2, 3, 4, 4])); // 0
+// console.log(isDual([2, 2, 3, 3, 4, 4,5,6]));//0
+
+
+
+
 
 
 console.log("\n ===========  Question 6 =========== ");
+
+
+
+// Step 1
+// Understand the problem
+    // 1 hour   = 3600 seconds kehone 5025 seconds sent yehonal
+    // input is anumbr of seconds
+    // need to convert second HH:MM:SS
+    // 5025 second 
+            // Hours   = ? 1
+            // Minutes = ? 23
+            // Seconds = ? 45
+// Step 2
+    // Solve it on paper
+    // 1 hour   = 3600 seconds kehone 5025 seconds sent yehonal
+        // 5025 seconds
+            // 1 minute = 60 seconds
+            // 1 hour   = 60 minutes
+            // 1 hour   = 3600 seconds
+        // 1 hour 
+            // => 1 × 3600 = 3600 seconds
+            // 5025 - 3600 = 1425 seconds 
+            // 1 seat ke 1425 second agegnen
+
+        // Now convert the remaining 1425 seconds into minutes:
+             //1 minute = 60 seconds
+        // 1425 / 60 = 23.75 minutes "23.75"  to sharp "23" minutes we are break dounin to "20" + "3"
+            // for 20 min :- 60 × 20 = 1200 seconds
+            
+            // for 3 min :- 60 × 3 = 180 seconds
+                
+            // So :-  1200 + 180 = 1380
+
+            // 23 × 60 = 1380
+
+            // 1425 - 1380 = 45
+
+// Step 3
+    // Create a general Solution to applay step by step
+        // get total second
+
+        // calculet hour
+        // calculet remaining  hour
+
+        // calculet minnute
+        // calculet remaining  minnute
+// Step 4
+// Write Pseudo code
+    // step 1
+        // function digitalClock(seconds)
+    // step 2
+        //  hours = given number of seconds / 3600
+        // remainingSeconds = seconds % 3600
+    // step 3
+        // minutes =  number of remainingSeconds / 60
+    // step 4
+        // seconds = remainingSeconds % 60
+    // step 5
+            // if hours is less than 10
+            // add "0" before hours
+
+            // if minutes is less than 10
+            //         add "0" before minutes
+
+            // if seconds is less than 10
+            // add "0" before seconds
+    // steeep 6
+        // return hours + ":" + minutes + ":" + seconds
+// Step 5
+// Translate to JavaScript Code
+
+
+
+
+
+
+
+// Source - https://stackoverflow.com/a/6313008
+// Posted by powtac, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-08-12, License - CC BY-SA 4.0
+
+// String.prototype.toHHMMSS = function () {
+//     var sec_num = parseInt(this, 10); // don't forget the second param
+//     var hours   = Math.floor(sec_num / 3600);
+//     var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+//     var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+//     if (hours   < 10) {hours   = "0"+hours;}
+//     if (minutes < 10) {minutes = "0"+minutes;}
+//     if (seconds < 10) {seconds = "0"+seconds;}
+//     return hours+':'+minutes+':'+seconds;
+// }
+
+
+
+
+// Source - https://stackoverflow.com/a/6313008
+// Posted by powtac, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-08-12, License - CC BY-SA 4.0
+
+// alert("5678".toHHMMSS());
+// alert("5025".toHHMMSS());
+
+
+
+
+
+
+
+
+
+
+const digitalClock = (totalSeconds) =>{
+
+
+    // Find the number of complete hours
+    const hours = Math.floor(totalSeconds / 3600);
+    // Step 1: Find complete hours
+
+    // console.log(hours);
+
+    // Find the seconds left after removing the hours
+    const remainingSeconds = totalSeconds % 3600; // 0.396 min enagegnalen yehn min wede second lemekeyer ke 3600 enabezalen be (cris cros mode) then 1425 second enagegnalen
+
+    // console.log(remainingSeconds);
+
+
+    // Find the number of complete minutes
+    const minutes = Math.floor(remainingSeconds / 60);
+    // 1425 second le 60 senakafle 23.75 min enagegnalen keza "23" le minutes seten 0.75 yeqerenal, 23 lebecha sent second endehone senawetaw 1380 then ke 1425 - 1380 = 45 second yekeral
+    // console.log(minutes);
+
+
+    // Find the seconds left after removing the minutes  
+    const seconds = remainingSeconds % 60; //1425 % 60
+    // = 0.75 * 60;
+
+    // console.log(seconds);
+
+
+    // Add 0 if the number is less than 10
+    const hh = hours < 10 ? "0" + hours : hours;
+    const mm = minutes < 10 ? "0" + minutes : minutes;
+    const ss = seconds < 10 ? "0" + seconds : seconds;
+
+    // Return HH:MM:SS
+    return hh + ":" + mm + ":" + ss;
+}
+
+
+console.log(digitalClock(5025));
+// "01:23:45"
+
+console.log(digitalClock(61201));
+// "17:00:01"
+
+console.log(digitalClock(87000));
+
+// "00:10:00"
+console.log(digitalClock(86400));
+console.log(digitalClock(172800));
+// Step 6
+// Test
+
+
+
+
+
+
+
+
+
 

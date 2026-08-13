@@ -558,20 +558,20 @@ console.log("\n ===========  Question 8 =========== ");
 
 // 4, Pseudo code to JavaScript
 
-// function evenIndex (array) {
-//     if (!Array.isArray(array)) {
-//         return "Please enter a valid array";
-//     }
+function evenIndex (array) {
+    if (!Array.isArray(array)) {
+        return "Please enter a valid array";
+    }
 
-//     for (let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++){
 
-//         if (i % 2 === 0){
-//             console.log(array[i]);
-//         }
-//     }
-// }
+        if (i % 2 === 0){
+            console.log(array[i]);
+        }
+    }
+}
 
-// evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
+evenIndex([5, 6, 99, 8, 76, 4, 68, 44]);
 
 // evenIndex( [11, "Sam", 3, 7, "car"]);
 
@@ -741,19 +741,19 @@ console.log("\n ===========  Question 10 =========== ");
 
 console.log("\n =========== Object-Oriented Data Model (OODM) =========== ");
 
-let evangadiClass = {
-        lengthOfCourse: "1 Month",
-        website: "https://www.evangadi.com/",
-        isChallenging: false,
-        topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
-        students:[
-            { name: "Abebe", age: 34, sex: "M" },
-            { name: "Kebede", age: 44, sex: "M"},
-            { name: "Almaz",  age: 27, sex: "F"},
-            { name: "Challa", age: 22, sex: "M"},
-            { name: "Chaltu",age: 19, sex: "F" }
-        ]
-}
+// let evangadiClass = {
+//         lengthOfCourse: "1 Month",
+//         website: "https://www.evangadi.com/",
+//         isChallenging: false,
+//         topicsCovered: ["HTML", "CSS", "Media Query", "JavaScrip"],
+//         students:[
+//             { name: "Abebe", age: 34, sex: "M" },
+//             { name: "Kebede", age: 44, sex: "M"},
+//             { name: "Almaz",  age: 27, sex: "F"},
+//             { name: "Challa", age: 22, sex: "M"},
+//             { name: "Chaltu",age: 19, sex: "F" }
+//         ]
+// }
 
 // CRUD
 
@@ -1180,27 +1180,27 @@ console.log("\n ===========  Question 17 =========== ");
         // 3224 :-3 is odd print 0
 
 
-function isEvens (number){
+// function isEvens (number){
 
-    let digits = number.toString();
+//     let digits = number.toString();
 
-    // "2", "4", "2", "6"
+//     // "2", "4", "2", "6"
     
 
-    for (const num of digits) {
+//     for (const num of digits) {
 
-        if (Number(num) % 2 !== 0) {
-            console.log(0);
-            return;
-        }
-    }
-    console.log(1);
-}
+//         if (Number(num) % 2 !== 0) {
+//             console.log(0);
+//             return;
+//         }
+//     }
+//     console.log(1);
+// }
 
-isEvens(2426);
-isEvens(3224);
-isEvens(8788);
-isEvens(1358);
+// isEvens(2426);
+// isEvens(3224);
+// isEvens(8788);
+// isEvens(1358);
 
 
 

@@ -669,7 +669,7 @@ function checkMeera(array) {
 
 // Step 6
     // Test
-checkMeera([10, 4, 0, 5]);
+checkMeera([10, 4, 0]);
 checkMeera([7, 4, 9]);
 checkMeera([1, -6, 4, -3]);
 
@@ -748,6 +748,9 @@ console.log("\n ===========  Question 5 =========== ");
 
 function isDual(arr) {
 
+    if(arr.length % 2 !==0) {
+        return 0;
+    }
   const counts = {}; //  to store how many times it appears
 
 //   counts = {
@@ -764,6 +767,7 @@ function isDual(arr) {
         counts[num] = 1; 
     }
 }
+
 for (const num of Object.values(counts)) {
     // look at each tally
     if (num !== 2) {
@@ -989,9 +993,9 @@ console.log("\n ===========  Question 6 =========== ");
     // input is anumbr of seconds
     // need to convert second HH:MM:SS
     // 5025 second 
-            // Hours   = ? 1
-            // Minutes = ? 23
-            // Seconds = ? 45
+            // Hours   = ? 
+            // Minutes = ? 
+            // Seconds = ? 
 // Step 2
     // Solve it on paper
     // 1 hour   = 3600 seconds kehone 5025 seconds sent yehonal
@@ -1089,14 +1093,15 @@ console.log("\n ===========  Question 6 =========== ");
 
 
 
-
+            // 1 minute = 60 seconds
+            // 1 hour   = 60 minutes
+            // 1 hour   = 3600 seconds
 
 
 const digitalClock = (totalSeconds) =>{
 
-
     // Find the number of complete hours
-    const hours = Math.floor(totalSeconds / 3600);
+    const hours = Math.floor(totalSeconds / 3600) %24;
     // Step 1: Find complete hours
 
     // console.log(hours);
@@ -1105,7 +1110,6 @@ const digitalClock = (totalSeconds) =>{
     const remainingSeconds = totalSeconds % 3600; // 0.396 min enagegnalen yehn min wede second lemekeyer ke 3600 enabezalen be (cris cros mode) then 1425 second enagegnalen
 
     // console.log(remainingSeconds);
-
 
     // Find the number of complete minutes
     const minutes = Math.floor(remainingSeconds / 60);
@@ -1151,5 +1155,30 @@ console.log(digitalClock(172800));
 
 
 
+
+
+
+
+
+// 
+// Q.5   Create a function that takes a number as its argument and returns an array of all its factors.    Example: passed argument 12 answer: return [1,2,3,4,6,12]
+// To find the factor of a number n, we divide the given number starting from 1,2,3,4..n
+// When we divide, if we get no remainder, then it is a factor.
+// n % 1 = 0
+// n % 2 if 0 it is factor. If diffent from 0, then not a factor.
+
+
+
+// function factorFinder(givenNum) {
+//   let resultHolder = [];
+//   for (i = 1; i <= givenNum; i++){
+//     let finalResult = givenNum % i;
+//     if (finalResult === 0) {
+//       resultHolder[i];
+//     }
+//   }
+//   return resultHolder;
+// }
+// console.log(factorFinder(12));
 
 

@@ -253,16 +253,57 @@ console.log("\n================= Quetion 1 =========");
 
 
 // 5. Convert pseudocode to JavaScript
-function bitwiseAND(a,b) {
-    return a & b;
-}
-function bitwiseOR(a, b) {
-    return a | b;
-}
-function bitwiseXOR(a, b) {
-    return a ^ b;
-}
-// 6. Test
-console.log(bitwiseAND(7, 12)); //4
-console.log(bitwiseAND(7, 12)); // 15
-console.log(bitwiseXOR(7, 12)); // 11
+// function bitwiseAND(a,b) {
+//     return a & b;
+// }
+// function bitwiseOR(a, b) {
+//     return a | b;
+// }
+// function bitwiseXOR(a, b) {
+//     return a ^ b;
+// }
+// // 6. Test
+// console.log(bitwiseAND(7, 12)); //4
+// console.log(bitwiseAND(7, 12)); // 15
+// console.log(bitwiseXOR(7, 12)); // 11
+
+// // Arrow functions
+// const bitwiseAND = (a, b) => a & b;
+
+// const bitwiseOR = (a, b) => a | b;
+
+// const bitwiseXOR = (a, b) => a ^ b;
+
+
+// // Test
+// console.log(bitwiseAND(7, 12)); // 4
+// console.log(bitwiseOR(7, 12));  // 15
+// console.log(bitwiseXOR(7, 12)); // 11
+
+// Using an Object
+const bitwise = {
+    AND: function (a, b) {
+        return a & b;
+    },
+    OR: function (a, b) {
+        return a | b;
+    },
+    XOR: function (a, b) {
+        return a ^ b;
+    }
+};
+// Test
+console.log(bitwise.AND(7, 12)); // 4
+console.log(bitwise.OR(7, 12));  // 15
+console.log(bitwise.XOR(7, 12)); // 11
+
+// Object + Arrow
+
+const bitwiseArrow = {
+    AND: (a, b) => a & b,
+    OR: (a, b) => a | b,
+    XOR: (a, b) => a ^ b
+};
+console.log(bitwiseArrow.AND(7, 12)); // 4
+console.log(bitwiseArrow.OR(7, 12));  // 15
+console.log(bitwiseArrow.XOR(7, 12)); // 11

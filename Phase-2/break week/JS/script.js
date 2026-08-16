@@ -43,27 +43,28 @@
 
 //step 5 psudo to  javascrip code
 // loop method
-const findLargest = (arr) => {
-    let num = arr[0];
-    let num2 = arr[0];
 
-    for (let i = 0; i < arr.length; i++) {
-        if(arr[i] > num){
-            num2 = num;
-            num = arr[i];
+// const findLargest = (arr) => {
+//     let num = arr[0];
+//     let num2 = arr[0];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if(arr[i] > num){
+//             num2 = num;
+//             num = arr[i];
             
-        }else if (arr[i] > num2 && arr[i] !== num) {
-            num2 = arr[i];
-        }
-    }
+//         }else if (arr[i] > num2 && arr[i] !== num) {
+//             num2 = arr[i];
+//         }
+//     }
 
-    return num2;
-};
+//     return num2;
+// };
 
-console.log(findLargest([3, 7, 2, 9, 4]));
+// console.log(findLargest([3, 7, 2, 9, 4]));
 
-console.log(findLargest([-5, -2, -10, -1]));
-console.log(findLargest([100]));
+// console.log(findLargest([-5, -2, -10, -1]));
+// console.log(findLargest([100]));
 
 
 
@@ -127,3 +128,141 @@ console.log(findLargest([100]));
 // console.log(largest); // Output: 130
 
 
+
+
+
+console.log("\n================= Quetion 1 =========");
+
+// A decimal number can be represented as a sequence of bits. To illustrate:
+
+// 6 = 00000110
+// 23 = 00010111
+// From the bitwise representation of numbers, we can calculate the bitwise AND, bitwise OR and bitwise XOR. Using the example above:
+
+// bitwiseAND(6, 23) ➞ 00000110
+
+// bitwiseOR(6, 23) ➞ 00010111
+
+// bitwiseXOR(6, 23) ➞ 00010001
+// Write three functions to calculate the bitwise AND, bitwise OR and bitwise XOR of two numbers.
+
+// Examples
+// bitwiseAND(7, 12) => 4
+
+// bitwiseOR(7, 12) => 15
+
+// bitwiseXOR(7, 12) => 11
+// JavaScript has a useful function: toString(2), where you can see the binary representation of a decimal number.
+
+
+
+//  Step 1, (Understand the problem)
+    // what is it:- Bitwise operations in JavaScript work directly on the individual binary bits of a number.
+    // A bit can have only two values:
+            // 0
+            // 1
+
+// | Decimal |   Binary |
+
+// |       0 | 00000000 |  
+// |       1 | 00000001 |  
+// |       2 | 00000010 |  
+// |       3 | 00000011 |  
+// |       4 | 00000100 |  
+// |       5 | 00000101 |  
+// |       6 | 00000110 |  
+// |       7 | 00000111 |  
+// |       8 | 00001000 |  
+// |       9 | 00001001 |  
+// |      10 | 00001010 |  
+
+
+// |     253 | 11111101 |
+// |     254 | 11111110 |
+// |     255 | 11111111 |
+
+
+
+// we need to three function 
+    // bitwiseAND(a, b)
+    // bitwiseOR(a, b)
+    // bitwiseXOR(a, b)
+
+    // bitwiseAND(7, 12) ➞ 4
+    // bitwiseOR(7, 12) ➞ 15
+    // bitwiseXOR(7, 12) ➞ 11
+
+
+
+
+// 2. Solve it on paper
+// AND
+    //   00000110
+    //   00010111
+    //   --------
+    //   00000110  
+// console.log(6 & 23); => 6
+// OR 
+    //   00000110
+    //   00010111
+    //   --------
+    //   00010111
+// console.log(6 | 23); => 23
+
+// XOR means exclusive OR.
+    // It returns 1 when the two bits are different.
+// | A | B | A ^ B |
+
+// | 0 | 0 | 0     |
+// | 0 | 1 | 1     |
+// | 1 | 0 | 1     |
+// | 1 | 1 | 0     |
+
+    //   00000110
+    //   00010111
+    //   --------
+    //   00010001
+// console.log(6 ^ 23); => 17
+
+
+
+
+
+
+
+
+
+// Step 3. Derive a general formula
+    // &  → AND → both need 1
+    // |  → OR  → at least one needs 1
+    // ^  → XOR → different bits produce 1
+
+
+// 4. Write pseudocode
+    // we need to three function 
+        // function bitwiseAND(a,b) {}
+        // function bitwiseOR(a, b) {}
+        // function bitwiseXOR(a, b) {}
+    
+    // compare value a and b 
+    // return Value 
+        // a & b
+        // a | b
+        // a ^ b
+
+
+
+// 5. Convert pseudocode to JavaScript
+function bitwiseAND(a,b) {
+    return a & b;
+}
+function bitwiseOR(a, b) {
+    return a | b;
+}
+function bitwiseXOR(a, b) {
+    return a ^ b;
+}
+// 6. Test
+console.log(bitwiseAND(7, 12)); //4
+console.log(bitwiseAND(7, 12)); // 15
+console.log(bitwiseXOR(7, 12)); // 11

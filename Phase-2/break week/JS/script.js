@@ -490,6 +490,9 @@ console.log("\n================= Quetion 5 =========");
 // A salesman has a number of cities to visit. He wants to calculate the total number of possible paths he could take, visiting each city once before returning home. Return the total number of possible paths a salesman can travel, given n cities.
 
 
+
+
+
 // Step 1. Understand the problem
     // we are given n number of city
     // visiting each city once before returning home.
@@ -585,3 +588,64 @@ console.log("\n================= Quetion 5 =========");
             // phathsRecursion(1);
                 // return 1
     // 4 * 3 * 2 * 1  = 24
+    
+
+
+
+console.log("\n================= Quetion 5 =========");
+
+// Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
+
+
+
+
+
+// Step 1. Understand the problem
+    // we are 4 opreter + - / *
+    // calculate any given number
+// Step 2. Solve it on paper
+    // 2 + 2 = 4
+    // 2 * 2 = 4
+    // 4 / 2 = 2
+
+// Step 3. Derive a general formula 
+// Step 4. Write pseudocode
+    // crate function calculator that take 3 argument num1, opreter, num2
+
+    // take if condition for each oprater 
+    // num 2 is 0 return "Can't divide by 0!"
+
+    // retun result 
+
+ // Step 5. Convert pseudocode to JavaScript
+
+function calculator(num1, operator, num2) {
+    // return num1 + num2
+    // return num1 * num2;
+    // return num1 - num2;
+    // return num1 / num2;
+    if (operator === "+") {
+        return num1 + num2;
+    }else if (operator === "*") {
+        return num1 * num2;
+    } else if (operator === "-") {
+        return num1 - num2;
+    }else if(num2 === 0){
+        return "Can't divide by 0!"
+    }
+    return num1 / num2;
+}
+
+console.log(calculator(2, "+", 2));
+console.log(calculator(12, "*", 2));
+console.log(calculator(2, "-", 2));
+console.log(calculator(2, "/", 0));
+
+
+
+
+
+
+
+
+

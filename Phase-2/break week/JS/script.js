@@ -454,8 +454,7 @@ console.log("\n================= Quetion 4 =========");
 
 
 
-
-        // Step 5. Convert pseudocode to JavaScript
+ // Step 5. Convert pseudocode to JavaScript
 
 
 
@@ -485,4 +484,104 @@ console.log("\n================= Quetion 4 =========");
     // ""
         // which completely removes the mathed vowels by replacing them with nothing.
 
-// 
+
+
+console.log("\n================= Quetion 5 =========");
+// A salesman has a number of cities to visit. He wants to calculate the total number of possible paths he could take, visiting each city once before returning home. Return the total number of possible paths a salesman can travel, given n cities.
+
+
+// Step 1. Understand the problem
+    // we are given n number of city
+    // visiting each city once before returning home.
+    // we need to count all possible order
+        // for 3 city
+            // A -> B -> C
+            // A -> C -> B
+            // B -> A -> C
+            // B -> C -> A
+            // C -> B -> A
+            // C -> A -> B
+    //  which gives us 6 as the possible number of paths(n)
+    // 3! 3 * 2 * 1 = 6
+    
+
+// Step 2. Solve it on paper
+// This challenge is describing a factorial.
+// paths(4) = 4!
+    // = 4 * 3 * 2 * 1
+    // = 24
+// paths(1)
+    // 1!
+        // = 1
+// paths(9)
+    // 9!
+        // = 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
+        // = 362880
+    
+    
+// Step 3. Derive a general formula 
+// Step 4. Write pseudocode
+    // Step 1
+        // we are create function phaths take parmeter (n)
+    // Step 2
+        // creat variable for store result
+            // let result = 1;
+    // step 3
+        // use for loop to up to n
+    // strp 4
+        // multiply the current result by i
+    // retun rsult
+
+
+
+// Step 5. Convert pseudocode to JavaScript
+
+// const phaths = (n) => {
+
+    // if (!Number.isInteger(n) || n < 1) {
+    //     return "Please provide a positive integer.";
+    // }
+//     let result = 1;
+
+//     for (let i = 1; i <= n; i++) {
+//         result = result * i;
+        
+//     }
+//     return result;
+// }
+
+// console.log(phaths(4));
+// console.log(phaths(1));
+// console.log(phaths(9));
+
+
+
+
+
+
+// Recursion Method
+
+// function phathsRecursion(n) {
+
+//     if (!Number.isInteger(n) || n < 1) {
+//         return "Please provide a positive integer.";
+//     }
+//     if(n === 1){
+//         return 1
+//     }
+
+//     // n! = n * (n - 1)
+//     return n * phathsRecursion(n - 1);
+// }
+// console.log(phathsRecursion(4));
+// console.log(phathsRecursion(-1));
+// console.log(phathsRecursion(9));
+
+
+// phathsRecursion(4)
+    // 4 * phathsRecursion(3)
+        // 4 * 3 phathsRecursion(2)
+            // 4 * 3 * 2 phathsRecursion(1)
+            // phathsRecursion(1);
+                // return 1
+    // 4 * 3 * 2 * 1  = 24

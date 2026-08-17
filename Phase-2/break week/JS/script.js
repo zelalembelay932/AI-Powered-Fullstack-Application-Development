@@ -282,21 +282,21 @@ console.log("\n================= Quetion 1 =========");
 // console.log(bitwiseXOR(7, 12)); // 11
 
 // // Using an Object
-const bitwise = {
-    AND: function (a, b) {
-        return a & b;
-    },
-    OR: function (a, b) {
-        return a | b;
-    },
-    XOR: function (a, b) {
-        return a ^ b;
-    }
-};
-// // Test
-console.log(bitwise.AND(7, 12)); // 4
-console.log(bitwise.OR(7, 12));  // 15
-console.log(bitwise.XOR(7, 12)); // 11
+// const bitwise = {
+//     AND: function (a, b) {
+//         return a & b;
+//     },
+//     OR: function (a, b) {
+//         return a | b;
+//     },
+//     XOR: function (a, b) {
+//         return a ^ b;
+//     }
+// };
+// // // Test
+// console.log(bitwise.AND(7, 12)); // 4
+// console.log(bitwise.OR(7, 12));  // 15
+// console.log(bitwise.XOR(7, 12)); // 11
 
 // // Object + Arrow
 
@@ -376,9 +376,47 @@ console.log("\n================= Quetion 2 =========");
 
 
 console.log("\n================= Quetion 3 =========");
+// Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise. Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
+
+// 1. Understand the problem
+    // it's christmas eve in Dec 24 display true 
+    // we are check date and monthe only year it coulde be anything 
+// 2. Solve it on paper
+    // any year + Dece + day 24
+// 3. Derive a general formula 
+// 4. Write pseudocode
+    // step 1
+        // create a function call timeForMilkAndCookies take parameter date
+    // step 2
+        // declare variable for monthe and date for passed argument
+    // step 3
+        // compare day and monthe matche to eve in if condition
+    // step 4
+        // if day and monthe same as to Dec 24 
+            // return True
+        // otherwise
+            // return False
+// 5. Convert pseudocode to JavaScript
+
+// Source - https://stackoverflow.com/a/74031833
+// Posted by michaelR
+// Retrieved 2026-08-17, License - CC BY-SA 4.0
+
+function timeForMilkAndCookies(date) {
+       // Destructure month and day from the passed in argument.
+    const [month, day] = [date.getMonth(), date.getDate()]; 
+    
+    // if the day matches xmas eve, return true, else return false.
+    if(month === 11 && day === 24) return true; 
+    else return false;      
+}
+// Step 6:- Test
+console.log(timeForMilkAndCookies(new Date(2023, 11, 24)));
+console.log(timeForMilkAndCookies(new Date(2023, 12, 2)));
+console.log(timeForMilkAndCookies(new Date(2023, 11, 2)));
 
 
 
 
 
-
+console.log("\n================= Quetion 4 =========");

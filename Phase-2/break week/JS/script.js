@@ -378,13 +378,13 @@ console.log("\n================= Quetion 2 =========");
 console.log("\n================= Quetion 3 =========");
 // Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise. Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
 
-// 1. Understand the problem
+// Step 1. Understand the problem
     // it's christmas eve in Dec 24 display true 
     // we are check date and monthe only year it coulde be anything 
-// 2. Solve it on paper
+// Step 2. Solve it on paper
     // any year + Dece + day 24
-// 3. Derive a general formula 
-// 4. Write pseudocode
+// Step 3. Derive a general formula 
+// Step 4. Write pseudocode
     // step 1
         // create a function call timeForMilkAndCookies take parameter date
     // step 2
@@ -396,7 +396,7 @@ console.log("\n================= Quetion 3 =========");
             // return True
         // otherwise
             // return False
-// 5. Convert pseudocode to JavaScript
+// Step 5. Convert pseudocode to JavaScript
 
 // Source - https://stackoverflow.com/a/74031833
 // Posted by michaelR
@@ -420,3 +420,69 @@ console.log(timeForMilkAndCookies(new Date(2023, 11, 2)));
 
 
 console.log("\n================= Quetion 4 =========");
+
+// Create a function that takes a string and returns a new string with all vowels removed.
+
+// Examples
+        // removeVowels
+            // ("I have never seen a thin person drinking Diet Coke.")
+            //  " hv nvr sn  thn prsn drnkng Dt Ck."
+
+        // removeVowels
+            // ("We're gonna build a wall!")
+            //  "W'r gnn bld  wll!"
+
+        // removeVowels
+            // ("Happy Thanksgiving to all--even the haters and losers!")
+            //  "Hppy Thnksgvng t ll--vn th htrs nd lsrs!"
+
+
+// Step 1. Understand the problem
+    // we have a paragraph,our problem is in this paragraph removed Vowels letter
+    // we have take JavaScript method replace()  
+// Step 2. Solve it on paper
+    // parameterName.replace(/[aeiou]/gi, "");
+// Step 3. Derive a general formula 
+    // .replace(/[aeiou]/gi, "");
+// Step 4. Write pseudocode
+    // Step 1
+        // Create function removeVowels take parameter 
+    // Step 2
+        // parameterName.replace(/[aeiou]/gi, "");
+    // Step 3
+        // print output
+
+
+
+
+        // Step 5. Convert pseudocode to JavaScript
+
+
+
+//     const removeVowels = (vowels) =>{
+//         return vowels.replace(/[aeiou]/gi, "");
+//     }
+// // Step 6:- Test
+
+// console.log(removeVowels("I have never seen a thin person drinking Diet Coke."));
+
+// console.log(removeVowels("We're gonna build a wall!"));
+
+// console.log(removeVowels("Happy Thanksgiving to all--even the haters and losers!"),
+// );
+
+
+
+
+
+
+    // /[aeiou]/
+        // is square brackets [] create a character set, matching any character liste inside them (the vowels)
+    //  g 
+        // stands for "global", it ensures that every vowel in the string is replaced, not just the first one.
+    // i  
+        // stands for "insensitive". its match case sensitive its includes both lowercase and uppercase Vowels.
+    // ""
+        // which completely removes the mathed vowels by replacing them with nothing.
+
+// 

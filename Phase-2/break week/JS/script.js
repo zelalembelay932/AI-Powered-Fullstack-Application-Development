@@ -252,7 +252,8 @@ console.log("\n================= Quetion 1 =========");
 
 
 
-// 5. Convert pseudocode to JavaScript
+// step 5. Convert pseudocode to JavaScript
+// function decleration
 // function bitwiseAND(a,b) {
 //     return a & b;
 // }
@@ -275,12 +276,12 @@ console.log("\n================= Quetion 1 =========");
 // const bitwiseXOR = (a, b) => a ^ b;
 
 
-// // Test
+// Test
 // console.log(bitwiseAND(7, 12)); // 4
 // console.log(bitwiseOR(7, 12));  // 15
 // console.log(bitwiseXOR(7, 12)); // 11
 
-// Using an Object
+// // Using an Object
 const bitwise = {
     AND: function (a, b) {
         return a & b;
@@ -292,18 +293,92 @@ const bitwise = {
         return a ^ b;
     }
 };
-// Test
+// // Test
 console.log(bitwise.AND(7, 12)); // 4
 console.log(bitwise.OR(7, 12));  // 15
 console.log(bitwise.XOR(7, 12)); // 11
 
-// Object + Arrow
+// // Object + Arrow
 
-const bitwiseArrow = {
-    AND: (a, b) => a & b,
-    OR: (a, b) => a | b,
-    XOR: (a, b) => a ^ b
-};
-console.log(bitwiseArrow.AND(7, 12)); // 4
-console.log(bitwiseArrow.OR(7, 12));  // 15
-console.log(bitwiseArrow.XOR(7, 12)); // 11
+// const bitwiseArrow = {
+//     AND: (a, b) => a & b,
+//     OR: (a, b) => a | b,
+//     XOR: (a, b) => a ^ b
+// };
+// console.log(bitwiseArrow.AND(7, 12)); // 4
+// console.log(bitwiseArrow.OR(7, 12));  // 15
+// console.log(bitwiseArrow.XOR(7, 12)); // 11
+
+
+// const bitwiseAND = (a, b) =>{
+//     const result = a & b;
+
+//     console.log("Binary result:", result.toString(2));
+
+//     return result;
+// }
+// console.log(bitwiseAND(7, 12));
+
+
+
+console.log("\n================= Quetion 2 =========");
+//  Step 1, (Understand the problem)
+    // print max and min number from array 
+// Step 2. Solve it on paper
+    // [1, 2, 3, 4, 5]
+        // min number is [1]
+        // max number is [5]
+
+// Step 3. Derive a general formula
+    // array[i] > max 
+    // array[i] < min 
+
+// Step 4. Write pseudocode
+    // create function minMax take parameter 
+    // we are create variable for store max and min values
+    // for loop to check all array in itration 
+    // check and compare value in if condition which one is grater and smallest value
+    // print max and min value
+
+
+// Step 5. Convert pseudocode to JavaScript
+
+// function minMax(arr) {
+//     let max = [0]; //2
+//     let min = [0];// -1
+
+//     for (let i = 0; i < arr.length; i++) {
+
+//         if(arr[i] < min){
+//             min = arr[i];
+            
+//         }
+//         if (arr[i] > max) max = arr[i];
+//     }
+//     return {min, max};
+// }
+// console.log(minMax([-1, 2, 3, 4, 5])); //[1, 5]
+// console.log(minMax([2334454, 5])); // [5, 2334454]
+// console.log(minMax([1]) ); // [1, 1]
+
+
+// React ES6 Spread Operator
+// function minMax(arr) {
+//     let min = Math.min(...arr);
+//     let max = Math.max(...arr);
+
+//     console.log(min);
+//     console.log(max);
+// }
+// minMax([42, 12, 89, 5, 73]);
+
+
+
+
+console.log("\n================= Quetion 3 =========");
+
+
+
+
+
+

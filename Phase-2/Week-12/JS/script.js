@@ -3,6 +3,7 @@
     // The DOM is the browser's JavaScript-friendly representation of an HTML page.
     // It allows JavaScript to find, read, change, add, or remove HTML elements.
 
+
 // Document
     // our HTML web page.
 // Object
@@ -51,7 +52,7 @@
 // <!DOCTYPE html>
 // <html>
 //   <body>
-//     <h1>Hello</h1>
+//     <h1 id="title">Hello</h1>
 //     <p>Welcome to my website.</p>
 //     <button>Click Me</button>
 //   </body>
@@ -83,12 +84,17 @@
     // DOM as a live blueprint of a webpage. JavaScript gives us the tools to inspect this blueprint, update it, change its structure, and react when users interact with it.
 
 // 1, Selecting Elements (Reading)
+// Single element
     // document.getElementById("id");
         // Targets a single element containing a specific ID.
     // document.querySelector(".class");
         // Uses standard CSS selectors to retrieve the first matching element.
+
+// Multiple elements
+
     // document.querySelectorAll('p')
         // Gathers all matching elements into a list format.
+    // const byClass = document.getElementsByClassName('item');
 
 // 2, Modifying Content and Styles (Updating)
     // Changing text: 
@@ -136,18 +142,116 @@
 
 
 
+// JavaScript HTML DOM Events
+    // In JavaScript, an event is a signal that something has "happened" within the browser or user interface,allowing your code to react to it. 
+    // When users interact with a webpage 
+    // like => clicking a button, scrolling, or typing
+    
+    // For example, if the user clicks a button
+    // https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick1
+
+
+// Category       | Event Name   |    Trigger Condition
+
+// Mouse Events      click       |  User clicks an element
+
+//                   dblclick    |  User double-clicks an element
+
+//                   mouseover   |
+//                   mouseout    |  Cursor enters or leaves an element
+
+//                   mousemove   |  Cursor moves over an element
+
+
+// Keyboard Events    keydown    |  User presses a key down
+
+//                    keyup      |  User releases a key
+
+
+// Form Events        submit     |  Form is submitted
+
+//                    change     | Value of an <input>,<select>, or <textarea> changes
+
+//                    focus/     | An element gains or loses focus
+//                    blur
+
+// Window            DOMContentLoaded  |  HTML is fully loaded and parsed
+//                   error             |  encounters javascript error   
+
+//                     resize          |  Browser window size changes
+
+//                     scroll          |  User scrolls up or down the page
+
+// Touch/Pointer       touchstart/     |   Finger touches or leaves a touchscreen
+//                      touchend
+
+//                      pointerdown    |  Device-agnostic click/touch start or end
+
+
+// https://www.w3schools.com/tags/ref_eventattributes.asp
 
 
 
 
 
+// How to do Event handling?
+
+// 1, Select the DOM Element
+    // Target the HTML element that will receive the user interaction.
+    // const button = document.querySelector('#submit-btn');
+
+
+// 2, Write the Handler Function
+    // Define the logic to execute when the event fires. The function automatically receives an event object containing details about the interaction.
+
+// function handleClick(event) {
+//   console.log('Button clicked!', event.target);
+// }
+
+
+
+// 3, Attach the Listener (Kelay huetu emiseruet bota lay Attach Madreg)
+    // Use addEventListener(eventType, handlerFunction) to link the event to your handler.
+
+    // button.addEventListener('click', handleClick);
+
+
+
+// Ways to bind an event (HTML event handlers)
+
+    // 1, HTML event handlers / Inline HTML Attributes
+        // Attach JavaScript directly inside HTML markup using on<event> attributes.
+
+//<button onclick="alert('Button clicked!')">Alert</button>
+//<button onclick="handleClick(event)">Call Function</button>
+        // https://www.w3schools.com/tags/ref_eventattributes.asp
+
+    // 2, Traditional DOM event handlers
+        // Select a DOM element in JavaScript and assign a function directly to its property.
+// https://www.w3schools.com/js/tryit.asp?filename=tryjs_events2
+
+    // 3, DOM Level 2 Event Listeners "addEventListener()"
+        // Add an event listener that fires when a user clicks a button:
+
+        // https://www.w3schools.com/js/tryit.asp?filename=tryjs_addeventlistener_displaydate
+
+
+
+
+// Default behaviors
+    // preventDefault()
+        // Stops the browser's native default action on the element, but the event continues to bubble up the DOM tree to parent elements.
+
+        // https://www.w3schools.com/jsref/event_preventdefault.asp
+
+    // stopPropagation()
+        // Stops the event from bubbling up to parent elements, but does not stop the browser's native default action on the target element.
+
+        // https://www.w3schools.com/jsref/event_stoppropagation.asp
 
 
 
 
 
-
-
-
-
-
+// Form Validation
+    // registration form tayp cods for next Support class

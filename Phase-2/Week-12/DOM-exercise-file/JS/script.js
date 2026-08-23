@@ -122,4 +122,84 @@ console.log("2.8 Blue companies:", blueCompanies.length);
 console.log("\n ===========Quesion 3 ===========");
 
 
+// Change the page background when Yes / No is clicked
+
+//Step 1, First crate function to add background
+
+// function addBackground(){
+//     document.body.style.backgroundColor = "#99ecff"
+// }
+const addBackground = () =>  document.body.style.backgroundColor = "#99ecff"
+//Step 2, First crate function to remove background
+
+// backgroundColor to an empty string ("")
+// function removeBackground() {
+//     document.body.style.backgroundColor = "";
+// }
+const removeBackground = () => document.body.style.backgroundColor = "";
+
+
+
+const yesBackground = document.getElementById("yesBackground");
+
+const noBackground = document.getElementById("noBackground");
+
+// Step 3
+    // Add a click EVENT to yes
+    // addEventListener() listens for event 
+        // "click"
+            // The event we are listening for.
+                // addBackground
+    // function that should ececute when the click happens.
+    yesBackground.addEventListener("click", addBackground);
+// Step 4
+    // Add a click EVENT to no
+    // when the user clicks No  button
+        // removeBackground() will execute.
+
+    noBackground.addEventListener("click", removeBackground);
+
+
+
+
+
+
+
+// Method 2
+
+// Change background when Yes is clicked
+
+yesBackground.addEventListener("click", function () {
+
+    document.body.style.backgroundColor = "#99ecff";
+
+});
+
+
+// Remove background when No is clicked
+
+noBackground.addEventListener("click", function () {
+
+    document.body.style.backgroundColor = "";
+
+});
+
+
+// Method 2 — Using onclick
+// When Yes is clicked
+yesBackground.onclick = function () {
+
+    document.body.style.backgroundColor = "#99ecff";
+
+};
+
+
+// When No is clicked
+noBackground.onclick = function () {
+
+    document.body.style.backgroundColor = "";
+
+};
+
+
 

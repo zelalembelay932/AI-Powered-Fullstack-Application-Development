@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <script src="./JS/script.js" defer></script>
+</head>
+<body>
+    <!-- <h1>DOM
+    </h1>
+
+    <h1>Fruits</h1> -->
+
+    <!-- <ul>
+        <li id="" class="red">Apple</li>
+        <li id="two" class="yellow">Mango</li>
+        <li id="three" class="red">Peach</li>
+        <li id="four" class="green">Kiwi</li>
+        <li id="five" class="orange">Papaya</li>
+        <li id="six" class="green">Avocado</li>
+        <li id="seven" class="yellow">Lemon</li>
+    </ul> -->
+
+ <!-- 1, HTML event handlers / Inline HTML Attributes -->
+<!-- <button onclick="alert('Button clicked!')">Alert</button> -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<!-- The form calls the validateForm() function when submitted -->
+    <form id="signupForm" onsubmit="return validateForm(event)">
+
+        <div class="form-group">
+            <div id="errorText" class="error-message"></div>
+            <label for="email">Email Address:</label><br>
+
+            <input type="text" id="email" placeholder="Enter your email" required>
+
+            
+
+            Password: 
+            <input type="password" placeholder="Enter your password" id="password" required>
+        </div>
+        
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+        function validateForm(event) {
+            
+            const emailInput = document.getElementById("email");
+            const errorText = document.getElementById("errorText");
+            
+            // 2. Get the value and remove
+            const emailValue = emailInput.value.trim();
+
+            
+            if (emailValue === "") {
+                // Prevent the form from refreshing/submitting to a server
+                event.preventDefault(); 
+                
+                // Show the error message
+                errorText.textContent = "Email address cannot be empty.";
+                errorText.style.display = "block";
+                
+                return false; // Tells the form not to submit
+            }
+
+            // 4. If it's not empty, clear errors and let the form submit
+            errorText.style.display = "none";
+            alert("Success! Form is being submitted.");
+            return true;
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+<!-- 
+    <h1>The DOMToken Object</h1>
+<h2>The add() Method</h2>
+
+<button onclick="myFunction()">Add</button>
+<p>Click "Add" to add the "myStyle" class to myDIV.</p>
+
+<div id="myDIV">
+<p>I am a myDIV.</p>
+</div> -->
+</body>
+</html>

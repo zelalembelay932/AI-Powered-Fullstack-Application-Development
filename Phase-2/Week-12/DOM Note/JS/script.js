@@ -12,9 +12,28 @@
     // arranges these pieces in a family tree pattern with parents and children
     // structured representation of the document
 
+// ==> Every tag in the HTML inside the document is NODE data type. 
+    // Eg:-
+        // <html> is a node
+        // <body> is a node
+        // <h1> is a node
+        // <p> is a node
+// ==> Its give information about the HTML elements such as div, p, h1, etc
+
+// ==> NodeList
+    // process such as all the child nodes for an unordered list
+    // Eg:-
+        // ul
+        // ├── li
+        // ├── li
+        // └── li
+
+
+
+
 //<div>
-//   <h1>Hello</h1>
-//   <p>Welcome</p>
+//     <h1>Hello</h1>
+//     <p>Welcome</p>
 // </div>;
 
 // The DOM looks
@@ -55,6 +74,7 @@
 //     <h1 id="title">Hello</h1>
 //     <p>Welcome to my website.</p>
 //     <button>Click Me</button>
+
 //   </body>
 // </html>
 
@@ -209,7 +229,6 @@
 // }
 
 
-
 // 3, Attach the Listener (Kelay huetu emiseruet bota lay Attach Madreg)
     // Use addEventListener(eventType, handlerFunction) to link the event to your handler.
 
@@ -226,9 +245,11 @@
 //<button onclick="handleClick(event)">Call Function</button>
         // https://www.w3schools.com/tags/ref_eventattributes.asp
 
+        
     // 2, Traditional DOM event handlers
         // Select a DOM element in JavaScript and assign a function directly to its property.
 // https://www.w3schools.com/js/tryit.asp?filename=tryjs_events2
+
 
     // 3, DOM Level 2 Event Listeners "addEventListener()"
         // Add an event listener that fires when a user clicks a button:
@@ -255,3 +276,25 @@
 
 // Form Validation
     // registration form tayp cods for next Support class
+
+
+
+
+function myFunction() {
+  const list = document.getElementById("myDIV").classList;
+  list.add("myStyle");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -162,9 +162,6 @@ const noBackground = document.getElementById("noBackground");
 
 
 
-
-
-
 // Method 2
 
 // Change background when Yes is clicked
@@ -185,21 +182,127 @@ noBackground.addEventListener("click", function () {
 });
 
 
-// Method 2 — Using onclick
+// Method 3 — Using onclick
 // When Yes is clicked
 yesBackground.onclick = function () {
 
     document.body.style.backgroundColor = "#99ecff";
-
 };
-
 
 // When No is clicked
 noBackground.onclick = function () {
 
     document.body.style.backgroundColor = "";
-
 };
 
+
+
+//                     HTML
+//                      │
+//                      ▼
+//           ┌─────────────────────┐
+//           │ #yesBackground      │
+//           │ #noBackground       │
+//           └──────────┬──────────┘
+//                      │
+//                      ▼
+//               JavaScript DOM
+//                      │
+//           ┌──────────┴──────────┐
+//           ▼                     ▼
+//    getElementById()      getElementById()
+//           │                     │
+//           ▼                     ▼
+//          Yes                    No
+//           │                     │
+//           │ click               │ click
+//           ▼                     ▼
+//  addBackground()       removeBackground()
+//           │                     │
+//           ▼                     ▼
+//   #99ecff background      "" background
+
+
+
+
+
+
+console.log("\n =========== Quesion 4 ===========");
+
+
+
+// Question 4:
+// A form with two text fields is provided under the section which says "For question 4".
+// Write a JavaScript code which takes the values of the two fields, checks if they are number values and calculate the sum of the two numbers.
+// 1. Display the result on the console
+// 2. Display the result underneath the form
+// 3. If any of the numbers provided is not a number, display a message that says
+// "Please enter numerical values only" underneath the form
+
+
+
+
+// 1, Get the value of two fields
+// 2, Check both values are numbers
+// 3, Calculate the sum of the two numbers
+// 4, Display the result on the console
+// 5. Display the result underneath the form
+// 6. If any of the numbers provided is not a number, display a message that says ("Please enter numerical values only")
+
+
+
+
+// step 1
+    // select the first input field
+// getElementById() finds the HTML element whose ID is "firstNumber"
+const firstNumber = document.getElementById("firstNumber");
+// step 2
+    // select the second input field
+// find the second input field using it id
+const secondNumber = document.getElementById("secondNumber");
+// Step 3
+    // Select the element where we will display the result
+const sumElement =  document.getElementById("sum");
+// step 4
+    // select the form
+const form = document.getElementById("adder");
+
+// step 5
+    // Listen for form submission
+
+form.addEventListener("submit", function (event){
+    // Prevent the browser from refreshing the page.
+    // Normally, submitting a form causes the browser to RELOAD.
+    // preventDefault() stop that default behavior.
+
+    event.preventDefault();
+
+    // step 6
+        // get the values entered by the user
+    const value1 = firstNumber.value;
+    const value2 = secondNumber.value;
+
+    // step 7
+        // check whether both values are numbers convert to strings
+    const number1 = Number(value1);
+    const number2 = Number(value2);
+
+    // step 8
+        // Validate the input 
+    if (Number.isNaN(number1) || Number.isNaN(number2)) {
+        sumElement.textContent = "Please enter numerical values only";
+
+        return;
+    }
+    // step 9
+        // Calculate the sum
+    const sum = number1  + number2 ;
+
+    console.log("Sum:-", sum);
+
+    // step 10
+        // Display the result underneath the form
+    sumElement.textContent = `Sum: ${sum}`;
+});
 
 

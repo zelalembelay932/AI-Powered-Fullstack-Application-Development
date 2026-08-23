@@ -6,7 +6,7 @@
     <title>jQuery Practice</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="./JS/script.js" defer ></script>
+    
   </head>
   <body>
     <h1>jQuery Practice</h1>
@@ -47,25 +47,34 @@
   <button id="yesBackground">Yes</button>
   <button id="noBackground">No</button>
     <hr>
+
+
+
     <h4>For Question 4:</h4>
     <h5>The Sum and Average of two numbers</h5>
     <form id="adder" action="#" method="POST">
+
       <div class="form-values">
         <p>
           First value<br />
-          <input type="text" name="first-value" placeholder="First value" />
+
+          <input type="text" name="first-value" placeholder="First value" id="firstNumber"/>
+
         </p>
         <p>
           Second value<br />
-          <input type="text" name="second-value" placeholder="Second value" />
+
+          <input type="text" name="second-value" placeholder="Second value" id="secondNumber" />
+
         </p>
       </div>
       <br />
       <button id="submitButton" type="submit">Sum and Average</button>
     </form>
     <br />
-    <div id="sum">Result will be displayed here</div>
+    <div id="sum"></div>
     <br />
+
 
 <!-- "if they work inline use this example" -->
     <form onsubmit="handleSubmit(event)">
@@ -73,6 +82,6 @@
       <button>submit</button>
     </form>
     
-
+<script src="./JS/script.js"></script>
   </body>
 </html>

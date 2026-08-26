@@ -62,16 +62,24 @@ console.log("\n ===========Quesion 2 ===========");
         // .red
 
 // const red =document.querySelectorAll(".red");
-    // Dispaly all red in console
+//     // Dispaly all red in console
 // console.log(red);
 // console.log(red.length);
 
 
+// // conver to arry
+// const displayRed = Array.from(red);
+// // display on console
+// for (let i = 0; i < displayRed.length; i++) {
+//     const element = displayRed[i];
+//     console.log(element);
+// }
+
 // 2.4 - Method 2: getElementsByClassName()
     // getElementsByClassName() searches for elements that have the specified class name.
 
-// const red = document.getElementsByClassName("red");
-// console.log("2.4", red);
+// const redClass = document.getElementsByClassName("red");
+// console.log("2.4", redClass);
 // console.log(red.length);
 
 
@@ -90,16 +98,17 @@ console.log("2.5:-", facebook);
 
 // 2.6 Add the "blue" class
 facebook.classList.add("blue");
-console.log("2.6:-", facebook);
+// console.log("2.6:-", facebook);
 
 
 // // 2.7 Append Facebook next to Sony
 const sony = document.querySelector("#techCompanies li:last-child");
 
-console.log("Sony:-", sony);
+// console.log("Sony:-", sony);
 // // Add Facebook immediately after Sony.
-techCompanies.appendChild(facebook);
-// sony.insertAdjacentElement("afterend", facebook)
+// techCompanies.appendChild(facebook);
+
+sony.insertAdjacentElement("afterend", facebook)
 
 
 
@@ -108,9 +117,9 @@ techCompanies.appendChild(facebook);
 
 // querySelectorAll(".blue") finds every element whose class contains "blue".
 
-const blueCompanies = document.querySelectorAll("#techCompanies .blue");
+// const blueCompanies = document.querySelectorAll("#techCompanies .blue");
 
-console.log("2.8 Blue companies:", blueCompanies.length);
+// console.log("2.8 Blue companies:", blueCompanies.length);
 
 
 
@@ -127,37 +136,39 @@ console.log("\n ===========Quesion 3 ===========");
 //Step 1, First crate function to add background
 
 // function addBackground(){
-//     document.body.style.backgroundColor = "#99ecff"
+    // document.body.style.backgroundColor = "#99ecff"
 // }
-const addBackground = () =>  document.body.style.backgroundColor = "#99ecff"
-//Step 2, First crate function to remove background
+// const addBackground = () =>  document.body.style.backgroundColor = "#99ecff"
+// //Step 2, First crate function to remove background
 
-// backgroundColor to an empty string ("")
-// function removeBackground() {
-//     document.body.style.backgroundColor = "";
-// }
-const removeBackground = () => document.body.style.backgroundColor = "";
+// // backgroundColor to an empty string ("")
+// // function removeBackground() {
+// //     document.body.style.backgroundColor = "";
+// // }
+// const removeBackground = () => document.body.style.backgroundColor = "";
+
+// const yesBackground = document.getElementById("yesBackground"); //Yes
+
+// const noBackground = document.getElementById("noBackground"); //No
+
+// // Step 3
+//     // Add a click EVENT to yes
+//     // addEventListener() listens for event 
+//         // "click"
+//             // The event we are listening for.
+//                 // addBackground
+//     // function that should ececute when the click happens.
+//     yesBackground.addEventListener("click", addBackground);
+// // Step 4
+//     // Add a click EVENT to no
+//     // when the user clicks No  button
+//         // removeBackground() will execute.
+
+//     noBackground.addEventListener("click", removeBackground);
 
 
 
-const yesBackground = document.getElementById("yesBackground");
 
-const noBackground = document.getElementById("noBackground");
-
-// Step 3
-    // Add a click EVENT to yes
-    // addEventListener() listens for event 
-        // "click"
-            // The event we are listening for.
-                // addBackground
-    // function that should ececute when the click happens.
-    yesBackground.addEventListener("click", addBackground);
-// Step 4
-    // Add a click EVENT to no
-    // when the user clicks No  button
-        // removeBackground() will execute.
-
-    noBackground.addEventListener("click", removeBackground);
 
 
 
@@ -166,20 +177,19 @@ const noBackground = document.getElementById("noBackground");
 
 // Change background when Yes is clicked
 
-yesBackground.addEventListener("click", function () {
+// yesBackground.addEventListener("click", function () {
 
-    document.body.style.backgroundColor = "#99ecff";
+//     document.body.style.backgroundColor = "#99ecff";
 
-});
+// });
 
+// // // Remove background when No is clicked
 
-// Remove background when No is clicked
+// noBackground.addEventListener("click", function () {
 
-noBackground.addEventListener("click", function () {
+//     document.body.style.backgroundColor = "";
 
-    document.body.style.backgroundColor = "";
-
-});
+// });
 
 
 // Method 3 — Using onclick
@@ -268,7 +278,16 @@ const sumElement =  document.getElementById("sum");
 const form = document.getElementById("adder");
 
 // step 5
-    // Listen for form submission
+    // Listen for form submission something happening to  this
+        // click;
+        // submit;
+        // input;
+        // change;
+        // mouseover;
+        // keydown;
+        // keyup;
+        // focus;
+        // blur;
 
 form.addEventListener("submit", function (event){
     // Prevent the browser from refreshing the page.

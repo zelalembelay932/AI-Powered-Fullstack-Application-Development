@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pliant:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --accent-color: #8672ff;
-    --base-color: white;
-    --text-color: #2e2b41;
+    --accent-color: #7223AF;
+    --base-color: #2D0D49 ;
+    --text-color: #CB57EE;
     --input-color: #f3f0ff;
 }
 *{
@@ -34,6 +34,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 h1{
@@ -104,7 +105,7 @@ form input::placeholder{
     border-radius: 100px;
     padding: .85em 4em;
     background-color: var(--accent-color);
-    color: var(--base-color);
+    color: var(--text-color);
     font: inherit;
     font-weight: 600;
     text-transform: uppercase;

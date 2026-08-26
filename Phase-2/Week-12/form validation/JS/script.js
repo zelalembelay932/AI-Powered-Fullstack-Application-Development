@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) =>{
         errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_Password_input.value)
     } else {
         // if we don't have a firstname input then we are in the login page
-        errors = getSignupFormErrors(email_input.value, password_input.value);
+        errors = getLoginFormErrors(email_input.value, password_input.value);
     }
 
     if (errors.length > 0) {
@@ -52,6 +52,24 @@ function getSignupFormErrors (firstname, email, password, repeatPassword) {
     }
     return errors;
 }
+
+
+
+function getLoginFormErrors (email, password){
+    let errors = []
+
+    if (email === "" || email == null) {
+        errors.push("Email is required");
+        email_input.parentElement.classList.add("incorrect");
+    }
+    if (password === "" || password == null) {
+        errors.push("Password is required");
+        password_input.parentElement.classList.add("incorrect");
+    }
+    return errors;
+}
+
+
 
 
 const allInputs = [firstname_input, email_input, password_input, repeat_Password_input];

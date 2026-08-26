@@ -98,7 +98,7 @@ div:has(input:focus) > label{
 form input::placeholder{
     color: var(--text-color);
 }
-form button{
+.button{
     margin-top: 10px;
     border: none;
     border-radius: 100px;
@@ -111,10 +111,9 @@ form button{
     cursor: pointer;
     transition: 150s ease;
 }
-form button:hover{
-    background-color: var(--text-color);
-    color: aqua;
-}
+/* .button:hover{
+    background-color: #000;
+} */
 form button:focus{
     outline: none;
     background-color: var(--text-color);
@@ -138,4 +137,7 @@ a:hover{
 }
 .incorrect input{
     border-color: #f06272;
+}
+#error-message{
+    color: #f06272;
 }

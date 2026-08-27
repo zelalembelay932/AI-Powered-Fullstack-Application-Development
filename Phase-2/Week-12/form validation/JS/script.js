@@ -1,3 +1,4 @@
+// creates a variable
 const form = document.getElementById('form');
 
 const firstname_input = document.getElementById("firstname-input");

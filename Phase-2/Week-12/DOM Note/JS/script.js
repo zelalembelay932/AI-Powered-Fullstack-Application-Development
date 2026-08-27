@@ -280,10 +280,10 @@
 
 
 
-function myFunction() {
-  const list = document.getElementById("myDIV").classList;
-  list.add("myStyle");
-}
+// function myFunction() {
+//   const list = document.getElementById("myDIV").classList;
+//   list.add("myStyle");
+// }
 
 
 

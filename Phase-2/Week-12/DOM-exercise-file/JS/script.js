@@ -117,10 +117,12 @@ sony.insertAdjacentElement("afterend", facebook)
 
 // querySelectorAll(".blue") finds every element whose class contains "blue".
 
-// const blueCompanies = document.querySelectorAll("#techCompanies .blue");
+const blueCompanies = document.querySelectorAll("#techCompanies .blue");
 
-// console.log("2.8 Blue companies:", blueCompanies.length);
+console.log("2.8 Blue companies:", blueCompanies.length);
 
+// let result = document.createElement("p");
+// blueCompanies.textContent = "blueCompanies";
 
 
 
@@ -135,10 +137,10 @@ console.log("\n ===========Quesion 3 ===========");
 
 //Step 1, First crate function to add background
 
-// function addBackground(){
-    // document.body.style.backgroundColor = "#99ecff"
-// }
-// const addBackground = () =>  document.body.style.backgroundColor = "#99ecff"
+function addBackground(){
+    document.body.style.backgroundColor = "#99ecff"
+}
+const addBackground = () =>  document.body.style.backgroundColor = "#99ecff"
 // //Step 2, First crate function to remove background
 
 // // backgroundColor to an empty string ("")
@@ -158,13 +160,13 @@ console.log("\n ===========Quesion 3 ===========");
 //             // The event we are listening for.
 //                 // addBackground
 //     // function that should ececute when the click happens.
-//     yesBackground.addEventListener("click", addBackground);
+    yesBackground.addEventListener("click", addBackground);
 // // Step 4
 //     // Add a click EVENT to no
 //     // when the user clicks No  button
 //         // removeBackground() will execute.
 
-//     noBackground.addEventListener("click", removeBackground);
+    noBackground.addEventListener("click", removeBackground);
 
 
 
@@ -204,6 +206,9 @@ noBackground.onclick = function () {
 
     document.body.style.backgroundColor = "";
 };
+
+
+
 
 
 
@@ -265,17 +270,13 @@ console.log("\n =========== Quesion 4 ===========");
 // step 1
     // select the first input field
 // getElementById() finds the HTML element whose ID is "firstNumber"
-const firstNumber = document.getElementById("firstNumber");
 // step 2
     // select the second input field
 // find the second input field using it id
-const secondNumber = document.getElementById("secondNumber");
 // Step 3
     // Select the element where we will display the result
-const sumElement =  document.getElementById("sum");
 // step 4
     // select the form
-const form = document.getElementById("adder");
 
 // step 5
     // Listen for form submission something happening to  this
@@ -288,6 +289,21 @@ const form = document.getElementById("adder");
         // keyup;
         // focus;
         // blur;
+// step 6
+        // get the values entered by the user
+    // step 7
+        // check whether both values are numbers convert to strings
+    // step 8
+        // Validate the input 
+// step 9
+        // Calculate the sum
+ // step 10
+        // Display the result underneath the form
+
+const firstNumber = document.getElementById("firstNumber");
+const secondNumber = document.getElementById("secondNumber");
+const sumElement =  document.getElementById("sum");
+const form = document.getElementById("adder");
 
 form.addEventListener("submit", function (event){
     // Prevent the browser from refreshing the page.
@@ -296,31 +312,22 @@ form.addEventListener("submit", function (event){
 
     event.preventDefault();
 
-    // step 6
-        // get the values entered by the user
     const value1 = firstNumber.value;
     const value2 = secondNumber.value;
 
-    // step 7
-        // check whether both values are numbers convert to strings
     const number1 = Number(value1);
     const number2 = Number(value2);
 
-    // step 8
-        // Validate the input 
+
     if (Number.isNaN(number1) || Number.isNaN(number2)) {
         sumElement.textContent = "Please enter numerical values only";
 
         return;
     }
-    // step 9
-        // Calculate the sum
     const sum = number1  + number2 ;
 
     console.log("Sum:-", sum);
 
-    // step 10
-        // Display the result underneath the form
     sumElement.textContent = `Sum: ${sum}`;
 });
 

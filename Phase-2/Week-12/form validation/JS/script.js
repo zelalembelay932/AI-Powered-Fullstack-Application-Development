@@ -105,12 +105,10 @@ form.addEventListener('submit', (e) =>{
         // Because the program does not know yet whether anything is wrong
         // then the validation function add error messages
     let errors = []
-if (condition) {
-    
-}
 
-    if (firstname_input) {
-      // if we have a firstname input we are in the signup
+    if (firstname_input) { // This must be Signup page " firstname_input" emil kalew Signup mehonun yeredal kalhone "else" Login check yadergal
+
+        // if we have a firstname input we are in the signup
         errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_Password_input.value);
 
       // firstname_input, email_input, password_input, repeat_Password_input
@@ -132,9 +130,23 @@ if (condition) {
     if (errors.length > 0) {
         // if there are any errors
         e.preventDefault();
-        error_message.innerText = errors.join(". ")
+        error_message.innerText = errors.join(". ") 
     }
 })
+        // User clicks Signup
+        //        ↓
+        // submit event
+        //        ↓
+        // JavaScript validation
+        //        ↓
+        // ERROR?
+        //    ↙         ↘
+        //  YES          NO
+        //  ↓             ↓
+        // preventDefault submit
+
+    // join(. ) => its combines array elements into one string
+        // display all error in one paragraph
 
 function getSignupFormErrors (firstname, email, password, repeatPassword) {
     let  errors = []
@@ -143,18 +155,23 @@ function getSignupFormErrors (firstname, email, password, repeatPassword) {
         errors.push('Firstname is required')
         firstname_input.parentElement.classList.add("incorrect");
     }
+            // Is firstname empty
+                    // OR
+            // is firstname null(No value)?
+
     if (email === '' || email == null){
         errors.push('Email is required')
         email_input.parentElement.classList.add("incorrect");
     }
+
     if (password === '' || password == null){
         errors.push('Password is required')
         password_input.parentElement.classList.add("incorrect");
-    }
-    if(password.length <8){
+    }else if(password.length <8){
         errors.push('Password must have 8 characters')
         password_input.parentElement.classList.add("incorrect");
     }
+
     if(password !== repeatPassword){
         errors.push('Password dose not match repeated password')
         password_input.parentElement.classList.add("incorrect");
@@ -181,10 +198,59 @@ function getLoginFormErrors (email, password){
 const allInputs = [firstname_input, email_input, password_input, repeat_Password_input];
 
 allInputs.forEach(input => {
-    input.addEventListener('input', () =>{
-        if(input.parentElement.classList.contains('incorrect')){
-            input.parentElement.classList.remove('incorrect')
-            error_message.innerText = ''
-        }
-    })
+    if (input){
+        input.addEventListener('input', () =>{
+            if (input.parentElement.classList.contains('incorrect')){
+                input.parentElement.classList.remove('incorrect');
+                error_message.innerText = '';
+            }
+        })
+    }
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+// FINAL 
+    // If you work on this project thoroughly and fully understand everything involved,
+        // you will know the important JavaScript concepts listed below.
+    // concept 1
+        // document.getElementById(); => DOM selection
+    // concept 2
+        // .value => reading user input
+    // concept 3
+        // addEventListener() => event-driven programming
+    // concept 4
+        // preventDefault() => controlling browser behavior
+    // concept 5
+        // function => reusable logic
+    // concept 6
+        // return => sending data back from a function
+    // concept 7
+        // array.push() => Storing multiple errors or (Value)
+    // concept 8
+        // array.length => checking how many errors or (Value) exist
+    // concept 9
+        // array.join  => converting multiple errors into one message
+    // concept 10
+        // parentElement => navigating the DOM tree
+    // concept 11
+        // classList.add() => changing CSS classes
+    // concept 12
+        // classList.remove() => removing CSS classes
+    // concept 13
+        // classList.contains() => checking whether a class exists
+    // concept 14
+        // forEach() => looping through elements
+    // concept 15
+        // input event => reacting to user typing
+    

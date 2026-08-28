@@ -1,6 +1,5 @@
 // DOM
 
-
 //Step 1
     //  creates a variable
         // const variableName
@@ -11,17 +10,8 @@
     // Find the element whose ID is form.
         // getElementById("your id")
 
-const form = document.getElementById('form');
 
-const firstname_input = document.getElementById("firstname-input");
-
-const email_input = document.getElementById("email-input");
-const password_input = document.getElementById("password-input");
-const repeat_Password_input = document.getElementById("repeat-password-input");
-
-const error_message = document.getElementById("error-message");
-
-// Listen for form event-driven something happening to  this
+// Listen for FORM event-driven something happening to  this
         // click;
         // submit;
         // input;
@@ -31,6 +21,7 @@ const error_message = document.getElementById("error-message");
         // keyup;
         // focus;
         // blur;
+
 
 // form.addEventListener("submit", (event) => {
 //     console.log("Form submitted");
@@ -61,6 +52,7 @@ const error_message = document.getElementById("error-message");
 // function handleSubmit(event) {
 //     console.log("Form submitted");
 // }
+
 // form.addEventListener("submit", handleSubmit);
 
             // form
@@ -97,6 +89,12 @@ const error_message = document.getElementById("error-message");
         // Signup
     // "Submit Event happen"
 
+const form = document.getElementById("form");
+const firstname_input = document.getElementById("firstname-input");
+const email_input = document.getElementById("email-input");
+const password_input = document.getElementById("password-input");
+const repeat_Password_input = document.getElementById("repeat-password-input");
+const error_message = document.getElementById("error-message");
 
 
 
@@ -115,6 +113,8 @@ form.addEventListener('submit', (e) =>{
         // are represents the entire HTML element
                 // that means 
             // firstname_input => <input id="email-input">
+            // <input type="text" name="firstname" id="firstname-input" placeholder="Firstname ">
+
 
     // firstname_input.value, email_input.value password_input.value, repeat_Password_input.value,
         // Represented the text currently enter into that field
@@ -167,7 +167,8 @@ function getSignupFormErrors (firstname, email, password, repeatPassword) {
     if (password === '' || password == null){
         errors.push('Password is required')
         password_input.parentElement.classList.add("incorrect");
-    }else if(password.length <8){
+
+    }else if(password.length < 8){
         errors.push('Password must have 8 characters')
         password_input.parentElement.classList.add("incorrect");
     }

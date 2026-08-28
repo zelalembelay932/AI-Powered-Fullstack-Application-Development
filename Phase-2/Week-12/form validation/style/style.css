@@ -133,11 +133,19 @@ a:hover{
         border-radius: 0;
     }
 }
+
+
+
+
+
+
+
+
 .incorrect label{
     background-color: #f06272;
 }
 .incorrect input{
-    border-color: #f06272;
+    border-color: #08f032;
 }
 #error-message{
     color: #f06272;

@@ -57,24 +57,27 @@
    
    <br>
    <hr>
-   <span class="err"></span>
-   <form action="#" style="border: 2px solid black; width: 500px;">
-    <br>
-    <label for="forF">First Name</label>
-    <input id="forF" type="text" >
-    <br>
-    <br>
-    <label for="forL">last Name</label>
-    <input  id="forL" type="text" >
-    <br>
-    <br>
-    <label for="email">email</label>
-    <input id="email"type="email" >
-    <br>
-    <br>
-    <button  id="btn">submit</button> 
+
+   <div id="err"> </div>
+   <!-- <span class="err"></span> -->
+   <form action="#" style="border: 2px solid black; width: 500px;" id="userForm">
+      <br>
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" >
+      <br>
+      <br>
+        <label for="lastName">last Name</label>
+        <input  id="lastName" type="text" >
+      <br>
+      <br>
+        <label for="email">email</label>
+        <input id="email" type="email" >
+      <br>
+      <br>
+        <button type="submit">submit</button> 
     </form>
-    <span class="result"></span>
+
+    <div id="userOutput"> </div>
     
 <!-- 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->

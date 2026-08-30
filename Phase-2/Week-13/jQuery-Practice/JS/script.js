@@ -331,6 +331,36 @@ console.log("\n=================== 3 =================");
 
 
 
+console.log("\n=================== 4 =================");
+
+// $(function () {
+//     // When this form is submitted, run this code.
+//     $("#userForm").on("submit", function (event) {
+//         event.preventDefault();
+
+//         const firstName = $("#firstName").val().trim();
+//         const lastName = $("#lastName").val().trim();
+//         const email = $("#email").val().trim();
+
+//         if (firstName === "" || lastName === "" || email === ""){
+//             $("#err").text("Please provide all required fields");
+//             return;
+//         }
+//         // Remove any error message
+//         $("#err").text("")
+//         // Hide the form
+//         $("#userForm").hide();
+
+//         // display values enterd by the user
+
+//         $("#userOutput").html(` 
+//             <p> First Name: ${firstName} </p>
+//             <p> Last Name: ${lastName} </p>
+//             <p> Email : ${email} </p>
+
+//             `);
+//     })
+// })
 
 
 

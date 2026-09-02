@@ -404,24 +404,24 @@ console.log("\n=================== 6 =================");
 // handles rejected/error path
 
 // Eg:-
-    Promise.resolve()
-    .then(() => {
-        console.log("Success");
-    })
-    .catch(() => {
-        console.log("Error");
-    });
+                // Promise.resolve()
+                // .then(() => {
+                //     console.log("Success");
+                // })
+                // .catch(() => {
+                //     console.log("Error");
+                // });
     // print Success
     // B/c the Promise is fulfilled.
 
 // Eg2:-
-    Promise.reject()
-    .then(() => {
-        console.log("Success");
-    })
-    .catch(() => {
-        console.log("Error");
-    });
+            // Promise.reject()
+            // .then(() => {
+            //     console.log("Success");
+            // })
+            // .catch(() => {
+            //     console.log("Error");
+            // });
     // print Error
         // B/c the Promise is rejected.
 
@@ -515,32 +515,151 @@ console.log("\n=================== 6 =================");
 //        ↓
 // next .then()
 
+console.log("\n=================== 6.1 =================");
 
-function job() {
+
+// function job() {
+//     return new Promise(function (resolve, reject) {
+//         reject();
+//     });
+// }
+
+// let promise = job();
+
+// promise
+//     .then(function () {
+//         console.log("Success 1");
+//     })
+//     .then(function () {
+//         console.log("Success 2");
+//     })
+//     .then(function () {
+//         console.log("Success 3");
+//     })
+//     .catch(function () {
+//         console.log("Error 1");
+//     })
+//     .then(function () {
+//         console.log("Success 4");
+//     });
+
+
+
+
+
+
+console.log("\n=================== 6.2 =================");
+// Step 1
+// function receive ine argument
+    // The Promise is fulfilled 
+        // success
+    // The Promise is rejected 
+            // error
+// Step 2
+    // job(true)
+        // resolve("success")
+
+    // So promise is fulfilled with:
+        // "success"
+
+// Step 3
+    // .then(A)
+    // the Promise is fulfilled, this .then() executes.
+        // data contains:
+            // success
+        // Therefore:
+            // console.log(data);
+        // prints:
+            // success
+// Step 4
+    // return job(false)
+    // .then() become rejeced
+        // success
+        //  ↓
+        // job(false)
+        //  ↓
+        // REJECTED: error
+// step 5
+    // .catch(B)
+        // Because the previous Promise was rejected, .catch() executes.
+    // console.log(error);
+            // prints: error
+// Step 6:-
+    // return "Error caught"
+        // We're not rejecting anymore.
+        // We're returning a normal string.
+        // Therefore the Promise returned from the catch() becomes fulfilled with:
+// step 7
+    // .then(c)
+        // .then(function (data) {
+        //     console.log(data);
+        //     return job(true);
+        // })
+
+// Because the previous catch() returned a normal value, the next .then() runs.
+
+// data is: Error caught
+    // console.log(data);
+        // prints: Error caught
+
+// Step 8
+    // return job(true);
+        // This creates a fulfilled Promise:
+            // success
+// step 9
+    // Final .catch(D)
+        // .catch(function (error) {
+        //     console.log(error);
+        // });
+
+    // Will it run?
+        // No.
+    // Why?
+        // Because:
+    // job(true)
+        // resolve("success")
+    // There is no rejection.
+        // Therefore:
+    // catch D 
+        // doesn't execute. is Skipped
+
+
+function job(state) {
     return new Promise(function (resolve, reject) {
-        reject();
+
+        if (state) {
+            resolve("success");
+        } else {
+            reject("error");
+        }
+
     });
 }
 
-let promise = job();
+let promise = job(true);
 
 promise
-    .then(function () {
-        console.log("Success 1");
+    .then(function (data) { // A
+        console.log(data);
+
+        return job(false);
     })
-    .then(function () {
-        console.log("Success 2");
+    .catch(function (error) { // B
+        console.log(error);
+
+        return "Error caught";
     })
-    .then(function () {
-        console.log("Success 3");
+    .then(function (data) { // C
+        console.log(data);
+
+        return job(true);
     })
-    .catch(function () {
-        console.log("Error 1");
-    })
-    .then(function () {
-        console.log("Success 4");
+    .catch(function (error) { // D
+        console.log(error);
     });
 
 
 
 
+
+    

@@ -2,9 +2,18 @@
 // first we are add class footer-column in all h3 parent div
 // we are add in for all h3 class footer-icon and add  element  <span class="footer-toggle">+</span>
 // then add in ul element class  <ul class="footer-links">
+ // $(this) => select only "Account"
+        
 
+$(function (){
 
-// $title => store the click footer heading jQuery object
+    $(".footer-title").on("click", function () {
+
+        if ($(window).width() > 768){
+            return;
+        }
+        const title = $(this); 
+        // title => store the click footer heading jQuery object
             // this variable contains jQuery object
         
         // this => refer to the specific element that the user clicked
@@ -17,14 +26,13 @@
                 // user click Account
             // this => <h3 class="footer-title">Account</h3>;
                 //  only acces HTML element
-            // $(this) => select only "Account"
+        const icon = title.find(".footer-arrow");
+         // thats we can control the correct dropdown instead of all dropdowns.
         
-        // thats we can control the correct dropdown instead of all dropdowns.
         
-        
-        // const $arrow = $title.find(".footer-arrow");
+        // const $icon = $title.find(".footer-arrow");
         // the .footer-arrow is inside .footer-title
-                    // $title.find(".footer-arrow")
+                    // title.find(".footer-arrow")
             // is find .footer-arrow inside the clicked heading.
 
                 // $title
@@ -43,7 +51,8 @@
             // that selects all arrows.
         // we need the arrow only one clicked heading
 
-
+        const links = title.next(".footer-links");
+        
         // const $links = $title.next(".footer-links");
         // $title.next()
             // get the next  the select element
@@ -88,28 +97,14 @@
         // That's exactly the relationship we need.
         // open/ close link
         // $links.slideToggle(300);
-
+        links.slideToggle(300);
         // 300 milliseconds = 0.3 seconds
         // 
-    
-    
-    
 
-$(function (){
     // select all h3 .footer-title
     // .on("click",  function (){})
         //  When footer h3 heading is clicked run function
-    $(".footer-title").on("click", function () {
-
-        if ($(window).width() > 768){
-            return;
-        }
-        const title = $(this);
-        const icon = title.find(".footer-arrow");
-        const links = title.next(".footer-links");
-        links.slideToggle(300);
-        
-
+    
         if (icon.text() === "x"){
             icon.text("+");
         }else{

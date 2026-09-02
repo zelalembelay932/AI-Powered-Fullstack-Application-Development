@@ -332,43 +332,214 @@ $(document).ready(function () {
 
 console.log("\n=================== 4 =================");
 
-$(function () {
-    // When this form is submitted, run this code.
-    $("#userForm").on("submit", function (event) {
-        event.preventDefault();
+// $(function () {
+//     // When this form is submitted, run this code.
+//     $("#userForm").on("submit", function (event) {
+//         event.preventDefault();
 
-        const firstName = $("#firstName").val().trim();
-        const lastName = $("#lastName").val().trim();
-        const email = $("#email").val().trim();
+//         const firstName = $("#firstName").val().trim();
+//         const lastName = $("#lastName").val().trim();
+//         const email = $("#email").val().trim();
 
-        if (firstName === "" || lastName === "" || email === ""){
-            $("#err").text("Please provide all required fields");
-            return;
-        }
-        // Remove any error message
-        $("#err").text("")
-        // Hide the form
-        $("#userForm").hide();
+//         if (firstName === "" || lastName === "" || email === ""){
+//             $("#err").text("Please provide all required fields");
+//             return;
+//         }
+//         // Remove any error message
+//         $("#err").text("")
+//         // Hide the form
+//         $("#userForm").hide();
 
-        // display values enterd by the user
+//         // display values enterd by the user
 
-        $("#userOutput").html(` 
-            <p> First Name: ${firstName} </p>
-            <p> Last Name: ${lastName} </p>
-            <p> Email : ${email} </p>
+//         $("#userOutput").html(` 
+//             <p> First Name: ${firstName} </p>
+//             <p> Last Name: ${lastName} </p>
+//             <p> Email : ${email} </p>
 
-            `);
+//             `);
+//     })
+// })
+
+
+
+
+
+
+console.log("\n=================== 6 =================");
+
+// Promise has three conceptual states
+    // Panding  => initial state
+            // opration is actively running, but resulat is not yet available.
+    // Fulfilled(success)
+            //  opration is completed successfully, holds the reulting value
+    //  Rejected (error)
+            //  opration is failed
+            // the promise holds the reson for the failure
+            // 
+
+ // HOW TO CRATE Promise
+    // construct a promise using the
+        // new Promise() construct
+    // its is accepts a function 
+    // automatically runs and provides tow callback function
+        // resolved 
+        // reject
+
+// HOW TO CONSUME a Promise
+    // .then()
+        // run callback when the promise RESOLVES successfully run this function.
+    // .catch()
+        // run callback when the promise FAILS or encounter an error
+        // Promise chai is rejected, handle the error here
+    // .finally()
+        // runs whether the promise is fulfilled or rejected
+
+// .then()
+//    ↓
+// handles fulfilled/success path
+
+// .catch()
+//    ↓
+// handles rejected/error path
+
+// Eg:-
+    Promise.resolve()
+    .then(() => {
+        console.log("Success");
     })
-})
+    .catch(() => {
+        console.log("Error");
+    });
+    // print Success
+    // B/c the Promise is fulfilled.
+
+// Eg2:-
+    Promise.reject()
+    .then(() => {
+        console.log("Success");
+    })
+    .catch(() => {
+        console.log("Error");
+    });
+    // print Error
+        // B/c the Promise is rejected.
 
 
 
 
 
 
+// step 1
+    // function job()
+        // definesafunction named job
+    // job()=> it will return a promise
+// Step 2 =>
+        // return new Promise(function (resolve, reject) {}
+    // new promise is created 
+        // a promise has two important function exexutor
+                // resolve => success
+                // reject => failure
+    // in this case we don't call resolved()
+// Step 3
+    // reject() 
+        //  this change the promise to the rejected state
+    // job() => Promise => REJECTED
+
+// step 4
+    // let promise = job()
+        // store the promise
+    // calling job() create a rejected promise
+
+    // so in this case 
+            //  promise
+                // ↓
+            // Rejected Promise
+// step 5
+    // .then() "first"
+        // handles a fulfilled promise
+        // but our promise is already rejected
+
+            // console.log("Success 1");
+        // dose not run b/c is rejected 
+// step 6
+    // .then() "Second"
+        // the promise chain is still rejected
+            // console.log("Success 2");
+        // dose not run b/c is rejected 
+// Step 7
+    // .then() "Third"
+        // still rejected
+// step 8
+    // .catch()
+        // handles rejected promises
+// REJECTED
+//    ↓
+// .then() → SKIP
+//    ↓
+// .then() → SKIP
+//    ↓
+// .then() → SKIP
+//    ↓
+// .catch() → HANDLE ERROR
+
+    // catch() is designed to handle rejrction
+
+    // our promise is rjected
+
+// REJECTED
+//    ↓
+// then 1 → cannot handle rejection
+//    ↓
+// then 2 → cannot handle rejection
+//    ↓
+// then 3 → cannot handle rejection
+//    ↓
+// catch → can handle rejection
+
+// so catch print
+    // console.log("Error 1");
+
+// Step 9
+    // So after the catch handler finishes normally, the Promise chain becomes fulfilled.
+
+// Rejected Promise
+//        ↓
+//     .catch()
+//        ↓
+// print "Error 1"
+//        ↓
+// handler finishes normally
+//        ↓
+// FULFILLED
+//        ↓
+// next .then()
 
 
+function job() {
+    return new Promise(function (resolve, reject) {
+        reject();
+    });
+}
 
+let promise = job();
+
+promise
+    .then(function () {
+        console.log("Success 1");
+    })
+    .then(function () {
+        console.log("Success 2");
+    })
+    .then(function () {
+        console.log("Success 3");
+    })
+    .catch(function () {
+        console.log("Error 1");
+    })
+    .then(function () {
+        console.log("Success 4");
+    });
 
 
 

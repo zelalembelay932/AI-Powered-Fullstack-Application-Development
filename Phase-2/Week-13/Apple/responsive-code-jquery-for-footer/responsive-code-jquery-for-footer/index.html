@@ -11,6 +11,7 @@
     <title>Apple Website</title>
     <!-- Link to the Font-Awesome Font -->
     <!-- This font gives us the option to use emojies, symbols, common logos and icons as a font -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"
@@ -305,7 +306,7 @@
       </div>
     </section>
 
-    <footer class="footer-wrapper">
+    <footer class="footer-wrapper" id="apple-footer">
       <div class="container">
         <div class="row">
           <div class="upper-text-container">
@@ -325,10 +326,18 @@
           </div>
         </div>
 
-        <div class="row footer-links-wrapper">
-          <div class="col col-12 col-sm-6 col-m-4 col-lg-2 offset1" >
-            <h3>Shop and Learn</h3>
-            <ul>
+        <!-- New Responsive with in jQuery -->
+        <div class="apple-footer">
+          <div class="footer-section">
+
+            <h3 class="footer-title"> Shop and Learn
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Mac</a></li>
               <li><a href="#">iPad</a></li>
               <li><a href="#">iPhone</a></li>
@@ -341,10 +350,19 @@
               <li><a href="#">Accessories</a></li>
               <li><a href="#">Gift Cards</a></li>
             </ul>
+
           </div>
-          <div class="col col-12 col-sm-6 col-m-4 col-lg-2">
-            <h3>Services</h3>
-            <ul>
+
+          
+          <div class="footer-section">
+            <h3 class="footer-title"> Services
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Apple Music</a></li>
               <li><a href="#">Apple News+</a></li>
               <li><a href="#">Apple TV+</a></li>
@@ -352,16 +370,34 @@
               <li><a href="#">Apple Card</a></li>
               <li><a href="#">iCloud</a></li>
             </ul>
-            <h3>Account</h3>
-            <ul>
+          </div>
+
+
+          <div class="footer-section">
+            <h3 class="footer-title"> Account
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Manage Your Apple ID</a></li>
               <li><a href="#">Apple Store Account</a></li>
               <li><a href="#">iCloud.com</a></li>
             </ul>
           </div>
-          <div class="col col-12 col-sm-6 col-m-4 col-lg-2">
-            <h3>Apple Store</h3>
-            <ul>
+
+
+          <div class="footer-section">
+            <h3 class="footer-title"> Apple Store
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Find a Store</a></li>
               <li><a href="#">Genius Bar</a></li>
               <li><a href="#">Today at Apple</a></li>
@@ -375,28 +411,75 @@
               <li><a href="#">Shopping Help</a></li>
             </ul>
           </div>
-          <div class="col col-12 col-sm-6 col-m-4 col-lg-2">
-            <h3>For Business</h3>
-            <ul>
+
+
+           <div class="footer-section">
+            <h3 class="footer-title"> For Business
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Apple and Business</a></li>
               <li><a href="#">Shop for Business</a></li>
             </ul>
-            <h3>For Education</h3>
-            <ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title"> For Education
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Apple and Education</a></li>
               <li><a href="#">Shop for College</a></li>
             </ul>
-            <h3>For Healthcare</h3>
-            <ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title"> For Healthcare
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Manage Your Apple ID</a></li>
               <li><a href="#">Apple Store Account</a></li>
               <li><a href="#">iCloud.com</a></li>
             </ul>
           </div>
 
-          <div class="col col-12 col-sm-6 col-m-4 col-lg-2">
-            <h3>Apple Values</h3>
-            <ul>
+          <div class="footer-section">
+            <h3 class="footer-title"> For Government
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
+              <li><a href="#">Apple and Education</a></li>
+              <li><a href="#">Shop for College</a></li>
+            </ul>
+          </div>
+
+
+          <div class="footer-section">
+            <h3 class="footer-title"> Apple Values
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Find a Store</a></li>
               <li><a href="#">Genius Bar</a></li>
               <li><a href="#">Today at Apple</a></li>
@@ -404,8 +487,18 @@
               <li><a href="#">Field Trip</a></li>
               <li><a href="#">Apple Store App</a></li>
             </ul>
-            <h3>About Apple</h3>
-            <ul>
+          </div>
+
+
+          <div class="footer-section">
+            <h3 class="footer-title"> About Apple
+              <span class="footer-arrow">
+                <!-- <i class="fa-solid fa-angle-down" style="color: rgb(8, 8, 8);"></i> -->
+                +
+              </span>
+            </h3>
+
+            <ul class="footer-links">
               <li><a href="#">Find a Store</a></li>
               <li><a href="#">Genius Bar</a></li>
               <li><a href="#">Today at Apple</a></li>
@@ -413,6 +506,36 @@
               <li><a href="#">Field Trip</a></li>
               <li><a href="#">Apple Store App</a></li>
             </ul>
+          </div>
+
+        </div>
+        
+
+
+        <div class="my-apple-wrapper">
+          More ways to shop: <a href="#">Find an Apple Store</a> or
+          <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.
+        </div>
+        <div class="copyright-wrapper row">
+          <div
+            class="copyright col-sm-12 order-2 col-md-8 order-md-1 col-lg-4 order-lg-1"
+          >
+            Copyright &copy; 2020 Apple Inc. All rights reserved.
+          </div>
+          <div class="footer-links-terms col-sm-12 order-3 col-lg-6 order-lg-2">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Sales and Refunds</a></li>
+              <li><a href="#">Legal</a></li>
+              <li><a href="#">Site Map</a></li>
+            </ul>
+          </div>
+          <div
+            class="footer-country col-sm-12 order-1 col-md-4 order-md-2 text-md-right col-lg-2 order-lg-3"
+          >
+            <div class="flag-wrapper"><img src="images/icons/16.png" /></div>
+            <div class="footer-country-name">United States</div>
           </div>
         </div>
       </div>
@@ -420,10 +543,12 @@
     
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="./js/jquery-4-0-0.js"></script>
+
 
     <!-- Bootsrap JS -->
-    <script src="js/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -54,44 +54,45 @@ console.log("\n=================== 2 =================");
 // 2.1. Select the element with an ID of "techCompanies" and display it on your console.
 
 
-// const techCompanies = $("#techCompanies");
-// console.log(techCompanies);
+const techCompanies = $("#techCompanies");
+console.log(techCompanies);
 
 // // 2.2. How many tech companies are listed under the ul element with an id of "techCompanies"?
 
 
-// const count =  $("#techCompanies li").length;
-// console.log(count);
+const count =  $("#techCompanies li").length; // desedent childeren selector 
+    // #techCompanies > li => this is direct chideren only in id
+console.log(count);
 
 
 // 2.3 Select all elements with class red
 
-// const red = $(".red");
+const red = $(".red");
 
-// console.log(red);
+console.log(red);
 
 
 // 2.4 Create a new <li> containing Facebook
 
-// const facebook = $("<li>Facebook</li>");
-// console.log(facebook);
+const facebook = $("<li>Facebook</li>");
+console.log(facebook);
 
 // // 2.5 Give Facebook the class blue
-// facebook.addClass("blue")
+facebook.addClass("blue")
 
 // 2.6 Append Facebook next to Sony
 // does not WORK!!!
 // $("#techCompanies").append(facebook);
+// $("#techCompanies").afterend(facebook);
 // But that does not put Facebook next to Sony. It puts Facebook at the end of the <ul>.
 
 
-// $("li").each(function () {
+$("li").each(function () {
 
-//     if ($(this).text().trim() === "Sony") {
-//         $(this).after(facebook);
-//     }
-
-// });
+    if ($(this).text().trim() === "Sony") {
+        $(this).after(facebook);
+    }
+});
 
 
 // $("li")
@@ -189,11 +190,11 @@ console.log("\n=================== 2 =================");
 
 // 2.7. How many of the tech companies are labeled blue? Find the result using jQuery and display the result inside the "blueCompanies" div
 
-// const blueCount = $("#techCompanies .blue").length;
+const blueCount = $("#techCompanies .blue").length;
 
-// console.log(blueCount);
+console.log(blueCount);
 
-// $("#blueCompanies").text(blueCount)
+$("#blueCompanies").text(blueCount)
 
 
 console.log("\n=================== 3 =================");
@@ -228,63 +229,62 @@ console.log("\n=================== 3 =================");
 // .ready() => wait until the HTML document has finished loading, then run this function
 
 
-// $(document).ready(function () { 
-//     // $("#numberForm")
-//         // select form id with jQuery 
-//     // .on("submit", ...)
-//         // Event Listen for form submission
-//     $("#numberForm").on("submit", function (event) {
 
-//         // Prevent the browser from refreshing/submitting normally
-//    event.preventDefault();     
+ // $("#numberForm")
+        // select form id with jQuery 
+    // .on("submit", ...)
+        // Event Listen for form submission
 
-//         // Get the values from the two form input fields
-//         const value1 = $("#number1").val().trim();
-//         const value2 = $("#number2").val().trim();
 
-//         // Check for empty values
-//         if (value1 === "" || value2 === "") {
+     // Prevent the browser from refreshing/submitting normally
+    
+        // Get the values from the two form input fields
+            // Convert string values into numbers
+            // JavaScript sees strings and perform string concatenation.
+           // Check whether both values are numbers
 
-//             $("#result").text("Please enter numerical values only");
+$(document).ready(function () { 
+    
+    $("#numberForm").on("submit", function (event) {
+        event.preventDefault();     
 
-//             console.log("Please enter numerical values only");
+        const value1 = $("#number1").val().trim();
+        const value2 = $("#number2").val().trim();
 
-//             return;
-//         }
+        if (value1 === "" || value2 === "") {
 
-//         // Convert string values into numbers
-//             // JavaScript sees strings and perform string concatenation.
-//         const number1 = Number(value1);
-//         const number2 = Number(value2);
+            $("#result").text("Please enter numerical values only");
 
-//         // Check whether both values are numbers
-//         if (isNaN(number1) || isNaN(number2)) {
+            console.log("Please enter numerical values only");
 
-//             $("#result").text("Please enter numerical values only");
+            return;
+        }
 
-//             console.log("Please enter numerical values only");
+        const number1 = Number(value1);
+        const number2 = Number(value2);
 
-//             return;
-//         }
+        if (isNaN(number1) || isNaN(number2)) {
 
-//         // Calculate the sum
-//         const sum = number1 + number2;
+            $("#result").text("Please enter numerical values only");
 
-//         // Calculate the average
-//         const average = sum / 2;
+            console.log("Please enter numerical values only");
 
-//         // Display result in console
-//         console.log("Sum:", sum);
-//         console.log("Average:", average);
+            return;
+        }
 
-//         // Display result underneath the form
-//         $("#result").text(
-//             "Sum: " + sum + " | Average: " + average
-//         );
+        const sum = number1 + number2;
+        const average = sum / 2;
 
-//     });
+        console.log("Sum:", sum);
+        console.log("Average:", average);
 
-// });
+        $("#result").text(
+            "Sum: " + sum + " | Average: " + average
+        );
+
+    });
+
+});
 
 
 //  Method 2 
@@ -360,6 +360,7 @@ $(function () {
             `);
     })
 })
+
 
 
 

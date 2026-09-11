@@ -165,6 +165,22 @@ console.log("\n ===============");
 
 
 
+console.log("\n=================== ASYNCHRONOUS =================");
+
+// what is ASYNCHRONOUS JavaScript?
+    // JavaScript is often described as a single-threaded language.
+        // Eyandandun code line by line eyehede run emiyaderg
+    // https://medium.com/@ignatovich.dm/the-javascript-event-loop-explained-with-examples-d8f7ddf0861d
+
+console.log("A");
+
+setTimeout(() => {
+    console.log("B");
+}, 2000);
+
+console.log("C");
+
+
 
 
 

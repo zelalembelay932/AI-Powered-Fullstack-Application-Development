@@ -1,0 +1,217 @@
+-GUI, Terminal, Shell & Bash
+    -GUI
+        Graphical user Interface
+            Commanding your OS using graphical symbols instead of typing Windows, icons and menus for opening deleting and moving files.
+                Mainly navigated with a mouse.
+
+    -Terminal
+        The `All Black Screen` programmers used to send `text commands`. 
+        Allso called the commands line or console.
+            Used to navigate folders, copy files, and do more complex tasks.
+
+    -Shell
+        The `software that interprets` 
+            What you type so the computer understands it and return a response.
+                Eg:- BASH, Command Prompt(CMD), PowerShell.
+    -Bash
+        Bourne Again Shell 
+            a Command-line Interface(CLI) and the most widely used shell.
+            for:- Default on Mac and Linux.
+
+    The clearest way to hold these apart
+        -Terminal is the Windows you type into.
+        -Shell is the program that understands what you type.
+        -Bash is one particular shell.
+
+        Think of it as: the terminal is the PHONE
+                        the shell is the language
+                        Bash is English, Amharic
+
+
+-What do you need to write Bash
+    -Windows
+        install `Git Bash` (comes with the Git for Windows Package) or `Gygwin`.
+    -Mac/Linux
+        -Use the built-in-terminal. 
+            Bash or (zsh) is already there nothing to install.
+
+    `Best Recommend is in VS Code used`.
+        to opening terminal in VS
+            cont + `
+            cont + Shift + `
+            cont + J or
+            Open folder in vs then 
+                right click 
+                    Open in integrated Terminal
+            
+            
+
+-The main Bash Command
+        Vocabulary
+            a `directory` is just another name for a `folder`.
+    
+    Command |   What it does            | The mouse equivqlent
+
+    pwd     | Print the full path for   | Looking at the address bar
+            |   your current directory  |
+
+    cd      | Changes the directory     | Double-click a folder
+
+    ls      | List the contents of the  | Opening folder see inside
+                 current directory
+    ls -l   | List long version 
+    ls -la  | List long version including hidden file
+
+    mkdir   | Makes a new directory     | Right click => New folder
+
+    touch   | Creates a new empty file  | Right click => New file
+
+    echo    | Print text, Create a file,| Typing into a new document
+                write text into a file  
+    mv      | Move or Renames           | Drag-and-drop, 
+                 a file/directory           right-click => Rename
+    rm/rmdir | Removes files and        | Delete
+                    directory 
+
+    grap     | Sharches for a string    | cont + F 
+                    in side file          accross file
+    chmod    |Changes permissions of file| Right-click => 
+                                            Properties => permissions
+    
+    exit     | Closes the terminal        | Closing the Windows
+
+
+    rmdir           ==> `Empty` directory only
+    rm file.txt     ==> A file
+    rm -r CSS       ==> A directory and everything inside it     
+                             (recursively)
+    rm -rf CSS      ==> Recursively and forcefully (no question asked)
+
+    cd ..           ==> For 
+
+-chmod & file permissions
+    Every file has an OWNER, a GROUP and EveryBody
+        each of those three gets three permissions
+
+    The three permissions & their number
+
+    Letter        Permission         Value
+      r              Read              4
+      w              Write             2
+      x              Execute           1
+                  (run the program)  
+      -           Permission not       0
+                        granted      
+
+    https://github.com/RehanSaeed/Bash-Cheat-Sheet
+
+        Number	Permission	Meaning
+            0	  ---	     Nothing
+            1	  --x	     Execute
+            2	  -w-	     Write
+            3	  -wx	     Write + Execute
+            4	  r--	     Read
+            5	  r-x	     Read + Execute
+            6	  rw-	     Read + Write
+            7	  rwx	     Read + Write + Execute
+
+
+
+
+-Questions on Bash (Bash Practice Activity):
+    1, Use the terminal/GitBash to navigate to the “Evangadi” folder located on your Desktop.
+
+        Using cd 
+            cd Desktop/Evangadi
+        Go one folder at a time
+            cd Desktop
+            cd Evangadi
+    2. Inside your “Evangadi” folder, create a folder called “BashPractice”
+
+        mkdir BashPractice
+    Create and enter it immediately
+        mkdir BashPractice && cd BashPractice
+
+        && 
+            Run the second command only if the first command succeed
+
+    3. In the “BashPractice” folder, create another subfolder named “BashTest”
+        mkdir BashTest
+
+        Create a nested directory from the parent
+            mkdir -p BashPractice/BashTest
+
+            -p => create parent directory when necessary.
+
+    4, In the “BashPractice” folder, create a text file named “myTextFile.txt”
+        touch myTextFile.txt
+
+    5. Add the text "Hello bash" to the “myTextFile.txt” file using the "echo" command.
+        echo "Hello bash" > myTextFile.txt 
+          to  check the file
+                cat myTextFile.txt 
+
+        > is Write this text to the file and Replace existing content 
+            echo "Hello" > myTextFile.txt
+            echo "World" > myTextFile.txt
+                file only `World`
+        >> is Add the text to the end of the existing file
+            echo "Hello Group 4" >> myTextFile.txt
+            echo "World" >> myTextFile.txt
+                file now Hello
+                            World
+
+        >   = overwrite
+        >>  = append
+
+    6. Rename the “myTextFile.txt” file to “myTextPractice.txt”.
+        mv myTextFile.txt myTextPractice.txt
+
+        Why does mv rename a file?
+            mv means:
+                move
+            Normally:
+                mv file.txt folder/
+            moves a file.
+            But:
+                mv old.txt new.txt
+            changes the filename
+
+
+    7. Change the permission of the “myTextPractice.txt” file to 776 using the chmod command.
+
+        chmod 776 myTextPractice.txt 
+            7 = rwx
+            7 = rwx
+            6 = rw-
+                Owner  = rwx
+                Group  = rwx
+                Others = rw-
+
+        chmod 776 myTextPractice.txt 
+
+         to check
+             ls -l myTextPractice.txt
+        display this
+                -rwxrwxrw- 1 user user ... myTextPractice.txt
+
+
+    8. Delete the “BashTest” folder along with any file inside it.
+        rm -r BashTest
+            rm => remove 
+            -r => recursive
+                Recursivel means Bash will remove the folder and the file/directory inside it
+        rm -rf BashTest
+            Forcefully and recursively remove BashTest
+        WARNING
+            rm -rf important-folder 
+                can remove a large amount of data immediately
+
+
+
+
+
+
+
+
+

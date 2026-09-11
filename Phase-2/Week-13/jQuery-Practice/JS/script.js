@@ -243,48 +243,48 @@ console.log("\n=================== 3 =================");
             // JavaScript sees strings and perform string concatenation.
            // Check whether both values are numbers
 
-$(document).ready(function () { 
+// $(document).ready(function () { 
     
-    $("#numberForm").on("submit", function (event) {
-        event.preventDefault();     
+//     $("#numberForm").on("submit", function (event) {
+//         event.preventDefault();     
 
-        const value1 = $("#number1").val().trim();
-        const value2 = $("#number2").val().trim();
+//         const value1 = $("#number1").val().trim();
+//         const value2 = $("#number2").val().trim();
 
-        if (value1 === "" || value2 === "") {
+//         if (value1 === "" || value2 === "") {
 
-            $("#result").text("Please enter numerical values only");
+//             $("#result").text("Please enter numerical values only");
 
-            console.log("Please enter numerical values only");
+//             console.log("Please enter numerical values only");
 
-            return;
-        }
+//             return;
+//         }
 
-        const number1 = Number(value1);
-        const number2 = Number(value2);
+//         const number1 = Number(value1);
+//         const number2 = Number(value2);
 
-        if (isNaN(number1) || isNaN(number2)) {
+//         if (isNaN(number1) || isNaN(number2)) {
 
-            $("#result").text("Please enter numerical values only");
+//             $("#result").text("Please enter numerical values only");
 
-            console.log("Please enter numerical values only");
+//             console.log("Please enter numerical values only");
 
-            return;
-        }
+//             return;
+//         }
 
-        const sum = number1 + number2;
-        const average = sum / 2;
+//         const sum = number1 + number2;
+//         const average = sum / 2;
 
-        console.log("Sum:", sum);
-        console.log("Average:", average);
+//         console.log("Sum:", sum);
+//         console.log("Average:", average);
 
-        $("#result").text(
-            "Sum: " + sum + " | Average: " + average
-        );
+//         $("#result").text(
+//             "Sum: " + sum + " | Average: " + average
+//         );
 
-    });
+//     });
 
-});
+// });
 
 
 //  Method 2 
@@ -517,6 +517,33 @@ console.log("\n=================== 6 =================");
 
 console.log("\n=================== 6.1 =================");
 
+// Promise has three conceptual states
+    // Panding  => initial state
+            // opration is actively running, but resulat is not yet available.
+    // Fulfilled(success)
+            //  opration is completed successfully, holds the reulting value
+    //  Rejected (error)
+            //  opration is failed
+            // the promise holds the reson for the failure
+            // 
+
+ // HOW TO CRATE Promise
+    // construct a promise using the
+        // new Promise() construct
+    // its is accepts a function 
+    // automatically runs and provides tow callback function
+        // resolved 
+        // reject
+
+// HOW TO CONSUME a Promise
+    // .then()
+        // run callback when the promise RESOLVES successfully run this function.
+    // .catch()
+        // run callback when the promise FAILS or encounter an error
+        // Promise chai is rejected, handle the error here
+    // .finally()
+        // runs whether the promise is fulfilled or rejected
+
 
 // function job() {
 //     return new Promise(function (resolve, reject) {
@@ -624,42 +651,123 @@ console.log("\n=================== 6.2 =================");
         // doesn't execute. is Skipped
 
 
-function job(state) {
-    return new Promise(function (resolve, reject) {
+// function job(state) {
+//     return new Promise(function (resolve, reject) {
+//         if (state) {
+//             resolve("success");
+//         } else {
+//             reject("error");
+//         }
+//     });
+// }
+// let promise = job(true);
 
-        if (state) {
-            resolve("success");
-        } else {
-            reject("error");
-        }
+// promise
+//     .then(function (data) { // A
+//         console.log(data);
 
-    });
-}
+//         return job(false);
+//     })
+//     .catch(function (error) { // B
+//         console.log(error);
 
-let promise = job(true);
+//         return "Error caught";
+//     })
+//     .then(function (data) { // C
+//         console.log(data);
 
-promise
-    .then(function (data) { // A
-        console.log(data);
-
-        return job(false);
-    })
-    .catch(function (error) { // B
-        console.log(error);
-
-        return "Error caught";
-    })
-    .then(function (data) { // C
-        console.log(data);
-
-        return job(true);
-    })
-    .catch(function (error) { // D
-        console.log(error);
-    });
+//         return job(true);
+//     })
+//     .catch(function (error) { // D
+//         console.log(error);
+//     });
 
 
 
 
 
+console.log("\n=================== 6.3 =================");
     
+// function job(state) {
+//     return new Promise(function(resolve, reject) {
+//         if (state) {
+//             resolve('success');
+//         } else {
+//             reject('error');
+//         }
+//     });
+// }
+
+// let promise = job(true);
+
+// promise
+
+// .then(function(data) {
+//     console.log(data);
+
+//     return job(true);
+// })
+
+// .then(function(data) {
+//     if (data !== 'victory') {
+//         throw 'Defeat';
+//     }
+
+//     return job(true);
+// })
+
+// .then(function(data) {
+//     console.log(data);
+// })
+
+// .catch(function(error) {
+//     console.log(error);
+
+//     return job(false);
+// })
+
+// .then(function(data) {
+//     console.log(data);
+
+//     return job(true);
+// })
+
+// .catch(function(error) {
+//     console.log(error);
+
+//     return 'Error caught';
+// })
+
+// .then(function(data) {
+//     console.log(data);
+
+//     return new Error('test');
+// })
+
+// .then(function(data) {
+//     console.log('Success:', data.message);
+// })
+
+// .catch(function(data) {
+//     console.log('Error:', data.message);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

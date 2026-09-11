@@ -4,30 +4,7 @@
 // then add in ul element class  <ul class="footer-links">
  // $(this) => select only "Account"
         
-
-$(function (){
-
-    $(".footer-title").on("click", function () {
-
-        if ($(window).width() > 768){
-            return;
-        }
-        const title = $(this); 
-        // title => store the click footer heading jQuery object
-            // this variable contains jQuery object
-        
-        // this => refer to the specific element that the user clicked
-                // it does not all heading
-        // this is the normal DOM element we convert to jQuery object $(this)
-            
-        // Eg:-
-            // <h3 class="footer-title">Account</h3>
-            // <h3 class="footer-title">Service</h3>;
-                // user click Account
-            // this => <h3 class="footer-title">Account</h3>;
-                //  only acces HTML element
-        const icon = title.find(".footer-arrow");
-         // thats we can control the correct dropdown instead of all dropdowns.
+ // thats we can control the correct dropdown instead of all dropdowns.
         
         
         // const $icon = $title.find(".footer-arrow");
@@ -51,8 +28,8 @@ $(function (){
             // that selects all arrows.
         // we need the arrow only one clicked heading
 
-        const links = title.next(".footer-links");
-        
+
+ 
         // const $links = $title.next(".footer-links");
         // $title.next()
             // get the next  the select element
@@ -97,14 +74,42 @@ $(function (){
         // That's exactly the relationship we need.
         // open/ close link
         // $links.slideToggle(300);
-        links.slideToggle(300);
+       
         // 300 milliseconds = 0.3 seconds
         // 
 
     // select all h3 .footer-title
     // .on("click",  function (){})
         //  When footer h3 heading is clicked run function
-    
+
+         // title => store the click footer heading jQuery object
+            // this variable contains jQuery object
+        
+        // this => refer to the specific element that the user clicked
+                // it does not all heading
+        // this is the normal DOM element we convert to jQuery object $(this)
+            
+        // Eg:-
+            // <h3 class="footer-title">Account</h3>
+            // <h3 class="footer-title">Service</h3>;
+                // user click Account
+            // this => <h3 class="footer-title">Account</h3>;
+                //  only acces HTML element
+                
+$(function (){
+
+    $(".footer-title").on("click", function () {
+
+        if ($(window).width() > 768){
+            return;
+        }
+        const title = $(this); 
+       
+        const icon = title.find(".footer-arrow");
+
+        const links = title.next(".footer-links");
+       
+     links.slideToggle(300);
         if (icon.text() === "x"){
             icon.text("+");
         }else{
@@ -117,13 +122,23 @@ $(function (){
 
 
 
+// Tare Method
 
-
-
-// $(window).on("resize", function () {
-//   if ($(window).width() > 768) {
-//     $(".footer-links").show();
-
-//     $(".footer-arrow").text("+");
-//   }
+// if ($(window).width() <= 768) {
+//     $('.footer-links-wrapper').addClass('someClass');
+// } else {
+//     $('.footer-links-wrapper').removeClass('someClass');
+// }
+// $(window).on('resize', function () {
+//     if ($(window).width() <= 768) {
+//     $('.footer-links-wrapper').addClass('someClass');
+//     } else {
+//     $('.footer-links-wrapper').removeClass('someClass');
+//     $('.footer-links-wrapper ul').show();
+//     }
+// });
+// // Footer collapse functionality
+// $(document).on('click', '.someClass h3', function () {
+//     $(this).next('ul').slideToggle();
+//     $(this).toggleClass('expanded');
 // });

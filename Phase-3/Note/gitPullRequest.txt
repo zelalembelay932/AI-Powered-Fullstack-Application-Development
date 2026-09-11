@@ -1,0 +1,57 @@
+1. Clone the repository
+    If you haven't cloned it yet:
+        git clone https://github.com/OWNER/REPOSITORY.git
+        cd REPOSITORY
+    Check the branches:
+        git branch -a
+
+
+2. Create your own branch
+
+    For example, call your branch name-branch:
+        git checkout -b name-branch
+    Or with the newer Git command:
+
+    git switch -c name-branch
+    Check that you're on your branch:
+
+    git branch
+        You should see:
+            * name-branch
+            main
+The * means you are currently working on name-branch.
+
+((You can easily create this from your GitHub repository.  Check Video))
+
+3. Put your Code in the repository
+For example, suppose your theme is:
+
+    my-theme/
+    ├── style.css
+    ├── index.html
+    └── assets/
+4. Check what Git sees
+    git status
+    You'll probably see something like:
+
+    Untracked files:
+
+5. Add your code
+    To add everything:
+        git add .
+        Or, safer, add only your code:
+
+6. Commit your theme
+    git commit -m "Add your Comments"
+7. Push to YOUR branch
+    This is the important part:
+        git push -u origin name-branch
+    Now GitHub will have:
+
+
+Very important: don't accidentally push to main
+Before pushing, always check:
+
+        git branch --show-current
+        If it says:
+                yourBranchName

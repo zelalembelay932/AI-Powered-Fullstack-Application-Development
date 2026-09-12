@@ -1,0 +1,30 @@
+- 1.1 Getting Started with Node.js
+    1 :- Install Node.js
+        Download the latest stable version 
+            from :- nodejs.org
+    2:- Test that it worked
+        A version number means you're ready
+            node --version
+    3 :- Run your Program
+        Write your code in a file, open your terminal `at that file path
+            node fileName.js
+        live run 
+            node --watch fileName.js
+            nodemon fileName.js 
+                => 'WE NNEED TO INSTALL'
+                    npm i -g nodemon
+
+
+
+- 1.2 What is back-end Development
+    
+
+
+
+
+
+
+
+
+
+

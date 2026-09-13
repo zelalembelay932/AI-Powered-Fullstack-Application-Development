@@ -148,8 +148,21 @@ This tow drawbacks are exactly why modules were invented
         then it's download 
             packages.json
         then 
+        chack type
+            "type": "commonjs"
+        
 
-  
+# ES6
+ step 1
+    Crate folder 
+ Step 2
+    we need to initialized
+        npm init or (-y / --yes)
+        then it's download 
+            packages.json
+        then 
+        chack type
+            "type": "module"
 
 
 

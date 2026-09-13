@@ -7,13 +7,13 @@ function subtract (a, b) {
 
 const age = 22;
 // for single file 
-module.exports.add = add;
-module.exports.subtract = subtract;
+// module.exports.add = add;
+// module.exports.subtract = subtract;
 
-// for multi file 
-module.exports = { add, subtract, age};
+// // for multi file 
+// module.exports = { add, subtract, age};
 
-console.log(module);
+// console.log(module);
 
 
 
@@ -23,7 +23,7 @@ console.log(module);
 export {add, subtract, age};
 
 // for ES6 default 
-// export default age;
+export default age;
 // export default add;
 
 

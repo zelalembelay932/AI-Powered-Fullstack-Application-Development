@@ -25,8 +25,10 @@
 
         console.log(result);
     // f. Export your "myMultiplier" function so that other modules can use it
-        module.exports = myMultiplier;
-
+        // module.exports = myMultiplier;
+            // or
+        module.exports.myMultiplier = myMultiplier;
+        // Check in app.js export function
 
 //   // Node Executes it like this:-
 
@@ -40,3 +42,14 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+                    

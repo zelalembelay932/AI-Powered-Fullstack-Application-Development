@@ -1,4 +1,8 @@
 // // to import other file function Commnjs
+import { myMultiplier } from "../nodeModulesProject/myFirst.js";
+
+console.log(myMultiplier(10));
+
 
 // const math = require("./math");
 
@@ -18,15 +22,15 @@
 
 // ES6 way
 
-import {add, subtract} from "./math.js";
+// import {add, subtract} from "./math.js";
 
 // for single import default
 
 // for this case first we are add exporter file (export default add;) 
     // then we take any name 
-    import name from "./math.js";
+    // import name from "./math.js";
 
 
-console.log(add(5, 3));
-console.log(subtract(4, 2));
-console.log(name);
+// console.log(add(5, 3));
+// console.log(subtract(4, 2));
+// console.log(name);

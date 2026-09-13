@@ -40,6 +40,45 @@
         
 
 
+# 1.3 Modular structure & namespace collision 
+    Modular design is GENERAL DESIGN PRINCIPLE 
+        not special to Node or even to programming.
+    It subdivides a system into smaller parts that can be built, changed and replaced independently.
+
+
+
+# Why does Node need it? Global namespace collision
+    NameSpace
+        The place/space where the name of a variable function is accessible
+    Name Collision
+        The accidental overriding of a variable/function because the same name was used in different places.
+
+    Eg:-
+    Developer A
+        function x (){
+            console.log(Developer A)
+        }
+        x();
+     Developer B
+        function x (){
+            console.log(Developer B)
+        }
+
+    x();
+
+    => now we are run in node server
+        node fileName.js
+            then display
+                 Developer B
+                 Developer B
+
+    Because two function is Global name space
+
+
+
+
+
+
 
 
 

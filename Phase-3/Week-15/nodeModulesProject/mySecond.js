@@ -12,5 +12,5 @@
         // c, Display the result in the terminal.
     console.log(result);
     // d. Export your "myMultiplier" function so that other modules can use it
-    module.exports = myMultiplier;
+    module.exports.myMultiplier = myMultiplier;
             

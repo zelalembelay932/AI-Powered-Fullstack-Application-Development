@@ -1,2 +1,4 @@
-console.log("Hello World");
-console.log(5 + 6);
+const os =require("os");
+
+console.log(os.arch());
+console.log(os.platform());

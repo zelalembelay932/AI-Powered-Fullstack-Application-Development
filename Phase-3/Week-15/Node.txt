@@ -166,3 +166,49 @@ This tow drawbacks are exactly why modules were invented
 
 
 
+# The Three types of Node Modules
+
+    1, Local module
+        your own files 
+            the modules you crate in your applications.
+            ex :- script.js
+            commonjs => script.cjs
+            ES6 => script.mjs  
+                        m => is module
+        any .js extention file is module
+
+    2, Core Modules
+        Built into Node 
+            no install needed
+                they arrive when you install Node.
+        Thes come free with Node 
+            `fs`, `path`, `http`, `https`, `url`, `os`, `crypto`, `event`
+    Eg:- in os
+        const os =require("os");
+
+            console.log(os.arch());
+            console.log(os.platform());
+
+        then run node fileName.js
+
+        display
+            x64
+            win32
+
+        check Node.js Documentation
+            https://nodejs.org/docs/latest/api/os.html
+        
+    3, Third-party module
+        created by `Other Developer` and shared via npm.
+            npm install <package>
+            Eg:-
+                npm i express
+
+
+
+
+
+
+
+
+

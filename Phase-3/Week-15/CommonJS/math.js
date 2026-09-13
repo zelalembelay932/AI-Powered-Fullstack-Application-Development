@@ -1,0 +1,17 @@
+function add (a, b){
+    return a + b;
+}
+function subtract (a, b) {
+    return a - b;
+}
+
+const age = 22;
+// for single file 
+module.exports.add = add;
+module.exports.subtract = subtract;
+
+// for multi file 
+module.exports = { add, subtract, age};
+
+console.log(module);
+

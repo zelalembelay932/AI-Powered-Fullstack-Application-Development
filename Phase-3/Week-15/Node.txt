@@ -97,3 +97,59 @@ The drawbacks of IIFE
         You must pay attention to the `order of your <script> tags` because file may depend o rach other's output.
             An IIFE runs Immediately possibly before a file listed above it has done its job.
 This tow drawbacks are exactly why modules were invented
+
+
+
+# CommonJS (old style)
+    - crateed in 2009 because JavaScript had no standard for modularity and Nodo needed one.
+    - Node's default
+        uses `require()` and `module.exports`.
+
+#ES6 modules (new style, 2015)
+    - JavaScript own official standard.
+    - Used by default in React, Angular and other frameworks. 
+        - Uses 
+            `import` => import code 
+            `exports` => exports code
+        - we need to configration 
+
+
+
+    # Main Different
+
+    | CommonJS                                      | ES6 Modules                                
+| --------------------------------------------- | ----------------------------------------------- |
+
+| `require()`                                   | `import`                                        |
+
+| `module.exports`                              | `export`                                        |
+
+| Older Node.js module system                   | Modern JavaScript module system                 |
+
+| Common in older Node.js projects              | Common in modern JS projects                    |
+
+| Imports are typically evaluated at runtime    | Imports are statically analyzable               |
+
+| Uses `.js` normally in CommonJS Node projects | Often uses `.js`, with module configuration     |
+
+| Common with older Node.js packages            | Used by modern browser and Node.js applications |
+
+
+
+
+#The Step writtenout 
+
+# CommonJS
+ step 1
+    Crate folder 
+ Step 2
+    we need to initialized
+        npm init or (-y / --yes)
+        then it's download 
+            packages.json
+        then 
+
+  
+
+
+

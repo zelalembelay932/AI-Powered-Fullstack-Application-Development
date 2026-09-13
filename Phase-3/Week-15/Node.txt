@@ -1,12 +1,12 @@
-- 1.1 Getting Started with Node.js
-    1 :- Install Node.js
+# 1.1 Getting Started with Node.js
+    1. :- Install Node.js
         Download the latest stable version 
             from :- nodejs.org
     2:- Test that it worked
         A version number means you're ready
             node --version
     3 :- Run your Program
-        Write your code in a file, open your terminal `at that file path
+        Write your code in a file, open your terminal `at that file path`
             node fileName.js
         live run 
             node --watch fileName.js
@@ -16,11 +16,28 @@
 
 
 
-- 1.2 What is back-end Development
-    
+ # 1.2 What is back-end Development 
 
+    Back-end (server-side) development is the logic that `Receive requests` from clients.   gets the right data from the database and sends it back  
 
+## The four pillars of back-end development
+    Server 
+        Recrive requests, send responses include serving a static website.
+    Back-end logic
+        Authentication (Who are you?) and authorization (what are you allowed to do?), plus your business logic and rules.
+    DataBase 
+        Store and retrieve data and interact with with it efficiently.
+    APIs
+        Allow communication between the frontend and backend, and define how different software components interact. 
 
+## What is Our Job as a Back-end Developer
+    Server-side logic
+        Build the script that decides what happens.
+    DataBase query
+        Write queries to store and retrieve data.
+    Communication
+        Organize and manage browser <-> server traffic over TCP/IP.
+        
 
 
 

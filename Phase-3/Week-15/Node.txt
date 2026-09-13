@@ -78,9 +78,22 @@
 
 
 
+# 1.4 The IIFE way
+    Immediately Invoked Function Expression
+        is a function defined as an expression and `Executed Immediately` after creation. 
 
+        (function(){
+            ...Your code
+        })();
 
-
-
-
-
+    => The Shape to memorize: ()() 
+        () => first pair hold the function
+        () => second pair run its right now.
+     
+The drawbacks of IIFE
+    Wrap everything
+        you must remember to Wrap  `every single file` by hand. Forget ince and the collision is back.
+    Script Order matters
+        You must pay attention to the `order of your <script> tags` because file may depend o rach other's output.
+            An IIFE runs Immediately possibly before a file listed above it has done its job.
+This tow drawbacks are exactly why modules were invented

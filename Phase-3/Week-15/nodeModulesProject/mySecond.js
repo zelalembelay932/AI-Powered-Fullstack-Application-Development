@@ -13,4 +13,7 @@
     console.log(result);
     // d. Export your "myMultiplier" function so that other modules can use it
     module.exports.myMultiplier = myMultiplier;
-            
+    
+    // module.exports = {
+    //     myMultiplier,
+    // };

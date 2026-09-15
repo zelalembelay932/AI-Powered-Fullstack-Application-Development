@@ -17,7 +17,10 @@
         function myMultiplier (number){
         return number * 2;
         }
-
+// if (require.main === module){
+//      const result = myMultiplier(4);
+//      console.log(result);
+// }
     // d. Execute the function inside the module. Pass the number 4 to the function
         const result = myMultiplier(4)
 
@@ -28,6 +31,9 @@
         // module.exports = myMultiplier;
             // or
         module.exports.myMultiplier = myMultiplier;
+        // module.exports = {
+        //     myMultiplier
+        // };
         // Check in app.js export function
 
 //   // Node Executes it like this:-

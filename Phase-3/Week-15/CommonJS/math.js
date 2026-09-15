@@ -1,16 +1,12 @@
-function add (a, b){
-    return a + b;
-}
-function subtract (a, b) {
-    return a - b;
-}
+cc
 
 const age = 22;
-// for single file 
-module.exports.add = add;
-module.exports.subtract = subtract;
 
-// for multi file 
+// for single file 
+// module.exports.add = add;
+// module.exports.subtract = subtract;
+
+// // for multi file 
 module.exports = { add, subtract, age};
 
 console.log(module);
@@ -20,7 +16,7 @@ console.log(module);
 
 // For ES6
 
-export {add, subtract, age};
+// export {add, subtract, age};
 
 // for ES6 default 
 // export default age;

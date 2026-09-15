@@ -1,15 +1,15 @@
 // const first = require("./myFirst");
 
-// const firstResult = first(14);
+// const firstResult = first(5);
 // console.log(firstResult); 
 
 // or 
-// console.log(first.myMultiplier(7));
+// console.log(first.myMultiplier(5));
 
 
 // const second = require("./mySecond");
 
-// const secondResult = second(14);
+// const secondResult = second(5);
 // console.log(secondResult);
 
 
@@ -22,11 +22,12 @@
 // Step 1 
     // import fs (File system) core module
     // fs allows Node.js to create, write, read and modify (Update).
-const fs = require("fs");
+
 // Step 2 
     // Import the module from /myFirst and /mySecond
 const myFirst = require("./myFirst");
 const mySecond = require("./mySecond");
+const fs = require("fs");
 // step 3
     // pass to 14 to myFirst myMultiplier function
     const firstResult = myFirst.myMultiplier(14);
@@ -39,8 +40,8 @@ const mySecond = require("./mySecond");
     // If it already exists, writeFileSync() replaces
     // its existing contents.
 
-    fs.writeFileSync("result.txt", firstText);
-
+    fs.writeFile("result.txt", firstText);
+    console.log("blocking");
 
 // b, FOR mySecond 
 
@@ -49,7 +50,7 @@ const secondResult = mySecond.myMultiplier(14);
 const secondText = `The value of 14 when passed through the myMultiplier function is ${secondResult}.`;
 
 
-fs.appendFileSync("result.txt", "\n" + secondText);
+fs.appendFile("result.txt", "\n" + secondText);
 
 
 

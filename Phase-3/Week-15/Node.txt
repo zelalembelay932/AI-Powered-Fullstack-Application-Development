@@ -86,14 +86,15 @@
             ...Your code
         })();
 
-    => The Shape to memorize: ()() 
+
+    => The Shape to memorize: ()(); 
         () => first pair hold the function
         () => second pair run its right now.
      
 The drawbacks of IIFE
     Wrap everything
         you must remember to Wrap  `every single file` by hand. Forget ince and the collision is back.
-    Script Order matters
+    Script Order matters 
         You must pay attention to the `order of your <script> tags` because file may depend o rach other's output.
             An IIFE runs Immediately possibly before a file listed above it has done its job.
 This tow drawbacks are exactly why modules were invented
@@ -151,7 +152,6 @@ This tow drawbacks are exactly why modules were invented
         chack type
             "type": "commonjs"
         
-
 # ES6
  step 1
     Crate folder 
@@ -183,7 +183,7 @@ This tow drawbacks are exactly why modules were invented
                 they arrive when you install Node.
         Thes come free with Node 
             `fs`, `path`, `http`, `https`, `url`, `os`, `crypto`, `event`
-    Eg:- in os
+    Eg:- in os 
         const os =require("os");
 
             console.log(os.arch());
@@ -207,8 +207,57 @@ This tow drawbacks are exactly why modules were invented
 
 
 
+2.1 Core Node Modules
+    fs => 
+        file & directory system 
+            create, open, edit, copy, remove file or folder
+    OS =>
+        info about computer operating system 
+            hostname network, free memory 
+    Path => 
+        Deals with file path 
+            get a path's directory, extention, root
+    http =>
+        create an HTTP server 
+            receive and handle requests, manage connections.
+    event =>
+        Own annd trigger your own event 
+            create, fire and listen for them.
+
+
+*GLOBAL
+    __dirname
+        path to current directory
+    __filename
+        file name
+    require
+        function to use modules (CommonJS)
+    module
+        info about current module file
+    process
+        info about env where the Program Executed
+
+__filename and __dirname are Node.js Global
+
+console.log(__filename);
+console.log(__dirname);
+
+
+Building an HTTP server, step by step
+
+    1, create a projects folder
+        mkdir http-server-project
+        cd http-server-project
+    2, Create package.json
+        npm init
+    3, Create app.js and open it 
+
+Write the server 
+    1, Import the http core module
+        
 
 
 
+What is module bandller?
 
 

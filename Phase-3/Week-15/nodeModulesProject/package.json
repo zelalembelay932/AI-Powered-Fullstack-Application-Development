@@ -1,0 +1,17 @@
+{
+  "name": "nodemodulesproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myCollector.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "mime-type": "^5.0.4",
+    "mime-types": "^3.0.2"
+  }
+}

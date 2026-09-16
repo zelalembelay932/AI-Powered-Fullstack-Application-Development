@@ -1,8 +1,8 @@
 // 5. Create a module called my "randomNumber".
 // a. The "randomNumber" module has a function called random(). The random function just returns a random number when it gets executed
 
-    function random () {
-      return Math.random();
+    function random() {
+    return Math.random();
       // Math.random() 
             // generates a pseudo-random decimal number 
             // from 0 inclusive up to not including 1.

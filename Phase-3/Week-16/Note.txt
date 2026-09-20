@@ -1,0 +1,85 @@
+1.1 Database & Database Management System
+    Database
+        An Organqized collection of structured information, stored electronically, designed to be efficiently managed, retrieved, and updated.
+    DBMS 
+        The software that makes a Database useble  it facilitates easy, efficient, reliable data processing.
+        Database are controlled by a DBMS
+
+    Jobs of DBMS
+        Creation, Storage, Retrival, Updating, Redundancy controlled, Memory, Access control.
+
+
+1.2 Relational VS Non-relational Database
+    Relational(SQL)
+        structured around  `Multiple table that interrelted` like an Organqized set of spreadsheed. 
+        Each table holds one type of data. 
+            Eg:-
+                MySQL
+    Non-relational(NoSQL)
+        No fixed table structure, Oprates around `objects or documents often key-value pairs resembling JSON. 
+            Eg:-
+                MongoDB
+
+    Same data, to shapes
+
+    SQL a `user table`
+    id   name       email
+    1    Abebe      abebe@gmail.com
+    2    Kebede     kebede@gmail.com
+
+    # Every row has the same  columns.
+    the shape is fixeed in advance
+
+
+    NoSQL a `user` collection
+    [
+        {"name": "Abebe", "email": "abebe@gmail.com"},
+        {"name": "kebede", "email": "kebede@gmail.com", "phone": "0912345678"}
+    ]
+    Each documents can have different fileds. "Kebede has a phone number, Abebe doesn't. Nobody complains.
+
+
+
+
+    Primary key & Foreign keys
+
+    Primary key
+        A `Unique identifier` with in a table, no two rows can share one and it can't be empty.
+            it's how a row is found and referenced.
+
+    Foreign key
+        a column in one table that references the primary key of another this is literally how table relate to each other.
+
+
+
+
+    Relational VS Non-relational The deeper difference
+        ACID (relational)
+                `A`tomicity(የአንድነት ባህሪ), 
+                `C`onsistency(ወጥነት), 
+                `I`solation(ነጠላ), 
+                `D`urability(ዘላቂነት).
+            Strong guarantees a transactio either fully happens or dosen't happen at all.
+
+        BASE (non-relational)
+                `B`asically
+                `A`vailable
+                `S`oft state
+                `E`ventually 
+            Favors staying `online and scalable` over instant, Strict consistency
+
+1.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+

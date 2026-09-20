@@ -77,7 +77,7 @@
             without changing anything
     POST => Creating new data 
         Add a brand-new book the collection
-    PUT => Complete replacement
+    PUT => Complete replacement (Emnasegebaw data kezi befit kenebere Complete yeqeyerewal, Gen Kelele Adiss yefetrenal)
         Swap the entire book for a new edition.
         The client send the whole updated representayion.
     PATCH => Partial update
@@ -100,8 +100,11 @@
 
 
 
-
-
+1.5 The MySQL Driver Connecting From Node
+    Node can't talk to MySQL on its own. its need translator, That translator is MySQL Driver
+    
+    a third-party module installed from npm
+        npm i mysql2
 
 
 

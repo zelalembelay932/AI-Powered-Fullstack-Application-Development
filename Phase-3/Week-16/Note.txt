@@ -68,7 +68,23 @@
                 `E`ventually 
             Favors staying `online and scalable` over instant, Strict consistency
 
-1.3
+1.3 HTTP verbds and their database function
+
+    Think of a library
+
+    GET => Retriving data
+        Browse the library to find and read something.
+            without changing anything
+    POST => Creating new data 
+        Add a brand-new book the collection
+    PUT => Complete replaceement
+        Swap the entire book for a new edition.
+        The client send the whole updated representayion.
+    PATCH => Partial update
+        Add one chapter, or fix one section `without rewriting the rest. 
+        The client send only what changed.
+    DELETE => Removing data
+        Take the book `permanently off the shelf`.
 
 
 

@@ -17,8 +17,6 @@
 
     module.exports = { random};
 
-
-
 // Math.random()
     // generates a pseudo-random decimal number from:
         // 0 inclusive

@@ -1,3 +1,4 @@
+console.log("========6========");
 
 // // import allows us to crate web server
 // const http = require("http");
@@ -5,9 +6,9 @@
 // // http.createServer(req, res)
 //     // create the http server in tow parameters
 
-//     // req (request) 
+//     // req (request)
 //         // it contains information about what the browser/client request
-            
+
 //     // res (response)
 //         // its our server send back to the browser.
 // const server = http.createServer((req, res) => {
@@ -20,16 +21,15 @@
 //     // res.statusCode = 200;
 
 //     // Set the type of content we are sending
-//     res.setHeader("Content-type", "text/plain");
+//     // res.setHeader("Contet-type", "text/plain");
 
-//     // res.writeHead(200, "Content-type", "text/html");
-//     // res.write("<h1>Hello Class</h1>");
-//     // res.end();
+//     res.writeHead(200, "Content-type", "text/plain");
+//     res.write("<h1>Hello Class</h1>");
+//     res.end();
 
 //     // response back to browser
 
-
-//     res.end("Request received and processed");
+//     // res.end("Request received and processed");
 // });
 
 // server.listen(1234, () =>{
@@ -37,11 +37,28 @@
 //     console.log("Server running at http://localhost:1234");
 // });
 
+console.log("========express 6========");
 
+// const express = require("express");
+// // this third-party package install
+// const app = express();
+// // this crate express application
+
+// // when the client send a GET request to / run this finction 
+// // // app.use
+// //     // Registers middleware,	Path prefix match  Any HTTP method
+// //     // middleware is between express and browser response
+
+// app.get("/", (req, res) => {
+//     res.send("Request received and processed");
+// });
+
+// app.listen(1234, () => {
+//     console.log("Server running at http://localhost:1234");
+// })
 
 
 console.log("========7========");
-
 
 // // Q7
 // // import allows us to crate web server
@@ -52,7 +69,7 @@ console.log("========7========");
 // // create the HTTP server
 // const server = http.createServer((req, res) => {
 
-//     // 
+//     //
 //     res.statusCode = 200;
 
 //     res.setHeader("Content-type", "text/plain");
@@ -69,6 +86,25 @@ console.log("========7========");
 
 
 
+console.log("========express 7========");
+
+
+// const express = require("express"); //imported
+// const x = require("./randomNumber") //imported
+
+// const app = express();
+
+// app.get("/", (req, res) =>{
+
+//     const number = x.random();
+
+//     res.send(`Randome number: ${number}`);
+// })
+
+
+// app.listen(1234, () => {
+//     console.log("Server running at http://localhost:1234");
+// })
 
 console.log("======== 8 Only Serve about.html========");
 
@@ -84,11 +120,6 @@ console.log("======== 8 Only Serve about.html========");
 //         ├── css/
 //         └── images/
 
-
-
-
-
-
 // // Import the built-in HTTP module.
 // // We use this to create our web server.
 // const http = require("http");
@@ -100,7 +131,6 @@ console.log("======== 8 Only Serve about.html========");
 // // Import the built-in Path module.
 // // We use this to build the correct file path.
 // const path = require("path");
-
 
 // // Create the HTTP server.
 // const server = http.createServer((req, res) => {
@@ -163,7 +193,6 @@ console.log("======== 8 Only Serve about.html========");
 //     });
 // });
 
-
 // // Start the server on port 1234.
 // server.listen(1234, () => {
 
@@ -178,11 +207,7 @@ console.log("======== 8 Only Serve about.html========");
 
 
 
-
-
 console.log("======== 8 e  Serve any page ========");
-
-
 
 // Folder Structure
 // // nodeModulesProject/
@@ -195,10 +220,6 @@ console.log("======== 8 e  Serve any page ========");
 //         ├── index.html
 //         ├── css/
 //         └── images/
-
-
-
-
 
 // // Import the built-in HTTP module.
 // // We use this to create our web server.
@@ -218,7 +239,7 @@ console.log("======== 8 e  Serve any page ========");
 
 //     // This is a regular expression (regex) used with JavaScript's .replace() method
 //     // what is first /
-//         // its regular expression 
+//         // its regular expression
 //             // Eg /hello/
 //                 // find the text hello
 //     // what is ^
@@ -230,7 +251,7 @@ console.log("======== 8 e  Serve any page ========");
 //         // Eg say hello
 //             // dose not match
 //             // b/c hello is not at the beginning
-//         // so 
+//         // so
 //             //  ^ is START HERE
 
 //     // What is \/
@@ -238,7 +259,6 @@ console.log("======== 8 e  Serve any page ========");
 //         // / is a literal character
 //     // what is +
 //         // one or more occurrences
-
 
 //     //.replace() has two main arguments:
 //         // replace(whatToFind, whatToPutInstead)
@@ -263,7 +283,6 @@ console.log("======== 8 e  Serve any page ========");
 //         // Result:
 //         // about.html
 
-
 //         // Example 2
 //         // let requestedFile = "///about.html";
 //         // Then:
@@ -278,10 +297,8 @@ console.log("======== 8 e  Serve any page ========");
 //         // After replacement:
 //         // about.html
 //         // So it removes all leading slashes.
-                        
-        
-//     requestFile = requestFile.replace(/^\/+/, "");
 
+//     requestFile = requestFile.replace(/^\/+/, "");
 
 //     // if user requests "/"
 //         // serve index.html
@@ -294,7 +311,7 @@ console.log("======== 8 e  Serve any page ========");
 
 //     fs.readFile(filePath, "utf8", (error, data) => {
 //         if (error){
-//             res.statusCode = 404; 
+//             res.statusCode = 404;
 //             res.setHeader("Content-Type", "text/plain");
 
 //             res.end("404 - Page not found");
@@ -314,100 +331,121 @@ console.log("======== 8 e  Serve any page ========");
 //     console.log("Server running at http://localhost:1234");
 // });
 
-
 console.log("=====New=====");
 
-// Import Node's built-in HTTP module.
-// We use it to create our web server.
-const http = require("http");
+// // Import Node's built-in HTTP module.
+// // We use it to create our web server.
+// const http = require("http");
 
-// Import Node's built-in File System module.
-// We use it to read files from our computer.
-const fs = require("fs");
+// // Import Node's built-in File System module.
+// // We use it to read files from our computer.
+// const fs = require("fs");
 
-// Import Node's built-in Path module.
-// We use it to build the correct file path.
-const path = require("path");
+// // Import Node's built-in Path module.
+// // We use it to build the correct file path.
+// const path = require("path");
 
-// Import the third-party MIME module.
-// We use it to determine the correct
-// Content-Type for HTML, CSS, JS, images, etc.
-const mime = require("mime-types");
+// // Import the third-party MIME module.
+// // We use it to determine the correct
+// // Content-Type for HTML, CSS, JS, images, etc.
+// const mime = require("mime-types");
 
-const server = http.createServer((req, res) => {
+// const server = http.createServer((req, res) => {
 
-    // Get the URL requested by the browser.
-    let requestFile = req.url;
+//     // Get the URL requested by the browser.
+//     let requestFile = req.url;
+
+//     // Check whether the URL begins with "/".
+//     console.log(requestFile);
+//     if (requestFile.startsWith("/")) {
+
+//         //if URL start with / Remove that first character slash.
+//         requestFile = requestFile.slice(1);
+//     }
+
+//     // In that case, use index.html.
+//     if (requestFile === "") {
+//         requestFile = "index.html";
+//     }
+
+//     const filePath = path.join(
+//         __dirname,
+//         "static",
+//         "apple-html-css-replica",
+//         requestFile
+//     );
+
+//     // Print the requested file and path
+//     // so you can see what the server is doing.
+//     // console.log("Requested file:", requestFile);
+//     // console.log("File path:", filePath);
+
+//     fs.readFile(filePath, (error, data) => {
+
+//         if (error) {
+
+//             // Send HTTP 404 status.
+//             res.statusCode = 404;
+
+//             // Tell browser this response is plain text.
+//             res.setHeader(
+//                 "Content-Type",
+//                 "text/plain"
+//             );
+
+//             // Send error message.
+//             res.end("404 - Page not found");
+
+//             // Stop executing the callback.
+//             return;
+//         }
+
+//         // Send HTTP 200 status.
+//         res.statusCode = 200;
+
+//         const contentType = mime.lookup(filePath) || "application/octet-stream";
+//         console.log(contentType);
+//         // If MIME type was found, use it.
+//         // Otherwise use a generic binary type.
+//         res.writeHead(
+//         {  "Content-Type":contentType }
+//         );
+
+//         res.end(data);
+//     });
+// });
+
+// server.listen(1234, () => {
+
+//     console.log(
+//         "Server running at http://localhost:1234"
+//     );
+// });
+
+console.log("========express 8========");
+
+// const express = require("express");
+
+// const path = require("path");
+
+// const app = express();
+
+// // app.use
+//     // Registers middleware,	Path prefix match  Any HTTP method
+//     // middleware is between express and browser response
+
+// app.use(
+//     express.static(path.join(__dirname, "static", "apple-html-css-replica"))
+// );
+
+// app.listen(1234, () => {
+//     console.log("Server running at http://localhost:1234");
+// })
 
 
-    // Check whether the URL begins with "/".
-    if (requestFile.startsWith("/")) {
 
-        // Remove the first character.
-        requestFile = requestFile.slice(1);
-    }
-
-    // In that case, use index.html.
-    if (requestFile === "") {
-        requestFile = "index.html";
-    }
+//abstraction  DX developer experience
 
 
-    const filePath = path.join(
-        __dirname,
-        "static",
-        "apple-html-css-replica",
-        requestFile
-    );
 
-
-    // Print the requested file and path
-    // so you can see what the server is doing.
-    // console.log("Requested file:", requestFile);
-    // console.log("File path:", filePath);
-
-    fs.readFile(filePath, (error, data) => {
-
-
-        if (error) {
-
-            // Send HTTP 404 status.
-            res.statusCode = 404;
-
-            // Tell browser this response is plain text.
-            res.setHeader(
-                "Content-Type",
-                "text/plain"
-            );
-
-            // Send error message.
-            res.end("404 - Page not found");
-
-            // Stop executing the callback.
-            return;
-        }
-
-        // Send HTTP 200 status.
-        res.statusCode = 200;
-
-
-        const contentType = mime.lookup(filePath);
-
-        // If MIME type was found, use it.
-        // Otherwise use a generic binary type.
-        res.setHeader(
-            "Content-Type",
-            contentType || "application/octet-stream"
-        );
-
-        res.end(data);
-    });
-});
-
-
-server.listen(1234, () => {
-
-    console.log(
-        "Server running at http://localhost:1234"
-    );
-});
+99,999,999,999

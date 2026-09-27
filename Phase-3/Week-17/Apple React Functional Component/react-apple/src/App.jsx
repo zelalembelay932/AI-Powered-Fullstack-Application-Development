@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 import './App.css'
 import Alert  from './components/Alert/Alert'
 import FirstSection from './components/FirstSection/FirstSection'
+import SecondSection from './components/SecondSection/SecondSection'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Alert/>
       <FirstSection/>
+      <SecondSection />
       <Footer />
     </>
   )

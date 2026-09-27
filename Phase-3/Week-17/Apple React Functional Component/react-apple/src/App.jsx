@@ -5,6 +5,7 @@ import './App.css'
 import Alert  from './components/Alert/Alert'
 import FirstSection from './components/FirstSection/FirstSection'
 import SecondSection from './components/SecondSection/SecondSection'
+import ThirdSection from './components/ThirdSection/ThirdSection'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Alert/>
       <FirstSection/>
       <SecondSection />
+      <ThirdSection />
       <Footer />
     </>
   )

@@ -3,6 +3,7 @@ import AppleTv from "../../assets/images/icons/apple-tv-logo.png"
 import Banker from "../../assets/images/home/banker.png"
 import Watch from "../../assets/images/icons/watch-series5-logo.png"
 
+import "./FifthSection.css"
 
 const FifthSection = () => {
   return (

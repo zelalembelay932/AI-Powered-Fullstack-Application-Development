@@ -585,123 +585,123 @@ console.log("====Question 3====");
                 // https://apple.com/iphone/
 
 
-// const express = require("express");
-// const app = express();
-// const mysql = require("mysql2");
+const express = require("express");
+const app = express();
+const mysql = require("mysql2");
 
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 
-// const cors = require("cors");
-// // CORS controls whether a browser is allowed to make a request from one origin to another origin.
+const cors = require("cors");
+// CORS controls whether a browser is allowed to make a request from one origin to another origin.
 
 
-// require("dotenv").config();
+require("dotenv").config();
 
-// app.use(cors());
+app.use(cors());
 
-// // for JSON file send in POST
+// for JSON file send in POST
 
+app.use(bodyParser.urlencoded({
+    extended: true,
+}),
+);
 // app.use(bodyParser.urlencoded({
-//     extended: true,
-// }),
-// );
-// // app.use(bodyParser.urlencoded({
-// //     extended: false
-// // }));
+//     extended: false
+// }));
 
-// // static
-//     // serves all of them as well as we have other file
+// static
+    // serves all of them as well as we have other file
 
-// app.use(express.static("public"));
+app.use(express.static("public"));
 
 
-// // Step 3
-// // MySQL connection
+// Step 3
+// MySQL connection
 
-// const conn = mysql.createConnection({
-//     host: process.env.DB_HOST,
-//     user: process.env.DB_USER,
-//     password: process.env.DB_PASSWORD,
-//     database: process.env.DB_NAME
-// });
+const conn = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+});
 
-// // Step 4
-// // Connect to MySQL
-
-
-// conn.connect((err) => {
-//     if (err) {
-//         console.log(
-//             "MySQL connection error:", err );
-//     } else {
-//         console.log(  " Connected to MySQL Database" );
-//     }
-// });
-
-// // Step 5
-// // Add product route
+// Step 4
+// Connect to MySQL
 
 
-// app.post("/add-product", (req, res) => {
+conn.connect((err) => {
+    if (err) {
+        console.log(
+            "MySQL connection error:", err );
+    } else {
+        console.log(  " Connected to MySQL Database" );
+    }
+});
 
-//     const productName = req.body.product_name;
-
-//     const productUrl = req.body.product_url;
-//     // Check the form data
-//     if (!productName || !productUrl) {
-//         return res.send(
-//             "Please enter product name and product URL"
-//         );
-//     }
-//     // SQL query
-
-//     const sql = `
-//         INSERT INTO products
-//         (product_url, product_name)
-//         VALUES (?, ?)
-//     `;
-//     // Execute SQL query
-
-//     conn.query(
-//         sql,
-//         [productUrl, productName],
-//         (err, result) => {
-//             // Check for error
-//             if (err) {
-//                 console.log(
-//                     "Insert error:",
-//                     err
-//                 );
-//                 return res.send(
-//                     "Error inserting product"
-//                 );
-//             }
-//             // Success
-//             console.log(
-//                 "Product inserted successfully Console"
-//             );
-//             console.log(
-//                 "New product ID:",
-//                 result
-//             );
-//             res.send(
-//                 "Product added successfully! Finaly browser"
-//             );
-//         }
-//     );
-// });
-
-// // Step 6
-// // Start server
+// Step 5
+// Add product route
 
 
-// app.listen(3000, () => {
+app.post("/add-product", (req, res) => {
 
-//     console.log(
-//         "Server running: http://localhost:3000"
-//     );
+    const productName = req.body.product_name;
 
-// });
+    const productUrl = req.body.product_url;
+    // Check the form data
+    if (!productName || !productUrl) {
+        return res.send(
+            "Please enter product name and product URL"
+        );
+    }
+    // SQL query
+
+    const sql = `
+        INSERT INTO products
+        (product_url, product_name)
+        VALUES (?, ?)
+    `;
+    // Execute SQL query
+
+    conn.query(
+        sql,
+        [productUrl, productName],
+        (err, result) => {
+            // Check for error
+            if (err) {
+                console.log(
+                    "Insert error:",
+                    err
+                );
+                return res.send(
+                    "Error inserting product"
+                );
+            }
+            // Success
+            console.log(
+                "Product inserted successfully Console"
+            );
+            console.log(
+                "New product ID:",
+                result
+            );
+            res.send(
+                "Product added successfully! Finaly browser"
+            );
+        }
+    );
+});
+
+// Step 6
+// Start server
+
+
+app.listen(3000, () => {
+
+    console.log(
+        "Server running: http://localhost:3000"
+    );
+
+});
 
 
 

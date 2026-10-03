@@ -37,3 +37,14 @@
 .tvshow-logo-wraper {
     padding: 340px 0 0px;
 }
+
+@media (min-width: 768px) {
+    /*Fifth section*/
+        .fifth-heghlight-wrapper .left-side-wrapper .left-side-container {
+            margin: 5px 5px 5px 10px;
+        }
+    
+        .fifth-heghlight-wrapper .right-side-wrapper .right-side-container {
+            margin: 5px 10px 5px 5px;
+        }
+}

@@ -21,3 +21,18 @@
     letter-spacing: -.01em;
     padding-top: 310px;
 }
+
+@media (min-width: 768px) {
+    /* First section */
+        .first-hightlight-wrapper {
+            background-image: url(../../assets/images/home/ipodPronew.jpg);
+            min-height: 692px;
+        }
+        .ipod-caption {
+            padding-top: 440px;
+        }
+}
+
+
+
+

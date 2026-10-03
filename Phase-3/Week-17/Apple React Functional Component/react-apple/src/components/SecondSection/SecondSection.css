@@ -11,3 +11,26 @@
     color: #fff;
     margin-bottom: 10px;
 }
+
+@media (min-width: 768px) {
+    /* Second section */
+        .second-hightlight-wrapper {
+            min-height: 692px;
+            background-image: url(../../assets/images/home/macbookair-new.jpg);
+        }
+    
+        .new-alert {
+            color: #BF4801;
+            font-size: 18px;
+        }
+}
+
+
+
+
+
+
+
+
+
+

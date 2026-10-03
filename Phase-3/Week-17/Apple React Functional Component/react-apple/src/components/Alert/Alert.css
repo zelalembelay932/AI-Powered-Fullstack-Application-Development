@@ -14,3 +14,14 @@
     max-width: 90%;
     margin: 0 auto;
 }
+
+@media (min-width: 768px) {
+    /*Alert section*/
+        .alert-text {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+}
+
+
+

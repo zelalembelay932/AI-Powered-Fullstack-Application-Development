@@ -18,3 +18,23 @@
     padding: 4px 0;
     border-bottom: 1px solid #4b4b4b;
 }
+
+@media (min-width: 768px) {
+    /* First section */
+        .first-hightlight-wrapper {
+            background-image: url("../images/home/ipodPronew.jpg");
+            min-height: 692px;
+        }
+    
+        .ipod-caption {
+            padding-top: 415px;
+        }
+                /*Nav bar*/
+                .nav-item {
+                    text-align: center !important;
+                    padding: 0;
+                    border-bottom: 0px;
+                }
+}
+
+

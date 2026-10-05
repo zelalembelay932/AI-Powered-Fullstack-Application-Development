@@ -129,6 +129,7 @@ console.log("=======React Props=======");
 
 // Why we need props
         // Without props a component always shows the same thing, so you would need a separate component for every variation (One for each product, each student, each question).
+
         // Props let you write a component `ONE` and reuse it with different data. This is what makes components truly reusable.
 
 
@@ -203,6 +204,20 @@ export default Developer;
 
 
 
+
+// 2.2 Reading  props and Destructuring
+        // in side chiled component, there  are three(3)  common way to read props.
+        // All three give the same result; 
+                // only differ in how much you type.
+
+// Way 1
+        // Dot Notation
+                // Accept one parameter called `props` and read each value with a dot, like `props.name`
+// Way 2 
+        // Destructure in the body
+                // Keep the `props` parameter, then pull the values out into variables on the first line of function.
+// Way 3
+        // 
 
 
 

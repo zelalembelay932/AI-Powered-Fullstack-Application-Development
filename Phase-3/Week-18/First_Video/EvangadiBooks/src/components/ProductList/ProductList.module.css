@@ -1,0 +1,15 @@
+.foods_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .foods-container {
+        max-width: 440px;
+        grid-template-columns: 1fr;
+    }
+}
+

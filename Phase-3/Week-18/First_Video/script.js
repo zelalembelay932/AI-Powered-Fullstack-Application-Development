@@ -41,7 +41,7 @@
 
 // Constuctor function
         //any constructor function is start with CAPITAL letters
-    
+
 //     function Student (name, age){
 //         this.name = name;
 //         this.age = age;
@@ -217,7 +217,9 @@ export default Developer;
         // Destructure in the body
                 // Keep the `props` parameter, then pull the values out into variables on the first line of function.
 // Way 3
-        // 
+        // Destructure in the parameter
+                // pull the values out right inside the parentheses  with { }. the shortest way and the one you'll see most.
+        
 
 
 

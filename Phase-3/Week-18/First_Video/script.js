@@ -14,6 +14,8 @@
 // student.city = "Adama";
 // console.log(student);
 
+import { Component } from "react";
+
 // // to delete key item
 // delete student.age;
 // console.log(student);
@@ -243,7 +245,7 @@ console.log("=======React Props=======");
 
 console.log("React Class Components + Props — Using Your Project");
 
-// React Class Components + Props Using Our Project
+`// React Class Components + Props Using Our Project`
 
         // our Structure is 
                 // data.js
@@ -262,14 +264,14 @@ console.log("React Class Components + Props — Using Your Project");
         //     ↓
         // ProductCard displays the product
 
-// 1, data.js
+`// 1, data.js`
         // Think of this as our database-like data source for the React application.
 
         // It is not actually a NoSQL database
                 // but like that
         // It is simply a JavaScript array containing JavaScript objects.
 
-// 1.2 Products
+`// 1.2 Products`
         // it is
                 let product = [];
         // we are create an array
@@ -282,7 +284,7 @@ console.log("React Class Components + Props — Using Your Project");
         // ├── product 3 → object
         // ├── product 4 → object
         // └── ...
-// What is Object?
+`// What is Object?`
         // An object store related information using `KEY/VALUE Pairs.
                 // {
                 //         id: 1,
@@ -293,7 +295,7 @@ console.log("React Class Components + Props — Using Your Project");
                 // key => id, value => 1
                 // key => title, value => "TIMATIM SELAXA"
 
-// 1.3 Why do we put product in separete file?
+`// 1.3 Why do we put product in separete file?`
         // like this
         class ProductList extends Component {
                 render() {
@@ -323,7 +325,7 @@ console.log("React Class Components + Props — Using Your Project");
 
 
 
-// 1.4  Our data.js is similar to database records
+`// 1.4  Our data.js is similar to database records`
         // this is usefull for understand Full-Stack development. 
 
         // Our data
@@ -370,8 +372,47 @@ console.log("React Class Components + Props — Using Your Project");
                 // UI
 `// Our current data.js is basically a static local data source standing in for the backend`
 
+`// 1.6 One thing improve in our data`
+        // price: "$5.99"
+                // we are mixing `string and number`
+        // we prefer to 
+                // price: 5.99
+        // the display 
+                // <p>${price}</p>
 
 
+
+`// 2, ProductList `
+
+        `2.1 // What does  class ProductList extends Component{}`
+
+// We are crateing JavaScript class called.
+        // ProductList
+// and we are saying it extends Reacts
+        // extends Component
+                // Component is provides React function that all our class be have as a React component.
+        // React.Component
+
+`//2.2 Why extends Component?`
+        // without React
+                class Person {
+                        constructor(name) {
+                                this.name = name;
+                        }
+                }
+        // Person is normal JavaScript class
+
+
+        // With React
+                class ProductList extends Component{}
+                // we are crating a react class component.
+                        // Ract is knows how to work with it.
+
+`// 2.3 What is a class component?`
+
+        // A class component is a React component written using JavaScript `class` syntax.
+        
+        
 
 
 

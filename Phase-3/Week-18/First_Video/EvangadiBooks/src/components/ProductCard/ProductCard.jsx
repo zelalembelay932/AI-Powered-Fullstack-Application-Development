@@ -18,7 +18,8 @@ class ProductCard extends Component{
           </div>
           <div className={styles.title_price}>
             <h3>{title}</h3>
-            <p>{price}</p>
+            <p>${price}</p>
+            
           </div>
           <div className={styles.food_desc}>{description}</div>
           {link && (

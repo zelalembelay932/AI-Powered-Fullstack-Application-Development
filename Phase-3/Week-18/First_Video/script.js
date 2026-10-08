@@ -412,14 +412,157 @@ console.log("React Class Components + Props — Using Your Project");
 
         // A class component is a React component written using JavaScript `class` syntax.
         
+        class ProductList extends Component{
+                render() {
+                        return (
+                                <h1>Hello</h1>
+                        )
+                }
+        }
+
+        // Functional component
+
+        const ProdactCard = () =>{
+                return(
+                        <h1>Hello</h1>
+                )
+        }
+
+        // Both can produce React UI
+                // important difference is the structure.
+`// 2.4 Why do we have render()?`
+        // render
+                // to describe the UI it should return.
+
+        // The important relationship is:
+                // class component
+                //        ↓
+                //     render()
+                //        ↓
+                //     JSX/UI
+
+        // Then our:
+                render()
+                returns:
+                <>
+                        <div className={styles.foods_container}>
+                        </div>
+                </>
+
+`// 2.6 The most important part "products.map()"`
+        // {products.map((product, index) => {}
+        // this is connect to our data.js to UI 
+
+        // .map()
+                // goes through every product
+        // product 1 => ProductCard
+        // product 2 => ProductCard
+        // product 3 => ProductCard
+        // product 4 => ProductCard
         
+// So instead of manually writing:
+
+        // <ProductCard ... />
+        // <ProductCard ... />
+        // <ProductCard ... />
+        // <ProductCard ... />
+
+// you let JavaScript generate them.
 
 
+`// 2.7 What is product?`
+        // {products.map((product, index) => {}
+                // product => current product
+                        product = {
+                                id: 1,
+                                title: "TIMATIM SELAXA",
+                        };
+
+                        // During the second:
+
+                        product = {
+                                id: 2,
+                                title: "TIBS",
+                        }
 
 
+`// 2.8 What is index?`
+        // for an array gives
+                // product 1 → index 0
+                // product 2 → index 1
+                // product 3 → index 2
+
+`// 2.9 Now we arrive at PROPS`
+
+        // <ProductCard key={index} data={product} />
+
+        // This is where our sending information from "ProductList" to "ProductCard"
+`What are props`
+        // Props are information passed from a parent component to child component.
+
+        // ProductList is the parent.
+        // ProductCard is the child.
+                // we sending:
+                        data={product}
+
+`Understand this syntax`
+        //  <ProductCard data={product} />
+
+// There are two different things here:
+        `// data =>is the prop name.`
+        `product =>is the actual JavaScript value.`
+
+        So:
+                data={product}
+        means:
+                // prop name = data
+                // prop value = current product object
+        // For example:
+        product = {
+        id: 1,
+        title: "TIMATIM SELAXA",
+        price: "$5.99"
+        }
+
+// Then React effectively gives to ProductCard:
+        data = {
+        id: 1,
+        title: "TIMATIM SELAXA",
+        price: "$5.99"
+        }
+
+`2.10 Why do we need props?`
+        // B/c components should be reuseble
+        // ProductCard could't receive props
+        // the every ProductCard need hardcoded information
+// like this 
+        // <h3>Tibs</h3>
+        // <p>$22.99</p>
+
+        // with in props
+                {/* <h3>{title}</h3>
+                <p>{price}</p> */}
+        // Now the same component can display only data changed:
+                // Tibs
+                // Kitfo
+                // Kinche
+                // Fatira
+                // Gored Gored
+`2.11 key={index}`
+        // key helps React identify list items.
+// React needs a stable way to distinguish(ለይቶ ማወቅ):
+        // ProductCard 1
+        // ProductCard 2
+        // ProductCard 3
+// You currently use:
+        // key={index}
+// It works for many simple static lists, but your data already has a unique ID:
+        // id: 1
+        // id: 2
+        // id: 3
 
 
-
+`2.12  Why doesn't ProductCard get "key" from "this.props"?`
 
 
 

@@ -79,6 +79,21 @@
 
 
 
+// function EvangadiStudent(name, group ){
+//         this.name = name;
+//         this.group = group;
+// }
+// EvangadiStudent.prototype.batch = "May, 2026"
+// console.log(EvangadiStudent);
+
+// EvangadiStudent.prototype.studentInfo = function() {
+//         return `${this.name} is ${this.batch} evagadi student in group ${this.group}` 
+// }
+// let studentOne = new EvangadiStudent("Teshome", 1);
+
+
+
+
 console.log("=======React Props=======");
 
 
@@ -89,18 +104,19 @@ console.log("=======React Props=======");
 
 // What are props?
         // Props = data  sent from parent => Child.
-        function App() {
-        return <Student name="Zelalem" age={30} />;
-        }
+       
+        // function App() {
+        // return <Student name="Zelalem" age={30} />;
+        // }
 
-        function Student(props) {
-                return (
-                <div>
-                <h2>{props.name}</h2>
-                <p>Age: {props.age}</p>
-                </div>
-        );
-        }
+        // function Student(props) {
+        //         return (
+        //         <div>
+        //         <h2>{props.name}</h2>
+        //         <p>Age: {props.age}</p>
+        //         </div>
+        // );
+        // }
                 // parent sends
                         // name= "Zelalem"
                         // age = 30
@@ -157,47 +173,49 @@ console.log("=======React Props=======");
 // Real Example
         // Suppose you are building a developer portfolio.
 // App.jsx
-function App() {
-        return (
-        <>
-                <Developer
-                name="Zelalem"
-                role="Full Stack Developer"
-                experience={3}
-                />
 
-                <Developer
-                name="Abebe"
-                role="Frontend Developer"
-                experience={2}
-                />
-        </>
-        );
-        }
-// Developer.jsx
-function Developer({ name, role, experience }) {
-        return (
-        <>
-                <h2>{name}</h2>
-                <p>{role}</p>
-                <p>{experience} years experience</p>
-        </>
-        );
-}
-export default Developer;
+
+// function App() {
+//         return (
+//         <>
+//                 <Developer
+//                 name="Zelalem"
+//                 role="Full Stack Developer"
+//                 experience={3}
+//                 />
+
+//                 <Developer
+//                 name="Abebe"
+//                 role="Frontend Developer"
+//                 experience={2}
+//                 />
+//         </>
+//         );
+//         }
+// // Developer.jsx
+// function Developer({ name, role, experience }) {
+//         return (
+//         <>
+//                 <h2>{name}</h2>
+//                 <p>{role}</p>
+//                 <p>{experience} years experience</p>
+//         </>
+//         );
+// }
+// export default Developer;
 
 // Notice something powerful here.
 
 // We use one component:
         // <Developer />
 // but provide different props:
-        <Developer name="Zelalem" role="Full Stack Developer" experience={3} />
-        and:
-        <Developer
-        name="Abebe"
-        role="Frontend Developer"
-        experience={2}
-        />
+        // <Developer name="Zelalem" role="Full Stack Developer" experience={3} />
+        // and:
+        // <Developer
+        // name="Abebe"
+        // role="Frontend Developer"
+        // experience={2}
+        // />
 // So the same component can display different data.
 
 
@@ -220,6 +238,106 @@ export default Developer;
         // Destructure in the parameter
                 // pull the values out right inside the parentheses  with { }. the shortest way and the one you'll see most.
         
+
+
+
+console.log("React Class Components + Props — Using Your Project");
+
+// React Class Components + Props Using Our Project
+
+        // our Structure is 
+                // data.js
+                        // ProductList
+                                // ProdactCard
+        
+        // Product data
+        //     ↓
+        // ProductList receives/imports products
+        //     ↓
+        // ProductList loops through products
+        //     ↓
+        // ProductList sends each product through props
+        //     ↓
+        // ProductCard receives props
+        //     ↓
+        // ProductCard displays the product
+
+// 1, data.js
+        // Think of this as our database-like data source for the React application.
+
+        // It is not actually a NoSQL database
+                // but like that
+        // It is simply a JavaScript array containing JavaScript objects.
+
+// 1.2 Products
+        // it is
+                let product = [];
+        // we are create an array
+                // array can contain multiple values in Object.
+        
+// products
+        // │
+        // ├── product 1 → object
+        // ├── product 2 → object
+        // ├── product 3 → object
+        // ├── product 4 → object
+        // └── ...
+// What is Object?
+        // An object store related information using `KEY/VALUE Pairs.
+                // {
+                //         id: 1,
+                //         title: "TIMATIM SELAXA",
+                //         price: "$5.99"
+                // };
+        // eg 
+                // key => id, value => 1
+                // key => title, value => "TIMATIM SELAXA"
+
+// 1.3 Why do we put product in separete file?
+        // like this
+        class ProductList extends Component {
+                render() {
+                const products = [
+                {
+                        id: 1,
+                        title: "Tibs",
+                        price: "$22.99",
+                },
+                ];
+        }
+        }
+        // But that is not a good structure when the application becomes LARGER.
+        // Wen nested 
+                // src/
+                // │
+                // ├── assets/
+                // │   └── data.js
+                        // data stored
+                // │
+                // ├── components/
+                // │   ├── ProductList/
+                        // List management
+                // │   └── ProductCard/
+                        // Display one Product
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

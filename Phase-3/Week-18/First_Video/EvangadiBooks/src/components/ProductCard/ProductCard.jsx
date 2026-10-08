@@ -7,7 +7,7 @@ class ProductCard extends Component{
 
 // const ProductCard = (props) => {
   // we are distructuring props
-  const {title, imgUrl, price, description} = this.props;
+  const {title, imgUrl, price, description, link} = this.props.data;
   return (
     <>
       <div className={styles.foods_container}>
@@ -21,6 +21,11 @@ class ProductCard extends Component{
             <p>{price}</p>
           </div>
           <div className={styles.food_desc}>{description}</div>
+          {link && (
+            <div>
+              <button className={styles.link}>{link}</button>
+            </div>
+          )}
         </div>
         {/* <!-- food item end --> */}
       </div>

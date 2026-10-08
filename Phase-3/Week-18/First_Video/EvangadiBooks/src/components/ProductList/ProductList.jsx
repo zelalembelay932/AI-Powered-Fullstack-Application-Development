@@ -11,15 +11,14 @@ render(){
   return (
     <>
       <div className={styles.foods_container}>
-        
-        {      
-          products.map((product) =>{
-            const {imgUrl, title, price, description} = product;
-            return (
-              <ProductCard title={title} imgUrl={imgUrl} price={price} description={description}/>
-            )
-          })
-        }
+        {products.map((product, index) => {
+          // const {imgUrl, title, price, description, link} = product;
+          return (
+            // <ProductCard title={title} imgUrl={imgUrl} price={price} description={description} link={link} />
+
+            <ProductCard key={index} data={product} />
+          );
+        })}
       </div>
     </>
   );

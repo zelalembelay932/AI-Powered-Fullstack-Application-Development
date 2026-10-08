@@ -323,12 +323,52 @@ console.log("React Class Components + Props — Using Your Project");
 
 
 
+// 1.4  Our data.js is similar to database records
+        // this is usefull for understand Full-Stack development. 
 
+        // Our data
+                // [
+                //   {
+                //     id: 1,
+                //     title: "Tibs",
+                //     price: "$22.99",
+                //   },
+                //   {
+                //     id: 2,
+                //     title: "Kitfo",
+                //     price: "$25.99",
+                //   },
+                // ];
+// look conceptually similar to records returned from a backend API
+        // Eg 
+                // a Node API might return.
+        // 
+                // [
+                //   {
+                //     "id": 1,
+                //     "title": "Tibs",
+                //     "price": 22.99,
+                //   },
+                //   {
+                //     "id": 2,
+                //     "title": "Kitfo",
+                //     "price": 25.99,
+                //   },
+                // ];
 
-
-
-
-
+// The react component cloud consume that in almost the same way.
+                // Database/API
+                //      ↓
+                // Backend
+                //      ↓
+                // JSON
+                //      ↓
+                // React
+                //      ↓
+                // Props
+                //      ↓
+                // UI
+`// Our current data.js is basically a static local data source standing in for the backend`
 
 
 

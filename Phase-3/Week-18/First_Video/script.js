@@ -252,7 +252,7 @@ console.log("React Class Components + Props — Using Your Project");
                         // ProductList
                                 // ProdactCard
         
-        // Product data
+        // data
         //     ↓
         // ProductList receives/imports products
         //     ↓
@@ -306,6 +306,7 @@ console.log("React Class Components + Props — Using Your Project");
                         price: "$22.99",
                 },
                 ];
+
         }
         }
         // But that is not a good structure when the application becomes LARGER.
@@ -470,20 +471,20 @@ console.log("React Class Components + Props — Using Your Project");
 // you let JavaScript generate them.
 
 
-`// 2.7 What is product?`
+// `// 2.7 What is product?`
         // {products.map((product, index) => {}
                 // product => current product
-                        product = {
-                                id: 1,
-                                title: "TIMATIM SELAXA",
-                        };
+                        // product = {
+                        //         id: 1,
+                        //         title: "TIMATIM SELAXA",
+                        // };
 
                         // During the second:
 
-                        product = {
-                                id: 2,
-                                title: "TIBS",
-                        }
+                        // product = {
+                        //         id: 2,
+                        //         title: "TIBS",
+                        // }
 
 
 `// 2.8 What is index?`
@@ -534,7 +535,7 @@ console.log("React Class Components + Props — Using Your Project");
 `2.10 Why do we need props?`
         // B/c components should be reuseble
         // ProductCard could't receive props
-        // the every ProductCard need hardcoded information
+                // the every ProductCard need hardcoded information
 // like this 
         // <h3>Tibs</h3>
         // <p>$22.99</p>
@@ -549,21 +550,125 @@ console.log("React Class Components + Props — Using Your Project");
                 // Fatira
                 // Gored Gored
 `2.11 key={index}`
-        // key helps React identify list items.
+// key helps React identify list items.
 // React needs a stable way to distinguish(ለይቶ ማወቅ):
-        // ProductCard 1
-        // ProductCard 2
-        // ProductCard 3
+// ProductCard 1
+// ProductCard 2
+// ProductCard 3
 // You currently use:
-        // key={index}
+// key={index}
 // It works for many simple static lists, but your data already has a unique ID:
-        // id: 1
-        // id: 2
-        // id: 3
+// id: 1
+// id: 2
+// id: 3
+
+`3, ProductCard  Receiving Props`
+
+`3.1 The most important line in ProductCard`
+
+const {title, imgUrl, price, description, link} = this.props.data;
+        // this.props
+                // props received by this component 
+                        // from <ProductCard data={product} />
+
+`3.2 What is this`
+        // this
+                // refer to the current component instance
+`3.3 What is this.props.data?`
+        // <ProductCard data={product} />
+
+        // We created a prop called:
+                // data
+        // Therefore inside ProductCard:
+                this.props.data
+        // gets that product object.
+        // For example:
+
+                        // {
+                                // id: 3,
+                                // title: "KITFO",
+                                // price: "$25.99",
+                                // imgUrl: "...",
+                                // description: "Made from the leanest meat..."
+                        // }
 
 
-`2.12  Why doesn't ProductCard get "key" from "this.props"?`
+
+`3.4 What does destructuring do?`
+
+`Instead of writing`
+        this.props.data.title
+        this.props.data.imgUrl
+        this.props.data.price
+        this.props.data.description
+        this.props.data.link
+
+// we wrote
+        // const { title, imgUrl, price, description, link } = this.props.data;
+
+// this is JavaScript object destructuing
+        // it extract property from this object
+                // const title = this.props.data.title;
+                // const imgUrl = this.props.data.imgUrl;
+                // const price = this.props.data.price;
+                // const description = this.props.data.description;
+                // const link = this.props.data.link;
+
+        // So these are equivalent to 
+// Destructuring
+        // const { title, price } = this.props.data;
+
+// Without destructuring
+        // const title = this.props.data.title;
+        // const price = this.props.data.price;
+
+// Destructuring simply makes the code shorter and cleaner.
 
 
+`LINK `
+`First, where does link come from?`
+        // In our ProductCard you have:
+// const { title, imgUrl, price, description, link } = this.props.data;
+// This extracts link from the product object.
+
+`What does link && (...) mean?`
+        // its JavaScrip Logical (&&) operator
+                // if "link" exists, render this JSX
+                        //  Does link exist?
+                        //        |
+                        //    ┌───┴───┐
+                        //   YES      NO
+                        //    ↓        ↓
+                        // show      show
+                        // button    nothing
+
+`What happens if link exists`
+// we have link="learn more"
+        // So React evaluates
+// link && (...)  as "Learn more"
+
+// b/c "Learn more" is a truth value, React Render the JSX
+
+`What happen a product without link`
+
+// we not have link="learn more"
+// undefined && (...) 
+// Therefore React renders Nothing for expression
+
+`&& is basically an if statement`
+        {link && (
+        <button>{link}</button>
+        )}
+
+// is conceptually similar to:
+        if (link) {
+        // show button
+        }
+// But JSX doesn't let you put a normal if directly inside the returned markup like this:
+        return (
+        <div>
+        if (link) { ... }   // ❌
+        </div>
+        );
 
 

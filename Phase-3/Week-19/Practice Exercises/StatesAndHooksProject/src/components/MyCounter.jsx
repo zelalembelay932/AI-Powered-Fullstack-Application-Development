@@ -16,29 +16,60 @@ class MyCounter extends Component {
     // we use the constructor to initialize the component  'state'  and bind the even handler.
 
     this.state = {
-      clickCount: 0 // Initializes the counter to zero
+      clickCount: 0, // Initializes the counter to zero
     };
     // creates the initial state. The state object stores clicks, and the initial count is zero
 
-    this.allClicksCounter = this.allClicksCounter.bind(this);
+    // this.allClicksCounter = this.allClicksCounter.bind(this);
+
+    // if we wenat do this Arrow function is other method 
+
+    // this.allClicksCounter  on the left
+            // this assigns the newly bound function back to the componrnts allClicksCounter property.
+
+    // this.allClicksCounter on the right
+        // => this references the original allClicksCounter method
+    // bind()
+            // create a new function whose `this` value is value is permanently set to the current component instance. 
 
     // binds the method to this component instance. Without binding, this can be undefined inside a regular event-handler method.
 
     // Make sure "this" refer to MyCounter inside the click handler
   }
 
-  allClicksCounter() {
-    //declares the function that responds to a click.
-    this.setState((previosState) => ({
-      // setState => tells React to update components state.
-      // previosState => is the state value used to calculate the next value. for a counter we add one
 
-      // uses React's state-update method with an updater function.
-      // This is safer when the new value depends on the previous value.
+
+
+// Method 1
+
+  // allClicksCounter() {
+  //   //declares the function that responds to a click.
+  //   this.setState((previosState) => ({
+  //     // setState => tells React to update components state.
+  //     // previosState => is the state value used to calculate the next value. for a counter we add one
+
+  //     // uses React's state-update method with an updater function.
+  //     // This is safer when the new value depends on the previous value.
+  //     clickCount: previosState.clickCount + 1,
+  //     // adds one to the latest stored count.
+  //   }));
+  // }
+
+
+
+  // Method 2
+// Arrow function
+  allClicksCounter = () => {
+    this.setState((previosState) => ({
       clickCount: previosState.clickCount + 1,
-      // adds one to the latest stored count.
-    }));
+    }))
   }
+
+
+
+
+
+
  // Q2 evenClickCount
   evenClickCount() {
     // calculates the even total less than or equal to clicks.
@@ -49,6 +80,7 @@ class MyCounter extends Component {
     // Notice the pattern:
         // Even numbers have remainder 0 when divided by 2.
         // Odd numbers have remainder 1 when divided by 2.
+
     // Eg1:- 7 - (7 % 2)    3 - (3 % 2)
           // 7 - (1)        3 - (1)
           //  6               2
@@ -80,17 +112,22 @@ class MyCounter extends Component {
 
     // even number has remainder 0 after division by 2, while an odd number has remainder 1. So 5 - 1 becomes 4.
   }
+
+
   render() {
     
     const evenClick = this.evenClickCount();
-    console.log(evenClick);
+    // console.log(evenClick);
     return (
       <>
         <div>
           <button type="button" onClick={this.allClicksCounter}>
             Click me
           </button>
+
           <CounterDisplayer clickCount={this.state.clickCount} />
+
+          
           <EvenCounterDisplayer clickCount={evenClick} />
         </div>
       </>

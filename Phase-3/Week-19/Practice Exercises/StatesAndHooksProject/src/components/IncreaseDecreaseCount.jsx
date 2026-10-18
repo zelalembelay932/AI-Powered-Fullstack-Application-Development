@@ -5,7 +5,7 @@ function IncreaseDecreaseCount() {
     const [count, setCount] = useState(0);
 
     // useState(0) =>
-            // ask React to create a state value ehose initial value is 0
+            // ask React to create a state value whose initial value is 0
     // count => is variable used to read te current state
             // browser display cureent state in p tag
     // setCount => is function used to request an update to that state.

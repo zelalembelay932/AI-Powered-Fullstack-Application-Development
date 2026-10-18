@@ -7,7 +7,12 @@ body {
     font-family: Arial, sans-serif;
     color: #222;
 }
+.dark{
 
+}
+.light{
+    
+}
 button,
 input {
     font: inherit;

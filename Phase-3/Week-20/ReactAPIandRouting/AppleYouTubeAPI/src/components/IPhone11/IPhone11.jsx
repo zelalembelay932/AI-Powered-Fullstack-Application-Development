@@ -1,7 +1,7 @@
 import React from 'react'
-import "./FourthSection.css"
+import "./IPhone11.css"
 
-const FourthSection = () => {
+const IPhone11 = () => {
   return (
     <>
         <section className="fourth-heghlight-wrapper">
@@ -47,4 +47,4 @@ const FourthSection = () => {
   )
 }
 
-export default FourthSection
+export default IPhone11

@@ -1,7 +1,7 @@
 import React from 'react'
-import "./FirstSection.css"
+import "./IpadPro.css"
 
-const FirstSection = () => {
+const IpadPro = () => {
   return (
     <>
         <section className="first-hightlight-wrapper">
@@ -32,4 +32,4 @@ const FirstSection = () => {
   )
 }
 
-export default FirstSection
+export default IpadPro

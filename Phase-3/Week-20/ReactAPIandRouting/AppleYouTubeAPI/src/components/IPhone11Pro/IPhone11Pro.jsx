@@ -1,7 +1,7 @@
 import React from 'react'
-import "./ThirdSection.css"
+import "./IPhone11Pro.css"
 
-const ThirdSection = () => {
+const IPhone11Pro = () => {
   return (
     <>
         <section className="third-hightlight-wrapper">
@@ -30,4 +30,4 @@ const ThirdSection = () => {
   )
 }
 
-export default ThirdSection
+export default IPhone11Pro

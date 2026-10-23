@@ -1,7 +1,7 @@
 import React from 'react'
-import "./SecondSection.css"
+import "./MacBookAir.css"
 
-const SecondSection = () => {
+const MacBookAir = () => {
   return (
     <>
         <section className="second-hightlight-wrapper">
@@ -35,4 +35,4 @@ const SecondSection = () => {
   )
 }
 
-export default SecondSection
+export default MacBookAir

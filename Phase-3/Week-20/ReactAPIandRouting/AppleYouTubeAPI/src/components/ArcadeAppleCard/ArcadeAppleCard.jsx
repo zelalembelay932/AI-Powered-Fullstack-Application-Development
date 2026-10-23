@@ -1,9 +1,9 @@
 import React from 'react'
 import Arcade from "../../assets/images/icons/arcade.png"
-import "./SixthSection.css"
+import "./ArcadeAppleCard.css"
 
 
-const SixthSection = () => {
+const ArcadeAppleCard = () => {
   return (
     <>
         <section className="sixth-heghlight-wrapper">
@@ -50,4 +50,4 @@ const SixthSection = () => {
   )
 }
 
-export default SixthSection
+export default ArcadeAppleCard

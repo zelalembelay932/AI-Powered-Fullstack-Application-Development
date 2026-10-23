@@ -3,9 +3,9 @@ import AppleTv from "../../assets/images/icons/apple-tv-logo.png"
 import Banker from "../../assets/images/home/banker.png"
 import Watch from "../../assets/images/icons/watch-series5-logo.png"
 
-import "./FifthSection.css"
+import "./AppleTvWatch.css"
 
-const FifthSection = () => {
+const AppleTvWatch = () => {
   return (
     <>
         <section className="fifth-heghlight-wrapper">
@@ -54,4 +54,4 @@ const FifthSection = () => {
   )
 }
 
-export default FifthSection
+export default AppleTvWatch

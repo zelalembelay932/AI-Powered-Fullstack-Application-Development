@@ -613,3 +613,38 @@ UCE_M8A5yxnLfW0KghEeajjw
 
   "https://youtube.googleapis.com/youtube/v3/search?  part=snippet &  channelId=UCxA7AzkI2Sndf8S1G5rSkwQ & maxResults=9 & order=date &    key=[YOUR_API_KEY]"; 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  AIzaSyATCKnrI-5WYNpILDOJo5tbxNLFGm_v4cU
+
+
+https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCE_M8A5yxnLfW0KghEeajjw&maxResults=10&order=date&key=AIzaSyATCKnrI-5WYNpILDOJo5tbxNLFGm_v4cU
+
+Authorization: Bearer [YOUR_ACCESS_TOKEN]
+Accept: application/json
+
+
+
+
+
+
+
+
+
+
+
+
+

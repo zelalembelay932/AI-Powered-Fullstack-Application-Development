@@ -1,0 +1,41 @@
+
+.cont {
+    max-width: 500px;
+}
+
+.error_code {
+    font-size: 8rem;
+    font-weight: 900;
+    color: #dc3545;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.h {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #212529;
+}
+
+.p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn_home {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn_home:hover {
+    background-color: #0056b3;
+}

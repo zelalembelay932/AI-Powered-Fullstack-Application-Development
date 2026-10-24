@@ -24,8 +24,6 @@
         //     </BrowserRouter>
         //   </StrictMode>,
         // );
-
-
 // Step 2
     
         // Routes 
@@ -54,12 +52,35 @@
 
 
 
+    `3, Nested Routes`
+        // nested routing helps you keep shared UI in one place
+        // The path of the parent is automatically included in the child, and child routes render throughthe <Outlet /> in the parent route.
         
+        `Non-existing routes`
+            // use a wildcard route
+            // <Route path="*" element={<Four04/>} />
+        `Shared layout with Outlet`
+            // Outlet => is where matching childroutes  render
+
+            // import {Outlet} from "react-router";
+            //  function SharedLayout(){
+            //     return (
+            //         <>
+            //             <Header />
+            //             <Outlet />
+            //             <Footer />
+            //         </>
+            //     );
+            //  }
 
 
 
 
-
+    `DATABASE TABLE JOIN`
+        // there are two common choices
+            // INNER JOIN => return only product with matching records in the joined tables.
+            // LEFT JOIN => preserves every matching iPhone in the products table, even if its description or price is missing
+        // For our data base we will use LEFT JOIN
 
 
 

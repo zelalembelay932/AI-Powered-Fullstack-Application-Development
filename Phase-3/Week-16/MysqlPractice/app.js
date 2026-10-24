@@ -10,29 +10,29 @@
 
 // const  express = require("express");
 // const app = express();
-// const mysql = require("mysql2");
+const mysql = require("mysql2");
 
-// require('dotenv').config()
+require('dotenv').config()
 
 
 
-// const connection = mysql.createConnection({
-//     // to access .env file install dotenv in `npm install dotenv --save `
-//     host: process.env.DB_HOST,
-//     user: process.env.DB_USER,
-//     password: process.env.DB_PASSWORD,
-//     database: process.env.DB_NAME,
-//     port: process.env.PORT
-// });
+const connection = mysql.createConnection({
+    // to access .env file install dotenv in `npm install dotenv --save `
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.PORT
+});
 
 // const createDatabaseSQL = `CREATE DATABASE IF NOT EXISTS zele`;
 
-// connection.connect((error) => {
-//     if(error) {
-//         console.error(error.message);
-//     }
-//     console.log("Connected to MySQL Database ");
-// });
+connection.connect((error) => {
+    if(error) {
+        console.error(error.message);
+    }
+    console.log("Connected to MySQL Database ");
+});
 
 
 
@@ -87,11 +87,11 @@ console.log("====Question 2 New====");
 // Question 2 New
 
 
-const express = require("express");
-const app = express();
+// const express = require("express");
+// const app = express();
 
-require("dotenv").config();
-const mysql = require("mysql2");
+// require("dotenv").config();
+// const mysql = require("mysql2");
 
 
 
@@ -99,30 +99,30 @@ const mysql = require("mysql2");
 // Step 2
 // Connect to myDB
 
-const conn = mysql.createConnection({
+// const conn = mysql.createConnection({
 
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    database: process.env.DB_NAME
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASSWORD,
+//     database: process.env.DB_NAME,
+//     database: process.env.DB_NAME
 
-});
+// });
 
 
 
-conn.connect((err) => {
+// conn.connect((err) => {
 
-    if (err) {
+//     if (err) {
 
-        console.log("Connection error:", err);
+//         console.log("Connection error:", err);
 
-    } else {
-        console.log("Connected to MySQL Database");
+//     } else {
+//         console.log("Connected to MySQL Database");
 
-    }
+//     }
 
-});
+// });
 
 // Excel design shows thes five table
 //     products;
@@ -163,155 +163,155 @@ conn.connect((err) => {
     // product_url
     // product_name
 
-app.get("/install", (req, res) => {
+// app.get("/install", (req, res) => {
 
-    let products = `
-        CREATE TABLE IF NOT EXISTS products (
-            product_id INT AUTO_INCREMENT,
-            product_url VARCHAR(255) NOT NULL,
-            product_name VARCHAR(255) NOT NULL,
-            PRIMARY KEY (product_id)
-        )
-    `;
-  //   // Create users
-  //   // The Excel design
-  //   // user_id
-  //   // User_name
-  //   // User_password
-  let users = `
-        CREATE TABLE IF NOT EXISTS users (
-            user_id INT AUTO_INCREMENT,
-            user_name VARCHAR(255) NOT NULL,
-            user_password VARCHAR(255) NOT NULL,
-            PRIMARY KEY (user_id)
-        )
-    `;
-
-  //   // Create product_description
-
-  //   // The Excel design
-  //   // Description_id
-  //   // Product_id
-  //   // Product_brief_description
-  //   // Product_description
-  //   // Product_img
-  //   // Product_link
-  let product_description = `
-        CREATE TABLE IF NOT EXISTS product_description (
-            description_id INT AUTO_INCREMENT,
-            product_id INT NOT NULL,
-            product_brief_description VARCHAR(255) NOT NULL,
-            product_description TEXT,
-            product_img VARCHAR(255),
-            product_link VARCHAR(255),
-
-            PRIMARY KEY (description_id),
-
-            FOREIGN KEY (product_id)
-            REFERENCES products(product_id)
-        )
-    `;
-  //   // The important part
-  //   // FOREIGN KEY (product_id)
-  //   // REFERENCES products(product_id)
-
-  //   // Create product_price
-
-  //   // From the Excel:
-  //   // Price_id
-  //   // Product_id
-  //   // Starting_price
-  //   // Price_range
-  let product_price = `
-        CREATE TABLE IF NOT EXISTS product_price (
-            price_id INT AUTO_INCREMENT,
-            product_id INT NOT NULL,
-            starting_price DECIMAL(10,2) NOT NULL,
-            price_range VARCHAR(255),
-            PRIMARY KEY (price_id),
-
-            FOREIGN KEY (product_id)
-            REFERENCES products(product_id)
-        )
-    `;
-  //   // Create orders
-
-  //   // The Excel design:
-  //   // order_id
-  //   // Product_id
+//     let products = `
+//         CREATE TABLE IF NOT EXISTS products (
+//             product_id INT AUTO_INCREMENT,
+//             product_url VARCHAR(255) NOT NULL,
+//             product_name VARCHAR(255) NOT NULL,
+//             PRIMARY KEY (product_id)
+//         )
+//     `;
+//   //   // Create users
+//   //   // The Excel design
 //   //   // user_id
-  let orders = `
-        CREATE TABLE IF NOT EXISTS orders (
-            order_id INT AUTO_INCREMENT,
-            product_id INT NOT NULL,
-            user_id INT NOT NULL,
+//   //   // User_name
+//   //   // User_password
+//   let users = `
+//         CREATE TABLE IF NOT EXISTS users (
+//             user_id INT AUTO_INCREMENT,
+//             user_name VARCHAR(255) NOT NULL,
+//             user_password VARCHAR(255) NOT NULL,
+//             PRIMARY KEY (user_id)
+//         )
+//     `;
 
-            PRIMARY KEY (order_id),
+//   //   // Create product_description
 
-            FOREIGN KEY (product_id)
-            REFERENCES products(product_id),
+//   //   // The Excel design
+//   //   // Description_id
+//   //   // Product_id
+//   //   // Product_brief_description
+//   //   // Product_description
+//   //   // Product_img
+//   //   // Product_link
+//   let product_description = `
+//         CREATE TABLE IF NOT EXISTS product_description (
+//             description_id INT AUTO_INCREMENT,
+//             product_id INT NOT NULL,
+//             product_brief_description VARCHAR(255) NOT NULL,
+//             product_description TEXT,
+//             product_img VARCHAR(255),
+//             product_link VARCHAR(255),
 
-            FOREIGN KEY (user_id)
-            REFERENCES users(user_id)
-        )
-    `;
+//             PRIMARY KEY (description_id),
+
+//             FOREIGN KEY (product_id)
+//             REFERENCES products(product_id)
+//         )
+//     `;
+//   //   // The important part
+//   //   // FOREIGN KEY (product_id)
+//   //   // REFERENCES products(product_id)
+
+//   //   // Create product_price
+
+//   //   // From the Excel:
+//   //   // Price_id
+//   //   // Product_id
+//   //   // Starting_price
+//   //   // Price_range
+//   let product_price = `
+//         CREATE TABLE IF NOT EXISTS product_price (
+//             price_id INT AUTO_INCREMENT,
+//             product_id INT NOT NULL,
+//             starting_price DECIMAL(10,2) NOT NULL,
+//             price_range VARCHAR(255),
+//             PRIMARY KEY (price_id),
+
+//             FOREIGN KEY (product_id)
+//             REFERENCES products(product_id)
+//         )
+//     `;
+//   //   // Create orders
+
+//   //   // The Excel design:
+//   //   // order_id
+//   //   // Product_id
+// //   //   // user_id
+//   let orders = `
+//         CREATE TABLE IF NOT EXISTS orders (
+//             order_id INT AUTO_INCREMENT,
+//             product_id INT NOT NULL,
+//             user_id INT NOT NULL,
+
+//             PRIMARY KEY (order_id),
+
+//             FOREIGN KEY (product_id)
+//             REFERENCES products(product_id),
+
+//             FOREIGN KEY (user_id)
+//             REFERENCES users(user_id)
+//         )
+//     `;
 
 
-conn.query(products, (err) => {
-    if (err) {
-        console.log("Products error:", err);
-        return;
-    }
-    console.log("Products table created");
+// conn.query(products, (err) => {
+//     if (err) {
+//         console.log("Products error:", err);
+//         return;
+//     }
+//     console.log("Products table created");
 
-        conn.query(users, (err) => {
-        if (err) {
-            console.log("Users error:", err);
-            return;
-        }
-            console.log("Users table created");
+//         conn.query(users, (err) => {
+//         if (err) {
+//             console.log("Users error:", err);
+//             return;
+//         }
+//             console.log("Users table created");
 
-    conn.query(product_description, (err) => {
-        if (err) {
-        console.log("Description error:", err);
-        return;
-        }
+//     conn.query(product_description, (err) => {
+//         if (err) {
+//         console.log("Description error:", err);
+//         return;
+//         }
 
-        console.log("Product description table created");
+//         console.log("Product description table created");
 
-        conn.query(product_price, (err) => {
-        if (err) {
-            console.log("Price error:", err);
-            return;
-        }
-            console.log("Product price table created");
+//         conn.query(product_price, (err) => {
+//         if (err) {
+//             console.log("Price error:", err);
+//             return;
+//         }
+//             console.log("Product price table created");
 
-            conn.query(orders, (err) => {
-            if (err) {
-                console.log("Orders error:", err);
-                return;
-            }
-            console.log("Orders table created");
-            // Send response
-            res.send("All tables created successfully!");
-          });
-        });
-      });
-    });
-  });
-});
+//             conn.query(orders, (err) => {
+//             if (err) {
+//                 console.log("Orders error:", err);
+//                 return;
+//             }
+//             console.log("Orders table created");
+//             // Send response
+//             res.send("All tables created successfully!");
+//           });
+//         });
+//       });
+//     });
+//   });
+// });
 
 
 // Step 5
 // Start server
 
-app.listen(3000, () => {
+// app.listen(3000, () => {
 
-    console.log(
-        "Server running: http://localhost:3000"
-    );
+//     console.log(
+//         "Server running: http://localhost:3000"
+//     );
 
-});
+// });
 
 
 
@@ -587,15 +587,15 @@ console.log("====Question 3====");
 
 const express = require("express");
 const app = express();
-const mysql = require("mysql2");
+// const mysql = require("mysql2");
 
 const bodyParser = require("body-parser");
 
 const cors = require("cors");
-// CORS controls whether a browser is allowed to make a request from one origin to another origin.
+// // CORS controls whether a browser is allowed to make a request from one origin to another origin.
 
 
-require("dotenv").config();
+// require("dotenv").config();
 
 app.use(cors());
 
@@ -605,9 +605,9 @@ app.use(bodyParser.urlencoded({
     extended: true,
 }),
 );
-// app.use(bodyParser.urlencoded({
-//     extended: false
-// }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 // static
     // serves all of them as well as we have other file
@@ -618,25 +618,25 @@ app.use(express.static("public"));
 // Step 3
 // MySQL connection
 
-const conn = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
-});
+// const conn = mysql.createConnection({
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASSWORD,
+//     database: process.env.DB_NAME
+// });
 
 // Step 4
 // Connect to MySQL
 
 
-conn.connect((err) => {
-    if (err) {
-        console.log(
-            "MySQL connection error:", err );
-    } else {
-        console.log(  " Connected to MySQL Database" );
-    }
-});
+// conn.connect((err) => {
+//     if (err) {
+//         console.log(
+//             "MySQL connection error:", err );
+//     } else {
+//         console.log(  " Connected to MySQL Database" );
+//     }
+// });
 
 // Step 5
 // Add product route
@@ -691,8 +691,9 @@ app.post("/add-product", (req, res) => {
     );
 });
 
-// Step 6
-// Start server
+// // Step 6
+// // Start server
+
 
 
 app.listen(3000, () => {

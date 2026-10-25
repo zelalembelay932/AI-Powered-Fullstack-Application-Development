@@ -5,8 +5,6 @@ import { useState } from 'react'
 function Apple() {
     // state to keep the data
     const [youtubeVideo, setYoutubeVideo] = useState([]);
-
-
     // send a request
     useEffect(()=>{
         // fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCxA7AzkI2Sndf8S1G5rSkwQ&maxResults=10&order=date&key=AIzaSyDmUTk6yTVSscfKCR2X7zP0NiOg9fZA_Ng',
@@ -42,13 +40,13 @@ fetchVideo()
 
     },[])
 
- const group = '[{ "name":"group4"}]';
- const obj = JSON.parse(group)
+//  const group = '[{ "name":"group4"}]';
+//  const obj = JSON.parse(group)
 
- console.log(obj[0]);
+//  console.log(obj[0]);
 
- const jsn = JSON.stringify(obj)
- console.log(jsn);
+//  const jsn = JSON.stringify(obj)
+//  console.log(jsn);
  
  
 

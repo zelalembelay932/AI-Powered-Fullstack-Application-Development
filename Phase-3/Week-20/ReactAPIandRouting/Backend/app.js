@@ -1,16 +1,20 @@
 // 1. Import the required packages
 const express = require("express");
 const mysql = require("mysql2");
-const cors = require("cors")
+const cors = require("cors");
+const bodyParser = require("body-parser");
+// allows requests from our React website runiing on another port.
 require("dotenv").config();
 
 // 2. Create the Express application
 const app = express();
-
-
 app.use(cors({origin : "http://localhost:5173"}))
+// app.use(cors());
 
-// app.use() registers middleware that runs while Express handles requests.
+
+app.use(bodyParser.urlencoded({extended: true }));
+// app.use() registers middleware that runs while Express handles requests. 
+    // allows the frontend origin http://localhost:5173 to make cross-origin requests.
 
 // cors() adds the appropriate CORS response headers.
 
@@ -30,13 +34,6 @@ const connection = mysql.createConnection({
 });
 
 
-const productSellect = `SELECT p.product_id. p.product_url, p.product_name, pd.product_brief_description, pd.product_description, pd.product_img, pd.product_link, pp.starting_price, pp.price_range FROM products AS p 
-  LEFT JOIN  product_description AS pd ON pd.description = (
-  SELECT MIN (pd2.description_id) FROM product_description AS pd2 WHERE pd2.product_id
-  )
-  LEFT JOIN product_price AS pp ON pp.price_id = (SELECT MIN(pp2.price_id) FROM product_price AS pp2 WHERE pp2.product_id = p.product_id)`;
-
-
 
 // 5. Create a simple home route
 app.get("/", (req, res) => {
@@ -53,66 +50,95 @@ app.get("/", (req, res) => {
 
 // Create an API endpoint to retrieve products
 
-
-
 app.get("/iphone", (req, res) => {
-    // registers a GET route with the path /iphone
-  const sql = `${productSellect} WHERE LOWER(TRIM(p.product_name)) LIKE 'iphone%' ORDER BY p.product_id ASC`;
-//SELECT =>	Retrieves data.
-// * =>	Selects all columns.
-// FROM =>	Specifies the source table.
-// products =>	The table from which data is retrieved.
-
-  connection.query(sql, (error, rows) => {
-    if (error) {
-      console.error("Product query failed:", error.message);
-
-      return res.status(500).json({
-        // HTTP response status to 500, meaning the server encountered an unexpected problem while handling the request.
-        message: "Failed to retrieve products",
-        error: error.message,
-      });
+  connection.query(
+    "SELECT * FROM products JOIN product_description JOIN product_price ON products.product_id = product_description.product_id AND products.product_id = product_price.product_id",
+    (err, rows, filds) =>{
+      let iphone = {product: []};
+      iphone.product = rows;
+      const stringIphone = JSON.stringify(iphone);
+      if (!err) res.end(stringIphone);
+      else console.log(err);
     }
-    return res.json({
-    //   count: rows.length,
-      products: rows,
-    });
-  });
-});
-
-// Q3  Singel product iPhone using its product_id
-app.get("/iphone/:id", (req, res) =>{
-  const id = Number(req.params.id);
-
-  if(!Number.isInteger(id) || id <= 0) {
-    return res.status(400).json({
-      message: "Invalid Product ID"
-    });
-  }
-  const sql = `${productSellect} WHERE p.product_id = ? AND LOWER(TRIM(p.product_name)) LIKE 'iphone%' LIMIT 1`;
-
-  connection.query(sql, [id], (error, rows) =>{
-    if (error) {
-      console.error("Single iPhone query failed:", error.message);
-
-      return  res.status(500).json({
-        message: "Failed to retrive the product.",
-      });
-    }
-
-    if (rows.length === 0) {
-        return res.status(400).json({
-          message: "iPhone product not found",
-        });
-    }
-
-    return res.json({
-      product: rows[0],
-    })
-
-
-  })
+  );
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// app.get("/iphone", (req, res) => {
+//     // registers a GET route with the path /iphone
+//   const sql = `${productSellect} WHERE LOWER(TRIM(p.product_name)) LIKE 'iphone%' ORDER BY p.product_id ASC`;
+// //SELECT =>	Retrieves data.
+// // * =>	Selects all columns.
+// // FROM =>	Specifies the source table.
+// // products =>	The table from which data is retrieved.
+
+//   connection.query(sql, (error, rows) => {
+//     if (error) {
+//       console.error("Product query failed:", error.message);
+
+//       return res.status(500).json({
+//         // HTTP response status to 500, meaning the server encountered an unexpected problem while handling the request.
+//         message: "Failed to retrieve products",
+//         error: error.message,
+//       });
+//     }
+//     return res.json({
+//     //   count: rows.length,
+//       products: rows,
+//     });
+//   });
+// });
+
+// // Q3  Singel product iPhone using its product_id
+// app.get("/iphone/:id", (req, res) =>{
+//   const id = Number(req.params.id);
+
+//   if(!Number.isInteger(id) || id <= 0) {
+//     return res.status(400).json({
+//       message: "Invalid Product ID"
+//     });
+//   }
+//   const sql = `${productSellect} WHERE p.product_id = ? AND LOWER(TRIM(p.product_name)) LIKE 'iphone%' LIMIT 1`;
+
+//   connection.query(sql, [id], (error, rows) =>{
+//     if (error) {
+//       console.error("Single iPhone query failed:", error.message);
+
+//       return  res.status(500).json({
+//         message: "Failed to retrive the product.",
+//       });
+//     }
+
+//     if (rows.length === 0) {
+//         return res.status(400).json({
+//           message: "iPhone product not found",
+//         });
+//     }
+
+//     return res.json({
+//       product: rows[0],
+//     })
+
+
+//   })
+// })
 
 
 

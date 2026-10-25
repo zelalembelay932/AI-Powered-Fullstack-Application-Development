@@ -1,48 +1,83 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { Link } from "react-router";
+import { useEffect, useState } from "react";
 
 const Iphone = () => {
   const [product, setProducts] = useState([]);
 
-  useEffect(()=>{
-    const fetchIphone = async () =>{
-      try{
-        const res = await fetch("http://localhost:3000/iphone");
-        if(!res.ok) throw new Error("faild to fetch Iphone");
-
-        const data = await res.json();
-        
-        console.log(data);
+  useEffect(() => {
+    fetch("http://localhost:3000/iphone")
+      .then((res) => res.json())
+      .then((data) => {
         setProducts(data.product);
-      }catch (error) {
-          console.log(error);
-      }
-    };
-    fetchIphone();
+      })
+      .catch(() => console.log("error: unable to fetch"));
   }, []);
+
+  console.log(product);
+  let flip = true;
   return (
     <>
-        <section>
-          <div>
-            <h1>Iphones</h1>
-
+      <section className="internal-page-wrapper">
+        <div className="container">
+          <div className="row justify-content-center text-center">
+            <div className="col-12 mt-5 pt-5">
+              <h1 className="font-weight-bold">Iphone</h1>
+              <div className="brief-description mb-5">
+                The best for the brightest
+              </div>
+            </div>
           </div>
-          {product?.map((products, index)=>{
+          {product?.map((product) => {
+            let order1 = 1;
+            let order2 = 2;
+            if (flip) {
+              order1 = 2;
+              order2 = 1;
+
+              flip = !flip;
+            } else {
+              flip = !flip;
+            }
             let productDiv = (
-              <div key={products.product_url}>
-                <div className={`col-sm-12 col-md-6 my-auto order-${index % 2 == 0 ? "1" : "2"}`}>
-                  <div>{products.product_name}</div>
-                  <div>{product.product_brief_description}</div>
-                  <div>{`Starting at ${product.starting_price}`}</div>
+              <div
+                key={product.product_url}
+                className="row justify-content-center text-center product-holder h-100"
+              >
+                <div className={`col-12 col-md-6 my-auto order-${order1}`}>
+                  <div className="product-title">{product.product_name}</div>
+
+                  <div className="product_brief">
+                    {product.product_brief_description}
+                  </div>
+
+                  <div className="starting-price">{`Starting at ${product.starting_price}`}</div>
+
+                  <div className="mothly-price">{product.price_range}</div>
+
+                  <div className="links-wrapper">
+                    <ul>
+                      <li>
+                        <Link to={`/iphone/${product.product_url}`}>
+                          Learn more
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={`col-sm-12 col-md-6 order-${order2}`}>
+                  <div className="product-image">
+                    <img src={product.product_img} alt="product" />
+                  </div>
                 </div>
               </div>
             );
-            
+            return productDiv;
           })}
-        </section>
+        </div>
+      </section>
     </>
   );
-}
+};
 
-export default Iphone
+export default Iphone;

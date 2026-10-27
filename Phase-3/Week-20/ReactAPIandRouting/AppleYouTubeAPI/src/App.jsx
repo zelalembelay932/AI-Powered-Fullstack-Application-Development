@@ -19,7 +19,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="mac" element={<Mac />} />
           <Route path="/iphone" element={<Iphone />} />
+
           <Route path="/iphone/:productID" element={<ProductPage/>} />
+          
           <Route path="/ipad" element={<Ipad />} />
         </Route>
 

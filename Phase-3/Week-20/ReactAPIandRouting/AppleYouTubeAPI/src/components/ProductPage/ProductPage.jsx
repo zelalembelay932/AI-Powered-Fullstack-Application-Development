@@ -80,7 +80,7 @@ const ProductPage = () => {
     else{
         return <NotFound />
     }
-  
+
 }
 
 export default ProductPage

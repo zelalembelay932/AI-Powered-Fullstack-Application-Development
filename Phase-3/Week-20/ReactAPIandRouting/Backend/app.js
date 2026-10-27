@@ -2,7 +2,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 // allows requests from our React website runiing on another port.
 require("dotenv").config();
 
@@ -67,7 +67,7 @@ app.get("/iphone", (req, res) => {
     // FROM products
         // identifie product as the starting table in our query
     // JOIN product_description
-        // wincludes records from product_description 
+        // includes records from product_description 
         // contains information such as the brief description, full description, image and product link.
     // JOIN product_price
         // This includes records from product_price, which contains the starting price and price range

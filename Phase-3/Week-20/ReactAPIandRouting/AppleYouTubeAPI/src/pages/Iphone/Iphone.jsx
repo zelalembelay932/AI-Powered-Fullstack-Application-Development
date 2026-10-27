@@ -81,7 +81,7 @@ const Iphone = () => {
                     {product.product_brief_description}
                   </div>
 
-                  <div className="starting-price">{`Starting at ${product.starting_price}`}</div>
+                  <div className="starting-price">{`Starting at $${product.starting_price}`}</div>
 
                   <div className="mothly-price">{product.price_range}</div>
 
@@ -95,6 +95,8 @@ const Iphone = () => {
                     </ul>
                   </div>
                 </div>
+
+
 
                 <div className={`col-sm-12 col-md-6 order-${order2}`}>
                   <div className="product-image">

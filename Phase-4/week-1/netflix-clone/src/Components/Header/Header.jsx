@@ -1,13 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from "./Header.module.css"
 import {Link} from 'react-router'
 import logo from '../../assets/image/logo.png'
 import {Search, Bell, User, ChevronDown } from "lucide-react"
 
 const Header = () => {
+    const [isSearchOpen, setIsSearchOpen]= useState(false);
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+    // for blur
+
+    const [isScrolled, setIsScrolled, ] = useState(false);
+
+    useEffect(()=>{
+        const handleScroll = ()=>{
+            if(window.scrollY > 50){
+                setIsScrolled(true);
+            }else{
+                setIsScrolled(false)
+            }
+        }
+        window.addEventListener('scroll',handleScroll);
+        return()=> window.removeEventListener('scroll',handleScroll)
+    },[])
+
+
   return (
     <>
-        <header className={style.header}>
+        <header className={`${style.header} ${isScrolled? style.scrolled:""} `}>
             <div className={style.container}>
                 {/* logo */}
                 <img src={logo} alt="Netflix Logo" className={style.logo}/>
@@ -24,16 +44,17 @@ const Header = () => {
                 <div className={style.rightSection}>
                     {/* Search */}
                     <div className={style.searchContainer}>
-                    <button className={style.searchButton}>
+                    <button onClick={()=>setIsSearchOpen(!isSearchOpen)}  className={style.searchButton}>
                         <Search size={20}/>
                     </button>
+                    {
+                        isSearchOpen && (
+                            <input type="text" placeholder='Movie title'  className={style.searchInput}/>
+                        )
+                    }
                     </div>
                     
-                    <div>
-                        <button type="button"> 
-                            {/* search button */}
-                        </button>
-                    </div>
+
                     {/* Notification */}
                     <button className={style.iconButton}>
                         {/* Notification icon */}
@@ -41,15 +62,30 @@ const Header = () => {
                         <span className={style.notificationBadge}>4</span>
                     </button>
                     {/* Profile */}
-                    <div>
-                        <button>
+                    <div className={style.profileContainer}>
+                        <button 
+                        onClick={()=>setIsProfileOpen(!isProfileOpen)}
+
+                        className={style.profileButton}>
                             {/* user icon */}
-                            <div>
-                            <User/>     
+                            <div className={style.profileAvatar}>
+                            <User size={20}/>     
                             </div>
                             {/* dropdoen icon */}
-                                <ChevronDown/>
+                                <ChevronDown size={20}/>
                         </button>
+
+                        {
+                            isProfileOpen&& (
+                                <div className={style.profileMenu}>
+                                    <Link className={style.profileMenuItem}>Account</Link>
+                                    <Link className={style.profileMenuItem}>Help Center</Link>
+                                    <hr className={style.profileMenuDivider}/>
+                                    <button className={style.profileMenuItem}>Sign Out</button>
+
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
 

@@ -136,4 +136,23 @@
 
 
 
-    
+`Banner.jsx - Fetching the featured TV show`
+
+        // useEffect
+            //  a built-in Hook that lets you run code after a component renders, allowing you to synchronize your component with external systems or handle "side effects"
+
+        // useEffect accepts two parts
+            //  a setup function (the code you want to run)
+            // an optional dependency array (a list of values that control when the code runs)
+        import { useEffect } from 'react';
+
+        useEffect(() => {
+        // 1. Write the code you want to run here (The Effect)
+
+        return () => {
+            // 2. Optional: Write cleanup code here
+        };
+        }, [dependency1, dependency2]); // 3. Optional: The Dependency Array
+
+        // useState
+            //  a built-in Hook that allows you to add and track local state in a functional component

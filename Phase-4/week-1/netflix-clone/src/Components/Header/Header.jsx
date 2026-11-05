@@ -61,6 +61,7 @@ const Header = () => {
                         <Bell/>
                         <span className={style.notificationBadge}>4</span>
                     </button>
+                    
                     {/* Profile */}
                     <div className={style.profileContainer}>
                         <button 

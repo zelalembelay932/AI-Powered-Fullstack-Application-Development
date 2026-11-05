@@ -6,6 +6,7 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 const IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
 const MovieCard = ({ movie }) => {
+    // console.log(movie);
     let geners = ['Adventure', 'Action', 'Thriller']
   return (
     <div className={style.cardWrapper}>
@@ -42,7 +43,7 @@ const MovieCard = ({ movie }) => {
                             return <span key={index}>{g}
                             {
                                 index < geners.length-1 &&(
-                                    <span className={style.dot}> • </span>
+                                    <span className={style.dot}> •jsxnnx </span>
                                 )
                             }
                             </span>

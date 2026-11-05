@@ -6,6 +6,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
+// Swiper: the main slider container.
+    // SwiperSlide: an individual slide.
+    // Navigation: adds previous and next arrow controls.
+    // swiper/css: loads the base slider styles.
+    // swiper/css/navigation: loads navigation styles.
 
 const SlideShow = ({ title, movies }) => {
   return (

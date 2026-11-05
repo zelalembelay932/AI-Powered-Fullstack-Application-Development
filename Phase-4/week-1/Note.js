@@ -280,6 +280,172 @@ await Promise.all([
             // Invalid endpoint.
 
 
+`SlideShow.jsx - Displaying movie lists`
+        // This component receives movie information from DisplayRow.
+    import { Swiper, SwiperSlide } from "swiper/react";
+    import "swiper/css";
+    import "swiper/css/navigation";
+    import { Navigation } from "swiper/modules";
+
+    // Our movie lists use Swiper to let users move horizontally between movie posters.
+            // Swiper: the main slider container.
+            // SwiperSlide: an individual slide.
+            // Navigation: adds previous and next arrow controls.
+            // swiper/css: loads the base slider styles.
+            // swiper/css/navigation: loads navigation styles.
+
+    const SlideShow = ({ title, movies }) => {
+        // Receives two props from DisplayRow.
+        // This is object destructuring.
+    // The longer alternative would be:
+        const SlideShow = (props) => {
+        const title = props.title;
+        const movies = props.movies;
+        }};
+    // Our version is shorter
+
+
+        <Swiper
+    modules={[Navigation]}
+    navigation
+    spaceBetween={10}
+    slidesPerView={4}
+    />
+        {/* Understand the properties:
+        modules={[Navigation]} =>	Registers the navigation module.
+        navigation	Enables    =>   previous and next arrows.
+        spaceBetween={10}	   =>   Adds 10 pixels between slides.
+        slidesPerView={4}	   =>   Shows four slides at once. */}
+
+
+
+    {movies?.map((movie) => (
+    <SwiperSlide key={movie.id}>
+        <MovieCard movie={movie} />
+    </SwiperSlide>
+    ))}
+
+    // This is one of the most important React patterns.
+
+        const movies = [
+        { id: 1, title: "The Last Kingdom" },
+        { id: 2, title: "Lupin" },
+        { id: 3, title: "Spider-Man" }
+        ];
+    // When our component uses:
+        movies.map((movie) => (
+        <MovieCard movie={movie} />
+        ))
+    // React generates:- 
+        {/* <MovieCard movie={movies[0]} />
+        <MovieCard movie={movies[1]} />
+        <MovieCard movie={movies[2]} > */}
+
+        // Why key={movie.id}?
+            // React needs a stable identifier to track each item in a list.
+            // The movie ID is suitable because each movie has its own unique ID.
+
+
+
+
+
+`MovieCard.jsx - Displaying individual movies`
+        // This component creates the movie poster card and its hover information.
+
+        const IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
+        // Defines the image URL base
+            // The difference from your banner is image size.
+            // original: used for a larger background.
+            // w500: used for movie posters at a smaller width.
+        const MovieCard = ({ movie }) => {}
+            // Receives a single movie object from SlideShow.
+    // eg:- 
+        const movie = {
+        id: 123,
+        title: "Example Movie",
+        poster_path: "/example.jpg"
+        };
+
+    let geners = ['Adventure', 'Action', 'Thriller']
+        // Creates a list of genres.
+            //  these genres are hardcoded, meaning every movie currently displays the same three genres.
+
+
+    // <div className={style.geners}>
+    // {geners.map((g, index) => {
+    //     return (
+    //     <span key={index}>
+    //         {g}
+    //         {
+    //         index < geners.length - 1 && (
+    //             <span className={style.dot}> • </span>
+    //         )
+    //         }
+    //     </span>
+    //     );
+    // })}
+    // </div>
+
+    index < geners.length - 1
+        // Checks whether the current genre is the last item.
+        // If it is not the last one, you display a separator dot.
+    // OutPut
+        // Adventure • Action • Thriller
+
+
+
+`Header.jsx - Navigation, search and profile`
+
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+        // You are creating two state variables.
+            Initially:
+                isSearchOpen = false;
+                isProfileOpen = false;
+            // Both interfaces are closed.
+
+        //  Scroll state
+        const [isScrolled, setIsScrolled] = useState(false);
+            // Tracks whether the user has scrolled down the page.
+            // This allows the header background to change.
+
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+    // window.scrollY =>
+        // tells you the number of pixels the browser has scrolled vertically.
+        // When scrolling exceeds 50 pixels, the condition becomes true.
+
+    window.addEventListener('scroll', handleScroll);
+        // Registers an event listener.
+        // Whenever the user scrolls, the browser executes handleScroll.
+
+    return () => window.removeEventListener('scroll', handleScroll)
+
+    // This is a cleanup function.
+        // When React removes the component or cleans up the effect, it removes the scroll event listener.
+    // Why is cleanup important?
+        // Without it, unnecessary event listeners can remain registered and cause resource or behavior problems.
+
+
+
+
+`Data.js - Local movie data`
+
+
+
 
 
 

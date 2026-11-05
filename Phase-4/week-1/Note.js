@@ -155,4 +155,134 @@
         }, [dependency1, dependency2]); // 3. Optional: The Dependency Array
 
         // useState
-            //  a built-in Hook that allows you to add and track local state in a functional component
+            //  a built-in Hook that allows we to add and track local state in a functional component
+
+
+`DisplayRow.jsx – Fetching multiple movie categories`
+
+    // This is the central data-fetching component for our movie categories.
+    // The important part is that we are making eight API requests concurrently using Promise.all().
+
+    // our state is 
+        const [movies, setMovies] = useState({
+        trending: [],
+        netflixOriginals: [],
+        topRated: [],
+        action: [],
+        comedy: [],
+        horror: [],
+        romance: [],
+        documentaries: [],
+        });
+
+    // You have one state variable called movies.
+        // It contains eight separate arrays.
+        // State property	Initial value
+            // trending	            []
+            // netflixOriginals	    []
+            // topRated	            []
+            // action	            []
+            // comedy	            []
+            // horror	            []
+            // romance	            []
+            // documentaries	    []
+
+        // Why initialize them as empty arrays?
+            // Because our application needs an array to work with while the API requests are still running.
+
+    useEffect(() => {
+        fetchMovies();
+    }, []);
+        // When the DisplayRow component initially renders, the effect executes and calls fetchMovies().
+
+    const [
+  trendingRes,
+  netflixRes,
+  topRatedRes,
+  actionRes,
+  comedyRes,
+  horrorRes,
+  romanceRes,
+  docRes,
+] = await Promise.all([
+  movieInstance.get(requests.fetchTrending),
+  movieInstance.get(requests.fetchNetflixOriginals),
+  movieInstance.get(requests.fetchTopRatedMovies),
+  movieInstance.get(requests.fetchActionMovies),
+  movieInstance.get(requests.fetchComedyMovies),
+  movieInstance.get(requests.fetchHorrorMovies),
+  movieInstance.get(requests.fetchRomanceMovies),
+  movieInstance.get(requests.fetchDocumentaries),
+]);
+
+    // we are sending eight different requests.
+    // Each movieInstance.get() returns a Promise.
+    // A Promise represents an operation that will complete in the future.
+    // Promise.all() waits until all the requests succeed.
+    // Then, the results are returned in the same order as the original Promise array.
+
+    // Why is Promise.all useful?
+        // Imagine making requests sequentially:
+const trending = await movieInstance.get(requests.fetchTrending);
+const action = await movieInstance.get(requests.fetchActionMovies);
+const comedy = await movieInstance.get(requests.fetchComedyMovies);
+
+    // The application waits for each request before starting the next one.
+// But our approach:
+await Promise.all([
+  movieInstance.get(requests.fetchTrending),
+  movieInstance.get(requests.fetchActionMovies),
+  movieInstance.get(requests.fetchComedyMovies),
+]);
+
+// Starts the requests together.
+    // This generally reduces the total waiting time.
+
+    // Example:
+        // This is JavaScript array destructuring.
+
+    const numbers = [10, 20, 30];
+
+    const [a, b, c] = numbers;
+
+    console.log(a); // 10
+    console.log(b); // 20
+    console.log(c); // 30
+
+    // our application uses the same concept for the API responses.
+
+// Updating state
+        setMovies({
+        trending: trendingRes.data.results,
+        netflixOriginals: netflixRes.data.results,
+        topRated: topRatedRes.data.results,
+        action: actionRes.data.results,
+        comedy: comedyRes.data.results,
+        horror: horrorRes.data.results,
+        romance: romanceRes.data.results,
+        documentaries: docRes.data.results,
+        });
+
+        // Once all eight requests succeed, you update the movies state.
+            // Means:
+                // Get the trending API response.
+                // Access its data.
+                // Access its results array.
+                // Store that array under the trending property.
+    catch (error) {
+    console.log(error);
+    }
+        // This catches an error if one or more of the requests fail.
+        // eg
+            // Invalid API key.
+            // Internet connection problem.
+            // TMDB server error.
+            // Invalid endpoint.
+
+
+
+
+
+
+
+

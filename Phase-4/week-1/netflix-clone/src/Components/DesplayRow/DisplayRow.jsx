@@ -19,6 +19,7 @@ const DisplayRow = () => {
   useEffect(() => {
     fetchMovies();
   }, []);
+  // When the DisplayRow component initially renders, the effect executes and calls fetchMovies().
 
   const fetchMovies = async () => {
     try {
@@ -41,6 +42,7 @@ const DisplayRow = () => {
         movieInstance.get(requests.fetchRomanceMovies),
         movieInstance.get(requests.fetchDocumentaries),
       ]);
+      
 
       setMovies({
         trending: trendingRes.data.results,

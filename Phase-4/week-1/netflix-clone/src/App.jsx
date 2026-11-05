@@ -6,7 +6,6 @@ import DisplayRow from './Components/DesplayRow/DisplayRow'
 import Footer from './Footer/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

@@ -70,5 +70,53 @@
         export default App
             // makes the App component available to other file
 
-        // 
-            
+    
+        
+`MovieInstance.js – Connecting Axios to TMDB`
+    import axios from 'axios'
+        // Axios is a JavaScript library used to send HTTP requests.
+        // it acts as a messenger between our React frontend app and a backend server or a third-party API
+    
+    // What does it actually do? (The "Work")
+        // GET (Fetch Data): Grabbing information from a server (e.g. loading a list of products, user profiles, or weather data).
+        
+        // POST (Send Data): Sending new information to a server (e.g. submitting a login form, creating a new tweet, or uploading a photo). 
+
+        // PUT/PATCH (Update Data): Editing information that already exists on the server. 
+
+        // DELETE (Remove Data): Telling the server to delete a piece of data.
+    const movieInstance = axios.create({})
+        // creates a reusable Axios instance.
+        // why?
+            // eg:- 
+                // Imagine we have to make eight API requests.
+                // Without a reusable instance, you might repeatedly write the full API URL.
+            // With an Axios instance, you define common configuration once.
+
+        // baseURL: The main web address of your movie API (e.g., https://themoviedb.org) so you don't have to type it out in every single request.
+    baseURL : "https://api.themoviedb.org/3"
+        // This is the base URL of TMDB's API version 3.
+        // eg:-
+            // https://api.themoviedb.org/3/trending/all/week
+            // https://api.themoviedb.org/3/movie/top_rated
+        // Axios combines the base URL with the request path.
+        export {movieInstance}
+            // Exports your configured Axios instance so other components can use it.
+
+        // eg:-
+        import { movieInstance } from "../../Utility/MovieInstance";
+
+        const response = await movieInstance.get("/movie/top_rated");
+
+        // Axios automatically sends the request to the configured TMDB base URL.
+
+
+
+`requestUrls.js –  API endpoints`
+
+
+
+
+
+
+

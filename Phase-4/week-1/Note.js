@@ -113,10 +113,27 @@
 
 
 `requestUrls.js –  API endpoints`
+    // This file defines the eight API request paths used by our application
+        // fetchTrending	     =>  /trending/all/week => Trending movies and TV shows
+        // fetchNetflixOriginals =>	/discover/tv	    => TV shows associated with Netflix
+        // fetchTopRatedMovies	=>  /movie/top_rated    => Highest-rated movies
+        // fetchActionMovies	=>  /discover/movie	    => Action movies
+        // fetchComedyMovies	=>  /discover/movie	    => Comedy movies
+        // fetchHorrorMovies	=>  /discover/movie	    => Horror movies
+        // fetchRomanceMovies	=>  /discover/movie	    => Romance movies
+        // fetchDocumentaries	=>  /discover/movie	    => Documentary movies
+
+
+    // What is with_genres?
+        // TMDB uses genre IDs to identify movie categories.
+        eg:-
+        fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`
+
+            // 28 represents the Action genre.
+        // with_genres=35
+            // represents Comedy.
 
 
 
 
-
-
-
+    

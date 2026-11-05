@@ -1,11 +1,38 @@
-import React from 'react'
-import NetflixBannerLogo from  '../../assets/image/logo.png'
-import {Play, Info} from 'lucide-react'
-import style from './Banner.module.css'
+import React, { useEffect, useState } from "react";
+import NetflixBannerLogo from "../../assets/image/logo.png";
+import { Play, Info } from "lucide-react";
+import style from "./Banner.module.css";
+import { movieInstance } from "../../Utility/MovieInstance";
+import requests from "../../Utility/requestUrls";
+
+const BANNER_BASE = "https://image.tmdb.org/t/p/original/";
 
 const Banner = () => {
+  const [bannerImage, setBannerImage] = useState({});
+  useEffect(() => {
+    async function fetchBannerImage() {
+      const request = await movieInstance.get(requests.fetchNetflixOriginals);
+      setBannerImage(
+        request.data.results[
+          Math.floor(Math.random() * request.data.results.length)
+        ],
+      );
+    }
+    fetchBannerImage();
+  }, []);
+
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  }
+
   return (
-    <div className={style.banner}>
+    <div
+      className={style.banner}
+      style={{
+        backgroundSize: "cover",
+        backgroundImage: `url("${BANNER_BASE}${bannerImage.backdrop_path}")`,
+      }}
+    >
       <div className={style.contents}>
         {/* Netflix image */}
         <img
@@ -14,13 +41,10 @@ const Banner = () => {
           alt="Netflix Logo"
         />
         {/* title */}
-        <h1 className={style.title}>Bridgerton</h1>
+        <h1 className={style.title}>{bannerImage?.original_name}</h1>
         {/* discription */}
         <h1 className={style.description}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id
-          soluta, facere accusantium obcaecati minima consequatur ullam?
-          Voluptatibus, perspiciatis vel, praesentium corrupti ea quis, et velit
-          corporis suscipit voluptas eius!
+          {truncate(bannerImage?.overview, 120)}
         </h1>
 
         {/* buttonsu */}
@@ -39,6 +63,6 @@ const Banner = () => {
       <div className={style.fadeBottom}></div>
     </div>
   );
-}
+};
 
-export default Banner
+export default Banner;

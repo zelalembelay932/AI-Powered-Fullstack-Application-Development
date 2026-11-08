@@ -2,7 +2,9 @@ import { useState } from "react";
 
 import "./App.css";
 import Home from "./pages/Home/Home";
+
 import {Routes, Route }  from 'react-router'
+
 import Mac from "./pages/Mac/Mac";
 import Iphone from "./pages/Iphone/Iphone";
 import Ipad from "./pages/Ipad/Ipad";

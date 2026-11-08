@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
+
 import NetflixBannerLogo from "../../assets/image/logo.png";
+
 import { Play, Info } from "lucide-react";
+
 import style from "./Banner.module.css";
+
 import { movieInstance } from "../../Utility/MovieInstance";
 // movieInstance => Provides Axios configuration.
 
@@ -9,6 +13,7 @@ import requests from "../../Utility/requestUrls";
 // requests => Provides the TMDB request endpoint.
 
 const BANNER_BASE = "https://image.tmdb.org/t/p/original/";
+
 
 const Banner = () => {
   const [bannerImage, setBannerImage] = useState({});
@@ -31,7 +36,7 @@ const Banner = () => {
                 // Wait for TMDB to respond.
                 // Save the response in request.
 
-          // console.log(request);
+          console.log(request);
 
       setBannerImage(
         // Stores the selected show in React state.
@@ -42,10 +47,11 @@ const Banner = () => {
         ],
       );
     }
+
     fetchBannerImage();
       // Actually executes the function.
        // Defining the function alone would not send an API request.
-  }, []);
+  },[]);
   // The empty dependency array tells React to run this effect after the initial render rather than after every render.
         
   function truncate(str, n) {
@@ -59,6 +65,7 @@ const Banner = () => {
       // substr(0, n - 1)=> takes the first part of the description.
       // "..." =>adds three dots.
   return (
+    
     <div
       className={style.banner}
       style={{

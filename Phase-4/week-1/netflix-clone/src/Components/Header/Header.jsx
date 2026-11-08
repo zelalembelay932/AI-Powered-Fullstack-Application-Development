@@ -9,7 +9,6 @@ const Header = () => {
     const [isProfileOpen, setIsProfileOpen] = useState(false);
 
     // for blur
-
     const [isScrolled, setIsScrolled, ] = useState(false);
 
     useEffect(()=>{

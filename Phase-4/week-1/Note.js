@@ -28,6 +28,7 @@
                 // It hooks into the browser’s history API to keep track of the current URL address (e.g., /about or /dashboard)
             // 2, Shares that Information
                 // It passes down the current URL information to other routing components (like <Routes> and <Route>) so your app knows exactly which screen to render
+
     createRoot(document.getElementById('root')).render()
             // createRoot(...)
                     // Creates the React root
@@ -53,7 +54,7 @@
         
         
         function App() {}
-            // deefines our main react function component.
+            // defines our main react function component.
         return ( )
             // start the JSX that react will display.
         <> </>
@@ -111,9 +112,11 @@
         // Axios automatically sends the request to the configured TMDB base URL.
 
 
+      
 
 `requestUrls.js –  API endpoints`
     // This file defines the eight API request paths used by our application
+
         // fetchTrending	     =>  /trending/all/week => Trending movies and TV shows
         // fetchNetflixOriginals =>	/discover/tv	    => TV shows associated with Netflix
         // fetchTopRatedMovies	=>  /movie/top_rated    => Highest-rated movies
@@ -152,6 +155,7 @@
         return () => {
             // 2. Optional: Write cleanup code here
         };
+        
         }, [dependency1, dependency2]); // 3. Optional: The Dependency Array
 
         // useState

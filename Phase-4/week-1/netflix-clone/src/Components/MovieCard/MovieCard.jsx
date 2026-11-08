@@ -1,4 +1,5 @@
 import style from './MovieCard.module.css'
+
 import { FaCirclePlay, FaCirclePlus } from "react-icons/fa6";
 import { GoCheckCircleFill } from "react-icons/go";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
@@ -43,7 +44,7 @@ const MovieCard = ({ movie }) => {
                             return <span key={index}>{g}
                             {
                                 index < geners.length-1 &&(
-                                    <span className={style.dot}> •jsxnnx </span>
+                                    <span className={style.dot}> • </span>
                                 )
                             }
                             </span>

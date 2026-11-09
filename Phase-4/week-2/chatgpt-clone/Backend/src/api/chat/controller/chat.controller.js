@@ -1,4 +1,4 @@
-import { createConversationService } from "../service/chat.service.js";
+import { createConversationService, getRecentConversationRows } from "../service/chat.service.js";
 
 
 
@@ -33,7 +33,12 @@ export const createConversationController = async (req, res) => {
 
 export const getConversationController = async (req, res) => {
     try {
-        res.send("get conversation api");
+        const result = await getRecentConversationRows(100);
+        res.status(200).json({
+            success: true,
+            message: 'Conversations fetched successfully',
+            data: result,
+        });
     } catch (error) {
         throw error;
     }

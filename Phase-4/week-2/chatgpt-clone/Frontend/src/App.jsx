@@ -22,4 +22,3 @@ function App() {
 export default App
 
 
-// git commit -m "feat(header): create application Chath]Header component, add application branding and title and  implement user profile section"

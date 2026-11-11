@@ -1,14 +1,20 @@
 import db from '../../../../db/db.config.js'
 import { GoogleGenAI } from "@google/genai";
-
+// This imports Google's official JavaScript SDK for interacting with Gemini.
 const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+
+// First, check whether GEMINI_MODEL exists in the environment.
+// Otherwise, use "gemini-3.5-flash-lite" as the default.
 
 const geminiClient = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
+// Think of it as creating a connection object that our application will use to send requests to Google's AI service
+
 
 export const getRecentConversationRows = async (limit = 5) =>{
+    // // The parameter limit controls how many records to retrieve. the default value is 5.
     const normalizedLimit = Number.parseInt(limit, 10);
-
+    // Number.parseInt() converts a string into an integer.
     const safeLimit = Number.isNaN(normalizedLimit) || normalizedLimit <= 0 ? 20 : normalizedLimit;
 
     const [rows] = await db.execute(
@@ -88,7 +94,7 @@ export async function createConversationService(question) {
 // get recent convesations 
         const historyRows = await getRecentConversationRows(5);
 
-         // save to database
+         // save to database user question 
     const [result] = await db.execute(
         'INSERT INTO conversations (content, role) VALUES (?, "user")', [ question,
         ]);

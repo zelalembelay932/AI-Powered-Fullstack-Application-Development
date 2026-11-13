@@ -1,80 +1,82 @@
 # AI-Powered Full-Stack Application Development
 
 ![Learning Journey](https://img.shields.io/badge/Journey-Continuous%20Learning-blue)
-![Frontend](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript%20%7C%20React-orange)
+![Frontend](https://img.shields.io/badge/Frontend-React%20%7C%20JavaScript-orange)
 ![Backend](https://img.shields.io/badge/Backend-Node.js%20%7C%20Express-green)
 ![Database](https://img.shields.io/badge/Database-MySQL-lightgrey)
 ![AI](https://img.shields.io/badge/AI-Google%20Gemini-8E75B2)
 
-A practical record of my journey toward becoming a **full-stack developer focused on building AI-powered applications**. This repository contains course exercises, technical notes, frontend recreations, backend experiments, database practice, React applications, API integrations, and larger project milestones.
+A practical record of my journey from web development fundamentals to full-stack application development and AI integration. This repository contains course exercises, technical notes, frontend recreations, backend development practice, database projects, React applications, API integrations, and complete project milestones.
 
-It is not one single finished application. It documents my progression from web development fundamentals to JavaScript, backend development, databases, React, external APIs, and AI integration.
+The goal is to learn how to design, build, connect, and improve applications across the full stack—and then extend them with AI capabilities.
 
-> **Latest milestone:** I have started building a ChatGPT-style AI chat application. Its Express backend is integrated with Google's Gemini SDK and MySQL for generating and storing conversations. The React frontend foundation is in progress; the current committed interface contains the sidebar and chat header, while the message list, chat input, and frontend-to-backend integration are still planned.
+> **Latest milestone:** I have completed the core development of a ChatGPT-style AI assistant application using React, Node.js, Express, MySQL, and Google's Gemini API. The frontend and backend are connected, conversation records are stored in MySQL, and the assistant uses recent conversation history when generating answers. This is a learning project and MVP, not a claim that every feature of the commercial ChatGPT product has been reproduced.
 
 ## Table of contents
 
-- [My learning journey](#my-learning-journey)
+- [Learning journey](#learning-journey)
 - [Featured projects](#featured-projects)
-- [Phase 4: AI-powered ChatGPT Clone](#phase-4-ai-powered-chatgpt-clone)
-- [Phase 4: Netflix Clone](#phase-4-netflix-clone)
-- [Technology and tools](#technology-and-tools)
+- [Project 1: AI ChatGPT Clone](#project-1-ai-chatgpt-clone)
+- [Project 2: Netflix Clone](#project-2-netflix-clone)
+- [Technology stack](#technology-stack)
 - [Repository structure](#repository-structure)
-- [Run the ChatGPT Clone](#run-the-chatgpt-clone)
+- [Run the AI ChatGPT Clone](#run-the-ai-chatgpt-clone)
 - [Run the Netflix Clone](#run-the-netflix-clone)
-- [What I am learning next](#what-i-am-learning-next)
+- [What I plan to learn next](#what-i-plan-to-learn-next)
 - [Learning approach](#learning-approach)
 - [Author](#author)
 - [License](#license)
 
-## My learning journey
+---
 
-The repository is organized into phases. Each phase builds on concepts and projects from the previous one.
+## Learning journey
+
+The repository is organized into phases. Each phase builds on the concepts and skills practiced in the previous one.
 
 ### Phase 1 — Web development foundations
 
-**Focus:** HTML, CSS, page structure, responsive layouts, and Bootstrap.
+**Focus:** HTML, CSS, responsive design, and Bootstrap.
 
-I began by learning how websites are structured and styled, then applied those concepts through practical recreations and small projects.
+Topics and projects include:
 
-Work in this phase includes:
+- HTML5 structure and semantic elements.
+- CSS selectors, layouts, Flexbox, and responsive design.
+- Media queries and mobile-friendly layouts.
+- Bootstrap components and grid system.
+- Puppy landing page and Apple website recreations.
+- Multi-page personal portfolio website.
 
-- Puppy Project using HTML and CSS.
-- Apple website recreations using HTML and CSS.
-- Responsive layouts and media-query exercises.
-- Apple-style layouts using Bootstrap.
-- A multi-page portfolio website with About, Contact, Portfolio, Resume, and Services pages.
-
-Explore: [Phase 1](./Phase-1/)
+Explore: [Phase-1](./Phase-1/)
 
 ### Phase 2 — JavaScript and browser interactions
 
-**Focus:** JavaScript fundamentals and interactive browser experiences.
+**Focus:** Programming fundamentals and interactive websites.
 
 Topics and exercises include:
 
-- Variables, operators, functions, conditions, loops, and objects.
-- JavaScript problem-solving and algorithm exercises.
-- DOM selection and manipulation.
-- Form validation and interactive forms.
-- jQuery practice and responsive website behavior.
+- Variables, data types, operators, and expressions.
+- Functions, conditions, loops, arrays, and objects.
+- Problem-solving and JavaScript algorithms.
+- DOM selection, manipulation, and event handling.
+- Form validation.
+- jQuery practice and browser interactions.
 
-Explore: [Phase 2](./Phase-2/)
+Explore: [Phase-2](./Phase-2/)
 
 ### Phase 3 — Backend development, databases, and React
 
-**Focus:** Server-side JavaScript, database connectivity, reusable React components, application state, routing, and APIs.
+**Focus:** Node.js, Express, MySQL, React, state management, routing, and APIs.
 
-My work includes:
+Topics and projects include:
 
-- Node.js fundamentals, core modules, npm packages, CommonJS, and ES modules.
-- Express.js servers, HTTP routes, middleware, and CORS.
-- MySQL connections using `mysql2`, SQL queries, and relational table exercises.
-- React functional components, props, reusable components, and component composition.
+- Node.js runtime, npm, core modules, CommonJS, and ES modules.
+- Express servers, routes, middleware, and CORS.
+- MySQL connections using `mysql2`, SQL queries, and relational tables.
+- React functional components, props, and reusable UI.
 - React state and hooks, including `useState` and `useEffect`.
-- React Router, nested routes, shared layouts, and not-found pages.
-- API requests using Fetch and Axios.
-- An Apple-style React website with page components and API exercises, including YouTube data integration.
+- React Router, nested routes, and shared layouts.
+- Fetch API and Axios.
+- Apple-style React website and API integration exercises.
 
 Selected projects:
 
@@ -85,71 +87,136 @@ Selected projects:
 - [Apple React API and Routing Project](./Phase-3/Week-20/ReactAPIandRouting/AppleYouTubeAPI/)
 - [Express and MySQL Backend](./Phase-3/Week-20/ReactAPIandRouting/Backend/)
 
-Explore: [Phase 3](./Phase-3/)
+Explore: [Phase-3](./Phase-3/)
 
-## Phase 4: AI-powered ChatGPT Clone
+### Phase 4 — Full-stack and AI application projects
 
-**Project path:** [Phase-4/week-2/chatgpt-clone](./Phase-4/week-2/chatgpt-clone/)
+Phase 4 contains larger projects that bring together frontend development, backend services, databases, and external APIs.
 
-This is my first AI-integrated application project in this learning repository. I am building a ChatGPT-inspired chat application with a React frontend and an Express backend that communicates with Google's Gemini model and stores conversation messages in MySQL.
+- **Week 1:** Netflix-style movie browsing frontend using React and TMDB.
+- **Week 2:** ChatGPT-style AI assistant using React, Express, MySQL, and Gemini.
 
-The project is separated into two applications:
+---
+
+## Featured projects
+
+| Project | Main technologies | Project focus |
+|---|---|---|
+| Puppy and Apple website recreations | HTML, CSS, Bootstrap | Web design and responsive layouts |
+| JavaScript exercises | JavaScript, DOM, jQuery | Programming logic and browser interactions |
+| Backend and database exercises | Node.js, Express, MySQL | REST endpoints and relational data |
+| Apple React project | React, Router, APIs | Component architecture and API integration |
+| Netflix Clone | React, Vite, Axios, TMDB | Movie and TV catalogue interface |
+| AI ChatGPT Clone | React, Express, MySQL, Gemini | Full-stack conversational AI application |
+
+---
+
+## Project 1: AI ChatGPT Clone
+
+**Status: Core application implemented**
+
+**Project directory:** [Phase-4/week-2/chatgpt-clone](./Phase-4/week-2/chatgpt-clone/)
+
+This project is a ChatGPT-inspired programming assistant application. It connects a React frontend to an Express backend, uses Google's Gemini API to generate answers, and stores user and assistant messages in a MySQL database.
+
+It demonstrates how a modern AI application can be organized into frontend components, API routes, controllers, services, an AI provider, and persistent storage.
+
+### Main features implemented
+
+- Chat-style dark user interface.
+- React components for the sidebar, chat header, message list, individual messages, and chat input.
+- Frontend-to-backend communication using Axios.
+- Sending user questions to the backend.
+- Generating assistant responses through Google's Gemini API.
+- Saving user and assistant messages in MySQL.
+- Loading recent conversation messages from the database when the application starts.
+- Using recent conversation messages as context for subsequent Gemini responses.
+- Loading indicator while the assistant is generating a response.
+- Rendering assistant responses with React Markdown.
+- Tracking Gemini token usage and storing it with assistant messages.
+- Modular Express structure with routes, controllers, services, and centralized error middleware.
+- Configurable Gemini model through the `GEMINI_MODEL` environment variable.
+
+### Technology stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | React, Vite, JavaScript, CSS Modules |
+| UI components | Lucide React |
+| Markdown rendering | React Markdown |
+| HTTP client | Axios |
+| Backend | Node.js, Express.js |
+| Database | MySQL, `mysql2/promise` connection pool |
+| AI provider | Google Gemini API |
+| AI SDK | `@google/genai` |
+| Configuration | dotenv and environment variables |
+
+### Frontend architecture
+
+The frontend is located inside the `Frontend` directory.
+
+| Component / file | Responsibility |
+|---|---|
+| `App.jsx` | Holds conversation state, loads messages, sends questions to the API, handles loading state, and coordinates the main layout. |
+| `Sidebar` | Displays the application's navigation area. |
+| `ChatHeader` | Displays the application title and profile area. |
+| `ChatInput` | Captures the user's question and submits it to the parent component. |
+| `MessageList` | Renders the conversation and assistant loading indicator. |
+| `ChatMessage` | Displays user messages and renders assistant responses as Markdown. |
+
+### Backend architecture
+
+The backend uses a modular structure to keep HTTP routing, request handling, business logic, database operations, and error responses separate.
 
 ```text
-chatgpt-clone/
-├── Backend/
-│   ├── db/
-│   │   ├── db.config.js
-│   │   └── schema.sql
-│   ├── src/
-│   │   ├── api/
-│   │   │   ├── main.routes.js
-│   │   │   └── chat/
-│   │   │       ├── chat.routes.js
-│   │   │       ├── controller/
-│   │   │       │   └── chat.controller.js
-│   │   │       └── service/
-│   │   │           └── chat.service.js
-│   │   └── middleware/
-│   │       └── error-handler.js
-│   ├── index.js
-│   └── package.json
+Backend/
+├── db/
+│   ├── db.config.js
+│   └── schema.sql
 │
-└── Frontend/
-    ├── src/
-    │   ├── components/
-    │   │   ├── Sidebar/
-    │   │   └── ChatHeader/
-    │   ├── App.jsx
-    │   └── main.jsx
-    └── package.json
+├── src/
+│   ├── api/
+│   │   ├── main.routes.js
+│   │   └── chat/
+│   │       ├── chat.routes.js
+│   │       ├── controller/
+│   │       │   └── chat.controller.js
+│   │       └── service/
+│   │           └── chat.service.js
+│   │
+│   └── middleware/
+│       └── error-handler.js
+│
+├── index.js
+└── package.json
 ```
 
-### Backend architecture and implemented features
-
-The backend uses a modular structure that separates route definitions, controllers, business logic, database access, and error handling.
-
-| Part | Responsibility |
+| Backend module | Responsibility |
 |---|---|
-| Express server | Starts the API on port `3001`, parses JSON requests, registers API routes, and uses centralized error handling. |
-| Database connection | Uses a MySQL connection pool through `mysql2/promise`. |
-| Chat routes | Defines the conversation creation and history endpoints. |
-| Chat controller | Reads the incoming question, calls the service layer, and returns JSON responses. |
-| Chat service | Validates the question, retrieves recent message history, calls Gemini, and stores user and assistant messages. |
-| Gemini integration | Uses Google's `@google/genai` SDK to generate assistant responses. |
-| Database schema | Stores message ID, role, content, token count, and creation timestamp in the `conversations` table. |
-| Error middleware | Returns a consistent JSON error response when a request fails. |
+| `index.js` | Loads configuration, creates the Express app, registers middleware and routes, verifies the database connection, and starts the server. |
+| `db.config.js` | Creates a MySQL promise-based connection pool. |
+| `main.routes.js` | Registers the API route groups. |
+| `chat.routes.js` | Defines conversation endpoints. |
+| `chat.controller.js` | Handles HTTP requests and sends JSON responses. |
+| `chat.service.js` | Validates questions, reads conversation history, calls Gemini, and stores messages. |
+| `error-handler.js` | Formats backend errors into JSON responses. |
+| `schema.sql` | Defines the MySQL conversations table. |
 
-### Current API endpoints
+### Conversation API
 
-The backend currently defines these endpoints:
+The backend currently exposes the following endpoints:
 
-| Method | Endpoint | Purpose |
+| Method | Endpoint | Description |
 |---|---|---|
-| `POST` | `/api/chat/conversations` | Accepts a question, gets a Gemini response, and saves both user and assistant messages. |
-| `GET` | `/api/chat/conversations` | Retrieves the latest 100 conversation message records from MySQL. |
+| `POST` | `/api/chat/conversations` | Accepts a question, generates a Gemini answer, and stores both messages. |
+| `GET` | `/api/chat/conversations` | Returns the latest 100 message records from MySQL. |
 
-Example request body for creating a conversation:
+Example request:
+
+```http
+POST http://localhost:3001/api/chat/conversations
+Content-Type: application/json
+```
 
 ```json
 {
@@ -157,125 +224,132 @@ Example request body for creating a conversation:
 }
 ```
 
-The chat service retrieves up to five recent message records to provide context to Gemini for the next response. This is a message-record limit, not a character limit and not necessarily five complete user-assistant exchanges.
+The backend responds with a JSON object containing the saved user message and assistant response.
 
-### Frontend progress
+### How the AI conversation flow works
 
-The frontend is initialized with React and Vite. The current committed UI includes:
+1. The user enters a question in the React chat input.
+2. React sends the question to the Express API using Axios.
+3. The chat controller receives the request and calls the chat service.
+4. The service validates the question and retrieves up to five recent message records from MySQL.
+5. Previous user and assistant messages are formatted as Gemini conversation history.
+6. Gemini receives the history and the new question, then generates a response.
+7. The backend stores the user's question and the assistant's response in MySQL.
+8. The API returns the saved messages to React.
+9. React displays the assistant response and scrolls toward the latest message.
 
-- **Sidebar:** Chat navigation layout with New Chat, Search Chat, Images, Apps, Deep Research, Codex, and Projects menu items.
-- **ChatHeader:** Application title area and a profile avatar.
-- **Application layout:** A main chat area prepared for the remaining chat components.
-- **Styling:** Dark interface theme using CSS variables, CSS Modules, and Lucide React icons.
+The history limit of five refers to **five message records**, not five characters or necessarily five complete question-and-answer pairs.
 
-The following parts are planned or in progress and are **not yet implemented in the current committed frontend**:
+### Gemini model configuration
 
-- Message list and individual message components.
-- Chat input and submit behavior.
-- Axios service for communicating with the backend.
-- Loading, error, and response states in the chat interface.
-- Full frontend integration with the conversation API.
+The backend defines a list of Gemini model identifiers in `chat.service.js`. The active model is selected through the `GEMINI_MODEL` environment variable; when it is not set, the service uses the first model in its configured list.
 
-### AI conversation flow
+The model identifiers currently listed in the source include:
 
-The backend flow is currently designed as follows:
+- `gemini-3.8-flash`
+- `gemini-3.7-flash`
+- `gemini-3.6-flash`
+- `gemini-3.5-flash`
+- `gemini-3.5-flash-lite`
+- `gemini-3.1-flash-lite`
 
-1. The client sends a question to the Express conversation endpoint.
-2. The controller passes the question to the chat service.
-3. The service validates the question and loads recent conversation records from MySQL.
-4. The service formats the previous messages as Gemini chat history.
-5. Gemini generates an assistant response.
-6. The backend saves the user's question and the assistant's answer in MySQL.
-7. The API returns both saved message records to the client.
+Actual model access depends on availability and permissions for the Google AI project associated with the API key. The current frontend does not provide a model-selection dropdown; model selection is configured on the backend.
 
-This project currently uses Gemini as its AI provider. The project name is ChatGPT Clone because it recreates a ChatGPT-style interface and conversational workflow; it does not call the OpenAI API.
+### Project scope
 
-## Phase 4: Netflix Clone
+The project implements a core conversational AI workflow. It is not an official OpenAI or ChatGPT product, and it uses Google's Gemini API rather than the OpenAI API.
 
-**Project path:** [Phase-4/week-1/netflix-clone](./Phase-4/week-1/netflix-clone/)
+Advanced product features such as user registration, authentication, independent multi-user conversation management, editable chat titles, streaming responses, file uploads, RAG, and production deployment are potential future improvements rather than features claimed as completed here.
 
-The Netflix Clone is a React and Vite frontend that connects to The Movie Database (TMDB) API to display movie and TV-show metadata in a streaming-platform-inspired interface.
+---
 
-Its reusable components include:
+## Project 2: Netflix Clone
+
+**Status: Main frontend project milestone completed**
+
+**Project directory:** [Phase-4/week-1/netflix-clone](./Phase-4/week-1/netflix-clone/)
+
+The Netflix Clone is a React and Vite frontend that uses The Movie Database (TMDB) API to display movie and TV-show catalogue information in a streaming-platform-inspired interface.
+
+### Main components
 
 | Component | Responsibility |
 |---|---|
 | `Header` | Navigation, expandable search input, notification icon, profile menu, and scroll-aware styling. |
-| `Banner` | Fetches a featured title from TMDB and displays its backdrop, title, and shortened description. |
+| `Banner` | Fetches a featured title from TMDB and displays its backdrop, title, and description. |
 | `DisplayRow` | Fetches movie and TV categories and passes results to slideshow components. |
 | `SlideShow` | Displays horizontal, navigable movie rows using Swiper. |
-| `MovieCard` | Displays posters and hover-style information panels with visual action icons and metadata. |
+| `MovieCard` | Displays posters and hover-style information panels. |
 | `Footer` | Displays social icons and footer navigation links. |
 
-The API request configuration includes trending titles, Netflix Originals, top-rated movies, action, comedy, horror, romance, and documentary categories.
+### Main technologies
 
-**Main technologies:** React, Vite, Axios, TMDB API, Swiper, CSS Modules, Lucide React, and React Icons.
+React, Vite, Axios, TMDB API, Swiper, CSS Modules, Lucide React, and React Icons.
 
-This is a frontend learning project, not a streaming service or an official Netflix product. It displays catalogue metadata and interface elements; it does not stream films. Authentication, persistent watchlists, fully implemented search, and AI recommendations are future enhancements.
+This is a frontend learning project. It displays catalogue metadata and interface elements; it does not stream films or represent an official Netflix service.
 
-## Featured projects
+---
 
-| Project | What it demonstrates |
+## Technology stack
+
+The repository contains projects and exercises using the following technologies. Not every project uses every technology.
+
+| Development area | Technologies |
 |---|---|
-| Puppy Project | HTML structure, CSS styling, and responsive layout practice. |
-| Apple website recreations | Multi-section layouts, responsive design, and Bootstrap. |
-| Portfolio website | Multi-page website structure and frontend presentation. |
-| JavaScript exercises | Programming fundamentals, algorithms, DOM manipulation, and form validation. |
-| Node.js and MySQL exercises | Server setup, Express routes, SQL queries, and database connectivity. |
-| React component projects | Reusable components, props, state, hooks, and component composition. |
-| Apple React API and Routing | React pages, routing, shared layouts, and external API practice. |
-| Netflix Clone | Movie-browsing frontend powered by TMDB data. |
-| ChatGPT Clone | Gemini-powered conversational backend, MySQL message persistence, and a React chat interface foundation. |
-
-## Technology and tools
-
-The repository contains projects and exercises using the following technologies. Not every project uses every item.
-
-| Area | Technologies |
-|---|---|
-| Frontend foundations | HTML5, CSS3, responsive design, Bootstrap, JavaScript, jQuery |
-| Frontend applications | React, JSX, React Hooks, React Router, Vite, CSS Modules |
+| Web foundations | HTML5, CSS3, Bootstrap, responsive design |
+| Programming | JavaScript, ES6+, DOM, jQuery |
+| Frontend | React, JSX, Hooks, React Router, Vite |
+| Styling and UI | CSS Modules, Swiper, Lucide React, React Icons |
 | Backend | Node.js, Express.js, REST APIs, middleware, CORS |
 | Database | MySQL, SQL, `mysql2`, connection pooling |
-| AI integration | Google Gemini API, `@google/genai` SDK |
 | API integration | Fetch API, Axios, TMDB API, YouTube Data API exercises |
-| UI and tooling | Swiper, Lucide React, React Icons, npm, ESLint, Git, and GitHub |
+| AI integration | Google Gemini API, `@google/genai` |
+| Development tools | npm, ESLint, Git, GitHub |
+
+---
 
 ## Repository structure
 
 ```text
 AI-Powered-Fullstack-Application-Development/
 │
-├── Evangadi Material/      # Supplementary course materials
-├── Phase-1/                # HTML, CSS, Bootstrap, and web foundations
-├── Phase-2/                # JavaScript, DOM, validation, and jQuery
-├── Phase-3/                # Node.js, Express, MySQL, React, hooks, APIs, routing
+├── Evangadi Material/       # Supplementary learning materials
+│
+├── Phase-1/                 # HTML, CSS, Bootstrap, web foundations
+│
+├── Phase-2/                 # JavaScript, DOM, validation, jQuery
+│
+├── Phase-3/                 # Node.js, Express, MySQL, React, APIs
+│
 ├── Phase-4/
 │   ├── week-1/
 │   │   ├── Resources/
-│   │   └── netflix-clone/  # React + Vite + TMDB
+│   │   └── netflix-clone/   # React + Vite + TMDB
 │   │
 │   └── week-2/
 │       └── chatgpt-clone/
-│           ├── Backend/    # Express + Gemini + MySQL
-│           └── Frontend/   # React + Vite chat UI
+│           ├── Backend/     # Express + Gemini + MySQL
+│           ├── Frontend/    # React chat interface
+│           └── Note/        # Architecture and learning notes
 │
 ├── LICENSE
 └── README.md
 ```
 
-Each project may have its own `package.json`. Install dependencies and run commands from that project's directory rather than from the repository root.
+Each project may have its own `package.json`. Install dependencies and run scripts from the relevant project directory rather than from the repository root.
 
-## Run the ChatGPT Clone
+---
 
-The ChatGPT Clone has separate backend and frontend applications. Run them in two terminal windows.
+## Run the AI ChatGPT Clone
+
+The ChatGPT Clone contains separate frontend and backend applications. Run them in two terminal windows.
 
 ### Prerequisites
 
 - Node.js and npm.
 - MySQL Server.
 - A Google Gemini API key.
-- A MySQL database for the chat messages.
+- A MySQL database for conversation messages.
 
 ### 1. Clone the repository
 
@@ -284,30 +358,32 @@ git clone https://github.com/zelalembelay932/AI-Powered-Fullstack-Application-De
 cd AI-Powered-Fullstack-Application-Development
 ```
 
-### 2. Create the MySQL database and table
+### 2. Create the MySQL database
 
-Create a database in MySQL:
+Open MySQL Workbench or a MySQL terminal and create the database:
 
 ```sql
 CREATE DATABASE chatgpt_clone;
 ```
 
-Select the database, then execute the SQL in:
+Select the database and execute the SQL statements in:
 
 `Phase-4/week-2/chatgpt-clone/Backend/db/schema.sql`
 
-That schema creates the `conversations` table used by the backend.
+This creates the `conversations` table used by the backend.
 
-### 3. Configure the backend environment
+**Schema note:** The current schema and service queries use the timestamp column name `craeted_at`. Keep that spelling consistent unless you rename it in both the schema and every related query.
 
-Open the backend folder:
+### 3. Configure and install the backend
+
+Open a terminal in the backend directory:
 
 ```bash
 cd "Phase-4/week-2/chatgpt-clone/Backend"
 npm install
 ```
 
-Create a local `.env` file in the Backend directory:
+Create a local `.env` file inside the Backend folder:
 
 ```env
 DB_HOST=localhost
@@ -316,30 +392,28 @@ DB_PASSWORD=your_mysql_password
 DB_NAME=chatgpt_clone
 
 GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-3.5-flash-lite
+GEMINI_MODEL=gemini-3.8-flash
 ```
 
-The current service code uses `gemini-3.5-flash-lite` as its default model when `GEMINI_MODEL` is not provided. Set the model to one available to your Google AI project.
+Choose a model identifier that is available to your Google AI project.
 
-Keep API keys and database credentials private. Never commit the real `.env` file to GitHub.
+### 4. Start the backend server
 
-### 4. Start the backend
-
-From the Backend directory, run:
+From the Backend directory:
 
 ```bash
-node index.js
+npm start
 ```
 
-The server is configured to listen at:
+The backend listens on:
 
 `http://localhost:3001`
 
-It checks the MySQL connection before starting the HTTP server.
+The server checks the MySQL connection before starting.
 
-### 5. Start the frontend
+### 5. Install and start the frontend
 
-Open a second terminal window:
+Open a second terminal:
 
 ```bash
 cd "AI-Powered-Fullstack-Application-Development/Phase-4/week-2/chatgpt-clone/Frontend"
@@ -347,32 +421,43 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite, usually `http://localhost:5173`.
+Open the local development URL shown by Vite, usually:
 
-**Current limitation:** The committed frontend is still a layout foundation. The backend API and Gemini integration are implemented, but the frontend message list, input component, and API connection are still part of the next development steps. Starting the frontend currently displays the existing sidebar and header rather than a complete working chat experience.
+`http://localhost:5173`
+
+The frontend currently sends requests to the backend at `http://localhost:3001`.
+
+### Security notes
+
+- Never commit real `.env` files, database passwords, or API keys.
+- Keep the Gemini API key in the backend environment, not in React or browser-visible variables.
+- The current backend CORS configuration allows the local frontend origin `http://localhost:5173`; update it deliberately when deploying to another origin.
+- Use a restricted database user instead of a root account for production deployments.
+
+---
 
 ## Run the Netflix Clone
 
-The Netflix Clone is a standalone Vite application.
+The Netflix Clone is a standalone Vite frontend.
 
-### 1. Open the project
+### 1. Open the project directory
 
 ```bash
 cd "Phase-4/week-1/netflix-clone"
 npm install
 ```
 
-### 2. Configure the TMDB API key
+### 2. Configure TMDB
 
-Create a local `.env` file in the Netflix Clone directory:
+Create a local `.env` file inside the Netflix Clone directory:
 
 ```env
 VITE_TMDB_API_KEY=your_tmdb_api_key
 ```
 
-The project reads this value from `import.meta.env.VITE_TMDB_API_KEY` in `src/Utility/requestUrls.js`.
+The app reads this value through `import.meta.env.VITE_TMDB_API_KEY`.
 
-Vite variables prefixed with `VITE_` are exposed in the browser bundle. For production, consider proxying API requests through a backend and applying the provider's key restrictions.
+Vite variables prefixed with `VITE_` are exposed in the browser bundle. For production, consider proxying API requests through a backend and applying the API provider's key restrictions.
 
 ### 3. Start the frontend
 
@@ -388,37 +473,47 @@ npm run preview
 npm run lint
 ```
 
-## What I am learning next
+---
 
-My goal is to progress from conventional full-stack development to building reliable applications with useful AI capabilities.
+## What I plan to learn next
 
-My next development steps for the ChatGPT Clone include:
+After completing the core ChatGPT Clone workflow, my next goal is to improve its architecture and explore more advanced AI engineering concepts.
 
-1. Complete the message list and individual message components.
-2. Build the chat input component and handle user submissions.
-3. Connect the React frontend to the Express API using Axios.
-4. Display loading, response, and error states in the interface.
-5. Improve conversation organization and persistence.
-6. Add proper validation, authentication, and user-specific conversation history.
-7. Explore additional AI capabilities such as streaming responses, structured outputs, and context-aware conversations.
+Potential next milestones:
 
-For future projects, I also plan to study retrieval-augmented generation (RAG), embeddings, vector databases, AI agents, and production deployment practices.
+1. Add authentication and secure user accounts.
+2. Organize conversations by user and conversation ID.
+3. Add conversation titles, create-new-chat, rename, and delete functionality.
+4. Explore streaming AI responses.
+5. Add file uploads and document processing.
+6. Learn embeddings and vector databases.
+7. Build a Retrieval-Augmented Generation (RAG) application.
+8. Explore AI agents and tool calling.
+9. Add automated tests and improve API validation.
+10. Containerize applications with Docker and learn CI/CD.
+11. Deploy and monitor an application in a production environment.
 
-These are learning and development goals; they should not be mistaken for features already implemented in this repository.
+These are future learning goals and are not presented as completed features of the current projects.
+
+---
 
 ## Learning approach
 
-I use this repository to keep more than finished project files. It also preserves practice exercises, study notes, code explanations, resources, and incremental development work.
+I use this repository to preserve more than finished application code. It also contains practice exercises, study notes, code explanations, resources, and incremental development work.
 
 My approach is to:
 
-1. Learn a concept and write notes about how it works.
-2. Practice it with small, focused exercises.
-3. Apply it in a page, component, API integration, or backend service.
-4. Debug and improve the implementation as my understanding grows.
-5. Track progress through Git commits and GitHub version control.
+1. Study a concept and understand why it is used.
+2. Practice it with small code examples.
+3. Apply it in a real project or feature.
+4. Debug problems and understand their causes.
+5. Document important implementation decisions.
+6. Track changes using Git commits and GitHub.
+7. Refactor and improve projects as my skills grow.
 
-This repository is continuously evolving as I learn, build, debug, and improve.
+The purpose of this repository is to demonstrate continuous learning through practical software development.
+
+---
 
 ## Author
 
@@ -430,4 +525,4 @@ This repository is continuously evolving as I learn, build, debug, and improve.
 
 ## License
 
-This repository includes an MIT License. Some folders may also contain third-party templates, images, libraries, or learning materials that have their own licensing terms. Check those original terms before reusing third-party assets.
+This repository includes an MIT License. Some folders may contain third-party templates, images, libraries, or learning materials with their own licensing terms. Check the original terms before reusing third-party assets.

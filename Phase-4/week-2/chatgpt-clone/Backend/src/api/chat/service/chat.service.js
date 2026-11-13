@@ -71,7 +71,7 @@ const getMessageById = async messageID => {
         id: rows[0].id,
         role: rows[0].role,
         content: rows[0].content,
-        tokenCount: Number(rows[0].tokenCount || 0),
+        tokenCount: Number(rows[0].token_count || 0),
         createdAT: rows[0].craeted_at,
     };
 }
@@ -126,7 +126,7 @@ export async function createConversationService(question) {
 }
 
 /**
- * 
+ *
  * @param {object} param 
  * @param {string} param.question 
  * 

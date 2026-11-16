@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import express from "express";
-
+import { errorHandler } from './src/middleware/error-handler.js';
 import cors from "cors";
 
 const app = express();
@@ -17,7 +17,7 @@ app.get("/health", (req, res) => {
 });
 
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 // Start server
 const startServer = async () => {

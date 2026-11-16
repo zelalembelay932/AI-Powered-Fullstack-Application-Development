@@ -1,13 +1,17 @@
 import { useState, useEffect, useRef } from "react";
-import './App.css'
-import ChatHeader from './components/ChatHeader/ChatHeader'
-import MessageList from './components/MessageList/MessageList'
-import Sidebar from './components/Sidebar/Sidebar'
-import axios from 'axios'
+import "./App.css";
+import ChatHeader from "./components/ChatHeader/ChatHeader";
+import MessageList from "./components/MessageList/MessageList";
+import Sidebar from "./components/Sidebar/Sidebar";
+import axios from "axios";
 import ChatInput from "./components/ChatInput/ChatInput";
 
-// aman godana acadami   
-function App() { 
+// Backend API URL: Vite reads VITE_ variables when the frontend is built.
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://aichat.zelalem.tech";
+
+// aman godana acadami
+function App() {
   const [conversations, setConversations] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const lastMessageRef = useRef(null);
@@ -15,35 +19,36 @@ function App() {
   async function fetchConversations() {
     try {
       const { data } = await axios.get(
-        "http://localhost:3001/api/chat/conversations",
+        `${API_BASE_URL}/api/chat/conversations`,
       );
       setConversations(data.data);
     } catch (error) {
       console.log(error);
     }
-  } 
-
+  }
 
   async function handleSubmit(question) {
     if (!question.trim()) {
       return;
     }
-    
+
     const tempQuestion = {
       id: Date.now(),
       content: question.trim(),
-      role: 'user'
+      role: "user",
     };
-    setConversations(prev => [...prev, tempQuestion])
+    setConversations((prev) => [...prev, tempQuestion]);
 
     try {
-      setIsLoading(true)
-      const {data} = await axios.post('http://localhost:3001/api/chat/conversations', 
-      {
-        question: question.trim(),
-      });
+      setIsLoading(true);
+      const { data } = await axios.post(
+        `${API_BASE_URL}/api/chat/conversations`,
+        {
+          question: question.trim(),
+        },
+      );
 
-      setConversations(prev => [...prev, data?.data?.assistantConversation]);
+      setConversations((prev) => [...prev, data?.data?.assistantConversation]);
 
       // console.log(data.data);
     } catch (error) {
@@ -51,19 +56,15 @@ function App() {
     } finally {
       setIsLoading(false);
     }
-    
-
   }
 
-
-  useEffect(()=>{
+  useEffect(() => {
     fetchConversations();
   }, []);
-  
+
   useEffect(() => {
     lastMessageRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [conversations, isLoading]);
-
 
   return (
     <div className="app">
@@ -85,6 +86,4 @@ function App() {
   );
 }
 
-export default App
-
-
+export default App;

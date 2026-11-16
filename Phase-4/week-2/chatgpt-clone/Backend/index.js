@@ -1,4 +1,4 @@
-import  'dotenv/config'
+import 'dotenv/config'
 import cors from 'cors'
 import express from 'express'
 import db from './db/db.config.js'
@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: 'http://localhost:5173'
+        origin: process.env.FRONTEND_URL || 'http://localhost:5173'
     })
 )
 
@@ -47,15 +47,16 @@ const startServer = async () =>{
             // await => means JavaScript waits for the database operation to finish before executing the next line.
         connection.release();
         // console.log(error.message);
-        
+
         // After checking the connection, you release it back into the connection pool.
 // Why?
         // Your application should reuse available database connections instead of unnecessarily holding them.
-        app.listen(3001, (err)=>{
+        const PORT = Number(process.env.PORT || 3001);
+        app.listen(PORT, '0.0.0.0', (err)=>{
         if (err){
                 throw err;
             }
-            console.log("Server is running on http://localhost:3001")
+            console.log(`Server is running on port ${PORT}`)
 });
     } catch (error) {
         console.error('error starting server:', error.message);
@@ -65,7 +66,3 @@ const startServer = async () =>{
 
 
 startServer();
-
-
-
-

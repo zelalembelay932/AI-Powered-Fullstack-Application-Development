@@ -4,7 +4,7 @@ import { errorHandler } from './src/middleware/error-handler.js';
 import { db } from './db/config.js';
 import cors from "cors";
 import { authenticateUser } from './src/middleware/authentication.js';
-// import { mainRouter } from './src/api/routes.js';
+import { mainRouter } from './src/api/routes.js';
 
 
 
@@ -22,7 +22,7 @@ app.get('/health', authenticateUser, (req, res) => {
 });
 
 // main router
-// app.use('/api', mainRouter);
+app.use('/api', mainRouter);
 
 app.use(errorHandler);
 
